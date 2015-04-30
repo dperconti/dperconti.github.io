@@ -21,6 +21,10 @@ ul {
     font-size: .9em;
 }
 
+dl, menu, ol, ul {
+  margin: 0em;
+}
+
 /* LAYOUT CSS */
 .pure-img-responsive {
     max-width: 100%;
