@@ -25,6 +25,15 @@ dl, menu, ol, ul {
   margin: 0em;
 }
 
+h1 {
+  font-size: 1.8em;
+  margin: .67em 0;
+}
+h2 {
+  font-size: 1.3em;
+  margin: .83em 0;
+}
+
 /* LAYOUT CSS */
 .pure-img-responsive {
     max-width: 100%;
