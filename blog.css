@@ -34,6 +34,11 @@ h2 {
   margin: .83em 0;
 }
 
+@media screen and (min-width: 48em)
+.pure-u-md-1-4, .pure-u-md-6-24 {
+  width: 21%;
+}
+
 /* LAYOUT CSS */
 .pure-img-responsive {
     max-width: 100%;
