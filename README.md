@@ -13,10 +13,10 @@
 
 
 ####_Application Security Engineer_
-######Urban Airship | Portland, OR | Novemeber 2014 to April 2015
+######Urban Airship | Portland, OR | November 2014 to April 2015
 - Worked independently to form a proof of concept coprocessor for Urban Airship's hbase implementation to meet new data retention policies
 - Architected a data retention workflow to allow basic configuration of said coprocessor
-- Worked alongside the Security Program Manager to address and resolve security incidents, whether they were security questionaires or security breaches
+- Worked alongside the Security Program Manager to address and resolve security incidents, whether they were security questionnaires or security breaches
 - Skills used:
     + Java, Hbase, Python/Django
 
