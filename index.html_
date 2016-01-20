@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Donato Perconti's personal online resume.">
+        <title>Donato Perconti</title>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+        <!--<![endif]-->
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" href="blog-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="blog.css">
+        <!--<![endif]-->
+    </head>
+    <body>
+        <div id="layout" class="pure-g">
+            <div class="sidebar pure-u-1 pure-u-md-1-4">
+                <div class="header">
+                    <hgroup>
+                        <h1 class="brand-title">Donato Perconti</h1>
+                        <h2 class="brand-tagline">Software Engineer</h2>
+                    </hgroup>
+                    <!--
+                        <nav class="nav">
+                           <ul class="nav-list">
+                              <li class="nav-item">
+                                 <a class="pure-button" href="http://www.web2pdfconvert.com/convert">Save to PDF</a>
+                              </li>
+                           </ul>
+                        </nav>-->
+                </div>
+            </div>
+            <div class="content pure-u-1 pure-u-md-3-4">
+                <div>
+                    <div class="posts">
+                        <h1 class="content-subhead">WORK EXPERIENCE</h1>
+                        <!-- A single post -->
+                        <section class="post">
+                            <!-- Platform POSITION -->
+                            <header class="post-header">
+                                <h2 class="post-title">Platform Engineer</h2>
+                                <p class="post-meta">Urban Airship | Portland, OR | April 2015 to present</p>
+                            </header>
+                            <div class="post-description">
+                                <p>
+                                <div class="pure-u-1-5">
+                                    <ul>
+                                        <li>Java</li>
+                                        <li>Scala</li>
+                                        <li>Python</li>
+                                    </ul>
+                                </div>
+                                <div class="pure-u-3-4">
+                                    <ul>
+                                        <li>Implemented custom healthcheck APIs to various services</li>
+                                        <li>Developed and maintained Urban Airship's customer facing APIs</li>
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                            <!-- App Sec POSITION -->
+                            <header class="post-header">
+                                <h2 class="post-title">Application Security Engineer</h2>
+                                <p class="post-meta">Urban Airship | Portland, OR | November 2014 to April 2015</p>
+                            </header>
+                            <div class="post-description">
+                                <p>
+                                <div class="pure-u-1-5">
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>Objective-C</li>
+                                        <li>Java</li>
+                                    </ul>
+                                </div>
+                                <div class="pure-u-3-4">
+                                    <ul>
+                                        <li>Worked independently to form a proof of concept coprocessor for UA's hbase implementation to meet new data retention policies</li>
+                                        <li>Architected data retention workflow to allow basic configuration</li>
+                                        <li>Worked alongside managers to address and resolve security incidents</li>
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                            <!-- CE POSITION -->
+                            <header class="post-header">
+                                <h2 class="post-title">Customer Engineer</h2>
+                                <p class="post-meta">Urban Airship - Portland, OR - August 2014 to November 2014</p>
+                            </header>
+                            <div class="post-description">
+                                <p>
+                                <div class="pure-u-1-5">
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>Objective-C</li>
+                                        <li>Java</li>
+                                    </ul>
+                                </div>
+                                <div class="pure-u-3-4">
+                                    <ul>
+                                        <li>Automated data mining to obtain and visualize various data sets</li>
+                                        <li>Created automated tools to troubleshoot and resolve bugs</li>
+                                        <li>Assisted in the creation of a POC API in Scala for UA's A/B testing</li>
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                            <!-- TSE POSITION -->
+                            <header class="post-header">
+                                <h2 class="post-title">Technical Support Engineer</h2>
+                                <p class="post-meta">Urban Airship - Portland, OR - August 2013 to August 2014</p>
+                            </header>
+                            <div class="post-description">
+                                <p>
+                                <div class="pure-u-1-5">
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>Objective-C</li>
+                                        <li>Java</li>
+                                        <li>Bash Scripting</li>
+                                    </ul>
+                                </div>
+                                <div class="pure-u-3-4">
+                                    <ul>
+                                        </li>Assisted in the improvement and fixing of numerous customer applications on all platforms (iOS, Android, Windows, BB, Amazon)</li>
+                                        </li>Implemented SSO workflow for support ticketing system and our Dashboard</li>
+                                        </li>Created and distributed automation scripts for easier access and readability for log files</li>
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                            <!-- QA POSITION -->
+                            <header class="post-header">
+                                <h2 class="post-title">QA Test Engineer</h2>
+                                <p class="post-meta">Bible and Journal App LLC - Vancouver, WA - July 2013 to October 2013</p>
+                            </header>
+                            <div class="post-description">
+                                <p>
+                                <div class="pure-u-1-5">
+                                    <ul>
+                                        <li>Java</li>
+                                        <li>Objective-C</li>
+                                        <li>Android & iOS</li>
+                                        <li>Phonegap</li>
+                                    </ul>
+                                </div>
+                                <div class="pure-u-3-4">
+                                    <ul>
+                                        <li>Customized and tested apps based on customer's request</li>
+                                        <li>Deployed over 30 mobile applications to both iOS and Android</li>
+                                        <li>Used Jira to track customer issues and requests</li>
+                                        <li> Created automated testing and release solutions to speed up the process up</li>
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                            <!-- Intel POSITION -->
+                            <header class="post-header">
+                                <h2 class="post-title">Web Developer II</h2>
+                                <p class="post-meta">Intel - Hillsboro, OR - May 2013 to August 2013</p>
+                            </header>
+                            <div class="post-description">
+                                <p>
+                                <div class="pure-u-1-5">
+                                    <ul>
+                                        <li>Java</li>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>Maven</li>
+                                    </ul>
+                                </div>
+                                <div class="pure-u-3-4">
+                                    <ul>
+                                        <li>Worked directly with the Marketing teams to determine best UX/UI</li>
+                                        <li>Intermediate voice between Marketing team and the back-end team to implement and track changes</li>
+                                        <li>Assisted in prioritizing security issues from evaluations</li>
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                            <!-- Freelance POSITION -->
+                            <header class="post-header">
+                                <h2 class="post-title">Freelance Web Developer</h2>
+                                <p class="post-meta">Self-Employed - Portland, OR - January 2013 to August 2013</p>
+                            </header>
+                            <div class="post-description">
+                                <p>
+                                <div class="pure-u-1-5">
+                                    <ul>
+                                        <li>HTML/CSS</li>
+                                        <li>Javascript</li>
+                                        <li>PHP</li>
+                                    </ul>
+                                </div>
+                                <div class="pure-u-3-4">
+                                    <ul>
+                                        <li>Created, maintained, and updated multiple websites for various clients</li>
+                                        <li>Worked directly with clients to determine the best UX/UI for their clients</li>
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                            <!-- The Good POSITION -->
+                            <header class="post-header">
+                                <h2 class="post-title">Interactive Developer</h2>
+                                <p class="post-meta">The Good - Portland, OR - January 2013 to March 2013</p>
+                            </header>
+                            <div class="post-description">
+                                <p>
+                                <div class="pure-u-1-5">
+                                    <ul>
+                                        <li>HTML/CSS</li>
+                                        <li>Javascript</li>
+                                        <li>PHP</li>
+                                    </ul>
+                                </div>
+                                <div class="pure-u-3-4">
+                                    <ul>
+                                        <li>LAMP Stack with Magneto and Wordpress frameworks</li>
+                                        <li>Edited and added features to various websites including Easton.com and BellHelmets.com to better ease
+                                            of use
+                                        </li>
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                            <!-- L&C POSITION -->
+                            <header class="post-header">
+                                <h2 class="post-title">Web Developer</h2>
+                                <p class="post-meta">Lewis & Clark College - Portland, OR - September 2012 to January 2013</p>
+                            </header>
+                            <div class="post-description">
+                                <p>
+                                <div class="pure-u-1-5">
+                                    <ul>
+                                        <li>HTML/CSS</li>
+                                        <li>Javascript</li>
+                                        <li>PHP</li>
+                                    </ul>
+                                </div>
+                                <div class="pure-u-3-4">
+                                    <ul>
+                                        <li>Digital Field Scholarship / geolocation based posts</li>
+                                        <li>Modified and edited PHP and jQuery plugins in Wordpress</li>
+                                        <li>Tested & implemented responsive HTML5 themes</li>
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                            <!-- UA Internship POSITION -->
+                            <header class="post-header">
+                                <h2 class="post-title">Intern</h2>
+                                <p class="post-meta">Urban Airship - Portland, OR - May 2012 to September 2012</p>
+                            </header>
+                            <div class="post-description">
+                                <p>
+                                <div class="pure-u-1-5">
+                                    <ul>
+                                        <li>Obj-C</li>
+                                        <li>Phonegap</li>
+                                        <li>jQuery</li>
+                                    </ul>
+                                </div>
+                                <div class="pure-u-3-4">
+                                    <ul>
+                                        <li>Integrated Urban Airship’s Push Library with PhoneGap</li>
+                                        <li>Experience in version control using Github</li>
+                                        <li>https://github.com/urbanairship/phonegap-ua-push</li>
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="posts">
+                        <h1 class="content-subhead">Eduction</h1>
+                        <section class="post">
+                            <header class="post-header">
+                                <h2 class="post-title">BA in Computer Science & Mathematics</h2>
+                                <p class="post-meta">Lewis & Clark College - Portland, OR - 2010 - 2013</p>
+                            </header>
+                            <div class="post-description">
+                                <p>
+                                <div class="pure-u-1-3">
+                                    <ul>
+                                        <li>Discrete Mathematics</li>
+                                        <li>Calculus I - III</li>
+                                        <li>Computer Networks</li>
+                                        <li>Computer Graphics</li>
+                                        <li>Mobile App Development</li>
+                                    </ul>
+                                </div>
+                                <div class="pure-u-1-3">
+                                    <ul>
+                                        <li>Varsity Basketball Team</li>
+                                        <li>Computer Science I - II</li>
+                                        <li>Algorithm Design and Analysis</li>
+                                        <li>Computer Security</li>
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                            <header class="post-header">
+                                <h2 class="post-title">AA Focus in Mechanical Engineering</h2>
+                                <p class="post-meta">Whatcom Community College - Bellingham, WA - 2008 - 2010</p>
+                            </header>
+                            <div class="post-description">
+                                <p>
+                                <div class="pure-u-1-1">
+                                    <ul>
+                                        <li>Engineering Physics I - III</li>
+                                        <li>Varsity Basketball Team & Team Captain</li>
+                                    </ul>
+                                </div>
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="footer">
+                        <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                            <ul>
+                                <li><a href="https://www.linkedin.com/in/dperconti">linkedin</a></li>
+                                <li><a href="https://angel.co/dperconti">Angel.co</a></li>
+                                <li><a href="https://github.com/dperconti">GitHub</a></li>
+                                <li><a href="https://twitter.com/dperconti">Twitter</a></li>
+                                <li><a href="http://stackoverflow.com/users/2600731/dperconti">StackOverflow</a></li>
+                                <li><a href="https://docs.google.com/document/d/140qYh3RTMafM51a2VIHOhgpigZzUzrUUTLDxvjTu_Go/edit?usp=sharing">Text Resume</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
