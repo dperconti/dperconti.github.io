@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod && angular-cli-ghpages --branch master && ngh; git checkout master; rm CNAME; echo 'www.dperconti.com' >> CNAME; git add --all; git commit -a -m 'Add CNAME'; git push origin master"
+    "deploy": "ng build --prod && angular-cli-ghpages --branch master && ngh; git checkout master; rm CNAME; echo 'www.dperconti.com' >> CNAME; git add --all; git commit -a -m 'Add CNAME'; git push origin master --force"
   },
   "private": true,
   "dependencies": {
