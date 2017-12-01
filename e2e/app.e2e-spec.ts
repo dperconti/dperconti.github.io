@@ -1,10 +1,10 @@
-import { MainPage } from './app.po';
+import { YourAngularProjectPage } from './app.po';
 
-describe('main App', () => {
-  let page: MainPage;
+describe('your-angular-project App', () => {
+  let page: YourAngularProjectPage;
 
   beforeEach(() => {
-    page = new MainPage();
+    page = new YourAngularProjectPage();
   });
 
   it('should display welcome message', () => {

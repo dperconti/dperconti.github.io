@@ -1,5 +1,5 @@
 {
-  "name": "main",
+  "name": "your-angular-project",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -8,8 +8,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "deploy": "ng build --prod && angular-cli-ghpages --branch master && ngh;"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +21,7 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "angular-bootstrap-md": "^5.0.5",
     "core-js": "^2.4.1",
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.14"
