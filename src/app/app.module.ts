@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
@@ -11,6 +12,10 @@ import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 
+const appRoutes: Routes = [
+  { path: '**', component: AppComponent }
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +26,10 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent
   ],
   imports: [
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    ),
     MDBBootstrapModule.forRoot(),
     BrowserModule
   ],

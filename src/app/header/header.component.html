@@ -9,17 +9,11 @@
 
         <!-- Links -->
         <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link waves-light" mdbRippleRadius>Services<span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link waves-light" href="https://medium.com/@dperconti" mdbRippleRadius>Blog</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link waves-light" mdbRippleRadius>About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link waves-light" mdbRippleRadius>Blog</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link waves-light" mdbRippleRadius>Contact</a>
+                <a class="nav-link waves-light" (click)="form.show()" mdbRippleRadius>Contact</a>
             </li>
         </ul>
         <!-- Links -->
@@ -29,3 +23,29 @@
 
 </mdb-navbar>
 <!--/.Navbar-->
+
+<!--Modal: Login with Avatar Form-->
+<div mdbModal #form="mdb-modal" class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header">
+                <img src="/assets/profile.jpeg" class="rounded-circle img-responsive">
+            </div>
+            <!--Body-->
+            <div class="modal-body text-center mb-1">
+
+                <h5 class="mt-1 mb-2">Donato Perconti</h5>
+
+                <div class="text-center">
+                    <a class="btn btn-cyan mt-1 waves-light" href="mailto:donato.perconti@gmail.com" mdbRippleRadius>Email</a>
+                </div>
+            </div>
+
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: Login with Avatar Form-->
