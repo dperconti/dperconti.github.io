@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod && git commit -a -m 'Deploy' && git push && git push origin --delete master && git branch -D master && git subtree split --prefix dist master"
+    "deploy": "ng build --prod && git commit -a -m 'Deploy' && git push && git push origin --delete master && git branch -D master && git checkout --orphan master && git rm --cached -r . && git subtree split --prefix dist master"
   },
   "private": true,
   "dependencies": {
