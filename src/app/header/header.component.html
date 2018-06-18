@@ -1,51 +1,27 @@
-<!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-light blue-grey lighten-5 fixed-top scrolling-navbar">
-
-    <!-- Navbar brand -->
-    <logo><a class="navbar-brand" href="#">Donato Perconti</a></logo>
-
-    <!-- Collapsible content -->
-    <links>
-
-        <!-- Links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link waves-light" href="https://medium.com/@dperconti" mdbRippleRadius>Blog</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link waves-light" (click)="form.show()" mdbRippleRadius>Contact</a>
-            </li>
-        </ul>
-        <!-- Links -->
-
-    </links>
-    <!-- Collapsible content -->
-
-</mdb-navbar>
-<!--/.Navbar-->
-
-<!--Modal: Login with Avatar Form-->
-<div mdbModal #form="mdb-modal" class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
-        <!--Content-->
-        <div class="modal-content">
-
-            <!--Header-->
-            <div class="modal-header">
-                <img src="/assets/profile.jpeg" class="rounded-circle img-responsive">
+<!--Panel-->
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-2">
+        <div class="card text-center hoverable amber accent-3 white-text mh-100" id="hidden" style="height: 175px; background-color: #E4C036 !important;">
+            <div class="card-body">
+                <!--Text-->
+                <br>
+                <br>
+                <br>
+                <i class="fa fa-hand-peace-o fa-3x " aria-hidden="true"></i>
             </div>
-            <!--Body-->
-            <div class="modal-body text-center mb-1">
-
-                <h5 class="mt-1 mb-2">Donato Perconti</h5>
-
-                <div class="text-center">
-                    <a class="btn btn-cyan mt-1 waves-light" href="mailto:donato.perconti@gmail.com" mdbRippleRadius>Email</a>
-                </div>
-            </div>
-
         </div>
-        <!--/.Content-->
+    </div>
+    <div class="col-9 wow fadeIn">
+        <div class="intro-info-content">
+            <br>
+            <br>
+            <h1 class="w-100" style="letter-spacing: 20px;">DONATO<span id="hidden" class="text-muted">PERCONTI</span></h1>
+            <p class="grey-text" style="letter-spacing: 3px;">SOFTWARE ENGINEERING LEADER</p>
+        </div>
+    </div>
+    <div class="col">
     </div>
 </div>
-<!--Modal: Login with Avatar Form-->
+
+<!--/.Panel-->
