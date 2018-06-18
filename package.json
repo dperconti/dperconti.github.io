@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": " git push origin delete master; ng build --prod; echo 'www.dperconti.com' >> ./dist/CNAME; git add --all; git commit -a -m 'Deploy'; git push;git subtree push  -P dist origin master"
+    "deploy": " git push origin --delete master; ng build --prod; echo 'www.dperconti.com' >> ./dist/CNAME; git add --all; git commit -a -m 'Deploy'; git push;git subtree push  -P dist origin master"
   },
   "private": true,
   "dependencies": {
