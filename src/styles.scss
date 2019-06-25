@@ -5,8 +5,8 @@ $break-large: 1200px;
 
 #hidden {
   @media screen and (max-width: $break-small) {
-    display:none;
-    font-size: calc(12px + .4vw);
+    display: none;
+    font-size: calc(12px + 0.4vw);
   }
   @media screen and (min-width: $break-large) {
   }
@@ -15,38 +15,36 @@ $break-large: 1200px;
 html {
   font-size: 12px;
   @media (max-width: 1000px) {
-    font-size: calc(12px + .4vw);
+    font-size: calc(12px + 0.4vw);
   }
 }
 h1 {
   font-size: 2.5rem;
 
   @media (max-width: 700px) {
-    font-size: calc(12px + .4vw);
+    font-size: calc(12px + 0.4vw);
   }
 }
 
 hr {
-    margin-top: 0rem;
-    margin-bottom: .5rem;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
 }
-
-
 
 .body {
   font-size: 1rem;
 }
 
-b, strong {
-    font-weight: bolder;
-    color: black;
+b,
+strong {
+  font-weight: bolder;
+  color: black;
 }
 
-
 .text-muted {
-    color: #181818 !important;
+  color: #181818 !important;
 }
 
 .card {
-    font-weight: 300;
+  font-weight: 300;
 }
