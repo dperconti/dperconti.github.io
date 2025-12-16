@@ -33,7 +33,7 @@ I noticed that engineers who maintained active lifestyles-running, cycling, hiki
 #### Metrics That Matter
 
 We tracked:
-- Meeting hours per week (target: <20)
+- Meeting hours per week (target: &lt;20)
 - Response time expectations (not everything is urgent)
 - Vacation usage (encouraged, not discouraged)
 - Team satisfaction scores
@@ -93,7 +93,7 @@ We tracked:
 - Change failure rate
 
 **Team Health Metrics:**
-- Meeting hours per week (target: <20)
+- Meeting hours per week (target: &lt;20)
 - Response time expectations (documented)
 - Vacation usage (encouraged)
 - Team satisfaction scores

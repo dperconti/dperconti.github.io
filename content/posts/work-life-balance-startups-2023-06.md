@@ -79,16 +79,16 @@ After analyzing engineering teams across multiple startups, I've observed a dire
 Track these metrics to ensure sustainable pace:
 
 **Code Quality Metrics:**
-- Test coverage (target: >80%)
-- Code review turnaround time (target: <24 hours)
-- Bug escape rate (target: <2%)
+- Test coverage (target: &gt;80%)
+- Code review turnaround time (target: &lt;24 hours)
+- Bug escape rate (target: &lt;2%)
 - Technical debt ratio (track over time)
 
 **Team Health Metrics:**
-- Average work hours per week (target: <45)
-- On-call incidents per engineer (target: <2/month)
-- Vacation usage (target: >80% of allocated)
-- Voluntary turnover rate (target: <10%/year)
+- Average work hours per week (target: &lt;45)
+- On-call incidents per engineer (target: &lt;2/month)
+- Vacation usage (target: &gt;80% of allocated)
+- Voluntary turnover rate (target: &lt;10%/year)
 
 **Productivity Metrics:**
 - Deployment frequency (more frequent = better)
