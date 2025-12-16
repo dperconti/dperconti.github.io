@@ -63,6 +63,7 @@ const Social = ({ source, className }) => {
     address,
     skype,
     website,
+    withlight,
   } = source;
   
   return (
@@ -372,6 +373,18 @@ const Social = ({ source, className }) => {
           <a
             aria-label="website"
             href={website}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            <IoGlobeOutline />
+          </a>
+        </li>
+      )}
+      {withlight && (
+        <li className="inline-block">
+          <a
+            aria-label="with light"
+            href={withlight}
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
