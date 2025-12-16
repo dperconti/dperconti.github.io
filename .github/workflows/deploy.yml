@@ -74,6 +74,18 @@ jobs:
           ls -la out | head -20
           echo "Total files:"
           find out -type f | wc -l
+          
+      - name: Verify CNAME file
+        run: |
+          if [ ! -f "out/CNAME" ]; then
+            echo "WARNING: CNAME file not found in out directory!"
+            echo "Copying from public/CNAME..."
+            cp public/CNAME out/CNAME
+            echo "CNAME file copied to out/CNAME"
+          else
+            echo "CNAME file found in out directory:"
+            cat out/CNAME
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
