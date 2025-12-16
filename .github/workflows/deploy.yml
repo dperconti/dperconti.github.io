@@ -36,8 +36,27 @@ jobs:
         run: node lib/jsonGenerator.js
 
       - name: Build with Next.js
-        run: npm run build
+        run: |
+          set -e
+          echo "Starting Next.js build..."
+          npm run build
+          echo "Build command completed"
+          
+          # Check if out directory was created
+          if [ ! -d "out" ]; then
+            echo "ERROR: 'out' directory was not created!"
+            echo "Checking .next directory:"
+            ls -la .next/ 2>/dev/null || echo ".next not found"
+            echo "Checking for any error files:"
+            find . -name "*.error" -o -name "error.log" 2>/dev/null || echo "No error files found"
+            echo "Build may have failed during export phase"
+            exit 1
+          fi
+          
+          echo "Build successful - out directory exists"
         continue-on-error: false
+        env:
+          NODE_OPTIONS: '--max_old_space_size=4096'
 
       - name: Verify build output
         run: |
