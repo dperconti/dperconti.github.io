@@ -1,0 +1,32 @@
+{
+  "site": {
+    "title": "Donato Perconti",
+    "base_url": "/",
+    "favicon": "/images/developer.png"
+  },
+
+  "settings": {
+    "pagination": 6,
+    "summary_length": 200,
+    "blog_folder": "posts"
+  },
+
+  "profile": {
+    "name": "Donato Perconti",
+    "designation": "Engineering Executive | Health, Wellness, and Fintech",
+    "bio": "Engineering leader with more than 10 years of experience building and scaling high-performing teams in fintech, health, and wellness. Proven ability to grow organizations, deliver business-aligned products, and create a culture of purpose-driven innovation. Expertise in payments, platform engineering, AI features, and data systems."
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "tag_manager_id": "",
+    "copyright": ""
+  },
+
+  "metadata": {
+    "meta_author": "Donato Perconti",
+    "meta_image": "",
+    "meta_description": "Engineering Executive | Health, Wellness, and Fintech. Engineering leader with more than 10 years of experience building and scaling high-performing teams."
+  }
+}
+
