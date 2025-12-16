@@ -17,7 +17,7 @@ const Contact = ({ data }) => {
             </div>
             <div className="mt-12 pt-12">
               {markdownify(title, "h3", "h5 font-normal text-3xl")}
-              <form className="contact-form mt-6" action={contact_form_action}>
+              <form className="contact-form mt-6" action={contact_form_action} method="POST">
                 <div className="row mb-6">
                   <div className="md:col-6">
                     <label className="mb-2 block" htmlFor="name">
@@ -62,11 +62,13 @@ const Contact = ({ data }) => {
                   </label>
                   <textarea
                     className="form-textarea w-full"
+                    name="message"
                     rows="6"
                     placeholder="Your message"
+                    required
                   />
                 </div>
-                <button className="btn btn-primary rounded text-sm">
+                <button type="submit" className="btn btn-primary rounded text-sm">
                   Send Message
                 </button>
               </form>
