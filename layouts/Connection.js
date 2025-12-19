@@ -32,6 +32,14 @@ const Connection = ({ data }) => {
       external: true,
     },
     {
+      title: "GitHub",
+      url: "https://github.com/dperconti",
+      icon: "💻",
+      description: "Check out my code and open source projects",
+      color: "from-gray-700 to-gray-900",
+      external: true,
+    },
+    {
       title: "With Light",
       url: "https://withlight.ai/",
       icon: "✨",
