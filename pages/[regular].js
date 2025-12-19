@@ -1,6 +1,7 @@
 import NotFound from "@layouts/404";
 import Base from "@layouts/Baseof";
 import Contact from "@layouts/Contact";
+import DateRequest from "@layouts/DateRequest";
 import Default from "@layouts/Default";
 import { getRegularPage, getSinglePage } from "@lib/contentParser";
 
@@ -23,6 +24,8 @@ const RegularPages = ({ data }) => {
         <NotFound data={data} />
       ) : layout === "contact" ? (
         <Contact data={data} />
+      ) : layout === "date-request" ? (
+        <DateRequest data={data} />
       ) : (
         <Default data={data} />
       )}
