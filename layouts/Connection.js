@@ -16,6 +16,14 @@ const Connection = ({ data }) => {
       color: "from-pink-500 to-rose-500",
     },
     {
+      title: "With Light",
+      url: "https://withlight.ai/",
+      icon: "✨",
+      description: "Empower your emotional wellness with DBT & AI",
+      color: "from-indigo-500 to-purple-500",
+      external: true,
+    },
+    {
       title: "Instagram",
       url: "https://www.instagram.com/dperconti/",
       icon: "📷",
@@ -37,14 +45,6 @@ const Connection = ({ data }) => {
       icon: "💻",
       description: "Check out my code and open source projects",
       color: "from-gray-700 to-gray-900",
-      external: true,
-    },
-    {
-      title: "With Light",
-      url: "https://withlight.ai/",
-      icon: "✨",
-      description: "Empower your emotional wellness with DBT & AI",
-      color: "from-indigo-500 to-purple-500",
       external: true,
     },
   ];
