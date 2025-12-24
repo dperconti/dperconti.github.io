@@ -5,6 +5,8 @@ import Header from "@partials/Header";
 import { TaxonomySlugProvider } from "context/state";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
+import SplineBackground from "@components/SplineBackground";
 
 const Base = ({
   title,
@@ -91,13 +93,29 @@ const Base = ({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <TaxonomySlugProvider>
-        <Header />
-      </TaxonomySlugProvider>
+      <div className="relative w-full min-h-screen">
+        {/* Spline background */}
+        <SplineBackground
+          scene="https://prod.spline.design/fgVOuowZrNyl-NCs/scene.splinecode"
+          className="pointer-events-none fixed inset-0 z-0 h-full w-full"
+        />
 
-      {/* main site */}
-      <main>{children}</main>
-      <Footer />
+        {/* Frosted glass overlay - changes based on theme */}
+        <div
+          className="fixed inset-0 z-[1] pointer-events-none frosted-overlay"
+        />
+
+        {/* Content */}
+        <div className="relative z-10 flex flex-col min-h-screen">
+          <TaxonomySlugProvider>
+            <Header />
+          </TaxonomySlugProvider>
+
+          {/* main site */}
+          <main>{children}</main>
+          <Footer />
+        </div>
+      </div>
     </>
   );
 };

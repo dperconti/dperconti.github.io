@@ -3,6 +3,7 @@ import { markdownify } from "@lib/utils/textConverter";
 import { MDXRemote } from "next-mdx-remote";
 import { useState, useEffect } from "react";
 import shortcodes from "./shortcodes/all";
+import InstagramGallery from "./components/InstagramGallery";
 
 const DateRequest = ({ data }) => {
   const { frontmatter, mdxContent } = data;
@@ -67,17 +68,28 @@ const DateRequest = ({ data }) => {
 
     return () => clearTimeout(timeoutId);
   }, [instagramHandle]);
+
   return (
     <section className="section pt-[72px]">
       <div className="container">
         <div className="row">
           <div className="mx-auto lg:col-8">
-            <div className="content">
-              {<MDXRemote {...mdxContent} components={shortcodes} />}
+            {/* Glass morphism content card */}
+            <div className="glass-card mb-8">
+              <div className="content">
+                {<MDXRemote {...mdxContent} components={shortcodes} />}
+              </div>
             </div>
-            <div className="mt-12 pt-12">
-              {markdownify(title, "h3", "h5 font-normal text-3xl")}
-              <form className="contact-form mt-6" action={contact_form_action} method="POST">
+            
+            <div className="glass-card mb-8">
+              <InstagramGallery username="dperconti" />
+            </div>
+            
+            {/* Glass morphism form card */}
+            <div className="glass-card">
+              <div className="mt-12 pt-12">
+                {markdownify(title, "h3", "h5 font-normal text-3xl glass-heading")}
+                <form className="contact-form mt-6" action={contact_form_action} method="POST">
                 <input type="hidden" name="_subject" value="Date Request" />
                 <div className="row mb-6">
                   <div className="md:col-6">
@@ -146,8 +158,8 @@ const DateRequest = ({ data }) => {
                     Instagram Handle <span className="text-red-500">*</span>
                   </label>
                   <input
-                    className={`form-input w-full ${
-                      isValid === false ? "border-red-500" : isValid === true ? "border-green-500" : ""
+                    className={`form-input w-full glass-input ${
+                      isValid === false ? "border-red-400" : isValid === true ? "border-green-400" : ""
                     }`}
                     name="instagram"
                     type="text"
@@ -174,12 +186,13 @@ const DateRequest = ({ data }) => {
                 </div>
                 <button 
                   type="submit" 
-                  className="btn btn-primary rounded text-sm"
+                  className="glass-button btn btn-primary rounded-lg text-sm font-secondary px-8 py-4 text-lg transition-all duration-300 hover:scale-105"
                   disabled={isValidating || isValid === false}
                 >
                   Send Date Request
                 </button>
               </form>
+            </div>
             </div>
           </div>
         </div>

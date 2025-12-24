@@ -4,12 +4,19 @@ html {
 }
 
 body {
-  @apply bg-body font-primary font-normal leading-relaxed text-text;
+  @apply font-primary font-normal leading-relaxed text-gray-900;
   @apply transition-colors duration-200;
+  background: transparent;
 }
 
 .light body {
-  @apply bg-white text-gray-900;
+  background: transparent;
+  @apply text-gray-900;
+}
+
+.dark body {
+  background: transparent;
+  @apply text-white;
 }
 
 h1,
@@ -18,7 +25,8 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-primary font-normal leading-tight text-dark;
+  @apply font-primary font-normal leading-tight text-gray-900;
+  text-shadow: none;
 }
 
 .light h1,
@@ -28,6 +36,17 @@ h6 {
 .light h5,
 .light h6 {
   @apply text-gray-900;
+  text-shadow: none;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  @apply text-white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 h1,

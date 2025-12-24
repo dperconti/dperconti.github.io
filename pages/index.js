@@ -27,7 +27,7 @@ const Home = ({ posts }) => {
                 "text-6xl lg:text-8xl font-semibold"
               )}
               {markdownify(designation, "p", "mt-6 text-primary text-xl")}
-              {markdownify(bio, "p", "mt-4 leading-9 text-xl")}
+              {markdownify(bio, "p", "mt-4 leading-9 text-xl font-light")}
               <Social source={social} className="profile-social-icons mt-8" />
             </div>
           </div>
