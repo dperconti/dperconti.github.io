@@ -5,7 +5,6 @@ import Header from "@partials/Header";
 import { TaxonomySlugProvider } from "context/state";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import dynamic from "next/dynamic";
 import SplineBackground from "@components/SplineBackground";
 
 const Base = ({
