@@ -118,8 +118,18 @@ jobs:
           
       - name: Copy CNAME file
         run: |
+          if [ ! -f "public/CNAME" ]; then
+            echo "ERROR: public/CNAME file not found!"
+            exit 1
+          fi
           cp public/CNAME out/CNAME
-          echo "CNAME copied: $(cat out/CNAME)"
+          if [ ! -f "out/CNAME" ]; then
+            echo "ERROR: Failed to copy CNAME file to out directory!"
+            exit 1
+          fi
+          echo "✓ CNAME file copied successfully"
+          echo "CNAME content: $(cat out/CNAME)"
+          echo "CNAME file size: $(wc -c < out/CNAME) bytes"
           
       - name: Ensure .nojekyll file exists
         run: |
