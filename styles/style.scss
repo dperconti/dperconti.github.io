@@ -18,5 +18,5 @@
 
 // Glass morphism styles - imported OUTSIDE @layer to ensure they're never purged by Tailwind
 // This ensures these styles are always included in the final CSS bundle
-@import "glass";
+@import "./glass";
 

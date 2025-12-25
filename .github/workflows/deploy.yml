@@ -146,6 +146,26 @@ jobs:
           touch out/.nojekyll
           echo "Created .nojekyll file"
           ls -la out/.nojekyll || echo "WARNING: .nojekyll file not found"
+          
+      - name: Verify favicon is included
+        run: |
+          echo "Checking for favicon.ico in out directory..."
+          if [ -f "out/favicon.ico" ]; then
+            echo "✓ favicon.ico found in out directory"
+            ls -lh out/favicon.ico
+          else
+            echo "WARNING: favicon.ico not found in out directory"
+            echo "Copying from public/favicon.ico if it exists..."
+            if [ -f "public/favicon.ico" ]; then
+              cp public/favicon.ico out/favicon.ico
+              echo "✓ Copied favicon.ico to out directory"
+            elif [ -f "favicon.ico" ]; then
+              cp favicon.ico out/favicon.ico
+              echo "✓ Copied favicon.ico from root to out directory"
+            else
+              echo "ERROR: No favicon.ico found to copy!"
+            fi
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

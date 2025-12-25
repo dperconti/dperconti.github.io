@@ -10,8 +10,9 @@ const Document = () => {
     <Html lang="en">
       <Head>
         {/* favicon */}
-        <link rel="shortcut icon" href={favicon} />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
         {/* theme meta */}
         <meta name="theme-name" content="hydrogen-nextjs" />
         <meta name="msapplication-TileColor" content="#000000" />

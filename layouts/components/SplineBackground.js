@@ -8,6 +8,10 @@ const FallbackBackground = ({ className }) => (
       background: 'linear-gradient(to bottom, #1e3a8a, #7c3aed, #ea580c)',
       width: '100%',
       height: '100%',
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      zIndex: 0,
     }}
   />
 );

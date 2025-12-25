@@ -6,16 +6,20 @@ html {
 body {
   @apply font-primary font-normal leading-relaxed text-gray-900;
   @apply transition-colors duration-200;
-  background: transparent;
+  // Beautiful gradient background - matches Spline fallback
+  background: linear-gradient(to bottom, #1e3a8a, #7c3aed, #ea580c);
+  min-height: 100vh;
 }
 
 .light body {
-  background: transparent;
+  // Lighter, softer gradient for light mode
+  background: linear-gradient(to bottom, #e0e7ff, #f3e8ff, #fed7aa);
   @apply text-gray-900;
 }
 
 .dark body {
-  background: transparent;
+  // Rich, vibrant gradient for dark mode
+  background: linear-gradient(to bottom, #1e3a8a, #7c3aed, #ea580c);
   @apply text-white;
 }
 
