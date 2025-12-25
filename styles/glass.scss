@@ -1,0 +1,248 @@
+// Glass Morphism Styles - Outside @layer to ensure they're never purged
+// These styles must always be included in the final CSS
+
+// Frosted overlay - changes based on theme
+.frosted-overlay {
+  backdrop-filter: blur(50px) saturate(180%);
+  -webkit-backdrop-filter: blur(50px) saturate(180%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.75) 100%);
+  transition: all 0.3s ease;
+}
+
+.dark .frosted-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+// Glass Morphism Styles
+.glass-card {
+  border-radius: 1rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  
+  @media (min-width: 1024px) {
+    padding: 3rem;
+  }
+  
+  &:hover {
+    box-shadow: 
+      0 12px 40px 0 rgba(31, 38, 135, 0.5),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+  }
+}
+
+.light .glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+  
+  &:hover {
+    box-shadow: 
+      0 12px 40px 0 rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
+  }
+}
+
+.dark .glass-card {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.95),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.03);
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 
+      0 12px 40px 0 rgba(0, 0, 0, 1),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  }
+}
+
+.glass-heading {
+  font-family: var(--font-primary, inherit);
+  color: #111827;
+  text-shadow: none;
+  letter-spacing: 0.02em;
+}
+
+.dark .glass-heading {
+  color: white;
+}
+
+.glass-button {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 4px 16px 0 rgba(31, 38, 135, 0.3),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 600;
+  
+  &:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 
+      0 6px 20px 0 rgba(31, 38, 135, 0.4),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// Glass morphism form inputs
+.glass-card .form-input,
+.glass-card .form-textarea,
+.glass-input {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  
+  // Light mode
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+  
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  &:focus {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(102, 225, 151, 0.6);
+    box-shadow: 
+      0 0 0 3px rgba(102, 225, 151, 0.1),
+      0 4px 12px 0 rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
+  
+  &.border-red-400 {
+    border-color: rgba(239, 68, 68, 0.6);
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  }
+  
+  &.border-green-400 {
+    border-color: rgba(74, 222, 128, 0.6);
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.1);
+  }
+}
+
+.dark .glass-card .form-input,
+.dark .glass-card .form-textarea,
+.dark .glass-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  &:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 
+      0 0 0 3px rgba(255, 255, 255, 0.1),
+      0 4px 12px 0 rgba(31, 38, 135, 0.2);
+  }
+}
+
+.glass-card label {
+  font-family: var(--font-secondary, inherit);
+  font-weight: 500;
+  color: #111827;
+}
+
+.dark .glass-card label {
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.glass-card .content {
+  color: #111827;
+  
+  p, li, td {
+    color: #1f2937;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary, inherit);
+    color: #111827;
+    text-shadow: none;
+  }
+  
+  a {
+    color: #2563eb;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    
+    &:hover {
+      color: #1d4ed8;
+    }
+  }
+}
+
+.dark .glass-card .content {
+  color: white;
+  
+  p, li, td {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  a {
+    color: rgba(255, 255, 255, 0.9);
+    
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+// Validation messages styling
+.glass-card p.text-sm {
+  font-family: var(--font-secondary, inherit);
+  
+  &.text-gray-600 {
+    color: #4b5563;
+  }
+  
+  &.text-green-600 {
+    color: #15803d;
+  }
+  
+  &.text-red-600 {
+    color: #dc2626;
+  }
+}
+
+.dark .glass-card p.text-sm {
+  &.text-gray-600 {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  &.text-green-600 {
+    color: #86efac;
+  }
+  
+  &.text-red-600 {
+    color: #fca5a5;
+  }
+}
+
