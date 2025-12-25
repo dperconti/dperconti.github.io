@@ -2,18 +2,26 @@
 // These styles must always be included in the final CSS
 
 // Frosted overlay - changes based on theme
-// Made more transparent so Spline background is visible
+// Very dark overlay so Spline background is extremely subtle
 .frosted-overlay {
-  backdrop-filter: blur(20px) saturate(120%);
-  -webkit-backdrop-filter: blur(20px) saturate(120%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.15) 100%);
+  backdrop-filter: blur(15px) saturate(120%);
+  -webkit-backdrop-filter: blur(15px) saturate(120%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.85) 100%);
   transition: all 0.3s ease;
 }
 
+// Light theme - very subtle overlay, Spline barely visible
+.light .frosted-overlay {
+  backdrop-filter: blur(15px) saturate(120%);
+  -webkit-backdrop-filter: blur(15px) saturate(120%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.8) 100%);
+}
+
+// Dark theme - very dark overlay, Spline barely visible
 .dark .frosted-overlay {
-  backdrop-filter: blur(20px) saturate(120%);
-  -webkit-backdrop-filter: blur(20px) saturate(120%);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.2) 100%);
+  backdrop-filter: blur(15px) saturate(120%);
+  -webkit-backdrop-filter: blur(15px) saturate(120%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.85) 100%);
 }
 
 // Glass Morphism Styles
