@@ -29,31 +29,60 @@ const Spline = dynamic(
 const SplineBackground = ({ scene, className }) => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const [canLoad, setCanLoad] = useState(true);
 
   useEffect(() => {
     // Log for debugging
     console.log('SplineBackground: Scene URL:', scene);
     console.log('SplineBackground: Component mounted');
     
-    // Check if scene URL is accessible
-    if (scene) {
-      fetch(scene, { method: 'HEAD' })
-        .then(() => {
-          console.log('SplineBackground: Scene URL is accessible');
+    // Check if WebGL is available (required for Spline)
+    const checkWebGL = () => {
+      try {
+        const canvas = document.createElement('canvas');
+        const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        if (!gl) {
+          console.warn('SplineBackground: WebGL not available, using fallback');
+          setCanLoad(false);
+          setError('WebGL not available');
           setIsLoading(false);
-        })
-        .catch((err) => {
-          console.error('SplineBackground: Scene URL not accessible:', err);
-          setError('Scene URL not accessible');
-          setIsLoading(false);
-        });
+          return false;
+        }
+        return true;
+      } catch (e) {
+        console.warn('SplineBackground: WebGL check failed, using fallback', e);
+        setCanLoad(false);
+        setError('WebGL check failed');
+        setIsLoading(false);
+        return false;
+      }
+    };
+
+    // Only check WebGL on client side
+    if (typeof window !== 'undefined') {
+      if (!checkWebGL()) {
+        return;
+      }
     }
-  }, [scene]);
+    
+    // Set a timeout to show fallback if Spline doesn't load within reasonable time
+    const timeoutId = setTimeout(() => {
+      if (!hasLoaded && isLoading && canLoad) {
+        console.warn('SplineBackground: Loading timeout, showing fallback');
+        setError('Loading timeout');
+        setIsLoading(false);
+      }
+    }, 15000); // 15 second timeout (increased for slower connections)
+
+    return () => clearTimeout(timeoutId);
+  }, [scene, hasLoaded, isLoading, canLoad]);
 
   const handleLoad = () => {
     console.log('SplineBackground: Spline scene loaded successfully');
     setIsLoading(false);
     setError(null);
+    setHasLoaded(true);
   };
 
   const handleError = (error) => {
@@ -62,9 +91,9 @@ const SplineBackground = ({ scene, className }) => {
     setIsLoading(false);
   };
 
-  // Show fallback if there's an error
-  if (error) {
-    console.warn('SplineBackground: Showing fallback due to error');
+  // Show fallback if there's an error or WebGL is not available
+  if (error || !canLoad) {
+    console.warn('SplineBackground: Showing fallback due to error or WebGL unavailability');
     return <FallbackBackground className={className} />;
   }
 
@@ -87,14 +116,18 @@ const SplineBackground = ({ scene, className }) => {
           overflow: 'hidden'
         }}
       >
-        <Spline 
-          scene={scene}
-          style={{
-            width: '100%',
-            height: '100%',
-            display: 'block'
-          }}
-        />
+        {scene && canLoad && (
+          <Spline 
+            scene={scene}
+            onLoad={handleLoad}
+            onError={handleError}
+            style={{
+              width: '100%',
+              height: '100%',
+              display: 'block'
+            }}
+          />
+        )}
       </div>
     </>
   );
