@@ -121,18 +121,22 @@ jobs:
           echo "Ensuring CNAME file is in out directory..."
           # Try public/CNAME first, then root CNAME, then create from known value
           if [ -f "public/CNAME" ]; then
-            cp public/CNAME out/CNAME
+            # Copy and remove any trailing newlines/whitespace
+            tr -d '\n\r' < public/CNAME > out/CNAME
             echo "Copied CNAME from public/CNAME"
           elif [ -f "CNAME" ]; then
-            cp CNAME out/CNAME
+            # Copy and remove any trailing newlines/whitespace
+            tr -d '\n\r' < CNAME > out/CNAME
             echo "Copied CNAME from root"
           else
-            echo "www.dperconti.com" > out/CNAME
+            echo -n "www.dperconti.com" > out/CNAME
             echo "Created CNAME file with default value"
           fi
-          echo "CNAME file contents:"
+          echo "CNAME file contents (with hex dump to check for issues):"
           cat out/CNAME
           echo ""
+          echo "CNAME file size:"
+          wc -c out/CNAME
           echo "Verifying CNAME is in out directory:"
           ls -la out/CNAME || echo "ERROR: CNAME file not found after copy!"
           
