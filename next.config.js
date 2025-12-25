@@ -21,6 +21,8 @@ const nextConfig = {
         fs: false,
       };
     }
+    // Configure webpack to properly handle ESM packages with exports field
+    config.resolve.conditionNames = ['import', 'require', 'node', 'default'];
     return config;
   },
 };
