@@ -118,23 +118,22 @@ jobs:
           
       - name: Ensure CNAME file is copied
         run: |
-          echo "Checking for CNAME file..."
-          # Next.js should copy public/CNAME automatically, but verify and copy if needed
-          if [ -f "public/CNAME" ]; then
-            echo "Found public/CNAME, ensuring it's in out directory..."
-            cp public/CNAME out/CNAME
-            echo "✓ CNAME copied to out directory"
-          elif [ -f "CNAME" ]; then
-            echo "Found root CNAME, copying to out directory..."
-            cp CNAME out/CNAME
-            echo "✓ CNAME copied from root"
-          else
-            echo "Creating CNAME file..."
-            echo "www.dperconti.com" > out/CNAME
-            echo "✓ CNAME created"
+          echo "Ensuring CNAME file exists in out directory..."
+          # Always copy from public/CNAME (source of truth)
+          cp public/CNAME out/CNAME
+          # Verify it exists and has correct content
+          if [ ! -f "out/CNAME" ]; then
+            echo "ERROR: CNAME file not found in out directory after copy!"
+            exit 1
           fi
-          echo "CNAME contents: '$(cat out/CNAME)'"
-          echo "CNAME size: $(wc -c < out/CNAME) bytes"
+          CNAME_CONTENT=$(cat out/CNAME | tr -d '\n\r')
+          if [ "$CNAME_CONTENT" != "www.dperconti.com" ]; then
+            echo "ERROR: CNAME content is incorrect: '$CNAME_CONTENT'"
+            echo "Expected: 'www.dperconti.com'"
+            exit 1
+          fi
+          echo "✓ CNAME file verified: '$CNAME_CONTENT'"
+          echo "✓ CNAME file size: $(wc -c < out/CNAME) bytes"
           
       - name: Ensure .nojekyll file exists
         run: |
