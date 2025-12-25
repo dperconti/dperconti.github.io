@@ -30,6 +30,12 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
+      - name: Clear Next.js cache
+        run: |
+          rm -rf .next
+          rm -rf out
+          echo "Cleared build caches"
+
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
 
@@ -78,6 +84,26 @@ jobs:
           echo "Total files:"
           find out -type f | wc -l
           
+      - name: Verify CSS includes glass morphism styles
+        run: |
+          echo "Checking for CSS files with glass morphism styles..."
+          CSS_FILES=$(find out -name "*.css" -type f)
+          if [ -z "$CSS_FILES" ]; then
+            echo "WARNING: No CSS files found in out directory"
+          else
+            echo "Found CSS files:"
+            echo "$CSS_FILES"
+            echo ""
+            echo "Checking for glass morphism styles..."
+            if grep -r "glass-card\|backdrop-filter\|glass-button" out --include="*.css" > /dev/null; then
+              echo "✓ Glass morphism styles found in CSS files"
+              grep -r "glass-card\|backdrop-filter\|glass-button" out --include="*.css" | head -5
+            else
+              echo "WARNING: Glass morphism styles not found in CSS files"
+              echo "This might indicate a build issue"
+            fi
+          fi
+          
       - name: Ensure CNAME file exists
         run: |
           echo "Ensuring CNAME file is in out directory..."
@@ -97,6 +123,13 @@ jobs:
           echo ""
           echo "Verifying CNAME is in out directory:"
           ls -la out/CNAME || echo "ERROR: CNAME file not found after copy!"
+          
+      - name: Ensure .nojekyll file exists
+        run: |
+          echo "Ensuring .nojekyll file exists for GitHub Pages..."
+          touch out/.nojekyll
+          echo "Created .nojekyll file"
+          ls -la out/.nojekyll || echo "WARNING: .nojekyll file not found"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
