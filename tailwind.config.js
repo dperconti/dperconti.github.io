@@ -30,6 +30,16 @@ module.exports = {
     "./layouts/**/*.{js,ts,jsx,tsx}",
     "./content/**/*.{md,mdx}",
   ],
+  safelist: [
+    // Glass morphism classes - ensure they're never purged
+    {
+      pattern: /^(glass-|frosted-)/,
+    },
+    // Ensure backdrop-filter utilities are included
+    {
+      pattern: /backdrop-filter/,
+    },
+  ],
   theme: {
     screens: {
       sm: "540px",

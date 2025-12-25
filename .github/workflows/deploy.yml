@@ -90,17 +90,29 @@ jobs:
           CSS_FILES=$(find out -name "*.css" -type f)
           if [ -z "$CSS_FILES" ]; then
             echo "WARNING: No CSS files found in out directory"
+            exit 1
           else
             echo "Found CSS files:"
             echo "$CSS_FILES"
             echo ""
             echo "Checking for glass morphism styles..."
-            if grep -r "glass-card\|backdrop-filter\|glass-button" out --include="*.css" > /dev/null; then
+            if grep -r "\.glass-card\|backdrop-filter\|\.glass-button" out --include="*.css" > /dev/null; then
               echo "✓ Glass morphism styles found in CSS files"
-              grep -r "glass-card\|backdrop-filter\|glass-button" out --include="*.css" | head -5
+              echo ""
+              echo "Sample of glass-card styles:"
+              grep -r "\.glass-card" out --include="*.css" | head -3
+              echo ""
+              echo "Sample of backdrop-filter usage:"
+              grep -r "backdrop-filter" out --include="*.css" | head -3
+              echo ""
+              echo "Sample of glass-button styles:"
+              grep -r "\.glass-button" out --include="*.css" | head -3
             else
-              echo "WARNING: Glass morphism styles not found in CSS files"
-              echo "This might indicate a build issue"
+              echo "ERROR: Glass morphism styles not found in CSS files!"
+              echo "This indicates a build issue - styles may have been purged"
+              echo "Checking all CSS files for any glass-related content:"
+              grep -r "glass" out --include="*.css" || echo "No glass-related styles found at all"
+              exit 1
             fi
           fi
           
