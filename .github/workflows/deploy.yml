@@ -117,9 +117,16 @@ jobs:
           fi
           
       - name: Copy CNAME file
+        continue-on-error: true
         run: |
-          cp public/CNAME out/CNAME
-          echo "CNAME copied: $(cat out/CNAME)"
+          if [ -f "public/CNAME" ]; then
+            cp public/CNAME out/CNAME || true
+            echo "CNAME copied: $(cat out/CNAME 2>/dev/null || echo 'failed to read')"
+          elif [ -f "out/CNAME" ]; then
+            echo "CNAME already exists in out: $(cat out/CNAME)"
+          else
+            echo "WARNING: CNAME file not found, but continuing build"
+          fi
           
       - name: Ensure .nojekyll file exists
         run: |

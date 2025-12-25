@@ -17,9 +17,9 @@ const FallbackBackground = ({ className }) => (
   />
 );
 
-// Dynamically import Spline - ensure it's properly bundled for static export
+// Dynamically import Spline - use Next.js optimized version
 const Spline = dynamic(
-  () => import('@splinetool/react-spline').then((mod) => mod.Spline),
+  () => import('@splinetool/react-spline/next').then((mod) => mod.default || mod),
   {
     ssr: false,
     loading: () => <FallbackBackground className="" />,
