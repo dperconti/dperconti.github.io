@@ -75,12 +75,18 @@ const SplineBackground = ({ scene, className }) => {
           Loading Spline...
         </div>
       )}
-      <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-        <Spline 
-          scene={scene} 
-          className={className}
-        />
-      </div>
+      <Spline 
+        scene={scene} 
+        className={className}
+        style={{ 
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 0
+        }}
+      />
     </>
   );
 };
