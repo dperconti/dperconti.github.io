@@ -9,6 +9,10 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  // Disable automatic static optimization data fetching for static export
+  generateBuildId: async () => {
+    return 'static-build'
+  },
   webpack: (config, { isServer }) => {
     // Ensure Spline runtime is properly bundled
     if (!isServer) {

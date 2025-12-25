@@ -1,5 +1,6 @@
 import config from "@config/config.json";
 import { dateFormat } from "@lib/utils/dateFormat";
+import { slugify } from "@lib/utils/textConverter";
 import Link from "next/link";
 const { blog_folder } = config.settings;
 
@@ -12,7 +13,8 @@ const Post = ({ post, className }) => {
             <li key={index}>
               <Link
                 className="text-primary"
-                href={`/categories/${category.toLowerCase()}`}
+                href={`/categories/${slugify(category)}/`}
+                prefetch={false}
               >
                 {category}
               </Link>
