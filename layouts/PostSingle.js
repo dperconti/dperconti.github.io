@@ -10,19 +10,59 @@ import Base from "./Baseof";
 import Post from "./components/Post";
 const PostSingle = ({ post, mdxContent, slug, posts }) => {
   const { frontmatter, content } = post[0];
-  let { description, title, date, categories } = frontmatter;
-  description = description ? description : content.slice(0, 120);
+  let { description, title, date, categories, image } = frontmatter;
+  description = description ? description : content.slice(0, 160);
   const similarPosts = similerItems(post, posts, slug);
+  const { base_url } = config.site;
+  const postUrl = `${base_url}posts/${slug}/`;
+  const postImage = image || `${base_url}images/default-blog-image.jpg`;
+
+  // Blog post structured data
+  const blogPostStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "image": postImage,
+    "datePublished": date,
+    "dateModified": date,
+    "author": {
+      "@type": "Person",
+      "name": config.metadata.meta_author,
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": config.metadata.meta_author,
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": postUrl,
+    },
+    "articleSection": categories && categories.length > 0 ? categories[0] : "Engineering",
+    "keywords": categories ? categories.join(", ") : "Engineering Leadership, Technical Excellence",
+  };
 
   return (
-    <Base title={title} description={description}>
+    <Base 
+      title={`${title} | Engineering Leadership Blog`}
+      meta_title={title}
+      description={description}
+      image={postImage}
+      canonical={postUrl}
+    >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(blogPostStructuredData),
+        }}
+      />
       <section className="pt-20 pb-6">
         <div className="container">
           <div className="row">
             <div className="mx-auto lg:col-10">
               <Link
                 className="mb-12  inline-flex items-center text-primary hover:underline"
-                href="/"
+                href="/blog"
               >
                 <svg
                   className="mr-2"
@@ -37,7 +77,7 @@ const PostSingle = ({ post, mdxContent, slug, posts }) => {
                     fill="currentcolor"
                   ></path>
                 </svg>
-                Back to Home
+                Back to Blog
               </Link>
               <article>
                 {markdownify(title, "h1", "h2 mt-12")}

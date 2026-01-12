@@ -30,9 +30,6 @@
   &:focus {
     background: rgba(255, 255, 255, 0.15);
     border-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 
-      0 0 0 3px rgba(255, 255, 255, 0.1),
-      0 4px 12px 0 rgba(31, 38, 135, 0.2);
     outline: none;
   }
 }
@@ -87,24 +84,35 @@
   font-weight: 300;
 }
 
-// Light mode styles for social icons
+// Light theme: dark grey social icons
 .light .profile-social-icons {
   a {
-    @apply text-gray-700;
+    @apply text-[#333333];
     
     &:hover {
-      @apply text-gray-900;
+      @apply text-[#000000];
     }
   }
 }
 
-// Dark mode styles for social icons (default)
-.dark .profile-social-icons {
+// Book theme: lighter grey social icons
+.book .profile-social-icons {
   a {
-    @apply text-dark;
+    @apply text-[#555555];
     
     &:hover {
-      @apply text-white;
+      @apply text-[#333333];
+    }
+  }
+}
+
+// Dark theme: light grey social icons
+.dark .profile-social-icons {
+  a {
+    @apply text-[#e5e5e5];
+    
+    &:hover {
+      @apply text-[#ffffff];
     }
   }
 }
@@ -112,7 +120,7 @@
 // content style
 .content {
   @apply prose max-w-none;
-  @apply prose-headings:mt-4 prose-headings:font-normal prose-headings:text-gray-900;
+  @apply prose-headings:mt-4 prose-headings:font-normal;
   @apply prose-h1:mb-4 prose-h1:text-h1-sm md:prose-h1:text-h1;
   @apply prose-h2:mb-4 prose-h2:text-h2-sm md:prose-h2:text-h2;
   @apply prose-h3:mt-4 prose-h3:text-h3-sm md:prose-h3:text-h3;
@@ -120,40 +128,122 @@
   @apply prose-h5:mb-4;
   @apply prose-h6:mb-6;
   @apply prose-hr:border-gray-300;
-  @apply prose-p:text-gray-800;
   @apply prose-img:rounded-lg;
-  @apply prose-blockquote:rounded prose-blockquote:border-gray-400 prose-blockquote:bg-gray-50 prose-blockquote:py-8 prose-blockquote:px-8 prose-blockquote:text-2xl prose-blockquote:not-italic prose-blockquote:leading-9 prose-blockquote:text-gray-900;
-  @apply prose-code:inline-block prose-code:rounded-sm prose-code:px-4 prose-code:pb-4 prose-code:bg-gray-100 prose-code:text-gray-900;
-  @apply prose-strong:text-gray-900;
-  @apply prose-a:text-blue-600 prose-a:underline;
-  @apply prose-li:text-gray-800 prose-li:marker:text-gray-600;
-  @apply prose-table:overflow-hidden prose-table:rounded prose-thead:border-gray-300 prose-thead:bg-gray-100 prose-tr:border-none prose-th:p-3 prose-th:text-base prose-th:text-gray-900 prose-td:p-3 prose-td:text-base prose-td:text-gray-800;
+  @apply prose-blockquote:rounded prose-blockquote:border-gray-400 prose-blockquote:py-8 prose-blockquote:px-8 prose-blockquote:text-2xl prose-blockquote:not-italic prose-blockquote:leading-9;
+  @apply prose-code:inline-block prose-code:rounded-sm prose-code:px-4 prose-code:pb-4;
+  @apply prose-a:underline;
+  @apply prose-table:overflow-hidden prose-table:rounded prose-thead:border-gray-300 prose-tr:border-none prose-th:p-3 prose-th:text-base prose-td:p-3 prose-td:text-base;
+}
+
+// Light theme: white background, dark grey text
+.light .content {
+  // Headings use gradient - don't override with solid color
+  @apply prose-p:text-[#333333];
+  @apply prose-blockquote:bg-[#f0f0f0] prose-blockquote:text-[#333333];
+  @apply prose-code:bg-[#f0f0f0] prose-code:text-[#333333];
+  @apply prose-strong:text-[#333333];
+  @apply prose-a:text-[#2563eb];
+  @apply prose-li:text-[#333333] prose-li:marker:text-[#666666];
+  @apply prose-thead:bg-[#f0f0f0] prose-th:text-[#333333] prose-td:text-[#333333];
+
+  // Ensure headings keep gradient - matches "but hard to scale" style
+  h1, h2, h3, h4, h5, h6 {
+    background: linear-gradient(
+      to right,
+      #7dd3fc 0%,      // light teal (start of "but")
+      #a7c4a0 15%,     // muted greenish-brown (end of "but")
+      #c49a6c 20%,     // orange-brown (start of "hard")
+      #ec4899 40%,     // vibrant pink/magenta (end of "hard")
+      #ec4899 100%     // vibrant pink/magenta (uniform for "to scale")
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+  }
 
   blockquote p {
-    @apply my-0 text-[21px] leading-9 text-gray-900;
+    @apply my-0 text-[21px] leading-9;
+    color: #333333;
   }
 
   tbody {
-    @apply bg-gray-50;
+    background: #f0f0f0;
   }
 }
 
-.light .content {
-  @apply prose-headings:text-gray-900;
-  @apply prose-p:text-gray-700;
-  @apply prose-blockquote:bg-gray-50 prose-blockquote:text-gray-900;
-  @apply prose-code:bg-gray-100 prose-code:text-gray-900;
-  @apply prose-strong:text-gray-900;
-  @apply prose-li:text-gray-700;
-  @apply prose-thead:bg-gray-100 prose-thead:text-gray-900;
-  @apply prose-td:text-gray-700;
+// Book theme: darker grey background, lighter grey text
+.book .content {
+  // Headings use solid color (no gradient) and smaller font sizes
+  @apply prose-p:text-[#555555] prose-p:text-sm md:prose-p:text-base;
+  @apply prose-blockquote:bg-[#b8b8b8] prose-blockquote:text-[#555555];
+  @apply prose-code:bg-[#b8b8b8] prose-code:text-[#555555];
+  @apply prose-strong:text-[#444444];
+  @apply prose-a:text-[#2563eb];
+  @apply prose-li:text-[#555555] prose-li:marker:text-[#777777];
+  @apply prose-thead:bg-[#b8b8b8] prose-th:text-[#555555] prose-td:text-[#555555];
+  // Smaller font sizes for book content
+  @apply prose-h1:text-h2-sm md:prose-h1:text-h2;
+  @apply prose-h2:text-h3-sm md:prose-h2:text-h3;
+  @apply prose-h3:text-h4 md:prose-h3:text-h4;
+  @apply prose-h4:text-h5 md:prose-h4:text-h5;
+  @apply prose-h5:text-h6 md:prose-h5:text-h6;
+  @apply prose-h6:text-base md:prose-h6:text-base;
+
+  // Headings use solid color (no gradient) for book sections
+  // But keep gradient for book title
+  h1:not(.book-title), h2, h3, h4, h5, h6 {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+    color: #444444 !important;
+  }
 
   blockquote p {
-    @apply text-gray-900;
+    @apply my-0 text-[21px] leading-9;
+    color: #555555;
   }
 
   tbody {
-    @apply bg-gray-50;
+    background: #b8b8b8;
+  }
+}
+
+// Dark theme: dark background, light grey text
+.dark .content {
+  // Headings use gradient - don't override with solid color
+  @apply prose-p:text-[#e5e5e5];
+  @apply prose-blockquote:bg-[#2a2a2a] prose-blockquote:text-[#e5e5e5];
+  @apply prose-code:bg-[#2a2a2a] prose-code:text-[#e5e5e5];
+  @apply prose-strong:text-[#e5e5e5];
+  @apply prose-a:text-[#60a5fa];
+  @apply prose-li:text-[#e5e5e5] prose-li:marker:text-[#b0b0b0];
+  @apply prose-thead:bg-[#2a2a2a] prose-th:text-[#e5e5e5] prose-td:text-[#e5e5e5];
+
+  // Ensure headings keep gradient - matches "but hard to scale" style
+  h1, h2, h3, h4, h5, h6 {
+    background: linear-gradient(
+      to right,
+      #7dd3fc 0%,      // light teal (start of "but")
+      #a7c4a0 15%,     // muted greenish-brown (end of "but")
+      #c49a6c 20%,     // orange-brown (start of "hard")
+      #ec4899 40%,     // vibrant pink/magenta (end of "hard")
+      #ec4899 100%     // vibrant pink/magenta (uniform for "to scale")
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+  }
+
+  blockquote p {
+    @apply my-0 text-[21px] leading-9;
+    color: #e5e5e5;
+  }
+
+  tbody {
+    background: #2a2a2a;
   }
 }
 
@@ -161,25 +251,30 @@
 .card {
   @apply rounded-2xl p-6 lg:p-9;
   @apply transition-all duration-300;
-  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.37),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
   
   &:hover {
-    box-shadow: 
-      0 12px 40px 0 rgba(31, 38, 135, 0.5),
-      inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
     transform: translateY(-2px);
   }
 }
 
+// Light theme: white card background
 .light .card {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+// Book theme: darker grey card background
+.book .card {
+  background: rgba(192, 192, 192, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+// Dark theme: dark card background
+.dark .card {
+  background: rgba(42, 42, 42, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 //tab
@@ -252,6 +347,105 @@
 
   &.warning {
     @apply border-[#ff918ccc] bg-[rgba(255,145,140,.15)];
+  }
+}
+
+// footer style
+.footer {
+  @apply mt-auto;
+}
+
+.footer-link {
+  @apply inline-block;
+}
+
+.light .footer {
+  @apply border-gray-200;
+  
+  .footer-link {
+    @apply text-[#555555];
+    
+    &:hover {
+      @apply text-[#333333];
+    }
+  }
+  
+  .footer-copyright {
+    @apply text-[#777777];
+  }
+}
+
+.book .footer {
+  @apply border-gray-400;
+  
+  .footer-link {
+    @apply text-[#666666];
+    
+    &:hover {
+      @apply text-[#444444];
+    }
+  }
+  
+  .footer-copyright {
+    @apply text-[#777777];
+  }
+}
+
+.dark .footer {
+  @apply border-gray-700;
+  
+  .footer-link {
+    @apply text-[#b0b0b0];
+    
+    &:hover {
+      @apply text-[#e5e5e5];
+    }
+  }
+  
+  .footer-copyright {
+    @apply text-[#999999];
+  }
+}
+
+// Book title - larger size for prominence and keep gradient
+.book .book-title {
+  font-size: 2.5rem !important;
+  
+  @media (min-width: 768px) {
+    font-size: 3.5rem !important;
+  }
+  
+  @media (min-width: 1024px) {
+    font-size: 4rem !important;
+  }
+  
+  // Ensure gradient is preserved for book title
+  background: linear-gradient(
+    to right,
+    #7dd3fc 0%,
+    #a7c4a0 15%,
+    #c49a6c 20%,
+    #ec4899 40%,
+    #ec4899 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  background-size: 200% 100% !important;
+}
+
+// Chapter sidebar - match body text color
+aside[aria-label="Table of contents"] {
+  color: inherit;
+  
+  h2, button {
+    color: inherit;
+  }
+  
+  button:hover:not([aria-current="location"]) {
+    color: inherit;
+    opacity: 0.8;
   }
 }
 

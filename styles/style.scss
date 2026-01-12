@@ -20,3 +20,37 @@
 // This ensures these styles are always included in the final CSS bundle
 @import "./glass";
 
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Parallax and animation utilities
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+// Subtle fade-in animation
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}

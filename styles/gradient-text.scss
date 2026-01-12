@@ -1,0 +1,95 @@
+// Gradient text effects that interact with background
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    #fb923c 0%,
+    #ec4899 25%,
+    #a855f7 50%,
+    #6366f1 75%,
+    #0ea5e9 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+// Partial gradient text (like Stable Sea)
+.gradient-text-partial {
+  background: linear-gradient(
+    135deg,
+    #111827 0%,
+    #fb923c 20%,
+    #10b981 40%,
+    #6366f1 60%,
+    #111827 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// Header gradient coloring - matches "but hard to scale" style exactly
+// "but" - light teal on 'b' → muted greenish-brown by 't'
+// "hard" - orange-brown on 'h' → vibrant pink/magenta by 'd'
+// "to scale" - uniform vibrant pink/magenta
+// Using !important to ensure it overrides theme-specific color styles
+h1, h2, h3, h4, h5, h6 {
+  overflow: visible !important;
+  background: linear-gradient(
+    to right,
+    #7dd3fc 0%,      // light teal (start of "but" - 'b')
+    #a7c4a0 15%,     // muted greenish-brown (end of "but" - 't')
+    #c49a6c 20%,     // orange-brown (start of "hard" - 'h')
+    #ec4899 40%,     // vibrant pink/magenta (end of "hard" - 'd')
+    #ec4899 100%     // vibrant pink/magenta (uniform for "to scale")
+  ) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  background-size: 200% 100% !important;
+  // Prevent clipping with gradient text
+  line-height: 1.3 !important;
+  padding-bottom: 0.2em !important;
+  margin-bottom: 0 !important;
+}
+
+// Clean, minimal text styles
+.text-clean {
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+}
+
+.text-clean-bold {
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  padding-bottom: 0.15em;
+}
+
+// Override gradient for book content headings - use solid color
+// But keep gradient for book title
+.book .content h1:not(.book-title),
+.book .content h2,
+.book .content h3,
+.book .content h4,
+.book .content h5,
+.book .content h6 {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  color: #444444 !important;
+}

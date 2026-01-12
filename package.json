@@ -6,14 +6,17 @@
   "license": "UNLICENSED",
   "scripts": {
     "dev": "node lib/jsonGenerator.js && next dev",
-    "build": "node lib/jsonGenerator.js && next build",
+    "build": "node lib/jsonGenerator.js && node lib/sitemapGenerator.js && next build",
     "export": "npm run build",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "generate-sitemap": "node lib/sitemapGenerator.js"
   },
   "dependencies": {
     "@splinetool/react-spline": "^3.1.0",
     "@splinetool/runtime": "^1.12.28",
+    "d3": "^7.8.5",
+    "framer-motion": "^11.0.0",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "marked": "^4.2.4",

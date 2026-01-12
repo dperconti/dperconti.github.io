@@ -52,7 +52,7 @@ const Connection = ({ data }) => {
   const LinkCard = ({ link }) => {
     const content = (
       <div
-        className={`group relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br ${link.color} p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl`}
+        className={`group relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br ${link.color} p-6 transition-all duration-300 hover:scale-[1.02]`}
       >
         <div className="relative z-10">
           <div className="mb-3 flex items-center gap-3">

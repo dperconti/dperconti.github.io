@@ -13,37 +13,302 @@ input#nav-toggle:checked ~ #nav-menu {
 
 // navbar items
 .navbar {
-  @apply relative;
+  @apply relative w-full;
 }
 
-.navbar-brand {
-  @apply text-xl font-semibold text-dark;
-  image {
-    @apply max-h-full max-w-full;
+.header {
+  @apply fixed top-0 left-0 right-0 z-50 w-full;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  transition: all 0.3s ease;
+  position: relative;
+  
+  // Add subtle gradient overlay for depth
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0.3;
+    z-index: -1;
   }
 }
 
+.light .header {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(0, 0, 0, 0.12);
+  
+  &::before {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 100%);
+  }
+}
+
+.book .header {
+  background: rgba(192, 192, 192, 0.7);
+  border-color: rgba(0, 0, 0, 0.18);
+  
+  &::before {
+    background: linear-gradient(180deg, rgba(192, 192, 192, 0.8) 0%, rgba(192, 192, 192, 0.6) 100%);
+  }
+}
+
+.dark .header {
+  background: rgba(26, 26, 26, 0.7);
+  border-color: rgba(255, 255, 255, 0.15);
+  
+  &::before {
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0.8) 0%, rgba(26, 26, 26, 0.6) 100%);
+  }
+}
+
+.navbar-brand {
+  @apply text-lg font-semibold transition-colors;
+  
+  &:hover {
+    @apply opacity-80;
+  }
+}
+
+.light .navbar-brand {
+  @apply text-[#333333];
+}
+
+.book .navbar-brand {
+  @apply text-[#555555];
+}
+
+.dark .navbar-brand {
+  @apply text-[#e5e5e5];
+}
+
+// Mobile menu background - transparent
 .navbar-nav {
-  @apply mt-7 text-center  md:mt-0 md:text-left;
+  @apply flex flex-col gap-1 py-4 md:flex-row md:py-0;
+}
+
+.light .navbar-nav {
+  background: transparent;
+}
+
+.book .navbar-nav {
+  background: transparent;
+}
+
+.dark .navbar-nav {
+  background: transparent;
 }
 
 .nav-item {
-  @apply my-2 md:my-0;
+  @apply relative;
 }
 
 .nav-link {
-  @apply rounded px-3 py-[3px] text-text transition duration-200 ease-in-out hover:bg-white/10;
+  @apply inline-flex items-center px-4 py-2 text-sm font-medium transition-all duration-200;
+  background: transparent !important;
 
   &-active {
-    @apply bg-white/10;
+    @apply font-semibold;
+    background: transparent !important;
   }
 }
 
 .light .nav-link {
-  @apply text-gray-700 hover:bg-gray-100;
+  @apply text-[#333333];
+  background: transparent !important;
+
+  &:hover {
+    @apply text-[#000000];
+    background: transparent !important;
+    opacity: 0.8;
+  }
 
   &-active {
-    @apply bg-gray-100;
+    @apply text-[#000000];
+    background: transparent !important;
+    opacity: 1;
+  }
+}
+
+.book .nav-link {
+  @apply text-[#555555];
+  background: transparent !important;
+
+  &:hover {
+    @apply text-[#333333];
+    background: transparent !important;
+    opacity: 0.8;
+  }
+
+  &-active {
+    @apply text-[#333333];
+    background: transparent !important;
+    opacity: 1;
+  }
+}
+
+.dark .nav-link {
+  @apply text-[#e5e5e5];
+  background: transparent !important;
+
+  &:hover {
+    @apply text-[#ffffff];
+    background: transparent !important;
+    opacity: 0.9;
+  }
+
+  &-active {
+    @apply text-[#ffffff];
+    background: transparent !important;
+    opacity: 1;
+  }
+}
+
+// Dropdown menu styling
+.nav-dropdown-list {
+  z-index: 50;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.light .nav-dropdown-list {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(0, 0, 0, 0.1);
+  
+  .nav-dropdown-link {
+    @apply text-[#333333];
+    background: transparent;
+    
+    &:hover {
+      @apply text-[#000000];
+      opacity: 0.8;
+    }
+  }
+}
+
+.book .nav-dropdown-list {
+  background: rgba(192, 192, 192, 0.85);
+  border-color: rgba(0, 0, 0, 0.15);
+  
+  .nav-dropdown-link {
+    @apply text-[#555555];
+    background: transparent;
+    
+    &:hover {
+      @apply text-[#333333];
+      opacity: 0.8;
+    }
+  }
+}
+
+.dark .nav-dropdown-list {
+  background: rgba(42, 42, 42, 0.85);
+  border-color: rgba(255, 255, 255, 0.1);
+  
+  .nav-dropdown-link {
+    @apply text-[#e5e5e5];
+    background: transparent;
+    
+    &:hover {
+      @apply text-[#ffffff];
+      opacity: 0.9;
+    }
+  }
+}
+
+// Chapter sidebar - glass morphism background matching navbar
+.chapter-sidebar {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  transition: all 0.3s ease;
+  position: relative;
+  
+  // Add subtle gradient overlay for depth
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0.3;
+    z-index: -1;
+  }
+}
+
+.light .chapter-sidebar {
+  background: rgba(255, 255, 255, 0.7);
+  
+  &::before {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 100%);
+  }
+}
+
+.book .chapter-sidebar {
+  background: rgba(192, 192, 192, 0.7);
+  
+  &::before {
+    background: linear-gradient(180deg, rgba(192, 192, 192, 0.8) 0%, rgba(192, 192, 192, 0.6) 100%);
+  }
+}
+
+.dark .chapter-sidebar {
+  background: rgba(26, 26, 26, 0.7);
+  
+  &::before {
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0.8) 0%, rgba(26, 26, 26, 0.6) 100%);
+  }
+}
+
+// Mobile chapter navigation - glass morphism background matching navbar
+.chapter-navigation {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  transition: all 0.3s ease;
+  position: relative;
+  
+  // Add subtle gradient overlay for depth
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0.3;
+    z-index: -1;
+  }
+}
+
+.light .chapter-navigation {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(0, 0, 0, 0.12);
+  
+  &::before {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 100%);
+  }
+}
+
+.book .chapter-navigation {
+  background: rgba(192, 192, 192, 0.7);
+  border-color: rgba(0, 0, 0, 0.18);
+  
+  &::before {
+    background: linear-gradient(180deg, rgba(192, 192, 192, 0.8) 0%, rgba(192, 192, 192, 0.6) 100%);
+  }
+}
+
+.dark .chapter-navigation {
+  background: rgba(26, 26, 26, 0.7);
+  border-color: rgba(255, 255, 255, 0.15);
+  
+  &::before {
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0.8) 0%, rgba(26, 26, 26, 0.6) 100%);
   }
 }
 

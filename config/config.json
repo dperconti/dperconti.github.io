@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Donato Perconti",
+    "title": "Donato Perconti - Head of Engineering | Engineering Leader",
     "base_url": "/",
     "favicon": "/favicon.ico"
   },
@@ -13,8 +13,8 @@
 
   "profile": {
     "name": "Donato Perconti",
-    "designation": "Engineering Executive | Health, Wellness, and Fintech",
-    "bio": "Engineering leader with more than 10 years of experience building and scaling high-performing teams in fintech, health, and wellness. Proven ability to grow organizations, deliver business-aligned products, and create a culture of purpose-driven innovation. Expertise in payments, platform engineering, AI features, and data systems.\n\nI'm also the creator of [With Light](http://withlight.ai/), an app that empowers emotional wellness with DBT & AI. Build resilience, regulate emotions, and find balance with Dialectical Behavior Therapy tools and guided AI coaching."
+    "designation": "Head of Engineering | Scaling Teams & Technical Excellence",
+    "bio": "Engineering Leader specializing in minimalist engineering organization, mentorship, and coaching. Expert in scaling engineering teams for Series A startups, with deep focus on engineering practices and technical excellence. Over 10 years of experience building high-performing teams that deliver business-aligned products through purpose-driven innovation.\n\nI believe in simple, effective engineering organizations that prioritize mentorship, coaching, and sustainable growth. My approach combines technical depth with leadership theory to create environments where engineers thrive and deliver exceptional results."
   },
 
   "params": {
@@ -26,7 +26,7 @@
   "metadata": {
     "meta_author": "Donato Perconti",
     "meta_image": "",
-    "meta_description": "Engineering Executive | Health, Wellness, and Fintech. Engineering leader with more than 10 years of experience building and scaling high-performing teams."
+    "meta_description": "Head of Engineering for Series A Startups | Engineering Leader specializing in scaling engineering teams, technical excellence, minimalist engineering organization, mentorship, and coaching. Expert in building high-performing teams."
   }
 }
 

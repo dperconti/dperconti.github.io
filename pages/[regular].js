@@ -1,5 +1,6 @@
 import NotFound from "@layouts/404";
 import Base from "@layouts/Baseof";
+import Chapter from "@layouts/Chapter";
 import Connection from "@layouts/Connection";
 import Contact from "@layouts/Contact";
 import DateRequest from "@layouts/DateRequest";
@@ -29,6 +30,8 @@ const RegularPages = ({ data }) => {
         <DateRequest data={data} />
       ) : layout === "connection" ? (
         <Connection data={data} />
+      ) : layout === "chapter" ? (
+        <Chapter data={data} />
       ) : (
         <Default data={data} />
       )}

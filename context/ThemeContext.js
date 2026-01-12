@@ -2,28 +2,37 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const ThemeContext = createContext();
 
+const themes = ["light", "book", "dark"];
+
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
 
   useEffect(() => {
     // Check localStorage for saved theme preference
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
+    if (savedTheme && themes.includes(savedTheme)) {
       setTheme(savedTheme);
-      document.documentElement.classList.toggle("light", savedTheme === "light");
-      document.documentElement.classList.toggle("dark", savedTheme === "dark");
+      applyTheme(savedTheme);
     } else {
-      // Default to dark theme
-      document.documentElement.classList.add("dark");
+      // Default to light theme
+      applyTheme("light");
     }
   }, []);
 
+  const applyTheme = (themeName) => {
+    // Remove all theme classes
+    document.documentElement.classList.remove("light", "book", "dark");
+    // Add the current theme class
+    document.documentElement.classList.add(themeName);
+  };
+
   const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
+    const currentIndex = themes.indexOf(theme);
+    const nextIndex = (currentIndex + 1) % themes.length;
+    const newTheme = themes[nextIndex];
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
-    document.documentElement.classList.toggle("light", newTheme === "light");
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
+    applyTheme(newTheme);
   };
 
   return (

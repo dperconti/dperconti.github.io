@@ -55,6 +55,20 @@ module.exports = {
         primary: theme.colors.default.theme_color.primary,
         body: theme.colors.default.theme_color.body,
         border: theme.colors.default.theme_color.border,
+        accent: {
+          red: {
+            500: theme.colors.default.accent?.red?.[500] || "#ef4444",
+            600: theme.colors.default.accent?.red?.[600] || "#dc2626",
+            light: theme.colors.default.accent?.red?.light || "rgba(239, 68, 68, 0.1)",
+            border: theme.colors.default.accent?.red?.border || "rgba(239, 68, 68, 0.3)",
+          },
+          green: {
+            500: theme.colors.default.accent?.green?.[500] || "#10b981",
+            600: theme.colors.default.accent?.green?.[600] || "#059669",
+            light: theme.colors.default.accent?.green?.light || "rgba(16, 185, 129, 0.1)",
+            border: theme.colors.default.accent?.green?.border || "rgba(16, 185, 129, 0.3)",
+          },
+        },
       },
       fontSize: {
         base: font_base + "px",

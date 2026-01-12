@@ -5,7 +5,7 @@ import Header from "@partials/Header";
 import { TaxonomySlugProvider } from "context/state";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import SplineBackground from "@components/SplineBackground";
+// Backgrounds removed for clean minimal design
 
 const Base = ({
   title,
@@ -18,11 +18,60 @@ const Base = ({
 }) => {
   const { meta_image, meta_author, meta_description } = config.metadata;
   const { base_url } = config.site;
+  const { name, designation, bio } = config.profile;
   const router = useRouter();
+
+  // Structured Data (JSON-LD) for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": name,
+    "jobTitle": "Head of Engineering",
+    "description": meta_description,
+    "url": base_url,
+    "sameAs": [
+      // Add social media URLs from social.json if available
+    ],
+    "knowsAbout": [
+      "Engineering Leadership",
+      "Scaling Engineering Teams",
+      "Technical Excellence",
+      "Engineering Practices",
+      "Mentorship",
+      "Coaching",
+      "Minimalist Engineering Organization",
+      "Series A Startups",
+      "Team Building",
+      "Technical Strategy"
+    ],
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Head of Engineering",
+      "occupationLocation": {
+        "@type": "Place",
+        "name": "United States"
+      },
+      "skills": [
+        "Engineering Leadership",
+        "Team Scaling",
+        "Technical Excellence",
+        "Mentorship",
+        "Coaching",
+        "Engineering Practices"
+      ]
+    }
+  };
 
   return (
     <>
       <Head>
+        {/* Structured Data (JSON-LD) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
         {/* title */}
         <title>
           {plainify(
@@ -92,20 +141,9 @@ const Base = ({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <div className="relative w-full min-h-screen">
-        {/* Spline background */}
-        <SplineBackground
-          scene="https://prod.spline.design/fgVOuowZrNyl-NCs/scene.splinecode"
-          className="pointer-events-none fixed inset-0 z-0 h-full w-full"
-        />
-
-        {/* Frosted glass overlay - changes based on theme */}
-        <div
-          className="fixed inset-0 z-[1] pointer-events-none frosted-overlay"
-        />
-
+      <div className="relative w-full min-h-screen bg-transparent">
         {/* Content */}
-        <div className="relative z-10 flex flex-col min-h-screen">
+        <div className="relative flex flex-col min-h-screen bg-transparent">
           <TaxonomySlugProvider>
             <Header />
           </TaxonomySlugProvider>
