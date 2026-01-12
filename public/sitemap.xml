@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <!-- Homepage -->
   <url>
     <loc>https://dperconti.github.io/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -17,7 +12,7 @@
   <!-- Blog -->
   <url>
     <loc>https://dperconti.github.io/blog/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -25,12 +20,1497 @@
   <!-- Contact -->
   <url>
     <loc>https://dperconti.github.io/contact/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
-  <!-- Note: Blog posts and categories should be dynamically generated -->
-  <!-- This sitemap should be regenerated during build time to include all posts -->
+  <!-- Blog Post: Building 1099 interest payout systems -->
+  <url>
+    <loc>https://dperconti.github.io/posts/1099-interest-payout-systems-2023-01/</loc>
+    <lastmod>2023-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: How an active lifestyle improves engineering productivity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/active-lifestyle-productivity-2023-02/</loc>
+    <lastmod>2023-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Active recovery for developers -->
+  <url>
+    <loc>https://dperconti.github.io/posts/active-recovery-for-developers---2023-07/</loc>
+    <lastmod>2023-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Active recovery for developers -->
+  <url>
+    <loc>https://dperconti.github.io/posts/active-recovery-for-developers---2023-10/</loc>
+    <lastmod>2023-01-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Active recovery for developers -->
+  <url>
+    <loc>https://dperconti.github.io/posts/active-recovery-for-developers---2024-01/</loc>
+    <lastmod>2023-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Active recovery for developers -->
+  <url>
+    <loc>https://dperconti.github.io/posts/active-recovery-for-developers---2024-04/</loc>
+    <lastmod>2023-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Active recovery for developers -->
+  <url>
+    <loc>https://dperconti.github.io/posts/active-recovery-for-developers---2024-07/</loc>
+    <lastmod>2023-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Active recovery for developers -->
+  <url>
+    <loc>https://dperconti.github.io/posts/active-recovery-for-developers---2024-10/</loc>
+    <lastmod>2023-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Active recovery for developers -->
+  <url>
+    <loc>https://dperconti.github.io/posts/active-recovery-for-developers---2025-01/</loc>
+    <lastmod>2023-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Active recovery for developers -->
+  <url>
+    <loc>https://dperconti.github.io/posts/active-recovery-for-developers---2025-04/</loc>
+    <lastmod>2023-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Active recovery for developers -->
+  <url>
+    <loc>https://dperconti.github.io/posts/active-recovery-for-developers---2025-07/</loc>
+    <lastmod>2023-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Active recovery for developers -->
+  <url>
+    <loc>https://dperconti.github.io/posts/active-recovery-for-developers---2025-10/</loc>
+    <lastmod>2023-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: AI-powered auto-categorization in accounting software -->
+  <url>
+    <loc>https://dperconti.github.io/posts/ai-autocategorization-accounting-2023-03/</loc>
+    <lastmod>2023-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Automated reconciliation with partner banks -->
+  <url>
+    <loc>https://dperconti.github.io/posts/automated-reconciliation-partner-banks-2023-01/</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building payment pipelines with Python -->
+  <url>
+    <loc>https://dperconti.github.io/posts/building-payment-pipelines-python-2023-01/</loc>
+    <lastmod>2023-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building real-time FX trading systems -->
+  <url>
+    <loc>https://dperconti.github.io/posts/building-realtime-fx-trading-2023-05/</loc>
+    <lastmod>2023-04-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building secure payment APIs -->
+  <url>
+    <loc>https://dperconti.github.io/posts/building-secure-payment-apis---2023-07/</loc>
+    <lastmod>2023-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building secure payment APIs -->
+  <url>
+    <loc>https://dperconti.github.io/posts/building-secure-payment-apis---2023-10/</loc>
+    <lastmod>2023-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building secure payment APIs -->
+  <url>
+    <loc>https://dperconti.github.io/posts/building-secure-payment-apis---2024-01/</loc>
+    <lastmod>2023-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building secure payment APIs -->
+  <url>
+    <loc>https://dperconti.github.io/posts/building-secure-payment-apis---2024-04/</loc>
+    <lastmod>2023-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building secure payment APIs -->
+  <url>
+    <loc>https://dperconti.github.io/posts/building-secure-payment-apis---2024-07/</loc>
+    <lastmod>2023-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building secure payment APIs -->
+  <url>
+    <loc>https://dperconti.github.io/posts/building-secure-payment-apis---2024-10/</loc>
+    <lastmod>2023-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building secure payment APIs -->
+  <url>
+    <loc>https://dperconti.github.io/posts/building-secure-payment-apis---2025-01/</loc>
+    <lastmod>2023-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building secure payment APIs -->
+  <url>
+    <loc>https://dperconti.github.io/posts/building-secure-payment-apis---2025-04/</loc>
+    <lastmod>2023-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building secure payment APIs -->
+  <url>
+    <loc>https://dperconti.github.io/posts/building-secure-payment-apis---2025-07/</loc>
+    <lastmod>2023-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building secure payment APIs -->
+  <url>
+    <loc>https://dperconti.github.io/posts/building-secure-payment-apis---2025-10/</loc>
+    <lastmod>2023-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Preventing burnout in engineering teams -->
+  <url>
+    <loc>https://dperconti.github.io/posts/burnout-prevention-engineering-2023-04/</loc>
+    <lastmod>2023-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building Buy Online, Pick-Up In Store at lululemon -->
+  <url>
+    <loc>https://dperconti.github.io/posts/buy-online-pickup-store-lululemon-2023-04/</loc>
+    <lastmod>2023-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: CI/CD with Cloud Build and GitHub Actions -->
+  <url>
+    <loc>https://dperconti.github.io/posts/cloud-build-cicd-pipeline-2024-01/</loc>
+    <lastmod>2023-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building customer identity and access management at Cloudentity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/customer-identity-access-management-cloudentity-2023-05/</loc>
+    <lastmod>2023-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Cycling and coding productivity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/cycling-coding-productivity-2023-05/</loc>
+    <lastmod>2023-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Scaling payments globally with decoupled checkout -->
+  <url>
+    <loc>https://dperconti.github.io/posts/decoupled-checkout-architecture-2023-03/</loc>
+    <lastmod>2023-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Establishing engineering KPIs tied to company OKRs -->
+  <url>
+    <loc>https://dperconti.github.io/posts/engineering-kpis-okrs-heard-2023-05/</loc>
+    <lastmod>2023-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Event-driven data ingestion at Pangea -->
+  <url>
+    <loc>https://dperconti.github.io/posts/event-driven-ingestion-pangea-2024-01/</loc>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: FX market data pipelines -->
+  <url>
+    <loc>https://dperconti.github.io/posts/fx-market-data-pipelines---2023-08/</loc>
+    <lastmod>2023-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: FX market data pipelines -->
+  <url>
+    <loc>https://dperconti.github.io/posts/fx-market-data-pipelines---2023-11/</loc>
+    <lastmod>2023-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: FX market data pipelines -->
+  <url>
+    <loc>https://dperconti.github.io/posts/fx-market-data-pipelines---2024-02/</loc>
+    <lastmod>2023-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: FX market data pipelines -->
+  <url>
+    <loc>https://dperconti.github.io/posts/fx-market-data-pipelines---2024-05/</loc>
+    <lastmod>2023-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: FX market data pipelines -->
+  <url>
+    <loc>https://dperconti.github.io/posts/fx-market-data-pipelines---2024-08/</loc>
+    <lastmod>2023-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: FX market data pipelines -->
+  <url>
+    <loc>https://dperconti.github.io/posts/fx-market-data-pipelines---2024-11/</loc>
+    <lastmod>2023-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: FX market data pipelines -->
+  <url>
+    <loc>https://dperconti.github.io/posts/fx-market-data-pipelines---2025-02/</loc>
+    <lastmod>2023-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: FX market data pipelines -->
+  <url>
+    <loc>https://dperconti.github.io/posts/fx-market-data-pipelines---2025-05/</loc>
+    <lastmod>2023-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: FX market data pipelines -->
+  <url>
+    <loc>https://dperconti.github.io/posts/fx-market-data-pipelines---2025-08/</loc>
+    <lastmod>2023-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: FX market data pipelines -->
+  <url>
+    <loc>https://dperconti.github.io/posts/fx-market-data-pipelines---2025-11/</loc>
+    <lastmod>2023-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: What hiking taught me about problem-solving -->
+  <url>
+    <loc>https://dperconti.github.io/posts/hiking-problem-solving-2023-04/</loc>
+    <lastmod>2023-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Integrating Jiko, Plaid, Clerk, and Xata at Pangea -->
+  <url>
+    <loc>https://dperconti.github.io/posts/jiko-plaid-clerk-integrations-2024-01/</loc>
+    <lastmod>2023-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Managing engineering stress -->
+  <url>
+    <loc>https://dperconti.github.io/posts/managing-engineering-stress---2023-07/</loc>
+    <lastmod>2023-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Managing engineering stress -->
+  <url>
+    <loc>https://dperconti.github.io/posts/managing-engineering-stress---2023-10/</loc>
+    <lastmod>2023-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Managing engineering stress -->
+  <url>
+    <loc>https://dperconti.github.io/posts/managing-engineering-stress---2024-01/</loc>
+    <lastmod>2023-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Managing engineering stress -->
+  <url>
+    <loc>https://dperconti.github.io/posts/managing-engineering-stress---2024-04/</loc>
+    <lastmod>2023-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Managing engineering stress -->
+  <url>
+    <loc>https://dperconti.github.io/posts/managing-engineering-stress---2024-07/</loc>
+    <lastmod>2023-12-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Managing engineering stress -->
+  <url>
+    <loc>https://dperconti.github.io/posts/managing-engineering-stress---2024-10/</loc>
+    <lastmod>2023-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Managing engineering stress -->
+  <url>
+    <loc>https://dperconti.github.io/posts/managing-engineering-stress---2025-01/</loc>
+    <lastmod>2023-12-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Managing engineering stress -->
+  <url>
+    <loc>https://dperconti.github.io/posts/managing-engineering-stress---2025-04/</loc>
+    <lastmod>2023-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Managing engineering stress -->
+  <url>
+    <loc>https://dperconti.github.io/posts/managing-engineering-stress---2025-07/</loc>
+    <lastmod>2023-12-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Managing engineering stress -->
+  <url>
+    <loc>https://dperconti.github.io/posts/managing-engineering-stress---2025-10/</loc>
+    <lastmod>2024-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Managing an overseas engineering team -->
+  <url>
+    <loc>https://dperconti.github.io/posts/managing-overseas-team-2023-05/</loc>
+    <lastmod>2024-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Meditation for engineers -->
+  <url>
+    <loc>https://dperconti.github.io/posts/meditation-engineers-2023-06/</loc>
+    <lastmod>2024-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mental health in fintech -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mental-health-in-fintech---2023-08/</loc>
+    <lastmod>2024-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mental health in fintech -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mental-health-in-fintech---2023-11/</loc>
+    <lastmod>2024-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mental health in fintech -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mental-health-in-fintech---2024-02/</loc>
+    <lastmod>2024-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mental health in fintech -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mental-health-in-fintech---2024-05/</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mental health in fintech -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mental-health-in-fintech---2024-08/</loc>
+    <lastmod>2024-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mental health in fintech -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mental-health-in-fintech---2024-11/</loc>
+    <lastmod>2024-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mental health in fintech -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mental-health-in-fintech---2025-02/</loc>
+    <lastmod>2024-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mental health in fintech -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mental-health-in-fintech---2025-05/</loc>
+    <lastmod>2024-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mental health in fintech -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mental-health-in-fintech---2025-08/</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mental health in fintech -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mental-health-in-fintech---2025-11/</loc>
+    <lastmod>2024-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mental health resources for engineers -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mental-health-resources-engineers-2023-05/</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mental health in tech leadership -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mental-health-tech-leadership-2023-01/</loc>
+    <lastmod>2024-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Migrating from Heroku to AWS: lessons learned -->
+  <url>
+    <loc>https://dperconti.github.io/posts/migrating-heroku-aws-2023-03/</loc>
+    <lastmod>2024-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Migrating to Nest.js and React -->
+  <url>
+    <loc>https://dperconti.github.io/posts/migrating-nestjs-react-2023-03/</loc>
+    <lastmod>2024-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Next.js for financial dashboards -->
+  <url>
+    <loc>https://dperconti.github.io/posts/nextjs-financial-dashboards-2023-06/</loc>
+    <lastmod>2024-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building a no-code workflow builder with React -->
+  <url>
+    <loc>https://dperconti.github.io/posts/no-code-workflow-builder-react-2023-02/</loc>
+    <lastmod>2024-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Outdoor activities and creativity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/outdoor-activities-and-creativity---2023-08/</loc>
+    <lastmod>2024-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Outdoor activities and creativity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/outdoor-activities-and-creativity---2023-11/</loc>
+    <lastmod>2024-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Outdoor activities and creativity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/outdoor-activities-and-creativity---2024-02/</loc>
+    <lastmod>2024-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Outdoor activities and creativity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/outdoor-activities-and-creativity---2024-05/</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Outdoor activities and creativity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/outdoor-activities-and-creativity---2024-08/</loc>
+    <lastmod>2024-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Outdoor activities and creativity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/outdoor-activities-and-creativity---2024-11/</loc>
+    <lastmod>2024-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Outdoor activities and creativity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/outdoor-activities-and-creativity---2025-02/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Outdoor activities and creativity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/outdoor-activities-and-creativity---2025-05/</loc>
+    <lastmod>2024-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Outdoor activities and creativity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/outdoor-activities-and-creativity---2025-08/</loc>
+    <lastmod>2024-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Outdoor activities and creativity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/outdoor-activities-and-creativity---2025-11/</loc>
+    <lastmod>2024-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Payment reconciliation automation -->
+  <url>
+    <loc>https://dperconti.github.io/posts/payment-reconciliation-automation---2023-09/</loc>
+    <lastmod>2024-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Payment reconciliation automation -->
+  <url>
+    <loc>https://dperconti.github.io/posts/payment-reconciliation-automation---2023-12/</loc>
+    <lastmod>2024-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Payment reconciliation automation -->
+  <url>
+    <loc>https://dperconti.github.io/posts/payment-reconciliation-automation---2024-03/</loc>
+    <lastmod>2024-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Payment reconciliation automation -->
+  <url>
+    <loc>https://dperconti.github.io/posts/payment-reconciliation-automation---2024-06/</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Payment reconciliation automation -->
+  <url>
+    <loc>https://dperconti.github.io/posts/payment-reconciliation-automation---2024-09/</loc>
+    <lastmod>2024-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Payment reconciliation automation -->
+  <url>
+    <loc>https://dperconti.github.io/posts/payment-reconciliation-automation---2024-12/</loc>
+    <lastmod>2024-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Payment reconciliation automation -->
+  <url>
+    <loc>https://dperconti.github.io/posts/payment-reconciliation-automation---2025-03/</loc>
+    <lastmod>2024-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Payment reconciliation automation -->
+  <url>
+    <loc>https://dperconti.github.io/posts/payment-reconciliation-automation---2025-06/</loc>
+    <lastmod>2024-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Payment reconciliation automation -->
+  <url>
+    <loc>https://dperconti.github.io/posts/payment-reconciliation-automation---2025-09/</loc>
+    <lastmod>2024-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Payment reconciliation automation -->
+  <url>
+    <loc>https://dperconti.github.io/posts/payment-reconciliation-automation---2025-12/</loc>
+    <lastmod>2024-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Integrating Plaid with TypeScript -->
+  <url>
+    <loc>https://dperconti.github.io/posts/plaid-integration-typescript-2023-03/</loc>
+    <lastmod>2024-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: How to make toys from old Olarpaper -->
+  <url>
+    <loc>https://dperconti.github.io/posts/post-1/</loc>
+    <lastmod>2022-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: How to make toys from old Olarpaper -->
+  <url>
+    <loc>https://dperconti.github.io/posts/post-2/</loc>
+    <lastmod>2022-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: What you need to know about Photography -->
+  <url>
+    <loc>https://dperconti.github.io/posts/post-3/</loc>
+    <lastmod>2022-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Python async best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/python-async-best-practices---2023-07/</loc>
+    <lastmod>2024-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Python async best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/python-async-best-practices---2023-10/</loc>
+    <lastmod>2024-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Python async best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/python-async-best-practices---2024-01/</loc>
+    <lastmod>2024-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Python async best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/python-async-best-practices---2024-04/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Python async best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/python-async-best-practices---2024-07/</loc>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Python async best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/python-async-best-practices---2024-10/</loc>
+    <lastmod>2024-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Python async best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/python-async-best-practices---2025-01/</loc>
+    <lastmod>2024-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Python async best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/python-async-best-practices---2025-04/</loc>
+    <lastmod>2024-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Python async best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/python-async-best-practices---2025-07/</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Python async best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/python-async-best-practices---2025-10/</loc>
+    <lastmod>2024-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Python async patterns for payment processing -->
+  <url>
+    <loc>https://dperconti.github.io/posts/python-async-payments-2023-02/</loc>
+    <lastmod>2024-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building data pipelines for fintech with Python -->
+  <url>
+    <loc>https://dperconti.github.io/posts/python-data-pipelines-fintech-2023-04/</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Python testing strategies for fintech -->
+  <url>
+    <loc>https://dperconti.github.io/posts/python-testing-strategies-fintech-2023-06/</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building real-time analytics with RDRs -->
+  <url>
+    <loc>https://dperconti.github.io/posts/real-time-analytics-rdrs-2023-02/</loc>
+    <lastmod>2024-12-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Recruiting and scaling engineering teams -->
+  <url>
+    <loc>https://dperconti.github.io/posts/recruiting-scaling-team-heard-2023-05/</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Remote team communication -->
+  <url>
+    <loc>https://dperconti.github.io/posts/remote-team-communication---2023-09/</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Remote team communication -->
+  <url>
+    <loc>https://dperconti.github.io/posts/remote-team-communication---2023-12/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Remote team communication -->
+  <url>
+    <loc>https://dperconti.github.io/posts/remote-team-communication---2024-03/</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Remote team communication -->
+  <url>
+    <loc>https://dperconti.github.io/posts/remote-team-communication---2024-06/</loc>
+    <lastmod>2025-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Remote team communication -->
+  <url>
+    <loc>https://dperconti.github.io/posts/remote-team-communication---2024-09/</loc>
+    <lastmod>2025-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Remote team communication -->
+  <url>
+    <loc>https://dperconti.github.io/posts/remote-team-communication---2024-12/</loc>
+    <lastmod>2025-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Remote team communication -->
+  <url>
+    <loc>https://dperconti.github.io/posts/remote-team-communication---2025-03/</loc>
+    <lastmod>2025-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Remote team communication -->
+  <url>
+    <loc>https://dperconti.github.io/posts/remote-team-communication---2025-06/</loc>
+    <lastmod>2025-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Remote team communication -->
+  <url>
+    <loc>https://dperconti.github.io/posts/remote-team-communication---2025-09/</loc>
+    <lastmod>2025-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Remote team communication -->
+  <url>
+    <loc>https://dperconti.github.io/posts/remote-team-communication---2025-12/</loc>
+    <lastmod>2025-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building a revenue recognition pipeline in Python -->
+  <url>
+    <loc>https://dperconti.github.io/posts/revenue-recognition-pipeline-python-2023-03/</loc>
+    <lastmod>2025-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Running an engineering organization -->
+  <url>
+    <loc>https://dperconti.github.io/posts/running-engineering-organization-2023-01/</loc>
+    <lastmod>2025-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: How running improves mental clarity for coding -->
+  <url>
+    <loc>https://dperconti.github.io/posts/running-mental-clarity-2023-03/</loc>
+    <lastmod>2025-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building a serverless prototype for Seawheeze community app -->
+  <url>
+    <loc>https://dperconti.github.io/posts/serverless-seawheeze-prototype-2023-04/</loc>
+    <lastmod>2025-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Stress management for engineers -->
+  <url>
+    <loc>https://dperconti.github.io/posts/stress-management-engineers-2023-03/</loc>
+    <lastmod>2025-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Managing GCP infrastructure with Terraform at Pangea -->
+  <url>
+    <loc>https://dperconti.github.io/posts/terraform-gcp-infrastructure-pangea-2024-01/</loc>
+    <lastmod>2025-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Trail running and problem-solving -->
+  <url>
+    <loc>https://dperconti.github.io/posts/trail-running-and-problem-solving---2023-09/</loc>
+    <lastmod>2025-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Trail running and problem-solving -->
+  <url>
+    <loc>https://dperconti.github.io/posts/trail-running-and-problem-solving---2023-12/</loc>
+    <lastmod>2025-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Trail running and problem-solving -->
+  <url>
+    <loc>https://dperconti.github.io/posts/trail-running-and-problem-solving---2024-03/</loc>
+    <lastmod>2025-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Trail running and problem-solving -->
+  <url>
+    <loc>https://dperconti.github.io/posts/trail-running-and-problem-solving---2024-06/</loc>
+    <lastmod>2025-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Trail running and problem-solving -->
+  <url>
+    <loc>https://dperconti.github.io/posts/trail-running-and-problem-solving---2024-09/</loc>
+    <lastmod>2025-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Trail running and problem-solving -->
+  <url>
+    <loc>https://dperconti.github.io/posts/trail-running-and-problem-solving---2024-12/</loc>
+    <lastmod>2025-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Trail running and problem-solving -->
+  <url>
+    <loc>https://dperconti.github.io/posts/trail-running-and-problem-solving---2025-03/</loc>
+    <lastmod>2025-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Trail running and problem-solving -->
+  <url>
+    <loc>https://dperconti.github.io/posts/trail-running-and-problem-solving---2025-06/</loc>
+    <lastmod>2025-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Trail running and problem-solving -->
+  <url>
+    <loc>https://dperconti.github.io/posts/trail-running-and-problem-solving---2025-09/</loc>
+    <lastmod>2025-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Trail running and problem-solving -->
+  <url>
+    <loc>https://dperconti.github.io/posts/trail-running-and-problem-solving---2025-12/</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript error handling patterns -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-error-handling-patterns-2023-05/</loc>
+    <lastmod>2025-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Event-driven architecture with TypeScript -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-event-driven-architecture-2023-04/</loc>
+    <lastmod>2025-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript for financial calculations -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-financial-calculations-2023-01/</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript monorepo best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-monorepo-best-practices---2023-09/</loc>
+    <lastmod>2025-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript monorepo best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-monorepo-best-practices---2023-12/</loc>
+    <lastmod>2025-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript monorepo best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-monorepo-best-practices---2024-03/</loc>
+    <lastmod>2025-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript monorepo best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-monorepo-best-practices---2024-06/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript monorepo best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-monorepo-best-practices---2024-09/</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript monorepo best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-monorepo-best-practices---2024-12/</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript monorepo best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-monorepo-best-practices---2025-03/</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript monorepo best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-monorepo-best-practices---2025-06/</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript monorepo best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-monorepo-best-practices---2025-09/</loc>
+    <lastmod>2025-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript monorepo best practices -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-monorepo-best-practices---2025-12/</loc>
+    <lastmod>2025-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript monorepos in fintech -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-monorepo-fintech-2023-02/</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript type patterns -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-type-patterns---2023-08/</loc>
+    <lastmod>2025-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript type patterns -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-type-patterns---2023-11/</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: TypeScript type patterns -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-type-patterns---2024-02/</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Type-safe form validation with TypeScript and Zod -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-type-patterns---2024-05/</loc>
+    <lastmod>2025-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Type-safe dependency injection with TypeScript -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-type-patterns---2024-08/</loc>
+    <lastmod>2025-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Advanced TypeScript utility types for financial data -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-type-patterns---2024-11/</loc>
+    <lastmod>2025-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Type-safe database queries with TypeScript -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-type-patterns---2025-02/</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Building type-safe APIs with TypeScript -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-type-patterns---2025-05/</loc>
+    <lastmod>2025-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Type-safe event handling with TypeScript -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-type-patterns---2025-08/</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Advanced TypeScript type patterns for financial systems -->
+  <url>
+    <loc>https://dperconti.github.io/posts/typescript-type-patterns---2025-11/</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Wellbeing in remote engineering teams -->
+  <url>
+    <loc>https://dperconti.github.io/posts/wellbeing-remote-teams-2023-02/</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Integrating Wise for international transfers -->
+  <url>
+    <loc>https://dperconti.github.io/posts/wise-integration-international-transfers-2023-01/</loc>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Work-life balance in startups -->
+  <url>
+    <loc>https://dperconti.github.io/posts/work-life-balance-startups-2023-06/</loc>
+    <lastmod>2025-12-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Category: Python -->
+  <url>
+    <loc>https://dperconti.github.io/categories/python/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Fintech -->
+  <url>
+    <loc>https://dperconti.github.io/categories/fintech/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Wellbeing -->
+  <url>
+    <loc>https://dperconti.github.io/categories/wellbeing/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Productivity -->
+  <url>
+    <loc>https://dperconti.github.io/categories/productivity/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Active Lifestyle -->
+  <url>
+    <loc>https://dperconti.github.io/categories/active-lifestyle/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: AI -->
+  <url>
+    <loc>https://dperconti.github.io/categories/ai/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Leadership -->
+  <url>
+    <loc>https://dperconti.github.io/categories/leadership/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Mental Health -->
+  <url>
+    <loc>https://dperconti.github.io/categories/mental-health/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Architecture -->
+  <url>
+    <loc>https://dperconti.github.io/categories/architecture/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Engineering -->
+  <url>
+    <loc>https://dperconti.github.io/categories/engineering/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: DevOps -->
+  <url>
+    <loc>https://dperconti.github.io/categories/devops/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Security -->
+  <url>
+    <loc>https://dperconti.github.io/categories/security/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: TypeScript -->
+  <url>
+    <loc>https://dperconti.github.io/categories/typescript/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Infrastructure -->
+  <url>
+    <loc>https://dperconti.github.io/categories/infrastructure/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: React -->
+  <url>
+    <loc>https://dperconti.github.io/categories/react/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Programming -->
+  <url>
+    <loc>https://dperconti.github.io/categories/programming/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Assistant -->
+  <url>
+    <loc>https://dperconti.github.io/categories/assistant/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Hiring -->
+  <url>
+    <loc>https://dperconti.github.io/categories/hiring/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: AWS -->
+  <url>
+    <loc>https://dperconti.github.io/categories/aws/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Best Practices -->
+  <url>
+    <loc>https://dperconti.github.io/categories/best-practices/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
   
 </urlset>

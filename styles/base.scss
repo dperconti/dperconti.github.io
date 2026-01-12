@@ -98,3 +98,16 @@ h6,
   @apply text-h6;
 }
 
+// Override gradient for book content headings - use solid color and smaller sizes
+.book .content h1,
+.book .content h2,
+.book .content h3,
+.book .content h4,
+.book .content h5,
+.book .content h6 {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  color: #444444 !important;
+}
