@@ -17,22 +17,23 @@ const Base = ({
   children,
 }) => {
   const { meta_image, meta_author, meta_description } = config.metadata;
-  const { base_url } = config.site;
+  const { base_url, site_url } = config.site;
+  const fullBaseUrl = site_url || (typeof window !== "undefined" ? window.location.origin : "https://dperconti.github.io");
   const { name, designation, bio } = config.profile;
   const router = useRouter();
+  const canonicalUrl = canonical || `${fullBaseUrl}${router.asPath === "/" ? "" : router.asPath}`;
 
-  // Structured Data (JSON-LD) for SEO
-  const structuredData = {
+  // Person structured data (JSON-LD) for Head of Engineering SEO
+  const personStructuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": name,
     "jobTitle": "Head of Engineering",
     "description": meta_description,
-    "url": base_url,
-    "sameAs": [
-      // Add social media URLs from social.json if available
-    ],
+    "url": fullBaseUrl,
+    "sameAs": [],
     "knowsAbout": [
+      "Head of Engineering",
       "Engineering Leadership",
       "Scaling Engineering Teams",
       "Technical Excellence",
@@ -47,12 +48,10 @@ const Base = ({
     "hasOccupation": {
       "@type": "Occupation",
       "name": "Head of Engineering",
-      "occupationLocation": {
-        "@type": "Place",
-        "name": "United States"
-      },
+      "occupationLocation": { "@type": "Place", "name": "United States" },
       "skills": [
         "Engineering Leadership",
+        "Head of Engineering",
         "Team Scaling",
         "Technical Excellence",
         "Mentorship",
@@ -62,14 +61,30 @@ const Base = ({
     }
   };
 
+  // WebSite structured data for sitelinks search
+  const websiteStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": config.site.title,
+    "url": fullBaseUrl,
+    "description": meta_description,
+    "publisher": { "@type": "Person", "name": name, "jobTitle": "Head of Engineering" }
+  };
+
   return (
     <>
       <Head>
-        {/* Structured Data (JSON-LD) */}
+        {/* Structured Data (JSON-LD) for Head of Engineering SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
+            __html: JSON.stringify(personStructuredData),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteStructuredData),
           }}
         />
         {/* title */}
@@ -80,10 +95,14 @@ const Base = ({
         </title>
 
         {/* canonical url */}
-        {canonical && <link rel="canonical" href={canonical} itemProp="url" />}
+        <link rel="canonical" href={canonicalUrl} />
 
         {/* noindex robots */}
-        {noindex && <meta name="robots" content="noindex,nofollow" />}
+        {noindex ? (
+          <meta name="robots" content="noindex,nofollow" />
+        ) : (
+          <meta name="robots" content="index, follow" />
+        )}
 
         {/* meta-description */}
         <meta
@@ -93,6 +112,12 @@ const Base = ({
 
         {/* author from config.json */}
         <meta name="author" content={meta_author} />
+
+        {/* keywords for Head of Engineering */}
+        <meta
+          name="keywords"
+          content="head of engineering, HoE, engineering leadership, scaling engineering teams, technical excellence, Donato Perconti, engineering leader, VP engineering, director of engineering"
+        />
 
         {/* og-title */}
         <meta
@@ -108,10 +133,8 @@ const Base = ({
           content={plainify(description ? description : meta_description)}
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content={`${base_url}/${router.asPath.replace("/", "")}`}
-        />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:locale" content="en_US" />
 
         {/* twitter-title */}
         <meta
@@ -130,13 +153,13 @@ const Base = ({
         {/* og-image */}
         <meta
           property="og:image"
-          content={`${base_url}${image ? image : meta_image}`}
+          content={`${fullBaseUrl}${image ? image : meta_image || ""}`}
         />
 
         {/* twitter-image */}
         <meta
           name="twitter:image"
-          content={`${base_url}${image ? image : meta_image}`}
+          content={`${fullBaseUrl}${image ? image : meta_image || ""}`}
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
