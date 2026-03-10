@@ -77,6 +77,12 @@ npm run export
 
 ## Adding New Posts
 
+**Target: 2–3 posts per week.** To generate placeholder posts at that cadence (does not overwrite existing):
+
+```bash
+node scripts/generate-blogs.js
+```
+
 1. Create a new Markdown file in `content/posts/`
 2. Add frontmatter:
 

@@ -13,6 +13,10 @@
       "url": "/books"
     },
     {
+      "name": "Consulting",
+      "url": "https://pnw.technology"
+    },
+    {
       "name": "Contact",
       "url": "/contact"
     }

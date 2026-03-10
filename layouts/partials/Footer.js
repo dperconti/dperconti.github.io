@@ -5,6 +5,8 @@ import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
 import Social from "@layouts/components/Social";
 
+const CONSULTING_URL = "https://pnw.technology";
+
 const Footer = () => {
   const { copyright } = config.params;
   return (
@@ -18,6 +20,10 @@ const Footer = () => {
                 <li key={`footer-nav-${i}`}>
                   <Link
                     href={item.url}
+                    {...(item.url.startsWith("http") && {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    })}
                     className="footer-link text-sm font-medium transition-colors duration-200"
                   >
                     {item.name}
@@ -26,12 +32,24 @@ const Footer = () => {
               ))}
             </ul>
           </nav>
-          
+
+          {/* Cross-site: Consulting */}
+          <div className="mb-8 flex justify-center">
+            <Link
+              href={CONSULTING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-foreground"
+            >
+              Engineering leadership consulting · pnw.technology
+            </Link>
+          </div>
+
           {/* Social Links */}
           <div className="mb-8 flex justify-center">
             <Social source={social} className="profile-social-icons" />
           </div>
-          
+
           {/* Copyright */}
           {copyright && (
             <div className="text-center">
