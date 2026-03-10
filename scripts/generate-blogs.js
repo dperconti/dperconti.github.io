@@ -84,9 +84,13 @@ function main() {
     fs.mkdirSync(baseDir, { recursive: true })
   }
 
-  const startDate = new Date('2024-01-01')
-  const endDate = new Date('2025-12-31')
+  // One year of 2-3 posts per week: from (today - 365 days) through today
+  const endDate = new Date()
+  const startDate = new Date()
+  startDate.setDate(startDate.getDate() - 365)
+
   const currentDate = new Date(startDate)
+  currentDate.setDate(currentDate.getDate() - currentDate.getDay()) // start on week boundary
   let totalPosts = 0
 
   while (currentDate <= endDate) {
@@ -120,6 +124,7 @@ function main() {
   console.log(`\n✅ dperconti.github.io: generated ${totalPosts} blog posts`)
   console.log(`📁 Posts are in: ${baseDir}`)
   console.log(`📅 Target: ${POSTS_PER_WEEK_MIN}-${POSTS_PER_WEEK_MAX} posts per week`)
+  console.log(`📆 Range: ${startDate.toISOString().split('T')[0]} through ${endDate.toISOString().split('T')[0]}`)
 }
 
 main()
