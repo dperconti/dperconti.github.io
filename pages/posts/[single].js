@@ -22,12 +22,15 @@ export const getStaticPaths = () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 };
 
 // get post single content
 export const getStaticProps = async ({ params }) => {
+  if (!params?.single) {
+    return { notFound: true };
+  }
   const { single } = params;
   const posts = getSinglePage(`content/${blog_folder}`);
   const post = posts?.filter((p) => p.slug == single);
