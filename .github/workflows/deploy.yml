@@ -1,5 +1,7 @@
 name: Deploy to GitHub Pages
 
+# Runs on push to main, master, or gh-pages. With default branch main, ensure
+# repo Settings → Pages → Build and deployment → Source is set to "GitHub Actions".
 on:
   push:
     branches:

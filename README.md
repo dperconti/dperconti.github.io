@@ -123,6 +123,14 @@ Edit `config/social.json` to update social media links and contact information.
 
 This site is configured for GitHub Pages deployment using GitHub Actions.
 
+### GitHub Pages source (required after switching default branch to main)
+
+1. In the repo go to **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not "Deploy from a branch").
+3. Pushes to `main` will trigger the workflow and deploy the site.
+
+If the source was "Deploy from a branch" with `master`, switching the default branch to `main` breaks the deploy until you change the source to **GitHub Actions**.
+
 ### Automatic Deployment
 
 1. Push to the `main` branch
