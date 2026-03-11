@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const { topicTitles } = require('./topic-titles')
 
 // Target: 2-3 blog posts per week for dperconti.github.io
 const POSTS_PER_WEEK_MIN = 2
@@ -17,23 +18,11 @@ const categories = [
   'Architecture',
 ]
 
-const topicTitles = [
-  'Engineering Leadership in Remote Teams',
-  'TypeScript Patterns for Financial Systems',
-  'Building Sustainable Engineering Cultures',
-  'Payment System Design Principles',
-  'Mentoring Junior Engineers',
-  'Technical Debt and When to Pay It Down',
-  'Scaling Teams Without Losing Quality',
-  'Work-Life Balance in Startups',
-  'API Design for Fintech',
-  'Running Effective Code Reviews',
-  'Incident Response Best Practices',
-  'Career Development for Engineers',
-  'Python in Production at Scale',
-  'Stakeholder Communication',
-  'System Design for Payments',
-]
+function getExistingPostCount(baseDir) {
+  if (!fs.existsSync(baseDir)) return 0
+  const files = fs.readdirSync(baseDir).filter((f) => f.endsWith('.md'))
+  return files.filter((f) => f.match(/---\d{4}-\d{2}-\d{2}\.md$/)).length
+}
 
 function generateSlug(title) {
   return title
@@ -55,8 +44,8 @@ function formatDateISO(date) {
   return `${y}-${m}-${d}T05:00:00Z`
 }
 
-function generatePost(date, index) {
-  const title = topicTitles[(date.getTime() + index) % topicTitles.length]
+function generatePost(date, titleIndex) {
+  const title = topicTitles[titleIndex % topicTitles.length]
   const y = date.getFullYear()
   const m = String(date.getMonth() + 1).padStart(2, '0')
   const d = String(date.getDate()).padStart(2, '0')
@@ -92,6 +81,7 @@ function main() {
   const currentDate = new Date(startDate)
   currentDate.setDate(currentDate.getDate() - currentDate.getDay()) // start on week boundary
   let totalPosts = 0
+  let nextTitleIndex = getExistingPostCount(baseDir)
 
   while (currentDate <= endDate) {
     const postsThisWeek =
@@ -109,10 +99,11 @@ function main() {
       postDate.setDate(postDate.getDate() + dayOffsets[i])
       if (postDate > endDate) continue
 
-      const { slug, content } = generatePost(postDate, i)
+      const { slug, content } = generatePost(postDate, nextTitleIndex)
       const filePath = path.join(baseDir, slug)
       if (!fs.existsSync(filePath)) {
         fs.writeFileSync(filePath, content, 'utf8')
+        nextTitleIndex++
         totalPosts++
         if (totalPosts % 50 === 0) console.log(`Generated ${totalPosts} posts...`)
       }

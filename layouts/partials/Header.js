@@ -100,15 +100,26 @@ const Header = () => {
                         </li>
                       ) : (
                         <li className="nav-item">
-                          <Link
-                            onClick={() => setOpenMenu(false)}
-                            href={menu.url}
-                            className={`nav-link ${
-                              router.asPath === menu.url && "nav-link-active"
-                            }`}
-                          >
-                            {menu.name}
-                          </Link>
+                          {menu.url.startsWith("http") ? (
+                            <a
+                              href={menu.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="nav-link"
+                            >
+                              {menu.name}
+                            </a>
+                          ) : (
+                            <Link
+                              onClick={() => setOpenMenu(false)}
+                              href={menu.url}
+                              className={`nav-link ${
+                                router.asPath === menu.url && "nav-link-active"
+                              }`}
+                            >
+                              {menu.name}
+                            </Link>
+                          )}
                         </li>
                       )}
                     </React.Fragment>
@@ -156,15 +167,27 @@ const Header = () => {
                     </li>
                   ) : (
                     <li className="nav-item">
-                      <Link
-                        onClick={() => setOpenMenu(false)}
-                        href={menu.url}
-                        className={`nav-link ${
-                          router.asPath === menu.url && "nav-link-active"
-                        }`}
-                      >
-                        {menu.name}
-                      </Link>
+                      {menu.url.startsWith("http") ? (
+                        <a
+                          href={menu.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="nav-link"
+                          onClick={() => setOpenMenu(false)}
+                        >
+                          {menu.name}
+                        </a>
+                      ) : (
+                        <Link
+                          onClick={() => setOpenMenu(false)}
+                          href={menu.url}
+                          className={`nav-link ${
+                            router.asPath === menu.url && "nav-link-active"
+                          }`}
+                        >
+                          {menu.name}
+                        </Link>
+                      )}
                     </li>
                   )}
                 </React.Fragment>
