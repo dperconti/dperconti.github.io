@@ -2,20 +2,20 @@ import config from "@config/config.json";
 import social from "@config/social.json";
 import Base from "@layouts/Baseof";
 import Social from "@layouts/components/Social";
-import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
 import AnimatedSection from "@components/AnimatedSection";
-import ParallaxSection from "@components/ParallaxSection";
 import BackgroundBlobs from "@layouts/components/BackgroundBlobs";
+import ProjectCard from "@layouts/components/ProjectCard";
+import { getSinglePage } from "@lib/contentParser";
 
-const Home = () => {
+const Home = ({ featuredProjects = [] }) => {
   const { name, designation, bio } = config.profile;
 
   return (
     <Base
-      title={`${name} - Head of Engineering | Engineering Leader`}
-      meta_title={`${name} - Head of Engineering for Series A Startups | Engineering Leadership`}
-      description="Head of Engineering specializing in scaling engineering teams, technical excellence, and minimalist engineering organization. Expert in mentorship, coaching, and engineering practices for Series A startups."
+      title={`${name} - Engineering Manager | Product & Platform`}
+      meta_title={`${name} - Engineering Manager | Portfolio`}
+      description="Engineering Manager focused on shipping product, building reliable systems, and leading teams through clear execution and strong technical foundations."
     >
       {/* Ultra-subtle background blobs */}
       <BackgroundBlobs />
@@ -27,29 +27,29 @@ const Home = () => {
             <div className="mx-auto lg:col-10 xl:col-9 text-center">
               <AnimatedSection direction="up" delay={0.1}>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-secondary font-semibold mb-6 text-clean-bold overflow-visible">
-                  Head of Engineering
+                  {name}
                 </h1>
               </AnimatedSection>
 
               <AnimatedSection direction="up" delay={0.2}>
                 <p className="text-lg md:text-xl lg:text-2xl font-secondary font-normal mb-8 max-w-3xl mx-auto text-clean leading-relaxed">
-                  Scaling engineering teams and technical excellence through minimalist organization, mentorship, and thoughtful leadership.
+                  I build and lead teams that ship high-quality product with strong architecture, reliability, and fast iteration.
                 </p>
               </AnimatedSection>
 
               <AnimatedSection direction="up" delay={0.3}>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Link 
-                    href="/contact" 
+                    href="/work" 
                     className="px-6 py-3 text-base font-secondary font-medium hover:opacity-80 transition-opacity"
                   >
-                    Get In Touch
+                    View Work
                   </Link>
                   <Link 
-                    href="/blog" 
+                    href="/contact" 
                     className="px-6 py-3 text-base font-secondary font-medium opacity-80 hover:opacity-100 transition-opacity"
                   >
-                    Read My Blog
+                    Get In Touch
                   </Link>
                 </div>
               </AnimatedSection>
@@ -78,6 +78,107 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Featured Projects */}
+      <section className="relative z-10 py-16 md:py-24">
+        <div className="container">
+          <div className="row">
+            <div className="mx-auto lg:col-10">
+              <AnimatedSection direction="up" delay={0.1}>
+                <div className="text-center mb-12">
+                  <h2 className="text-2xl md:text-3xl font-secondary font-semibold mb-4 text-[#5D4037] text-clean-bold">
+                    Featured projects
+                  </h2>
+                  <p className="text-base md:text-lg font-secondary font-normal text-[#8D6E63] max-w-2xl mx-auto text-clean">
+                    A few case studies showing how I think, what I shipped, and how I build systems that scale.
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <div className="row">
+                {featuredProjects.map((project, i) => (
+                  <ProjectCard
+                    className="col-12 mb-6 md:col-4"
+                    key={`featured-${i}`}
+                    project={project}
+                  />
+                ))}
+              </div>
+
+              <div className="text-center mt-10">
+                <Link
+                  href="/work"
+                  className="px-6 py-3 text-base font-secondary font-medium opacity-80 hover:opacity-100 transition-opacity"
+                >
+                  See all work
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Credibility */}
+      <section className="relative z-10 py-16 md:py-24">
+        <div className="container">
+          <div className="row">
+            <div className="mx-auto lg:col-10">
+              <AnimatedSection direction="up" delay={0.1}>
+                <div className="text-center mb-8">
+                  <h2 className="text-2xl md:text-3xl font-secondary font-semibold mb-4 text-[#5D4037] text-clean-bold">
+                    Products and teams
+                  </h2>
+                  <p className="text-base md:text-lg font-secondary font-normal text-[#8D6E63] max-w-2xl mx-auto text-clean">
+                    A selection of products I’ve built and companies I’ve worked with.
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <div className="flex flex-wrap justify-center gap-3">
+                <a className="btn" href="https://withlight.ai/" target="_blank" rel="noreferrer">
+                  With Light
+                </a>
+                <a className="btn" href="https://www.trunkmatch.com/" target="_blank" rel="noreferrer">
+                  TrunkMatch
+                </a>
+                <a className="btn" href="https://withaevum.com/" target="_blank" rel="noreferrer">
+                  Aevum
+                </a>
+                <a className="btn" href="https://www.meetdeb.com/" target="_blank" rel="noreferrer">
+                  Deb
+                </a>
+                <a className="btn" href="https://www.mendbloom.com/" target="_blank" rel="noreferrer">
+                  Mendbloom
+                </a>
+                <a className="btn" href="https://www.altum.education/" target="_blank" rel="noreferrer">
+                  Altum
+                </a>
+              </div>
+
+              <div className="mt-6 flex flex-wrap justify-center gap-3 opacity-90">
+                <a className="btn" href="https://www.pangea.io/" target="_blank" rel="noreferrer">
+                  Pangea
+                </a>
+                <a className="btn" href="https://www.stablesea.com/" target="_blank" rel="noreferrer">
+                  Stable Sea
+                </a>
+                <a className="btn" href="https://spoonly.care/" target="_blank" rel="noreferrer">
+                  Spoonly
+                </a>
+              </div>
+
+              <div className="text-center mt-10">
+                <Link
+                  href="/work#companies"
+                  className="px-6 py-3 text-base font-secondary font-medium opacity-80 hover:opacity-100 transition-opacity"
+                >
+                  See companies
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Expertise Section */}
       <section className="relative z-10 py-16 md:py-24">
         <div className="container">
@@ -87,10 +188,10 @@ const Home = () => {
                 <AnimatedSection direction="up" delay={0.1}>
                   <div className="text-center">
                     <h3 className="text-xl font-secondary font-semibold mb-3 text-[#5D4037] text-clean-bold">
-                      Minimalist Engineering
+                      Execution & Delivery
                     </h3>
                     <p className="text-sm md:text-base font-secondary font-normal text-[#8D6E63] text-clean leading-relaxed">
-                      Simple, effective organization that eliminates complexity.
+                      Roadmaps that move, releases that land, and clarity that keeps teams aligned.
                     </p>
                   </div>
                 </AnimatedSection>
@@ -98,10 +199,10 @@ const Home = () => {
                 <AnimatedSection direction="up" delay={0.2}>
                   <div className="text-center">
                     <h3 className="text-xl font-secondary font-semibold mb-3 text-[#5D4037] text-clean-bold">
-                      Mentorship & Coaching
+                      Team Leadership
                     </h3>
                     <p className="text-sm md:text-base font-secondary font-normal text-[#8D6E63] text-clean leading-relaxed">
-                      Building high-performing teams through thoughtful leadership.
+                      Hiring, coaching, and creating an environment where engineers do their best work.
                     </p>
                   </div>
                 </AnimatedSection>
@@ -109,10 +210,10 @@ const Home = () => {
                 <AnimatedSection direction="up" delay={0.3}>
                   <div className="text-center">
                     <h3 className="text-xl font-secondary font-semibold mb-3 text-[#5D4037] text-clean-bold">
-                      Scaling & Excellence
+                      Architecture & Reliability
                     </h3>
                     <p className="text-sm md:text-base font-secondary font-normal text-[#8D6E63] text-clean leading-relaxed">
-                      Technical practices that enable sustainable growth.
+                      Systems designed for maintainability, observability, and dependable performance.
                     </p>
                   </div>
                 </AnimatedSection>
@@ -152,10 +253,10 @@ const Home = () => {
             <div className="mx-auto lg:col-8 text-center">
               <AnimatedSection direction="up" delay={0.1}>
                 <h2 className="text-2xl md:text-3xl font-secondary font-semibold mb-4 text-[#5D4037] text-clean-bold">
-                  Ready to scale your engineering team?
+                  Want to chat?
                 </h2>
                 <p className="text-base md:text-lg font-secondary font-normal text-[#8D6E63] mb-8 max-w-2xl mx-auto text-clean">
-                  Let's discuss how minimalist engineering organization and thoughtful leadership can transform your team.
+                  I’m actively interviewing. If you’re hiring an Engineering Manager, I’d love to connect.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
@@ -165,10 +266,10 @@ const Home = () => {
                     Get In Touch
                   </Link>
                   <Link 
-                    href="/blog" 
+                    href="/work" 
                     className="px-6 py-3 text-base font-secondary font-medium text-[#8D6E63] hover:text-[#5D4037] transition-colors"
                   >
-                    Read My Blog
+                    View Work
                   </Link>
                 </div>
               </AnimatedSection>
@@ -182,10 +283,13 @@ const Home = () => {
 
 export default Home;
 
-// Simplified - no longer fetching posts for homepage
 export const getStaticProps = async () => {
+  const projects = getSinglePage("content/projects");
+  const featuredProjects = projects.filter((p) => p.frontmatter?.featured);
   return {
-    props: {},
+    props: {
+      featuredProjects: featuredProjects.slice(0, 6),
+    },
   };
 };
 

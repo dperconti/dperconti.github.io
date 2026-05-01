@@ -5,12 +5,12 @@
       "url": "/"
     },
     {
-      "name": "Blog",
-      "url": "https://pnw.technology/blog"
+      "name": "Work",
+      "url": "/work"
     },
     {
-      "name": "Books",
-      "url": "/books"
+      "name": "Writing",
+      "url": "/blog"
     },
     {
       "name": "Consulting",
