@@ -23,40 +23,39 @@ const Base = ({
   const router = useRouter();
   const canonicalUrl = canonical || `${fullBaseUrl}${router.asPath === "/" ? "" : router.asPath}`;
 
-  // Person structured data (JSON-LD) for Head of Engineering SEO
+  const jobTitle = designation || "Engineering Manager";
+
+  // Person structured data (JSON-LD)
   const personStructuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": name,
-    "jobTitle": "Head of Engineering",
-    "description": meta_description,
+    "jobTitle": jobTitle,
+    "description": meta_description || bio,
     "url": fullBaseUrl,
     "sameAs": [],
     "knowsAbout": [
-      "Head of Engineering",
-      "Engineering Leadership",
-      "Scaling Engineering Teams",
-      "Technical Excellence",
-      "Engineering Practices",
-      "Mentorship",
-      "Coaching",
-      "Minimalist Engineering Organization",
-      "Series A Startups",
+      "Engineering Management",
+      "Platform Engineering",
+      "Payments Systems",
+      "AI Systems",
+      "RAG Pipelines",
+      "Backend Platforms",
+      "Cloud Infrastructure",
       "Team Building",
-      "Technical Strategy"
+      "Engineering Leadership"
     ],
     "hasOccupation": {
       "@type": "Occupation",
-      "name": "Head of Engineering",
+      "name": jobTitle,
       "occupationLocation": { "@type": "Place", "name": "United States" },
       "skills": [
         "Engineering Leadership",
-        "Head of Engineering",
+        "Platform Engineering",
+        "Payments Systems",
+        "AI Systems",
         "Team Scaling",
-        "Technical Excellence",
-        "Mentorship",
-        "Coaching",
-        "Engineering Practices"
+        "Cloud Infrastructure"
       ]
     }
   };
@@ -68,13 +67,13 @@ const Base = ({
     "name": config.site.title,
     "url": fullBaseUrl,
     "description": meta_description,
-    "publisher": { "@type": "Person", "name": name, "jobTitle": "Head of Engineering" }
+    "publisher": { "@type": "Person", "name": name, "jobTitle": jobTitle }
   };
 
   return (
     <>
       <Head>
-        {/* Structured Data (JSON-LD) for Head of Engineering SEO */}
+        {/* Structured Data (JSON-LD) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -113,10 +112,9 @@ const Base = ({
         {/* author from config.json */}
         <meta name="author" content={meta_author} />
 
-        {/* keywords for Head of Engineering */}
         <meta
           name="keywords"
-          content="head of engineering, HoE, engineering leadership, scaling engineering teams, technical excellence, Donato Perconti, engineering leader, VP engineering, director of engineering"
+          content="engineering manager, engineering leadership, platform engineering, payments systems, AI systems, Donato Perconti"
         />
 
         {/* og-title */}
