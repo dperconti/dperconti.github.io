@@ -8,15 +8,15 @@ const Contact = ({ data }) => {
   const { title } = frontmatter;
   const { contact_form_action } = config.params;
   return (
-    <section className="section pt-[72px]">
+    <section className="section py-16 md:py-24">
       <div className="container">
         <div className="row">
-          <div className="mx-auto lg:col-8">
+          <div className="mx-auto max-w-xl lg:col-8">
             <div className="content">
               {<MDXRemote {...mdxContent} components={shortcodes} />}
             </div>
-            <div className="mt-12 pt-12">
-              {markdownify(title, "h3", "h5 font-normal text-3xl")}
+            <div className="mt-10">
+              {markdownify(title, "h1", "text-3xl md:text-4xl font-secondary font-semibold text-[#5D4037]")}
               <form className="contact-form mt-6" action={contact_form_action} method="POST">
                 <div className="row mb-6">
                   <div className="md:col-6">

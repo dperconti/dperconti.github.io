@@ -3,11 +3,6 @@ title: "Contact"
 layout: "contact"
 draft: false
 
-
 ---
 
-## Contact
-
-Email: [donato.perconti@gmail.com](mailto:donato.perconti@gmail.com)
-
-LinkedIn: [linkedin.com/in/dperconti](https://www.linkedin.com/in/dperconti/)
+Reach out via the form below, or find me on [LinkedIn](https://www.linkedin.com/in/dperconti/).

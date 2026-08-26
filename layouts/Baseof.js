@@ -1,8 +1,6 @@
 import config from "@config/config.json";
 import { plainify } from "@lib/utils/textConverter";
 import Footer from "@partials/Footer";
-import Header from "@partials/Header";
-import { TaxonomySlugProvider } from "context/state";
 import Head from "next/head";
 import { useRouter } from "next/router";
 // Backgrounds removed for clean minimal design
@@ -163,14 +161,8 @@ const Base = ({
       </Head>
 
       <div className="relative w-full min-h-screen bg-transparent">
-        {/* Content */}
         <div className="relative flex flex-col min-h-screen bg-transparent">
-          <TaxonomySlugProvider>
-            <Header />
-          </TaxonomySlugProvider>
-
-          {/* main site */}
-          <main>{children}</main>
+          <main className="flex flex-1 flex-col">{children}</main>
           <Footer />
         </div>
       </div>
