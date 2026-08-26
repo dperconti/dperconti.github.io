@@ -1,12 +1,7 @@
 {
   "main": [
-    {
-      "name": "Home",
-      "url": "/"
-    },
-    {
-      "name": "Contact",
-      "url": "/contact"
-    }
+    { "name": "thesis", "url": "/thesis" },
+    { "name": "writing", "url": "/writing" },
+    { "name": "about", "url": "/about" }
   ]
 }

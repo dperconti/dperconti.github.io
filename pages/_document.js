@@ -31,7 +31,8 @@ const Document = () => {
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                const theme = localStorage.getItem('theme') || 'dark';
+                const saved = localStorage.getItem('theme');
+                const theme = (saved === 'dark' || saved === 'light') ? saved : 'light';
                 document.documentElement.classList.add(theme);
               })();
             `,

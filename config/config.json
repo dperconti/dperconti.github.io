@@ -1,8 +1,8 @@
 {
   "site": {
-    "title": "Donato Perconti — Engineering Manager",
+    "title": "Donato Perconti",
     "base_url": "/",
-    "site_url": "https://dperconti.github.io",
+    "site_url": "https://www.dperconti.com",
     "favicon": "/favicon.ico"
   },
 
@@ -14,7 +14,7 @@
 
   "profile": {
     "name": "Donato Perconti",
-    "designation": "Engineering Manager",
+    "designation": "Engineering Leadership",
     "bio": "Building payments systems, platforms, and engineering teams across fintech and health tech."
   },
 
@@ -27,7 +27,6 @@
   "metadata": {
     "meta_author": "Donato Perconti",
     "meta_image": "",
-    "meta_description": "Donato Perconti — Engineering Manager. Payments, platforms, and AI systems leadership."
+    "meta_description": "Donato Perconti — Engineering Leadership. Hands-on work across payments, platforms, and AI systems."
   }
 }
-

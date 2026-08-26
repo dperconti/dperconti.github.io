@@ -2,37 +2,36 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const ThemeContext = createContext();
 
-const themes = ["light", "book", "dark"];
+const themes = ["light", "dark"];
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    // Check localStorage for saved theme preference
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme && themes.includes(savedTheme)) {
+    if (savedTheme === "book") {
+      // Migrate legacy book theme
+      setTheme("light");
+      applyTheme("light");
+      localStorage.setItem("theme", "light");
+    } else if (savedTheme && themes.includes(savedTheme)) {
       setTheme(savedTheme);
       applyTheme(savedTheme);
     } else {
-      // Default to light theme
       applyTheme("light");
     }
   }, []);
 
   const applyTheme = (themeName) => {
-    // Remove all theme classes
     document.documentElement.classList.remove("light", "book", "dark");
-    // Add the current theme class
     document.documentElement.classList.add(themeName);
   };
 
   const toggleTheme = () => {
-    const currentIndex = themes.indexOf(theme);
-    const nextIndex = (currentIndex + 1) % themes.length;
-    const newTheme = themes[nextIndex];
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    applyTheme(newTheme);
+    const next = theme === "light" ? "dark" : "light";
+    setTheme(next);
+    localStorage.setItem("theme", next);
+    applyTheme(next);
   };
 
   return (
@@ -49,4 +48,3 @@ export const useTheme = () => {
   }
   return context;
 };
-

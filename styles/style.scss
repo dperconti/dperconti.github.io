@@ -20,6 +20,9 @@
 // This ensures these styles are always included in the final CSS bundle
 @import "./glass";
 
+// Editorial / asim-inspired site shell
+@import "./site";
+
 // Smooth scrolling
 html {
   scroll-behavior: smooth;

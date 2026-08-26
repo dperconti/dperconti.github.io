@@ -3,37 +3,22 @@ import writing from "@config/writing.json";
 import Base from "@layouts/Baseof";
 import Link from "next/link";
 
-const Home = () => {
-  const { name, designation } = config.profile;
-  const role = designation || "Engineering Leadership";
-
+const Writing = () => {
   return (
     <Base
-      title={`${name} — ${role}`}
-      meta_title={`${name} — ${role}`}
-      description={config.profile.bio}
+      title={`Writing — ${config.profile.name}`}
+      meta_title={`Writing — ${config.profile.name}`}
+      description="Notes and writing from Donato Perconti."
     >
       <div className="site-frame">
-        <p className="site-prompt">
-          $ {name} · {role.toLowerCase()}
-        </p>
-
-        <h1 className="site-hook">
-          Reliable systems and capable teams are the same problem. Scale one
-          without the other and you get theater.
-        </h1>
-
+        <p className="site-page-sub">writing</p>
+        <h1 className="site-page-title">Writing</h1>
         <p className="site-lede">
-          I lead engineering close to the work — payments, platforms, and AI
-          systems — so delivery stays honest and ownership stays real.
+          Short pieces here; longer threads live elsewhere.
         </p>
-
-        <Link href="/thesis/" className="site-cta">
-          read the thesis →
-        </Link>
 
         <div className="site-section-head">
-          <span>$ ls writing</span>
+          <span>$ ls</span>
           <span>{writing.length} items</span>
         </div>
 
@@ -68,4 +53,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Writing;
