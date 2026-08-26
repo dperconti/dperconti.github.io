@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Donato Perconti - Head of Engineering | Engineering Leader",
+    "title": "Donato Perconti — Engineering Manager",
     "base_url": "/",
     "site_url": "https://dperconti.github.io",
     "favicon": "/favicon.ico"
@@ -14,8 +14,8 @@
 
   "profile": {
     "name": "Donato Perconti",
-    "designation": "Head of Engineering | Scaling Teams & Technical Excellence",
-    "bio": "Head of Engineering and engineering leader specializing in minimalist engineering organization, mentorship, and coaching. Expert in scaling engineering teams for Series A startups, with deep focus on engineering practices and technical excellence. Over 10 years of experience building high-performing teams that deliver business-aligned products through purpose-driven innovation.\n\nI believe in simple, effective engineering organizations that prioritize mentorship, coaching, and sustainable growth. My approach combines technical depth with leadership theory to create environments where engineers thrive and deliver exceptional results."
+    "designation": "Engineering Manager",
+    "bio": "Engineering Manager focused on shipping product, building reliable systems, and leading teams through clear execution."
   },
 
   "params": {
@@ -27,7 +27,7 @@
   "metadata": {
     "meta_author": "Donato Perconti",
     "meta_image": "",
-    "meta_description": "Donato Perconti — Head of Engineering. Engineering leader and blog at pnw.technology. Scaling engineering teams, technical excellence, mentorship, and engineering practices for Series A startups."
+    "meta_description": "Donato Perconti — Engineering Manager. Product and platform engineering leadership."
   }
 }
 

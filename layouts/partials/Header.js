@@ -1,43 +1,15 @@
 import menu from "@config/menu.json";
-import { useHeaderContext } from "context/state";
 import ThemeSwitcher from "@layouts/components/ThemeSwitcher";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 const Header = () => {
   // router
   const router = useRouter();
 
-  //context
-  const { categories } = useHeaderContext();
-
   //local state
   const [openMenu, setOpenMenu] = useState(false);
-  const [navMenu, setNavMenu] = useState(
-    menu.main.map((item) => ({ ...item, type: "main" }))
-  );
-
-  useEffect(() => {
-    const matchRoute = menu.main.find((item) => item.url === router.asPath);
-    const navList = [...menu.main];
-    
-    // Filter to show only specific categories: Fintech, Python, TypeScript
-    const allowedCategories = ['Fintech', 'Python', 'TypeScript'];
-    const filteredCategories = categories.filter(cat => 
-      allowedCategories.includes(cat.name)
-    );
-    
-    // Insert filtered categories after "Blog" if it exists, otherwise after first item
-    const blogIndex = navList.findIndex(item => item.name === "Blog" || item.url === "/blog");
-    if (blogIndex !== -1 && filteredCategories.length > 0) {
-      navList.splice(blogIndex + 1, 0, ...filteredCategories);
-    } else if (filteredCategories.length > 0) {
-      navList.splice(1, 0, ...filteredCategories);
-    }
-    setNavMenu(navList);
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [router.asPath, menu.main, categories]);
+  const navMenu = menu.main.map((item) => ({ ...item, type: "main" }));
 
   return (
     <>

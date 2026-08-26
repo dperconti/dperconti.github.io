@@ -1,26 +1,13 @@
 ---
-title: "Contact Me"
+title: "Contact"
 layout: "contact"
 draft: false
 
 
 ---
 
-## Get in touch
+## Contact
 
-Engineering leader with more than 10 years of experience building and scaling high-performing teams in fintech, health, and wellness. Let's connect about engineering leadership, product development, or collaboration opportunities.
+Email: [donato.perconti@gmail.com](mailto:donato.perconti@gmail.com)
 
-## Personal Projects
-
-### With Light
-
-I'm the creator of [With Light](http://withlight.ai/), an app that empowers emotional wellness with DBT & AI. Build resilience, regulate emotions, and find balance with Dialectical Behavior Therapy tools and guided AI coaching.
-
-### Email
-
-donato.perconti@gmail.com
-
-### Phone
-
-208.790.1990
-
+LinkedIn: [linkedin.com/in/dperconti](https://www.linkedin.com/in/dperconti/)

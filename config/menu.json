@@ -5,21 +5,8 @@
       "url": "/"
     },
     {
-      "name": "Work",
-      "url": "/work"
-    },
-    {
-      "name": "Writing",
-      "url": "/blog"
-    },
-    {
-      "name": "Consulting",
-      "url": "https://pnw.technology"
-    },
-    {
       "name": "Contact",
       "url": "/contact"
     }
   ]
 }
-
