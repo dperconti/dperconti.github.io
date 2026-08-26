@@ -25,4 +25,2140 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Blog Post: Agent harnesses: logs, budgets, and kill switches -->
+  <url>
+    <loc>https://dperconti.github.io/posts/agent-harnesses-logs-budgets-and-kill-switches---2025-08-06/</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Agent harnesses: logs, budgets, and kill switches under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/agent-harnesses-logs-budgets-and-kill-switches-under-real-load---2025-11-30/</loc>
+    <lastmod>2025-11-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: AI changes tempo; leadership still owns outcomes -->
+  <url>
+    <loc>https://dperconti.github.io/posts/ai-changes-tempo-leadership-still-owns-outcomes---2025-10-05/</loc>
+    <lastmod>2025-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: AI in the workflow, not on the slide deck -->
+  <url>
+    <loc>https://dperconti.github.io/posts/ai-in-the-workflow-not-on-the-slide-deck---2025-11-25/</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: AI literacy as a coaching problem -->
+  <url>
+    <loc>https://dperconti.github.io/posts/ai-literacy-as-a-coaching-problem---2026-02-09/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: AI literacy as a coaching problem: what I watch for -->
+  <url>
+    <loc>https://dperconti.github.io/posts/ai-literacy-as-a-coaching-problem-what-i-watch-for---2026-04-30/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Alignment is a protocol, not a meeting -->
+  <url>
+    <loc>https://dperconti.github.io/posts/alignment-is-a-protocol-not-a-meeting---2024-10-10/</loc>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Alignment is a protocol, not a meeting (2025) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/alignment-is-a-protocol-not-a-meeting-2025---2025-12-30/</loc>
+    <lastmod>2025-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Alignment is a protocol, not a meeting: a field note -->
+  <url>
+    <loc>https://dperconti.github.io/posts/alignment-is-a-protocol-not-a-meeting-a-field-note---2025-07-29/</loc>
+    <lastmod>2025-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Alignment is a protocol, not a meeting — note 151 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/alignment-is-a-protocol-not-a-meeting-note-151---2025-10-29/</loc>
+    <lastmod>2025-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Alignment is a protocol, not a meeting — note 76 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/alignment-is-a-protocol-not-a-meeting-note-76---2025-04-02/</loc>
+    <lastmod>2025-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Alignment is a protocol, not a meeting: what I watch for -->
+  <url>
+    <loc>https://dperconti.github.io/posts/alignment-is-a-protocol-not-a-meeting-what-i-watch-for---2025-01-03/</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Alignment is a protocol, not a meeting without the theater -->
+  <url>
+    <loc>https://dperconti.github.io/posts/alignment-is-a-protocol-not-a-meeting-without-the-theater---2025-07-24/</loc>
+    <lastmod>2025-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: API design for humans who inherit it -->
+  <url>
+    <loc>https://dperconti.github.io/posts/api-design-for-humans-who-inherit-it---2024-09-16/</loc>
+    <lastmod>2024-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: API design for humans who inherit it: a field note -->
+  <url>
+    <loc>https://dperconti.github.io/posts/api-design-for-humans-who-inherit-it-a-field-note---2025-04-25/</loc>
+    <lastmod>2025-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Architecture decisions you can reverse -->
+  <url>
+    <loc>https://dperconti.github.io/posts/architecture-decisions-you-can-reverse---2025-06-13/</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Architecture decisions you can reverse (2026) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/architecture-decisions-you-can-reverse-2026---2025-06-15/</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Borrowing patterns, not brand names -->
+  <url>
+    <loc>https://dperconti.github.io/posts/borrowing-patterns-not-brand-names---2024-10-25/</loc>
+    <lastmod>2024-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Build less, own more of the outcome -->
+  <url>
+    <loc>https://dperconti.github.io/posts/build-less-own-more-of-the-outcome---2025-01-11/</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Build less, own more of the outcome in practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/build-less-own-more-of-the-outcome-in-practice---2026-02-21/</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Build less, own more of the outcome under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/build-less-own-more-of-the-outcome-under-real-load---2025-10-22/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Build less, own more of the outcome when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/build-less-own-more-of-the-outcome-when-the-calendar-is-full---2025-07-16/</loc>
+    <lastmod>2025-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Build the harness, buy the commodity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/build-the-harness-buy-the-commodity---2024-09-06/</loc>
+    <lastmod>2024-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Build the harness, buy the commodity: a field note -->
+  <url>
+    <loc>https://dperconti.github.io/posts/build-the-harness-buy-the-commodity-a-field-note---2026-06-17/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Build the harness, buy the commodity for engineering leaders -->
+  <url>
+    <loc>https://dperconti.github.io/posts/build-the-harness-buy-the-commodity-for-engineering-leaders---2024-11-08/</loc>
+    <lastmod>2024-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Build the harness, buy the commodity — note 114 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/build-the-harness-buy-the-commodity-note-114---2025-07-07/</loc>
+    <lastmod>2025-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Build the harness, buy the commodity — note 146 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/build-the-harness-buy-the-commodity-note-146---2025-10-11/</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Buy vs build when AI compresses build time -->
+  <url>
+    <loc>https://dperconti.github.io/posts/buy-vs-build-when-ai-compresses-build-time---2024-12-19/</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Buy vs build when AI compresses build time in practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/buy-vs-build-when-ai-compresses-build-time-in-practice---2026-02-02/</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Buy vs build when AI compresses build time without the theater -->
+  <url>
+    <loc>https://dperconti.github.io/posts/buy-vs-build-when-ai-compresses-build-time-without-the-theater---2025-01-31/</loc>
+    <lastmod>2025-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Carbon-aware scheduling without the slogans -->
+  <url>
+    <loc>https://dperconti.github.io/posts/carbon-aware-scheduling-without-the-slogans---2024-11-07/</loc>
+    <lastmod>2024-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Carbon-aware scheduling without the slogans (2024) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/carbon-aware-scheduling-without-the-slogans-2024---2026-01-14/</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Carbon-aware scheduling without the slogans for engineering leaders -->
+  <url>
+    <loc>https://dperconti.github.io/posts/carbon-aware-scheduling-without-the-slogans-for-engineering-leaders---2025-05-25/</loc>
+    <lastmod>2025-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Carbon-aware scheduling without the slogans in practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/carbon-aware-scheduling-without-the-slogans-in-practice---2026-02-28/</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Carbon-aware scheduling without the slogans: what I watch for -->
+  <url>
+    <loc>https://dperconti.github.io/posts/carbon-aware-scheduling-without-the-slogans-what-i-watch-for---2025-05-11/</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Career conversations that change next week’s work -->
+  <url>
+    <loc>https://dperconti.github.io/posts/career-conversations-that-change-next-week-s-work---2024-09-09/</loc>
+    <lastmod>2024-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Career conversations that change next week’s work for engineering leaders -->
+  <url>
+    <loc>https://dperconti.github.io/posts/career-conversations-that-change-next-week-s-work-for-engineering-leaders---2024-12-29/</loc>
+    <lastmod>2024-12-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Career conversations that change next week’s work — note 202 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/career-conversations-that-change-next-week-s-work-note-202---2026-03-21/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Career conversations that change next week’s work: what I watch for -->
+  <url>
+    <loc>https://dperconti.github.io/posts/career-conversations-that-change-next-week-s-work-what-i-watch-for---2026-07-14/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Career conversations that change next week’s work when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/career-conversations-that-change-next-week-s-work-when-the-calendar-is-full---2025-03-14/</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Ceremony is optional; continuity is not -->
+  <url>
+    <loc>https://dperconti.github.io/posts/ceremony-is-optional-continuity-is-not---2025-06-02/</loc>
+    <lastmod>2025-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Ceremony is optional; continuity is not without the theater -->
+  <url>
+    <loc>https://dperconti.github.io/posts/ceremony-is-optional-continuity-is-not-without-the-theater---2026-04-08/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Coaching juniors through AI-assisted workflows -->
+  <url>
+    <loc>https://dperconti.github.io/posts/coaching-juniors-through-ai-assisted-workflows---2025-05-05/</loc>
+    <lastmod>2025-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Coaching juniors through AI-assisted workflows — note 112 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/coaching-juniors-through-ai-assisted-workflows-note-112---2025-07-02/</loc>
+    <lastmod>2025-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Coaching juniors through AI-assisted workflows — note 168 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/coaching-juniors-through-ai-assisted-workflows-note-168---2025-12-14/</loc>
+    <lastmod>2025-12-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Coaching through ambiguity without stealing the work -->
+  <url>
+    <loc>https://dperconti.github.io/posts/coaching-through-ambiguity-without-stealing-the-work---2025-12-25/</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Coaching through ambiguity without stealing the work — note 203 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/coaching-through-ambiguity-without-stealing-the-work-note-203---2026-03-23/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Code review as teaching, not gatekeeping -->
+  <url>
+    <loc>https://dperconti.github.io/posts/code-review-as-teaching-not-gatekeeping---2024-09-01/</loc>
+    <lastmod>2024-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Code review as teaching, not gatekeeping — note 86 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/code-review-as-teaching-not-gatekeeping-note-86---2025-04-28/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Code review as teaching, not gatekeeping under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/code-review-as-teaching-not-gatekeeping-under-real-load---2025-01-07/</loc>
+    <lastmod>2025-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Collaboration tax and how to cut it -->
+  <url>
+    <loc>https://dperconti.github.io/posts/collaboration-tax-and-how-to-cut-it---2025-05-15/</loc>
+    <lastmod>2025-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Collaboration tax and how to cut it: a field note -->
+  <url>
+    <loc>https://dperconti.github.io/posts/collaboration-tax-and-how-to-cut-it-a-field-note---2026-06-08/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Collaboration tax and how to cut it: what I watch for -->
+  <url>
+    <loc>https://dperconti.github.io/posts/collaboration-tax-and-how-to-cut-it-what-i-watch-for---2026-07-07/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Conflict as a design input -->
+  <url>
+    <loc>https://dperconti.github.io/posts/conflict-as-a-design-input---2024-08-29/</loc>
+    <lastmod>2024-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Conflict as a design input: what I watch for -->
+  <url>
+    <loc>https://dperconti.github.io/posts/conflict-as-a-design-input-what-i-watch-for---2025-01-09/</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Conflict as a design input — working notes -->
+  <url>
+    <loc>https://dperconti.github.io/posts/conflict-as-a-design-input-working-notes---2025-03-19/</loc>
+    <lastmod>2025-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Connectors are the hard part of retrieval -->
+  <url>
+    <loc>https://dperconti.github.io/posts/connectors-are-the-hard-part-of-retrieval---2026-06-25/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Connectors are the hard part of retrieval under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/connectors-are-the-hard-part-of-retrieval-under-real-load---2026-08-07/</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Contributing without cosplay -->
+  <url>
+    <loc>https://dperconti.github.io/posts/contributing-without-cosplay---2025-04-03/</loc>
+    <lastmod>2025-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Contributing without cosplay (2026) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/contributing-without-cosplay-2026---2025-06-24/</loc>
+    <lastmod>2025-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Contributing without cosplay when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/contributing-without-cosplay-when-the-calendar-is-full---2025-06-25/</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Cross-team work without a shared roadmap -->
+  <url>
+    <loc>https://dperconti.github.io/posts/cross-team-work-without-a-shared-roadmap---2024-12-27/</loc>
+    <lastmod>2024-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Cross-team work without a shared roadmap: a field note -->
+  <url>
+    <loc>https://dperconti.github.io/posts/cross-team-work-without-a-shared-roadmap-a-field-note---2026-02-23/</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Cross-team work without a shared roadmap for engineering leaders -->
+  <url>
+    <loc>https://dperconti.github.io/posts/cross-team-work-without-a-shared-roadmap-for-engineering-leaders---2026-02-06/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Cross-team work without a shared roadmap — note 138 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/cross-team-work-without-a-shared-roadmap-note-138---2025-09-12/</loc>
+    <lastmod>2025-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Cross-team work without a shared roadmap when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/cross-team-work-without-a-shared-roadmap-when-the-calendar-is-full---2025-04-08/</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Cross-team work without a shared roadmap without the theater -->
+  <url>
+    <loc>https://dperconti.github.io/posts/cross-team-work-without-a-shared-roadmap-without-the-theater---2025-06-05/</loc>
+    <lastmod>2025-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Cross-team work without a shared roadmap — working notes -->
+  <url>
+    <loc>https://dperconti.github.io/posts/cross-team-work-without-a-shared-roadmap-working-notes---2026-04-12/</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Designing for fewer retries, not prettier dashboards -->
+  <url>
+    <loc>https://dperconti.github.io/posts/designing-for-fewer-retries-not-prettier-dashboards---2025-02-01/</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Designing for fewer retries, not prettier dashboards (2025) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/designing-for-fewer-retries-not-prettier-dashboards-2025---2025-06-21/</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Designing for fewer retries, not prettier dashboards: a field note -->
+  <url>
+    <loc>https://dperconti.github.io/posts/designing-for-fewer-retries-not-prettier-dashboards-a-field-note---2026-08-19/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Designing for fewer retries, not prettier dashboards in practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/designing-for-fewer-retries-not-prettier-dashboards-in-practice---2025-07-06/</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Designing for fewer retries, not prettier dashboards under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/designing-for-fewer-retries-not-prettier-dashboards-under-real-load---2025-11-23/</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Designing hand-offs between agents and humans -->
+  <url>
+    <loc>https://dperconti.github.io/posts/designing-hand-offs-between-agents-and-humans---2025-08-22/</loc>
+    <lastmod>2025-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Designing hand-offs between agents and humans — note 180 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/designing-hand-offs-between-agents-and-humans-note-180---2026-01-19/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Designing hand-offs between agents and humans when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/designing-hand-offs-between-agents-and-humans-when-the-calendar-is-full---2025-12-19/</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Designing hand-offs between agents and humans without the theater -->
+  <url>
+    <loc>https://dperconti.github.io/posts/designing-hand-offs-between-agents-and-humans-without-the-theater---2025-10-16/</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Docs PRs as onboarding practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/docs-prs-as-onboarding-practice---2024-11-18/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Documentation that earns its keep -->
+  <url>
+    <loc>https://dperconti.github.io/posts/documentation-that-earns-its-keep---2025-01-18/</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Documentation that earns its keep — note 88 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/documentation-that-earns-its-keep-note-88---2025-05-03/</loc>
+    <lastmod>2025-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Efficiency as reliability practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/efficiency-as-reliability-practice---2024-12-16/</loc>
+    <lastmod>2024-12-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Efficiency as reliability practice: a field note -->
+  <url>
+    <loc>https://dperconti.github.io/posts/efficiency-as-reliability-practice-a-field-note---2025-08-28/</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Efficiency as reliability practice — note 198 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/efficiency-as-reliability-practice-note-198---2026-03-10/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Efficiency as reliability practice when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/efficiency-as-reliability-practice-when-the-calendar-is-full---2025-08-16/</loc>
+    <lastmod>2025-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Efficiency as reliability practice without the theater -->
+  <url>
+    <loc>https://dperconti.github.io/posts/efficiency-as-reliability-practice-without-the-theater---2026-08-04/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Efficiency as reliability practice — working notes -->
+  <url>
+    <loc>https://dperconti.github.io/posts/efficiency-as-reliability-practice-working-notes---2025-01-16/</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Eval loops for retrieval quality -->
+  <url>
+    <loc>https://dperconti.github.io/posts/eval-loops-for-retrieval-quality---2026-05-09/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Evaluating AI assistance without vanity metrics -->
+  <url>
+    <loc>https://dperconti.github.io/posts/evaluating-ai-assistance-without-vanity-metrics---2026-06-04/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Evaluating AI assistance without vanity metrics: what I watch for -->
+  <url>
+    <loc>https://dperconti.github.io/posts/evaluating-ai-assistance-without-vanity-metrics-what-i-watch-for---2026-08-10/</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Event-driven agentic workflows teams can operate -->
+  <url>
+    <loc>https://dperconti.github.io/posts/event-driven-agentic-workflows-teams-can-operate---2026-01-31/</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Exit strategies for bought AI tooling -->
+  <url>
+    <loc>https://dperconti.github.io/posts/exit-strategies-for-bought-ai-tooling---2024-09-24/</loc>
+    <lastmod>2024-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Exit strategies for bought AI tooling for engineering leaders -->
+  <url>
+    <loc>https://dperconti.github.io/posts/exit-strategies-for-bought-ai-tooling-for-engineering-leaders---2025-11-16/</loc>
+    <lastmod>2025-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Exit strategies for bought AI tooling — note 197 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/exit-strategies-for-bought-ai-tooling-note-197---2026-03-09/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Exit strategies for bought AI tooling — note 236 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/exit-strategies-for-bought-ai-tooling-note-236---2026-07-03/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Exit strategies for bought AI tooling: what I watch for -->
+  <url>
+    <loc>https://dperconti.github.io/posts/exit-strategies-for-bought-ai-tooling-what-i-watch-for---2026-03-29/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Exit strategies for bought AI tooling when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/exit-strategies-for-bought-ai-tooling-when-the-calendar-is-full---2024-10-13/</loc>
+    <lastmod>2024-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Exit strategies for bought AI tooling — working notes -->
+  <url>
+    <loc>https://dperconti.github.io/posts/exit-strategies-for-bought-ai-tooling-working-notes---2025-07-28/</loc>
+    <lastmod>2025-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Feedback that lands after incidents -->
+  <url>
+    <loc>https://dperconti.github.io/posts/feedback-that-lands-after-incidents---2026-05-05/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: From demo RAG to operable RAG -->
+  <url>
+    <loc>https://dperconti.github.io/posts/from-demo-rag-to-operable-rag---2025-08-25/</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: From demo RAG to operable RAG (2025) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/from-demo-rag-to-operable-rag-2025---2025-09-03/</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: From demo RAG to operable RAG for engineering leaders -->
+  <url>
+    <loc>https://dperconti.github.io/posts/from-demo-rag-to-operable-rag-for-engineering-leaders---2026-01-28/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Grounding answers in systems teams actually run -->
+  <url>
+    <loc>https://dperconti.github.io/posts/grounding-answers-in-systems-teams-actually-run---2026-06-12/</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Growing seniors who can grow others -->
+  <url>
+    <loc>https://dperconti.github.io/posts/growing-seniors-who-can-grow-others---2024-12-30/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Growing seniors who can grow others (2024) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/growing-seniors-who-can-grow-others-2024---2026-08-01/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Growing seniors who can grow others (2025) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/growing-seniors-who-can-grow-others-2025---2026-02-20/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Growing seniors who can grow others — note 227 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/growing-seniors-who-can-grow-others-note-227---2026-06-05/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Growing seniors who can grow others — working notes -->
+  <url>
+    <loc>https://dperconti.github.io/posts/growing-seniors-who-can-grow-others-working-notes---2025-10-15/</loc>
+    <lastmod>2025-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Hand-offs that preserve context -->
+  <url>
+    <loc>https://dperconti.github.io/posts/hand-offs-that-preserve-context---2024-12-28/</loc>
+    <lastmod>2024-12-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Hand-offs that preserve context — note 116 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/hand-offs-that-preserve-context-note-116---2025-07-14/</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Hand-offs that preserve context under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/hand-offs-that-preserve-context-under-real-load---2025-01-21/</loc>
+    <lastmod>2025-01-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Hand-offs that preserve context when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/hand-offs-that-preserve-context-when-the-calendar-is-full---2026-07-17/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Hand-offs that preserve context without the theater -->
+  <url>
+    <loc>https://dperconti.github.io/posts/hand-offs-that-preserve-context-without-the-theater---2026-01-15/</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Hiring for ownership, not theatrical confidence -->
+  <url>
+    <loc>https://dperconti.github.io/posts/hiring-for-ownership-not-theatrical-confidence---2024-11-22/</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Hiring for ownership, not theatrical confidence (2024) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/hiring-for-ownership-not-theatrical-confidence-2024---2026-04-16/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Hiring for ownership, not theatrical confidence in practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/hiring-for-ownership-not-theatrical-confidence-in-practice---2025-02-08/</loc>
+    <lastmod>2025-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Hiring for ownership, not theatrical confidence under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/hiring-for-ownership-not-theatrical-confidence-under-real-load---2026-08-13/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Hiring for ownership, not theatrical confidence without the theater -->
+  <url>
+    <loc>https://dperconti.github.io/posts/hiring-for-ownership-not-theatrical-confidence-without-the-theater---2026-07-04/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Hiring for ownership, not theatrical confidence — working notes -->
+  <url>
+    <loc>https://dperconti.github.io/posts/hiring-for-ownership-not-theatrical-confidence-working-notes---2025-11-18/</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Idempotency for agentic side effects -->
+  <url>
+    <loc>https://dperconti.github.io/posts/idempotency-for-agentic-side-effects---2025-10-21/</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Idempotency for agentic side effects for engineering leaders -->
+  <url>
+    <loc>https://dperconti.github.io/posts/idempotency-for-agentic-side-effects-for-engineering-leaders---2026-05-15/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Idempotency for agentic side effects under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/idempotency-for-agentic-side-effects-under-real-load---2026-03-03/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Incident response that improves the system -->
+  <url>
+    <loc>https://dperconti.github.io/posts/incident-response-that-improves-the-system---2025-03-24/</loc>
+    <lastmod>2025-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Integration debt after the purchase -->
+  <url>
+    <loc>https://dperconti.github.io/posts/integration-debt-after-the-purchase---2026-03-19/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Integration debt after the purchase under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/integration-debt-after-the-purchase-under-real-load---2026-06-02/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Interfaces between teams beat shared Slack channels -->
+  <url>
+    <loc>https://dperconti.github.io/posts/interfaces-between-teams-beat-shared-slack-channels---2024-11-29/</loc>
+    <lastmod>2024-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Interfaces between teams beat shared Slack channels (2025) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/interfaces-between-teams-beat-shared-slack-channels-2025---2025-08-02/</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Interfaces between teams beat shared Slack channels — note 115 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/interfaces-between-teams-beat-shared-slack-channels-note-115---2025-07-10/</loc>
+    <lastmod>2025-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Interfaces between teams beat shared Slack channels when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/interfaces-between-teams-beat-shared-slack-channels-when-the-calendar-is-full---2026-02-08/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Interfaces between teams beat shared Slack channels without the theater -->
+  <url>
+    <loc>https://dperconti.github.io/posts/interfaces-between-teams-beat-shared-slack-channels-without-the-theater---2025-06-27/</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Internal open source across product teams -->
+  <url>
+    <loc>https://dperconti.github.io/posts/internal-open-source-across-product-teams---2025-03-04/</loc>
+    <lastmod>2025-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Internal open source across product teams under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/internal-open-source-across-product-teams-under-real-load---2025-07-01/</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Judgment under load: what managers actually practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/judgment-under-load-what-managers-actually-practice---2024-12-07/</loc>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Judgment under load: what managers actually practice in practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/judgment-under-load-what-managers-actually-practice-in-practice---2026-03-18/</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Judgment under load: what managers actually practice — note 137 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/judgment-under-load-what-managers-actually-practice-note-137---2025-09-11/</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Judgment under load: what managers actually practice: what I watch for -->
+  <url>
+    <loc>https://dperconti.github.io/posts/judgment-under-load-what-managers-actually-practice-what-i-watch-for---2025-04-13/</loc>
+    <lastmod>2025-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Keeping humans accountable when models draft code -->
+  <url>
+    <loc>https://dperconti.github.io/posts/keeping-humans-accountable-when-models-draft-code---2025-09-18/</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Keeping humans accountable when models draft code: what I watch for -->
+  <url>
+    <loc>https://dperconti.github.io/posts/keeping-humans-accountable-when-models-draft-code-what-i-watch-for---2025-11-10/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Leaders who stay close to the craft -->
+  <url>
+    <loc>https://dperconti.github.io/posts/leaders-who-stay-close-to-the-craft---2024-10-19/</loc>
+    <lastmod>2024-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Leaders who stay close to the craft for engineering leaders -->
+  <url>
+    <loc>https://dperconti.github.io/posts/leaders-who-stay-close-to-the-craft-for-engineering-leaders---2025-09-23/</loc>
+    <lastmod>2025-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Leaders who stay close to the craft when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/leaders-who-stay-close-to-the-craft-when-the-calendar-is-full---2025-12-31/</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Leaders who stay close to the craft without the theater -->
+  <url>
+    <loc>https://dperconti.github.io/posts/leaders-who-stay-close-to-the-craft-without-the-theater---2025-05-04/</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Licenses, liability, and leadership judgment -->
+  <url>
+    <loc>https://dperconti.github.io/posts/licenses-liability-and-leadership-judgment---2025-01-17/</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Licenses, liability, and leadership judgment — working notes -->
+  <url>
+    <loc>https://dperconti.github.io/posts/licenses-liability-and-leadership-judgment-working-notes---2025-04-11/</loc>
+    <lastmod>2025-04-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Maintainer burden and team capacity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/maintainer-burden-and-team-capacity---2024-10-23/</loc>
+    <lastmod>2024-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Maintainer burden and team capacity: what I watch for -->
+  <url>
+    <loc>https://dperconti.github.io/posts/maintainer-burden-and-team-capacity-what-i-watch-for---2025-05-27/</loc>
+    <lastmod>2025-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Maintainer burden and team capacity when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/maintainer-burden-and-team-capacity-when-the-calendar-is-full---2024-10-27/</loc>
+    <lastmod>2024-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Make-or-buy with agents in the mix -->
+  <url>
+    <loc>https://dperconti.github.io/posts/make-or-buy-with-agents-in-the-mix---2024-08-28/</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Measuring compute waste in product teams -->
+  <url>
+    <loc>https://dperconti.github.io/posts/measuring-compute-waste-in-product-teams---2026-03-13/</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mentoring in public without performing -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mentoring-in-public-without-performing---2024-10-28/</loc>
+    <lastmod>2024-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mentoring in public without performing: a field note -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mentoring-in-public-without-performing-a-field-note---2025-04-30/</loc>
+    <lastmod>2025-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mentoring in public without performing under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mentoring-in-public-without-performing-under-real-load---2024-11-13/</loc>
+    <lastmod>2024-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mentoring in public without performing when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mentoring-in-public-without-performing-when-the-calendar-is-full---2026-07-29/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mentoring in public without performing without the theater -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mentoring-in-public-without-performing-without-the-theater---2025-11-07/</loc>
+    <lastmod>2025-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mentoring in public without performing — working notes -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mentoring-in-public-without-performing-working-notes---2025-04-18/</loc>
+    <lastmod>2025-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mentorship that survives calendar chaos -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mentorship-that-survives-calendar-chaos---2025-08-03/</loc>
+    <lastmod>2025-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mentorship that survives calendar chaos in practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mentorship-that-survives-calendar-chaos-in-practice---2025-08-07/</loc>
+    <lastmod>2025-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Mentorship that survives calendar chaos: what I watch for -->
+  <url>
+    <loc>https://dperconti.github.io/posts/mentorship-that-survives-calendar-chaos-what-i-watch-for---2026-01-07/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Migrations that respect team capacity -->
+  <url>
+    <loc>https://dperconti.github.io/posts/migrations-that-respect-team-capacity---2024-11-12/</loc>
+    <lastmod>2024-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Migrations that respect team capacity (2025) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/migrations-that-respect-team-capacity-2025---2025-02-11/</loc>
+    <lastmod>2025-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Multi-agent theater vs useful specialization -->
+  <url>
+    <loc>https://dperconti.github.io/posts/multi-agent-theater-vs-useful-specialization---2026-06-20/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Multi-agent theater vs useful specialization under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/multi-agent-theater-vs-useful-specialization-under-real-load---2026-08-24/</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Open source as mentorship at scale -->
+  <url>
+    <loc>https://dperconti.github.io/posts/open-source-as-mentorship-at-scale---2025-06-14/</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Open source governance for small teams -->
+  <url>
+    <loc>https://dperconti.github.io/posts/open-source-governance-for-small-teams---2024-12-13/</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Open source governance for small teams (2026) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/open-source-governance-for-small-teams-2026---2025-06-07/</loc>
+    <lastmod>2025-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Orchestration without a black-box conductor -->
+  <url>
+    <loc>https://dperconti.github.io/posts/orchestration-without-a-black-box-conductor---2025-11-20/</loc>
+    <lastmod>2025-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Orchestration without a black-box conductor: a field note -->
+  <url>
+    <loc>https://dperconti.github.io/posts/orchestration-without-a-black-box-conductor-a-field-note---2026-05-30/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Ownership is a design problem, not a pep talk -->
+  <url>
+    <loc>https://dperconti.github.io/posts/ownership-is-a-design-problem-not-a-pep-talk---2025-03-27/</loc>
+    <lastmod>2025-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Owning outcomes when agents ship changes -->
+  <url>
+    <loc>https://dperconti.github.io/posts/owning-outcomes-when-agents-ship-changes---2026-07-22/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Pairing as coaching, not surveillance -->
+  <url>
+    <loc>https://dperconti.github.io/posts/pairing-as-coaching-not-surveillance---2025-01-19/</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Pairing as coaching, not surveillance in practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/pairing-as-coaching-not-surveillance-in-practice---2026-06-21/</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Permissions in RAG: the boring requirement -->
+  <url>
+    <loc>https://dperconti.github.io/posts/permissions-in-rag-the-boring-requirement---2026-05-17/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Platforms you buy still need owners -->
+  <url>
+    <loc>https://dperconti.github.io/posts/platforms-you-buy-still-need-owners---2025-03-07/</loc>
+    <lastmod>2025-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Platforms you buy still need owners: a field note -->
+  <url>
+    <loc>https://dperconti.github.io/posts/platforms-you-buy-still-need-owners-a-field-note---2025-05-19/</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Prompting is not process — harnesses are -->
+  <url>
+    <loc>https://dperconti.github.io/posts/prompting-is-not-process-harnesses-are---2025-12-03/</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: RAG pipelines as team infrastructure -->
+  <url>
+    <loc>https://dperconti.github.io/posts/rag-pipelines-as-team-infrastructure---2025-07-26/</loc>
+    <lastmod>2025-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: RAG pipelines as team infrastructure (2026) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/rag-pipelines-as-team-infrastructure-2026---2026-01-12/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: RAG pipelines as team infrastructure in practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/rag-pipelines-as-team-infrastructure-in-practice---2025-10-01/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: RAG pipelines as team infrastructure — note 167 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/rag-pipelines-as-team-infrastructure-note-167---2025-12-12/</loc>
+    <lastmod>2025-12-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: RAG pipelines as team infrastructure without the theater -->
+  <url>
+    <loc>https://dperconti.github.io/posts/rag-pipelines-as-team-infrastructure-without-the-theater---2026-03-06/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: RAG that fails gracefully when context is thin -->
+  <url>
+    <loc>https://dperconti.github.io/posts/rag-that-fails-gracefully-when-context-is-thin---2026-07-06/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Reorganizing when the product shape changes -->
+  <url>
+    <loc>https://dperconti.github.io/posts/reorganizing-when-the-product-shape-changes---2024-09-19/</loc>
+    <lastmod>2024-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Reorganizing when the product shape changes for engineering leaders -->
+  <url>
+    <loc>https://dperconti.github.io/posts/reorganizing-when-the-product-shape-changes-for-engineering-leaders---2026-01-23/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Reorganizing when the product shape changes in practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/reorganizing-when-the-product-shape-changes-in-practice---2025-02-21/</loc>
+    <lastmod>2025-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Reorganizing when the product shape changes — note 206 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/reorganizing-when-the-product-shape-changes-note-206---2026-04-01/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Reorganizing when the product shape changes under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/reorganizing-when-the-product-shape-changes-under-real-load---2026-05-18/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Right-sizing infrastructure as leadership work -->
+  <url>
+    <loc>https://dperconti.github.io/posts/right-sizing-infrastructure-as-leadership-work---2024-10-02/</loc>
+    <lastmod>2024-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Right-sizing infrastructure as leadership work (2024) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/right-sizing-infrastructure-as-leadership-work-2024---2024-11-24/</loc>
+    <lastmod>2024-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Right-sizing infrastructure as leadership work (2026) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/right-sizing-infrastructure-as-leadership-work-2026---2026-02-10/</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Right-sizing infrastructure as leadership work — note 72 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/right-sizing-infrastructure-as-leadership-work-note-72---2025-03-23/</loc>
+    <lastmod>2025-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Shared ownership across org boundaries -->
+  <url>
+    <loc>https://dperconti.github.io/posts/shared-ownership-across-org-boundaries---2025-02-25/</loc>
+    <lastmod>2025-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Shared ownership across org boundaries in practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/shared-ownership-across-org-boundaries-in-practice---2026-01-05/</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Shared ownership across org boundaries — note 71 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/shared-ownership-across-org-boundaries-note-71---2025-03-21/</loc>
+    <lastmod>2025-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Shipping with models without losing craft -->
+  <url>
+    <loc>https://dperconti.github.io/posts/shipping-with-models-without-losing-craft---2025-11-05/</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Shipping with models without losing craft: a field note -->
+  <url>
+    <loc>https://dperconti.github.io/posts/shipping-with-models-without-losing-craft-a-field-note---2025-12-09/</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Small platforms that stay operable -->
+  <url>
+    <loc>https://dperconti.github.io/posts/small-platforms-that-stay-operable---2025-02-22/</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Sustainability reviews in architecture forums -->
+  <url>
+    <loc>https://dperconti.github.io/posts/sustainability-reviews-in-architecture-forums---2024-09-12/</loc>
+    <lastmod>2024-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Sustainability reviews in architecture forums in practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/sustainability-reviews-in-architecture-forums-in-practice---2026-03-26/</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Sustainability reviews in architecture forums — note 155 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/sustainability-reviews-in-architecture-forums-note-155---2025-11-09/</loc>
+    <lastmod>2025-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Sustainability reviews in architecture forums under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/sustainability-reviews-in-architecture-forums-under-real-load---2026-08-11/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Sustainability reviews in architecture forums without the theater -->
+  <url>
+    <loc>https://dperconti.github.io/posts/sustainability-reviews-in-architecture-forums-without-the-theater---2025-04-12/</loc>
+    <lastmod>2025-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Teaching judgment without becoming a bottleneck -->
+  <url>
+    <loc>https://dperconti.github.io/posts/teaching-judgment-without-becoming-a-bottleneck---2026-05-13/</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Teaching judgment without becoming a bottleneck (2024) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/teaching-judgment-without-becoming-a-bottleneck-2024---2026-05-24/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Teaching judgment without becoming a bottleneck under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/teaching-judgment-without-becoming-a-bottleneck-under-real-load---2026-08-06/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Teaching teams to distrust fluent wrongness -->
+  <url>
+    <loc>https://dperconti.github.io/posts/teaching-teams-to-distrust-fluent-wrongness---2025-09-19/</loc>
+    <lastmod>2025-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Technical debt with a repayment schedule -->
+  <url>
+    <loc>https://dperconti.github.io/posts/technical-debt-with-a-repayment-schedule---2025-02-18/</loc>
+    <lastmod>2025-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Testing strategy when speed matters -->
+  <url>
+    <loc>https://dperconti.github.io/posts/testing-strategy-when-speed-matters---2025-01-22/</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Testing strategy when speed matters (2024) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/testing-strategy-when-speed-matters-2024---2025-04-26/</loc>
+    <lastmod>2025-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: The energy cost of flaky CI -->
+  <url>
+    <loc>https://dperconti.github.io/posts/the-energy-cost-of-flaky-ci---2025-06-20/</loc>
+    <lastmod>2025-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: The energy cost of flaky CI when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/the-energy-cost-of-flaky-ci-when-the-calendar-is-full---2025-12-21/</loc>
+    <lastmod>2025-12-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: The meeting you should replace with a doc -->
+  <url>
+    <loc>https://dperconti.github.io/posts/the-meeting-you-should-replace-with-a-doc---2024-10-07/</loc>
+    <lastmod>2024-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: The meeting you should replace with a doc for engineering leaders -->
+  <url>
+    <loc>https://dperconti.github.io/posts/the-meeting-you-should-replace-with-a-doc-for-engineering-leaders---2025-05-21/</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: The meeting you should replace with a doc in practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/the-meeting-you-should-replace-with-a-doc-in-practice---2026-02-17/</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: The meeting you should replace with a doc — note 257 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/the-meeting-you-should-replace-with-a-doc-note-257---2026-08-23/</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: The meeting you should replace with a doc under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/the-meeting-you-should-replace-with-a-doc-under-real-load---2024-12-04/</loc>
+    <lastmod>2024-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: The new cost of custom: maintenance, not typing -->
+  <url>
+    <loc>https://dperconti.github.io/posts/the-new-cost-of-custom-maintenance-not-typing---2025-08-10/</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: The new cost of custom: maintenance, not typing in practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/the-new-cost-of-custom-maintenance-not-typing-in-practice---2026-05-02/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: The psychology of asking for help in engineering -->
+  <url>
+    <loc>https://dperconti.github.io/posts/the-psychology-of-asking-for-help-in-engineering---2024-12-09/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: The psychology of asking for help in engineering under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/the-psychology-of-asking-for-help-in-engineering-under-real-load---2025-09-06/</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: The quiet work of keeping delivery honest -->
+  <url>
+    <loc>https://dperconti.github.io/posts/the-quiet-work-of-keeping-delivery-honest---2024-11-05/</loc>
+    <lastmod>2024-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: The quiet work of keeping delivery honest: what I watch for -->
+  <url>
+    <loc>https://dperconti.github.io/posts/the-quiet-work-of-keeping-delivery-honest-what-i-watch-for---2025-03-05/</loc>
+    <lastmod>2025-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Tool use as a privilege, not a default -->
+  <url>
+    <loc>https://dperconti.github.io/posts/tool-use-as-a-privilege-not-a-default---2026-04-10/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Trust compounds slower than roadmaps -->
+  <url>
+    <loc>https://dperconti.github.io/posts/trust-compounds-slower-than-roadmaps---2024-09-27/</loc>
+    <lastmod>2024-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Trust compounds slower than roadmaps under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/trust-compounds-slower-than-roadmaps-under-real-load---2025-12-01/</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Trust compounds slower than roadmaps without the theater -->
+  <url>
+    <loc>https://dperconti.github.io/posts/trust-compounds-slower-than-roadmaps-without-the-theater---2026-07-23/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Upstream first as a collaboration habit -->
+  <url>
+    <loc>https://dperconti.github.io/posts/upstream-first-as-a-collaboration-habit---2025-05-14/</loc>
+    <lastmod>2025-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: What Asim Hussain’s green software work asks of us -->
+  <url>
+    <loc>https://dperconti.github.io/posts/what-asim-hussain-s-green-software-work-asks-of-us---2025-02-10/</loc>
+    <lastmod>2025-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: What Asim Hussain’s green software work asks of us — note 129 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/what-asim-hussain-s-green-software-work-asks-of-us-note-129---2025-08-21/</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: What Asim Hussain’s green software work asks of us: what I watch for -->
+  <url>
+    <loc>https://dperconti.github.io/posts/what-asim-hussain-s-green-software-work-asks-of-us-what-i-watch-for---2026-07-28/</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When a vendor becomes your process -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-a-vendor-becomes-your-process---2024-12-18/</loc>
+    <lastmod>2024-12-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When a vendor becomes your process: a field note -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-a-vendor-becomes-your-process-a-field-note---2026-07-19/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When a vendor becomes your process — note 172 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-a-vendor-becomes-your-process-note-172---2025-12-27/</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When a vendor becomes your process — note 256 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-a-vendor-becomes-your-process-note-256---2026-08-21/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When a vendor becomes your process: what I watch for -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-a-vendor-becomes-your-process-what-i-watch-for---2025-05-07/</loc>
+    <lastmod>2025-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When a vendor becomes your process when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-a-vendor-becomes-your-process-when-the-calendar-is-full---2025-11-01/</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When an agent should stop and ask -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-an-agent-should-stop-and-ask---2026-04-27/</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When leadership means clearing drag, not adding process -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-leadership-means-clearing-drag-not-adding-process---2024-11-01/</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When leadership means clearing drag, not adding process (2025) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-leadership-means-clearing-drag-not-adding-process-2025---2026-08-18/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When leadership means clearing drag, not adding process in practice -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-leadership-means-clearing-drag-not-adding-process-in-practice---2026-06-22/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When leadership means clearing drag, not adding process — working notes -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-leadership-means-clearing-drag-not-adding-process-working-notes---2025-05-28/</loc>
+    <lastmod>2025-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When product and platform disagree productively -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-product-and-platform-disagree-productively---2024-11-16/</loc>
+    <lastmod>2024-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When product and platform disagree productively — note 213 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-product-and-platform-disagree-productively-note-213---2026-04-23/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When product and platform disagree productively when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-product-and-platform-disagree-productively-when-the-calendar-is-full---2025-04-23/</loc>
+    <lastmod>2025-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When product and platform disagree productively without the theater -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-product-and-platform-disagree-productively-without-the-theater---2025-04-01/</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When product and platform disagree productively — working notes -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-product-and-platform-disagree-productively-working-notes---2025-02-04/</loc>
+    <lastmod>2025-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When retrieval lies politely -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-retrieval-lies-politely---2026-04-20/</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When retrieval lies politely (2026) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-retrieval-lies-politely-2026---2026-06-19/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When retrieval lies politely — working notes -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-retrieval-lies-politely-working-notes---2026-08-25/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When to fork and when to fund -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-to-fork-and-when-to-fund---2024-10-11/</loc>
+    <lastmod>2024-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When to sponsor, when to step back -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-to-sponsor-when-to-step-back---2025-08-11/</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When to sponsor, when to step back (2024) -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-to-sponsor-when-to-step-back-2024---2025-09-24/</loc>
+    <lastmod>2025-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When to sponsor, when to step back under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-to-sponsor-when-to-step-back-under-real-load---2026-01-24/</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: When to sponsor, when to step back when the calendar is full -->
+  <url>
+    <loc>https://dperconti.github.io/posts/when-to-sponsor-when-to-step-back-when-the-calendar-is-full---2025-09-09/</loc>
+    <lastmod>2025-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Who owns the knowledge graph behind the bot? -->
+  <url>
+    <loc>https://dperconti.github.io/posts/who-owns-the-knowledge-graph-behind-the-bot---2025-08-24/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Who owns the knowledge graph behind the bot? — working notes -->
+  <url>
+    <loc>https://dperconti.github.io/posts/who-owns-the-knowledge-graph-behind-the-bot-working-notes---2025-09-28/</loc>
+    <lastmod>2025-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Working agreements that age well -->
+  <url>
+    <loc>https://dperconti.github.io/posts/working-agreements-that-age-well---2024-10-04/</loc>
+    <lastmod>2024-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Working agreements that age well: a field note -->
+  <url>
+    <loc>https://dperconti.github.io/posts/working-agreements-that-age-well-a-field-note---2026-04-07/</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Working agreements that age well — note 157 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/working-agreements-that-age-well-note-157---2025-11-11/</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Working agreements that age well — note 68 -->
+  <url>
+    <loc>https://dperconti.github.io/posts/working-agreements-that-age-well-note-68---2025-03-13/</loc>
+    <lastmod>2025-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Post: Working agreements that age well under real load -->
+  <url>
+    <loc>https://dperconti.github.io/posts/working-agreements-that-age-well-under-real-load---2025-02-23/</loc>
+    <lastmod>2025-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Category: AI -->
+  <url>
+    <loc>https://dperconti.github.io/categories/ai/</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Architecture -->
+  <url>
+    <loc>https://dperconti.github.io/categories/architecture/</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Engineering -->
+  <url>
+    <loc>https://dperconti.github.io/categories/engineering/</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Teams -->
+  <url>
+    <loc>https://dperconti.github.io/categories/teams/</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Leadership -->
+  <url>
+    <loc>https://dperconti.github.io/categories/leadership/</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Open Source -->
+  <url>
+    <loc>https://dperconti.github.io/categories/open-source/</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Sustainability -->
+  <url>
+    <loc>https://dperconti.github.io/categories/sustainability/</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Category: Mentorship -->
+  <url>
+    <loc>https://dperconti.github.io/categories/mentorship/</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 </urlset>

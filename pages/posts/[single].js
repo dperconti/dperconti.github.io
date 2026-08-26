@@ -36,12 +36,7 @@ export const getStaticProps = async ({ params }) => {
   const post = posts?.filter((p) => p.slug == single);
 
   if (!post?.length) {
-    return {
-      redirect: {
-        destination: "https://pnw.technology/blog",
-        permanent: true,
-      },
-    };
+    return { notFound: true };
   }
 
   const mdxContent = await parseMDX(post[0].content);

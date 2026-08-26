@@ -1,15 +1,8 @@
 [
   {
-    "title": "Hands-on leadership",
+    "title": "Engineering leadership",
     "href": "/thesis/",
     "meta": "thesis",
     "date": "2026·08"
-  },
-  {
-    "title": "Writing elsewhere",
-    "href": "https://pnw.technology/blog",
-    "meta": "external",
-    "date": "ongoing",
-    "external": true
   }
 ]

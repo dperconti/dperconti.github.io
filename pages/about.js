@@ -21,11 +21,10 @@ const About = () => {
 
         <div className="site-prose">
           <p>
-            I build and lead engineering for payments systems, backend
-            platforms, and AI-assisted product work across fintech and health
-            tech. The through-line is practical: ship reliable systems, grow
-            teams that can own them, and stay close enough to the craft that
-            decisions stay grounded.
+            I lead engineering through coaching, cross-team collaboration, and
+            the processes that make AI and event-driven workflows ownable.
+            Payments and platforms are still the craft — leadership is how teams
+            keep judgment as the tools move.
           </p>
           <p>
             Recent chapters include Pangea, Heard, Ness, Elevate Security,

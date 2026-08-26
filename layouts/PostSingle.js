@@ -62,7 +62,7 @@ const PostSingle = ({ post, mdxContent, slug, posts }) => {
             <div className="mx-auto lg:col-10">
               <Link
                 className="mb-12  inline-flex items-center text-primary hover:underline"
-                href="/blog"
+                href="/writing/"
               >
                 <svg
                   className="mr-2"
@@ -77,7 +77,7 @@ const PostSingle = ({ post, mdxContent, slug, posts }) => {
                     fill="currentcolor"
                   ></path>
                 </svg>
-                Back to Blog
+                Back to Writing
               </Link>
               <article>
                 {markdownify(title, "h1", "h2 mt-12")}

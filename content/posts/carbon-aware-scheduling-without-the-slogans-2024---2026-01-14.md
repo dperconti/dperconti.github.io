@@ -1,0 +1,34 @@
+---
+title: "Carbon-aware scheduling without the slogans (2024)"
+date: 2026-01-14T05:00:00Z
+categories:
+  - Sustainability
+  - Engineering
+draft: false
+---
+
+Most teams do not fail for lack of intelligence. They fail when carbon-aware scheduling without the slogans (2024) stays abstract while the calendar fills with motion.
+
+Sustainable pace for people and sustainable resource use for systems are the same habit: refuse unnecessary churn.
+
+Ask architecture reviews one plain question: what did we choose that forces waste forever?
+
+Buy-versus-build debates should start from ownership. If nobody on your team can operate the failure mode, you did not buy a capability — you rented a demo.
+
+Green software thinking — the kind Asim Hussain and the Green Software Foundation keep insisting on — treats efficiency as a reliability and cost discipline, not a branding exercise.
+
+Flaky CI, chatty retries, and oversized environments are leadership issues because they burn attention and energy.
+
+Process should be light enough to change. If your AI workflow cannot be updated when a model, connector, or compliance rule changes, you do not have a workflow — you have a ritual.
+
+On carbon-aware scheduling without the slogans (2024), the leadership move is to make the invisible visible: ownership, verification, and the path for the next person.
+
+In practice that means shorter cycles: decide, ship a thin slice, review what broke, coach the pattern into the next person. Long programs without those loops become status machines.
+
+Team literacy matters more than individual clever prompts. Shared harnesses beat private magic.
+
+I prefer written decisions over verbal ones. Memory is a poor archive, and AI tools make fluent improvisation cheap — which raises the value of durable context.
+
+None of this requires a new framework brand. It requires attention, a short feedback loop, and the humility to change process when agents join the workflow.
+
+Coaching is the mechanism. Process is the memory. Tools are leverage — only when ownership stays human.
