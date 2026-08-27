@@ -1,5 +1,5 @@
 ---
-title: "Reorganizing when the product shape changes in practice"
+title: "Reorganizing when the product shape changes: naming the owner"
 date: 2025-02-21T05:00:00Z
 categories:
   - Leadership
@@ -7,101 +7,99 @@ categories:
 draft: false
 ---
 
-In practice, **Reorganizing when the product shape changes** is a sequence of controls you can name — not a philosophy deck.
+Shared ownership across org boundaries needs a named primary for each failure mode. Co-owning everything is owning nothing.
 
-Cross-team collaboration gets romanticized as “more communication.” Most teams already communicate constantly. What they lack is a published interface for work that crosses boundaries.
+The rest develops that one idea with controls you can install and failure modes you can recognize.
 
-Alignment is a protocol — written inputs, outputs, owners, and failure modes — not a recurring meeting that performs agreement.
+Keep the unit of progress small enough to finish under a full calendar: one owner clarification, one verification signal, one reversible control. Grand programs without weekly evidence become status machines.
 
-The standard is inheritance. If a new teammate cannot find the owner, the control, and the evidence, you have a story — not a practice.
+Measure what you claim to care about. If **Reorganizing when the product shape changes** only appears in kickoff slides and never in review, incident, or planning artifacts, it is branding. Put a verification signal where people already look.
 
-## Interfaces, feedback, ownership
+## Practices with enough detail to copy
 
-Treat the practice as a system with inputs, outputs, and feedback. If any of those are social-only, the system will drift.
+Cadence beats intensity. These hold when they fit inside weeks people already live.
 
-Write the boundary as an API: inputs, outputs, latency expectations, error semantics, and who gets paged. If you cannot write that page, you do not have alignment — you have hope.
+### 1
 
-Publish “done” definitions across teams before joint work starts — especially for platform and product hand-offs. Ambiguous done is how resentments form.
+After hand-off: verify the receiving team can operate the failure mode without a Slack ping to the sender.
 
-A hand-off ticket says “ready for platform.” Platform discovers missing authz assumptions in production. Ready now means: runbook, rollback, and a joint drill — not a status emoji.
+Interfaces between teams beat shared Slack channels. Channels are transport; interfaces are contracts. Confusing the two creates ambient anxiety and no ownership.
 
-Useful signals tie to user impact and operability: escaped defects, stale answers, retry amplification, review cycle time, on-call toil. Vanity metrics create vanity leadership.
+### 2
 
-Hero bridges — one person who translates between teams — feel invaluable until they burn out and the org discovers it had no interface. Document what the hero knows while they are still standing.
+For every shared system: name a primary owner per failure mode.
 
-Replace status karaoke with a short decision doc: context, options, choice, date, owner. Status belongs in a dashboard or a running doc; meetings are for conflict and irreversible choices.
+The meeting you should replace with a doc is the one that only redistributes status. Keep the meeting that resolves contested decisions — and require options in writing before it starts.
 
-A working group creates a Slack channel for “alignment.” Six weeks later the channel is noise and decisions still live in side DMs. Delete the channel or convert it into a decision log with owners.
-
-Collaboration theater: more shared channels, same missing contracts.
-
-Quarterly: delete channels and meetings that produce no decisions or artifacts.
+### 3
 
 Before joint delivery: publish the interface doc and the escalation path.
 
-Two orgs share on-call for a boundary service. Without a primary for each failure mode, pages bounce. Shared ownership without primaries is a page-routing bug.
+Shared roadmaps without shared capacity envelopes are fiction. Publish what each team can actually carry before you celebrate alignment.
 
-## The costs of doing it right
+### 4
 
-Fewer meetings feel risky to managers who equate presence with control. Measure outcomes and escaped misunderstandings instead of seat time.
-
-Strict ownership can feel cold. Ambiguous ownership feels warm until the page. Prefer clear primary owners with named collaborators.
-
-Written interfaces cost an afternoon. Unwritten interfaces cost a quarter. Choose deliberately.
-
-Interfaces between teams beat shared Slack channels. Channels are transport; interfaces are contracts. Confusing the two creates ambient anxiety and no ownership.
-
-## How to hold the standard
-
-Hold three standards at once: a named owner, a written control, and a verification signal. Missing any one turns the practice into performance.
-
-Replace status karaoke with a short decision doc: context, options, choice, date, owner. Status belongs in a dashboard or a running doc; meetings are for conflict and irreversible choices.
-
-Interfaces between teams beat shared Slack channels. Channels are transport; interfaces are contracts. Confusing the two creates ambient anxiety and no ownership.
-
-Conflict as a design input means capturing the disagreement as constraints and options. Personality narratives are a dead end; interface narratives ship.
+Quarterly: delete channels and meetings that produce no decisions or artifacts.
 
 Prefer async artifacts for continuity. Use meetings when the decision is contested or irreversible. Calendar density is not collaboration quality.
 
 Working agreements that age well name how to change the agreement. Static culture docs become wallpaper within a quarter.
 
+Joint incidents need a single incident commander even when two orgs are involved. Dual command is how pages bounce and customers wait.
+
+On **Reorganizing when the product shape changes**, publish the interface: inputs, outputs, done criteria, and who gets paged. More Slack is not a substitute for a contract, and hero translators are a continuity risk.
+
+## Scenes
+
+A hand-off ticket says “ready for platform.” Platform discovers missing authz assumptions in production. Ready now means: runbook, rollback, and a joint drill — not a status emoji.
+
 Product wants a feature; platform wants stability. Without a capacity envelope and SLO, every conversation becomes moral. With them, the conversation becomes scheduling and tradeoffs.
 
-None of these principles require a new program name. They require attention in the path of work — reviews, design notes, procurement, and post-incident follow-through.
+Two teams “share a roadmap.” Neither owns the shared schema. Breaking changes collide. The repair is a schema owner, a deprecation clock, and an explicit consumer list — not a longer joint standup.
 
-Refuse to scale a workflow you cannot explain on a whiteboard to a new hire in fifteen minutes.
+## Tradeoffs
 
-## The neighboring discipline
+Written interfaces cost an afternoon. Unwritten interfaces cost a quarter. Choose deliberately.
 
-Leaders who isolate the practice from Buy-versus-build judgment create beautiful local optima and expensive global failure.
+Fewer meetings feel risky to managers who equate presence with control. Measure outcomes and escaped misunderstandings instead of seat time.
 
-Build less, own more of the outcome: prefer thin custom layers over reimplementing commodity models. Copilots make greenfield look cheap until on-call inherits it.
+Strict ownership can feel cold. Ambiguous ownership feels warm until the page. Prefer clear primary owners with named collaborators.
 
-Build the harness, buy the commodity works until someone rebuilds the commodity “for flexibility.” Flexibility without differentiated ownership is usually nostalgia.
+Resist the urge to expand scope into neighboring slogans. If a control does not make **Reorganizing when the product shape changes** more operable for the next person, leave it for another note. Dilution is how coherent essays become stitched scrapbooks.
 
-When a vendor becomes your process, document the process in your words. Otherwise a price hike or outage becomes an identity crisis.
+Meetings can choose among written options. They cannot permanently store ownership across org boundaries. Status karaoke is expensive theater.
 
-## Tempo changed; accountability did not
+## Failure modes
 
-If agents or copilots touch this workflow, add budgets, logs, and a kill switch before you add autonomy.
+Each of these is a missing control, not a personality problem:
 
-Keeping humans accountable when models draft code means the merge still carries a name and a verification note. Anonymized autocomplete is not an accountability model.
+- Collaboration theater: more shared channels, same missing contracts.
+- Roadmaps that look shared but hide capacity fiction — platform work scheduled as free.
+- Meetings used as a substitute for written interfaces — everyone left “aligned,” nobody can explain ownership later.
+- Hero bridges that mask missing contracts until attrition.
 
-## Checklist you can run
+Conflict as a design input means capturing the disagreement as constraints and options. Personality narratives are a dead end; interface narratives ship.
 
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+Treat conflict as design input. Resolve it in the interface, not in personality. Productive disagreement about SLOs and capacity envelopes beats political disagreement about who is more strategic.
 
-- Before joint delivery: publish the interface doc and the escalation path.
-- Publish “done” definitions across teams before joint work starts — especially for platform and product hand-offs.
-- When stuck: write the disagreement as options with tradeoffs; meet only to choose.
-- For every shared system: name a primary owner per failure mode.
-- Quarterly: delete channels and meetings that produce no decisions or artifacts.
-- After hand-off: verify the receiving team can operate the failure mode without a Slack ping to the sender.
+Replace status karaoke with a short decision doc: context, options, choice, date, owner. Status belongs in a dashboard or a running doc; meetings are for conflict and irreversible choices.
+
+Publish “done” definitions across teams before joint work starts — especially for platform and product hand-offs. Ambiguous done is how resentments form.
+
+Escalation paths that rely on knowing the right person are outages waiting for vacation. Publish who decides, by when, and what “stuck” means.
+
+Hand-offs that preserve context include decision history, open risks, and the last failed assumption — not only a ticket ID. Context loss is a defect.
+
+Hero bridges — one person who translates between teams — feel invaluable until they burn out and the org discovers it had no interface. Document what the hero knows while they are still standing.
+
+Write the boundary as an API: inputs, outputs, latency expectations, error semantics, and who gets paged. If you cannot write that page, you do not have alignment — you have hope.
+
+A cross-team launch checklist exists as a wiki page nobody updates. Convert it into a living interface doc with an owner and a last-reviewed date, or delete it.
+
+Two orgs share on-call for a boundary service. Without a primary for each failure mode, pages bounce. Shared ownership without primaries is a page-routing bug.
 
 ## Close
 
-Protocols beat vibes. Write the boundary, name the owner, make failure legible.
+If collaboration feels expensive, check the interface before you hire more coordinators.
 
-If this feels quieter than a keynote, that is intentional. Compounding work rarely looks like theater.
-
-On **Reorganizing when the product shape changes**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+On **Reorganizing when the product shape changes**, keep the loop short: write the decision, name the owner, verify the outcome.

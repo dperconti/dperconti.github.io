@@ -1,5 +1,5 @@
 ---
-title: "Designing hand-offs between agents and humans — note 180"
+title: "Designing hand-offs between agents and humans: the operable version"
 date: 2026-01-19T05:00:00Z
 categories:
   - AI
@@ -7,95 +7,99 @@ categories:
 draft: false
 ---
 
-Another working note on **Designing hand-offs between agents and humans**: same thesis, sharper edges from recent delivery pressure.
+I care about “Designing hand-offs between agents and humans” for one practical reason: it either leaves clearer ownership next week, or it was theater.
 
-Agentic systems attracts demos faster than operability. The difference between useful and dangerous is almost always the harness: logs, budgets, privileges, and a human kill switch.
+Logs, budgets, and kill switches are leadership tools — not only platform niceties.
 
-Event-driven agentic workflows only help when every action emits an auditable event: what ran, why, with which tools, and what it changed.
+I will stay on this thesis — no adjacent manifesto, no tour of every neighboring discipline.
 
-I am not interested in branding this work. I am interested in whether the next person can run it without a week of hallway archaeology.
+Useful specialization is narrow tools and clear interfaces — not personas arguing in a shared context window for theater value.
 
-## The objection, taken seriously
+On **Designing hand-offs between agents and humans**, design the stop path before the autonomy story — budgets, allow-listed tools, audit logs, and a kill switch operators can reach without a war room. Autonomy is earned after those exist.
 
-The counterargument is usually speed: we do not have time. That sentence often means you do not have time for the second failure.
+## Practices with enough detail to copy
 
-Take the objection seriously. Lightweight is good. Invisible is not. The fix is shorter artifacts and clearer owners — not more ceremony.
+Cadence beats intensity. These hold when they fit inside weeks people already live.
 
-## What to put in place before the announcement
+### 1
 
-Harnesses first: logs, token/time budgets, blast-radius limits, and a kill switch a human can use without a war room. Autonomy is earned after those exist.
+Ship the harness before the autonomy: budget, log schema, kill switch, allow-listed tools.
 
-Idempotency for agentic side effects — retries must not double-charge, double-page, or double-merge. Partial failure is normal; duplicate effects are optional if you design poorly.
+Event-driven agentic workflows teams can operate look like other event-driven systems: schemas, consumers, dead-letter paths, and owners.
+
+### 2
+
+Define stop-and-ask rules in writing; review them like any other safety control.
 
 Emit events for every tool call in production. Incidents without forensics become superstition. Event-driven design is how you keep humans in the loop without standing over the process.
 
-Useful specialization looks like a retrieval agent, a draft agent, and a verifier — each with narrow tools — not five personas arguing in a shared context window for theater value.
+### 3
 
-## Scenes from delivery
+Require event emission for every tool call in production.
 
-A kill switch exists but only in a vendor dashboard with three click-throughs and no on-call ownership. That is not a kill switch; that is a hope. Put the switch where operators already work.
+Harnesses first: logs, token/time budgets, blast-radius limits, and a kill switch a human can use without a war room. Autonomy is earned after those exist.
 
-Stop-and-ask rules were informal. The agent emails a customer. Now you have a process problem and a trust problem. Irreversible writes, authz changes, and customer communication belong on an allow-list with human gates.
+### 4
+
+Keep a named human owner for every agentic workflow that can change production state.
+
+Design hand-offs: when an agent must stop and ask, what context is packaged for the human, and how the resume is recorded. Dropped context forces humans to redo work the agent already “knew.”
+
+When an agent should stop and ask is a policy question, not a vibe. Write the list: irreversible writes, authz, customer communication, spend above threshold, tools outside the allow-list.
+
+Orchestration without a black-box conductor: prefer explicit workflows over an opaque planner nobody can debug. Debuggability is a product requirement.
+
+Resist the urge to expand scope into neighboring slogans. If a control does not make **Designing hand-offs between agents and humans** more operable for the next person, leave it for another note. Dilution is how coherent essays become stitched scrapbooks.
+
+## Scenes
+
+A multi-agent demo impresses leadership. In production, nobody can explain which agent wrote which file or why. Specialization without interfaces is just distributed confusion.
 
 An agent retries a payment side effect after a timeout. Without idempotency keys, customers see duplicates. Treat agent side effects with the same discipline as payment systems.
 
-## What you give up
+Under real load, an agent without budgets burns tokens, opens noisy PRs, and creates review debt faster than value. Budgets are not pessimism; they are product constraints.
 
-Do not build a program office for a one-team problem. Do not invent a framework brand. Do install the smallest control that makes failure legible.
-
-Human hand-offs add latency. Unbounded autonomy adds blast radius. Pick the latency.
+## Tradeoffs
 
 Harnesses slow the first demo and save the first incident. Sequence matters.
 
 Narrow tools feel less magical than one omnipotent agent. Magic is not an operability strategy.
 
-Omnipotent agents that “just figure it out” until they take the wrong production action.
+Human hand-offs add latency. Unbounded autonomy adds blast radius. Pick the latency.
 
-## Principles under ordinary pressure
+Write one page while the decision is still warm — context, options, choice, owner, revisit date. Verbal alignment on **Designing hand-offs between agents and humans** evaporates under ordinary calendar pressure, and Slack archaeology is a poor substitute for a decision record.
 
-Prefer reversible moves. If you cannot say how you would unwind the decision, you are not done designing it.
+Measure what you claim to care about. If **Designing hand-offs between agents and humans** only appears in kickoff slides and never in review, incident, or planning artifacts, it is branding. Put a verification signal where people already look.
 
-Useful specialization looks like a retrieval agent, a draft agent, and a verifier — each with narrow tools — not five personas arguing in a shared context window for theater value.
+## Failure modes
 
-Orchestration without a black-box conductor: prefer explicit workflows over an opaque planner nobody can debug. Debuggability is a product requirement.
+Each of these is a missing control, not a personality problem:
 
-Orchestration without a black-box conductor means you can explain the workflow on a whiteboard and pause any step. If you cannot, you cannot operate it.
-
-Design hand-offs: when an agent must stop and ask, what context is packaged for the human, and how the resume is recorded. Dropped context forces humans to redo work the agent already “knew.”
+- No kill switch; stopping requires redeploying or begging a vendor.
+- Multi-agent theater without clear interfaces or ownership of outcomes.
+- Omnipotent agents that “just figure it out” until they take the wrong production action.
+- Hand-offs that drop context, so humans redo the work.
 
 Owning outcomes when agents ship changes means the human merge still carries production accountability. Agents accelerate the middle; humans own the edge.
 
-A multi-agent demo impresses leadership. In production, nobody can explain which agent wrote which file or why. Specialization without interfaces is just distributed confusion.
+Human resume paths need packaged context: what the agent tried, what failed, and what must not be retried. Empty hand-offs erase the value of automation.
 
-Teach the principles in the artifacts people already touch: PR templates, RFC sections, architecture checklists, and on-call runbooks.
+Useful specialization looks like a retrieval agent, a draft agent, and a verifier — each with narrow tools — not five personas arguing in a shared context window for theater value.
 
-Autonomy is earned with observability. Until then, keep the blast radius small.
+Tool use as a privilege, not a default. Grant the minimum side effects; expand with evidence. Omnipotent agents that “just figure it out” eventually figure out the wrong production action.
 
-## The neighboring discipline
+Idempotency for agentic side effects — retries must not double-charge, double-page, or double-merge. Partial failure is normal; duplicate effects are optional if you design poorly.
 
-Leaders who isolate the practice from AI in engineering workflows create beautiful local optima and expensive global failure.
+Every tool grant is a privilege expansion. Review tool allow-lists the way you review IAM — on a cadence, with least privilege as the default.
 
-Shared harnesses beat private prompt folklore. If the only way to do it “right” lives in one engineer’s chat history, you do not have a practice.
+Budgets are product constraints. Token, time, and blast-radius limits keep agents from optimizing for activity over outcomes.
 
-Someone pastes a production schema into a consumer model tool to “move faster.” Leadership had no published data boundary. That is not an individual ethics failure first — it is a missing control.
+Orchestration without a black-box conductor means you can explain the workflow on a whiteboard and pause any step. If you cannot, you cannot operate it.
 
-Define allowed tools and data boundaries. Copilots without policy become shadow IT with autocomplete. Secrets, customer data, and authz logic need explicit rules.
+A kill switch exists but only in a vendor dashboard with three click-throughs and no on-call ownership. That is not a kill switch; that is a hope. Put the switch where operators already work.
 
-## A plan for the next seven days
-
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
-
-- Require event emission for every tool call in production.
-- Ship the harness before the autonomy: budget, log schema, kill switch, allow-listed tools.
-- Define stop-and-ask rules in writing; review them like any other safety control.
-- Harnesses first: logs, token/time budgets, blast-radius limits, and a kill switch a human can use without a war room.
-- Chaos-test retries: kill mid-flight and prove no duplicate side effects.
-- Idempotency for agentic side effects — retries must not double-charge, double-page, or double-merge.
-
-## The point, again
+## Close
 
 Own the outcome. Let agents accelerate the safe middle of the workflow.
 
-Continuity is the product. Tools and frameworks are optional accessories.
-
-On **Designing hand-offs between agents and humans**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+Carry the claim as a habit, not a brand: **Designing hand-offs between agents and humans** either compounds ownership or it was applause.

@@ -7,109 +7,91 @@ categories:
 draft: false
 ---
 
-**From demo RAG to operable RAG** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
+The useful version of “From demo RAG to operable RAG” is narrower than the slogan: Demo RAG is a weekend. Operable RAG is product work: freshness, permissions, connectors, evals, and an owner who gets paged when answers go stale.
 
-Retrieval and operable RAG is infrastructure with a product owner. Treat it that way and you will skip a year of trust erosion.
+I will stay on this thesis — no adjacent manifesto, no tour of every neighboring discipline.
 
-Connectors are the hard part of retrieval. Treat them as product surface area, not glue code you apologize for later.
+Resist the urge to expand scope into neighboring slogans. If a control does not make **From demo RAG to operable RAG** more operable for the next person, leave it for another note. Dilution is how coherent essays become stitched scrapbooks.
 
-The standard is inheritance. If a new teammate cannot find the owner, the control, and the evidence, you have a story — not a practice.
+Keep the unit of progress small enough to finish under a full calendar: one owner clarification, one verification signal, one reversible control. Grand programs without weekly evidence become status machines.
 
-## What I refuse to romanticize
+## What fails when you skip it
 
-I teach from failure modes because teams already have scars. Naming them precisely is faster than inventing a framework brand.
+Teams already have scars. Naming the failure modes precisely is faster than inventing a framework brand.
 
 Treating retrieval as a model problem when it is a data-operations problem.
 
-Shipping the chat UI before connectors and authz — then spending a year apologizing for hallucinations that were access bugs.
+Evals skipped because “users will tell us.” Users leave instead.
 
 Connectors treated as temporary glue with no product owner.
 
-Evals skipped because “users will tell us.” Users leave instead.
+No owner for corpus freshness; silent drift until users stop asking.
 
-## Mechanisms worth installing
+## Controls that answer those failures
 
-Those failures map to controls. Install the smallest ones that make failure legible.
+Connectors need product management: identity, rate limits, partial failure, schema drift, and who owns the break. Glue code without an owner becomes a career-limiting outage.
 
-Permissions bugs in RAG are data breaches with a conversational UI. Treat them with the same severity as any other authz defect.
+Freshness SLOs belong next to product SLOs. A corpus that is “usually fine” is how trust erodes without an incident ticket.
 
-Instrument the pipeline: query → retrieved IDs → scores → answer → user feedback. Make polite lies auditable. If you cannot replay what was retrieved, you cannot improve it.
-
-When retrieval lies politely, users blame “the AI” and stop reporting. Instrument feedback and retrieval traces so lies become tickets with owners.
-
-Ground answers in systems teams actually run — tickets, dashboards, runbooks — not paraphrases of marketing docs. Citation quality is a product requirement.
+Permissions in RAG are not optional. Enforce authz at retrieval time; never “filter in the prompt.” Prompt-side filtering is a leak with extra steps.
 
 Fail gracefully when context is thin: say what you do not know, ask for a tighter question, or escalate to a human path. Inventing confidence is how demos become liabilities.
 
-Design chunking as architecture: preserve meaning units, cite sources, and refuse to shred tables into noise. “Improving” chunk size without an eval is a regression with good intentions.
+Permissions bugs in RAG are data breaches with a conversational UI. Treat them with the same severity as any other authz defect.
 
-## Texture from the work
+Gold-question suites are living artifacts. Retire questions that no longer match the product; add questions from real support failures.
 
-An engineer “improves” chunking and destroys table Q&A. No eval suite existed, so the regression shipped as a win. Gold questions would have caught it in CI.
+Treat polite wrongness as a product defect with a trace: query, retrieved IDs, scores, answer, feedback. Without that trail, debates stay stuck on model vibes while users quietly stop asking.
+
+## A concrete scene
+
+Who owns the knowledge graph behind the bot? “The AI squad” means nobody owns source quality. Assign freshness owners per major corpus with an SLO.
+
+Permissions were “coming later.” The chat UI shipped. Then an answer included a doc the user should not see. That is not a model problem; it is an access-control problem you deferred.
 
 A connector flakes under rate limits. The bot answers from a partial corpus and sounds complete. Partial retrieval without a warning is a product bug.
 
-A bot answers from last quarter’s runbooks with perfect tone and wrong on-call. Freshness had no owner. Users learned to distrust the system in a week.
+## Tradeoffs
 
-## The costs of doing it right
+Strict authz can reduce recall. That is acceptable. Unauthorized recall is not a quality feature.
 
 Thin-context refusals lower answer rate and raise trust. Optimize for trust if the product depends on it.
 
 Evals feel slow before launch and priceless after. Fifty gold questions beat a thousand vague complaints.
 
-Strict authz can reduce recall. That is acceptable. Unauthorized recall is not a quality feature.
+For **From demo RAG to operable RAG**, the inheritance test is blunt: after a week, can someone outside the original room explain what changed, who owns it, and how you will know if it breaks? If the answer depends on hallway memory, you still have a story — not a practice.
 
-## How to hold the standard
+When pressure rises, teams drop the unowned practice first. Put **From demo RAG to operable RAG** in the path of work — templates, checklists, review norms — or admit it was optional applause.
 
-Optimize for the next person's onboarding cost. Every undocumented exception becomes a tax on hiring and incident response.
+## What to do this month
 
-Ground answers in systems teams actually run — tickets, dashboards, runbooks — not paraphrases of marketing docs. Citation quality is a product requirement.
+- Log retrieval traces for every production answer for at least 30 days.
+- Review connector failures in the same forum as product incidents.
+- Before UI polish: ship connectors, authz checks, and a 50-question eval set.
+- Add a thin-context path: refuse or escalate instead of inventing.
 
-Fail gracefully when context is thin: say what you do not know, ask for a tighter question, or escalate to a human path. Inventing confidence is how demos become liabilities.
+Chunking strategy as an architecture choice belongs in the same review as service boundaries. It changes failure modes and cost profiles.
 
-Design chunking as architecture: preserve meaning units, cite sources, and refuse to shred tables into noise. “Improving” chunk size without an eval is a regression with good intentions.
+Partial retrieval should be visible to the user and to ops. Silent degradation is how polite lies scale.
+
+Instrument the pipeline: query → retrieved IDs → scores → answer → user feedback. Make polite lies auditable. If you cannot replay what was retrieved, you cannot improve it.
+
+When retrieval lies politely, users blame “the AI” and stop reporting. Instrument feedback and retrieval traces so lies become tickets with owners.
 
 Own freshness: every source needs a refresh policy, a staleness signal, and a human accountable when the corpus lies. Silent drift is how users stop asking.
 
-Connectors need product management: identity, rate limits, partial failure, schema drift, and who owns the break. Glue code without an owner becomes a career-limiting outage.
+Ground answers in systems teams actually run — tickets, dashboards, runbooks — not paraphrases of marketing docs. Citation quality is a product requirement.
 
-Permissions were “coming later.” The chat UI shipped. Then an answer included a doc the user should not see. That is not a model problem; it is an access-control problem you deferred.
+Build evals early — gold questions, regression sets, and failure buckets (wrong, stale, unauthorized, empty). Without them you argue about vibes while users lose trust.
 
-Teach the principles in the artifacts people already touch: PR templates, RFC sections, architecture checklists, and on-call runbooks.
+Design chunking as architecture: preserve meaning units, cite sources, and refuse to shred tables into noise. “Improving” chunk size without an eval is a regression with good intentions.
 
-Operable RAG is infrastructure with a product owner. Demo RAG is a screenshot.
+Citation quality is part of the answer. An uncited fluent paragraph trains users to treat guesses as documentation.
 
-## The neighboring discipline
-
-Leaders who isolate the practice from AI in engineering workflows create beautiful local optima and expensive global failure.
-
-Where copilots help: boilerplate, test scaffolding, exploratory refactors with strong suites. Where they hide debt: security boundaries, concurrency, and domain invariants nobody wrote down.
-
-A strong IC becomes a bottleneck because only they know the “good prompts.” Codify the harness: templates, allow-listed tools, eval snippets, and examples of refusals.
-
-AI changes tempo; leadership still owns outcomes. If escaped defects rise while suggestion counts rise, you optimized the wrong dashboard.
-
-## Tempo changed; accountability did not
-
-Retrieval systems sit next to agentic workflows. The same discipline applies: privileges, audit trails, and human override when context is thin or side effects are irreversible.
-
-Design hand-offs: when an agent must stop and ask, what context is packaged for the human, and how the resume is recorded. Dropped context forces humans to redo work the agent already “knew.”
-
-## A plan for the next seven days
-
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
-
-- Permissions bugs in RAG are data breaches with a conversational UI.
-- Review connector failures in the same forum as product incidents.
-- Log retrieval traces for every production answer for at least 30 days.
-- Before UI polish: ship connectors, authz checks, and a 50-question eval set.
-- Name a freshness owner per major source with a refresh SLO.
-- Instrument the pipeline: query → retrieved IDs → scores → answer → user feedback.
+Support escalations mention “the bot was wrong last month too.” Without retrieval traces, engineering debates model temperature instead of the stale source.
 
 ## Close
 
 Build the eval loop first. Everything else is speculation with a chat box.
 
-Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.
-
-On **From demo RAG to operable RAG**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+Carry the claim as a habit, not a brand: **From demo RAG to operable RAG** either compounds ownership or it was applause.

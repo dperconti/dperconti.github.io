@@ -1,5 +1,5 @@
 ---
-title: "Code review as teaching, not gatekeeping under real load"
+title: "Code review as teaching, not gatekeeping: naming the owner"
 date: 2025-01-07T05:00:00Z
 categories:
   - Engineering
@@ -7,108 +7,93 @@ categories:
 draft: false
 ---
 
-Under real load, **Code review as teaching, not gatekeeping** stops being a slogan. Queues, incidents, and half-finished migrations reveal whether the system was designed or performed.
+“Code review as teaching, not gatekeeping” stops being abstract the moment you ask who gets paged when it fails.
 
-People praise Engineering craft in the abstract and starve it in the sprint. The fix is to put craft controls on the same board as features.
+Craft shows up in boring places: migrations sized to capacity, alerts that mean something, reviews that leave the code more teachable.
 
-Operability under inheritance is the craft metric that compounds.
+What follows stays on that claim: mechanisms, concrete scenes, and the failure modes that appear when the claim is ignored.
 
-I am not interested in branding this work. I am interested in whether the next person can run it without a week of hallway archaeology.
+For **Code review as teaching, not gatekeeping**, the inheritance test is blunt: after a week, can someone outside the original room explain what changed, who owns it, and how you will know if it breaks? If the answer depends on hallway memory, you still have a story — not a practice.
 
-## The operating controls
+Write one page while the decision is still warm — context, options, choice, owner, revisit date. Verbal alignment on **Code review as teaching, not gatekeeping** evaporates under ordinary calendar pressure, and Slack archaeology is a poor substitute for a decision record.
 
-Start with mechanisms. For this work, the first controls should be boring on purpose — inspectable, teachable, and cheap to revisit.
-
-Testing strategy when speed matters protects the invariants customers feel. Coverage percentages without risk focus become theater.
-
-Code review as teaching: require at least one pattern comment. Reject gatekeeping that only polices style without teaching why. Slow, unkind reviews are a leadership failure disguised as standards.
-
-Technical debt with a repayment schedule appears beside features with an owner and a trigger metric. Unscheduled debt always loses to the loudest roadmap slide.
-
-Documentation that earns its keep means runbooks and decision records over aspirational diagrams. If freshness has no owner, docs become fiction.
-
-Observability that tells a story correlates user impact → service → change → owner. Orphaned dashboards are decoration. Alerts that fire for noise train people to ignore harm.
-
-Observability that cannot answer “what changed for which users?” is incomplete. Build the story path before you build the fifteenth chart.
-
-## Texture from the work
+## A scene from delivery
 
 Incident response produces a beautiful timeline and no permanent control. The next similar failure arrives on schedule. Remediation means a test, a rate limit, a privilege change, or a budget — something that bites.
 
-An architecture review celebrates a new service boundary. Nobody asks who owns the failure mode across the new network hop. Three incidents later, the boundary is rewritten — this time with an owner map.
+That scene is the thesis under calendar pressure. The response is not another status meeting — it is a control.
 
-A team ships a “temporary” dual-write and forgets the delete ticket. Six months later both paths are load-bearing. Craft would have put a repayment date next to the feature flag.
-
-## Failure modes that teach
-
-Each failure mode below is a missing control. Another meeting will not install it.
-
-- Debt that never appears on the board and therefore never loses to a feature fairly.
-- Docs that rot because nobody owns freshness; new hires learn folklore instead.
-- Big-bang migrations that consume goodwill and leave half-migrated states.
-- Reviews as status gates — slow, unkind, and educationally empty.
-
-## The costs of doing it right
-
-Reversible architecture can look indecisive to executives who want inevitability. Translate: we are buying option value and reducing blast radius.
-
-Teaching reviews take minutes longer than rubber stamps. Escaped defects take days. Budget the minutes.
-
-Right-sizing tests means saying no to low-value suites that burn CI energy without protecting user invariants.
-
-## Principles under ordinary pressure
-
-Optimize for the next person's onboarding cost. Every undocumented exception becomes a tax on hiring and incident response.
-
-Documentation that earns its keep means runbooks and decision records over aspirational diagrams. If freshness has no owner, docs become fiction.
-
-Observability that tells a story correlates user impact → service → change → owner. Orphaned dashboards are decoration. Alerts that fire for noise train people to ignore harm.
-
-Observability that cannot answer “what changed for which users?” is incomplete. Build the story path before you build the fifteenth chart.
+## Mechanisms
 
 Migrations that respect capacity use thin slices, dual-write windows, and a kill switch. Big-bang weekends consume goodwill and leave half-migrated states.
 
+Small platforms that stay operable refuse features that cannot be owned on-call by the same team that ships them. Unowned platform features are product debt wearing infrastructure clothing.
+
+Code review as teaching: require at least one pattern comment. Reject gatekeeping that only polices style without teaching why. Slow, unkind reviews are a leadership failure disguised as standards.
+
+Architecture decisions you can reverse include a rollback path and a date to re-evaluate assumptions. Inevitable-looking diagrams are often just unchallenged ones.
+
 API design for inheritors: name invariants, versioning rules, and what “breaking” means before the first client. Clever endpoints without consumer contracts become permanent politics.
+
+Testing strategy when speed matters protects the invariants customers feel. Coverage percentages without risk focus become theater.
+
+On **Code review as teaching, not gatekeeping**, craft shows up as reversible decisions, reviews that teach, and remediations that change a control within a week of an incident — not as aesthetics in a diagram.
+
+## Another texture
 
 API consumers invent conflicting interpretations of optional fields because the contract never said which fields are load-bearing. A one-page consumer expectation doc would have been cheaper than the outage.
 
-None of these principles require a new program name. They require attention in the path of work — reviews, design notes, procurement, and post-incident follow-through.
+A service grows a second write path “temporarily.” Eighteen months later both paths are sacred. Temporary needs an expiration owner on the same board as the feature.
 
-Refuse to scale a workflow you cannot explain on a whiteboard to a new hire in fifteen minutes.
+## Tradeoffs
 
-## Where this couples to adjacent work
+Right-sizing tests means saying no to low-value suites that burn CI energy without protecting user invariants.
 
-A durable approach borrows controls from Engineering leadership instead of inventing a parallel religion.
+Teaching reviews take minutes longer than rubber stamps. Escaped defects take days. Budget the minutes.
 
-Ceremony is optional; continuity is not. Keep the lightest process that still produces decisions, owners, and evidence. Delete the rest without guilt.
+Reversible architecture can look indecisive to executives who want inevitability. Translate: we are buying option value and reducing blast radius.
 
-A platform team and two product streams share a schema. Everyone “aligned” in a roadmap meeting. Three weeks later, two breaking changes land in the same release train because nobody owned the deprecation clock. The fix is not another sync. It is a published contract: schema owner, change window, and who gets paged when clients break.
+Put repayment and operability on the same board as features so debt competes in the open instead of at 2 a.m. Unscheduled debt always loses to the loudest slide.
 
-Hands-on does not mean doing everyone’s job. It means knowing where the system will tax the team and being willing to renegotiate scope when reality asks for it. Stay close enough to feel texture; distant enough that people still own outcomes.
+Observability should answer what changed for which users, tied to an owner. Orphaned dashboards are decoration.
 
-## When models join the workflow
+## Failure modes
 
-Fluent output raises the value of written invariants. Improvisation got cheaper; durable context got more precious.
+Each of these is a missing control, not a personality problem:
 
-Coach AI literacy as judgment: when to draft with a model, when to refuse, when to escalate. Literacy is a coaching problem, not a one-time workshop.
+- Reviews as status gates — slow, unkind, and educationally empty.
+- Big-bang migrations that consume goodwill and leave half-migrated states.
+- Debt that never appears on the board and therefore never loses to a feature fairly.
+- Docs that rot because nobody owns freshness; new hires learn folklore instead.
 
-Idempotency for agentic side effects — retries must not double-charge, double-page, or double-merge. Partial failure is normal; duplicate effects are optional if you design poorly.
+## What to do this month
 
-## A plan for the next seven days
-
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
-
-- Code review as teaching: require at least one pattern comment.
-- Every review: teach one reusable pattern in writing.
-- Every quarter: schedule debt repayment proportional to change-fail pain.
+- Every incident: ship one permanent control within a week.
 - Every API: publish consumer expectations and deprecation rules.
 - Every design: state the reversible path and the revisit date.
-- Testing strategy when speed matters protects the invariants customers feel.
+
+Documentation that earns its keep means runbooks and decision records over aspirational diagrams. If freshness has no owner, docs become fiction.
+
+API consumer contracts should name required fields, error semantics, and deprecation windows. Optional-everything APIs become archaeology projects.
+
+Observability that cannot answer “what changed for which users?” is incomplete. Build the story path before you build the fifteenth chart.
+
+Incident response that improves the system ends with a control change dated within a week. Timelines without control changes are storytelling.
+
+Migrations earn trust when each slice leaves the system operable and reversible. Percentage-complete without a kill switch is optimism with a burn-down chart.
+
+Review latency is a craft signal. A queue that sits for days teaches people to bypass standards or to ship without teaching comments.
+
+Observability that tells a story correlates user impact → service → change → owner. Orphaned dashboards are decoration. Alerts that fire for noise train people to ignore harm.
+
+Technical debt with a repayment schedule appears beside features with an owner and a trigger metric. Unscheduled debt always loses to the loudest roadmap slide.
+
+An architecture review celebrates a new service boundary. Nobody asks who owns the failure mode across the new network hop. Three incidents later, the boundary is rewritten — this time with an owner map.
+
+A migration is “done” at 80% with a cleanup ticket in the backlog forever. Craft would have treated 100% with kill-switch removal as the definition of done.
 
 ## Close
 
 Prefer systems that teach through their structure — clear boundaries beat cleverness.
 
-Continuity is the product. Tools and frameworks are optional accessories.
-
-On **Code review as teaching, not gatekeeping**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+On **Code review as teaching, not gatekeeping**, keep the loop short: write the decision, name the owner, verify the outcome.

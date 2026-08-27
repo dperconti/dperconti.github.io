@@ -7,100 +7,87 @@ categories:
 draft: false
 ---
 
-**Event-driven agentic workflows teams can operate** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
+“Event-driven agentic workflows teams can operate” stops being abstract the moment you ask who gets paged when it fails.
 
-Agentic systems should feel like junior systems in production: explicit tools, limited blast radius, and a named human who owns outcomes.
+Multi-agent theater is specialization without interfaces. Useful specialization is narrow tools, clear side effects, and kill switches.
 
-Event-driven agentic workflows only help when every action emits an auditable event: what ran, why, with which tools, and what it changed.
+I will stay on this thesis — no adjacent manifesto, no tour of every neighboring discipline.
 
-The standard is inheritance. If a new teammate cannot find the owner, the control, and the evidence, you have a story — not a practice.
+On **Event-driven agentic workflows teams can operate**, design the stop path before the autonomy story — budgets, allow-listed tools, audit logs, and a kill switch operators can reach without a war room. Autonomy is earned after those exist.
 
-## Boring controls that compound
+Keep the unit of progress small enough to finish under a full calendar: one owner clarification, one verification signal, one reversible control. Grand programs without weekly evidence become status machines.
 
-Start with mechanisms. For this work, the first controls should be boring on purpose — inspectable, teachable, and cheap to revisit.
+## How it actually works
 
-Idempotency for agentic side effects — retries must not double-charge, double-page, or double-merge. Partial failure is normal; duplicate effects are optional if you design poorly.
+Install the smallest set of mechanisms that make success and failure legible. Skip the program name.
 
-Orchestration without a black-box conductor means you can explain the workflow on a whiteboard and pause any step. If you cannot, you cannot operate it.
-
-Orchestration without a black-box conductor: prefer explicit workflows over an opaque planner nobody can debug. Debuggability is a product requirement.
-
-Emit events for every tool call in production. Incidents without forensics become superstition. Event-driven design is how you keep humans in the loop without standing over the process.
-
-Useful specialization looks like a retrieval agent, a draft agent, and a verifier — each with narrow tools — not five personas arguing in a shared context window for theater value.
+Every tool grant is a privilege expansion. Review tool allow-lists the way you review IAM — on a cadence, with least privilege as the default.
 
 Tool use as a privilege, not a default. Grant the minimum side effects; expand with evidence. Omnipotent agents that “just figure it out” eventually figure out the wrong production action.
 
-## Texture from the work
+Design hand-offs: when an agent must stop and ask, what context is packaged for the human, and how the resume is recorded. Dropped context forces humans to redo work the agent already “knew.”
 
-A kill switch exists but only in a vendor dashboard with three click-throughs and no on-call ownership. That is not a kill switch; that is a hope. Put the switch where operators already work.
+When an agent should stop and ask is a policy question, not a vibe. Write the list: irreversible writes, authz, customer communication, spend above threshold, tools outside the allow-list.
 
-Under real load, an agent without budgets burns tokens, opens noisy PRs, and creates review debt faster than value. Budgets are not pessimism; they are product constraints.
+Harnesses first: logs, token/time budgets, blast-radius limits, and a kill switch a human can use without a war room. Autonomy is earned after those exist.
 
-An agent retries a payment side effect after a timeout. Without idempotency keys, customers see duplicates. Treat agent side effects with the same discipline as payment systems.
+Orchestration without a black-box conductor: prefer explicit workflows over an opaque planner nobody can debug. Debuggability is a product requirement.
 
-## How the practice decays
+For **Event-driven agentic workflows teams can operate**, the inheritance test is blunt: after a week, can someone outside the original room explain what changed, who owns it, and how you will know if it breaks? If the answer depends on hallway memory, you still have a story — not a practice.
 
-Each failure mode below is a missing control. Another meeting will not install it.
+## Where this shows up
 
-- Omnipotent agents that “just figure it out” until they take the wrong production action.
-- Hand-offs that drop context, so humans redo the work.
-- No kill switch; stopping requires redeploying or begging a vendor.
-- Multi-agent theater without clear interfaces or ownership of outcomes.
+An agent opens twelve draft PRs overnight against a thin test suite. Review debt becomes the real cost. Budgets and merge gates would have been kinder than a demo.
 
-## The costs of doing it right
+A multi-agent demo impresses leadership. In production, nobody can explain which agent wrote which file or why. Specialization without interfaces is just distributed confusion.
 
-Harnesses slow the first demo and save the first incident. Sequence matters.
+Stop-and-ask rules were informal. The agent emails a customer. Now you have a process problem and a trust problem. Irreversible writes, authz changes, and customer communication belong on an allow-list with human gates.
+
+## Tradeoffs
 
 Human hand-offs add latency. Unbounded autonomy adds blast radius. Pick the latency.
 
 Narrow tools feel less magical than one omnipotent agent. Magic is not an operability strategy.
 
-## Principles under ordinary pressure
+Harnesses slow the first demo and save the first incident. Sequence matters.
 
-Prefer reversible moves. If you cannot say how you would unwind the decision, you are not done designing it.
+When pressure rises, teams drop the unowned practice first. Put **Event-driven agentic workflows teams can operate** in the path of work — templates, checklists, review norms — or admit it was optional applause.
+
+Write one page while the decision is still warm — context, options, choice, owner, revisit date. Verbal alignment on **Event-driven agentic workflows teams can operate** evaporates under ordinary calendar pressure, and Slack archaeology is a poor substitute for a decision record.
+
+## Failure modes
+
+Each of these is a missing control, not a personality problem:
+
+- Omnipotent agents that “just figure it out” until they take the wrong production action.
+- Hand-offs that drop context, so humans redo the work.
+- Multi-agent theater without clear interfaces or ownership of outcomes.
+- Retries without idempotency keys — duplicate side effects under partial failure.
+
+## What to do this month
+
+- Define stop-and-ask rules in writing; review them like any other safety control.
+- Keep a named human owner for every agentic workflow that can change production state.
+- Require event emission for every tool call in production.
+
+Orchestration without a black-box conductor means you can explain the workflow on a whiteboard and pause any step. If you cannot, you cannot operate it.
 
 Emit events for every tool call in production. Incidents without forensics become superstition. Event-driven design is how you keep humans in the loop without standing over the process.
 
 Useful specialization looks like a retrieval agent, a draft agent, and a verifier — each with narrow tools — not five personas arguing in a shared context window for theater value.
 
-Tool use as a privilege, not a default. Grant the minimum side effects; expand with evidence. Omnipotent agents that “just figure it out” eventually figure out the wrong production action.
+Budgets are product constraints. Token, time, and blast-radius limits keep agents from optimizing for activity over outcomes.
+
+Human resume paths need packaged context: what the agent tried, what failed, and what must not be retried. Empty hand-offs erase the value of automation.
 
 Owning outcomes when agents ship changes means the human merge still carries production accountability. Agents accelerate the middle; humans own the edge.
 
-Event-driven agentic workflows teams can operate look like other event-driven systems: schemas, consumers, dead-letter paths, and owners.
+Idempotency for agentic side effects — retries must not double-charge, double-page, or double-merge. Partial failure is normal; duplicate effects are optional if you design poorly.
 
-A multi-agent demo impresses leadership. In production, nobody can explain which agent wrote which file or why. Specialization without interfaces is just distributed confusion.
-
-None of these principles require a new program name. They require attention in the path of work — reviews, design notes, procurement, and post-incident follow-through.
-
-Refuse to scale a workflow you cannot explain on a whiteboard to a new hire in fifteen minutes.
-
-## The neighboring discipline
-
-Leaders who isolate the practice from Engineering craft create beautiful local optima and expensive global failure.
-
-Migrations that respect capacity use thin slices, dual-write windows, and a kill switch. Big-bang weekends consume goodwill and leave half-migrated states.
-
-Incident response produces a beautiful timeline and no permanent control. The next similar failure arrives on schedule. Remediation means a test, a rate limit, a privilege change, or a budget — something that bites.
-
-Architecture decisions you can reverse include a rollback path and a date to re-evaluate assumptions. Inevitable-looking diagrams are often just unchallenged ones.
-
-## Make it observable
-
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
-
-- Orchestration without a black-box conductor means you can explain the workflow on a whiteboard and pause any step.
-- Define stop-and-ask rules in writing; review them like any other safety control.
-- Require event emission for every tool call in production.
-- Idempotency for agentic side effects — retries must not double-charge, double-page, or double-merge.
-- Chaos-test retries: kill mid-flight and prove no duplicate side effects.
-- Keep a named human owner for every agentic workflow that can change production state.
+An agent retries a payment side effect after a timeout. Without idempotency keys, customers see duplicates. Treat agent side effects with the same discipline as payment systems.
 
 ## Close
 
-Own the outcome. Let agents accelerate the safe middle of the workflow.
+Logs, budgets, and kill switches are how leaders sleep.
 
-If this feels quieter than a keynote, that is intentional. Compounding work rarely looks like theater.
-
-On **Event-driven agentic workflows teams can operate**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+On **Event-driven agentic workflows teams can operate**, keep the loop short: write the decision, name the owner, verify the outcome.

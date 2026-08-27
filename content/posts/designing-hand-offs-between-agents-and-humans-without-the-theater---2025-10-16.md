@@ -1,5 +1,5 @@
 ---
-title: "Designing hand-offs between agents and humans without the theater"
+title: "Designing hand-offs between agents and humans: naming the owner"
 date: 2025-10-16T05:00:00Z
 categories:
   - AI
@@ -7,95 +7,89 @@ categories:
 draft: false
 ---
 
-Without the theater, **Designing hand-offs between agents and humans** is quieter: fewer frameworks, more written owners, less applause for motion.
+“Designing hand-offs between agents and humans” stops being abstract the moment you ask who gets paged when it fails.
 
-If you are shipping Agentic systems, design the stop path before the autonomy story. Teams remember the first uncontrolled side effect longer than the first clever demo.
+Event-driven agentic workflows only help when every action emits an auditable event: what ran, why, with which tools, and what it changed.
 
-Logs, budgets, and kill switches are leadership tools — not only platform niceties.
+What follows stays on that claim: mechanisms, concrete scenes, and the failure modes that appear when the claim is ignored.
 
-The standard is inheritance. If a new teammate cannot find the owner, the control, and the evidence, you have a story — not a practice.
+For **Designing hand-offs between agents and humans**, the inheritance test is blunt: after a week, can someone outside the original room explain what changed, who owns it, and how you will know if it breaks? If the answer depends on hallway memory, you still have a story — not a practice.
 
-## Why smart teams still dodge this
+Resist the urge to expand scope into neighboring slogans. If a control does not make **Designing hand-offs between agents and humans** more operable for the next person, leave it for another note. Dilution is how coherent essays become stitched scrapbooks.
 
-The counterargument is usually speed: we do not have time. That sentence often means you do not have time for the second failure.
+## How it actually works
 
-Take the objection seriously. Lightweight is good. Invisible is not. The fix is shorter artifacts and clearer owners — not more ceremony.
+Start with controls that are boring on purpose: written owners, verification, and a path for the next person.
 
-## The operating controls
+Human resume paths need packaged context: what the agent tried, what failed, and what must not be retried. Empty hand-offs erase the value of automation.
 
-Tool use as a privilege, not a default. Grant the minimum side effects; expand with evidence. Omnipotent agents that “just figure it out” eventually figure out the wrong production action.
+Emit events for every tool call in production. Incidents without forensics become superstition. Event-driven design is how you keep humans in the loop without standing over the process.
 
-Event-driven agentic workflows teams can operate look like other event-driven systems: schemas, consumers, dead-letter paths, and owners.
-
-Orchestration without a black-box conductor: prefer explicit workflows over an opaque planner nobody can debug. Debuggability is a product requirement.
-
-Harnesses first: logs, token/time budgets, blast-radius limits, and a kill switch a human can use without a war room. Autonomy is earned after those exist.
-
-## Concrete cases
-
-Under real load, an agent without budgets burns tokens, opens noisy PRs, and creates review debt faster than value. Budgets are not pessimism; they are product constraints.
-
-A multi-agent demo impresses leadership. In production, nobody can explain which agent wrote which file or why. Specialization without interfaces is just distributed confusion.
-
-Stop-and-ask rules were informal. The agent emails a customer. Now you have a process problem and a trust problem. Irreversible writes, authz changes, and customer communication belong on an allow-list with human gates.
-
-## The costs of doing it right
-
-Do not build a program office for a one-team problem. Do not invent a framework brand. Do install the smallest control that makes failure legible.
-
-Human hand-offs add latency. Unbounded autonomy adds blast radius. Pick the latency.
-
-Harnesses slow the first demo and save the first incident. Sequence matters.
-
-Narrow tools feel less magical than one omnipotent agent. Magic is not an operability strategy.
-
-Hand-offs that drop context, so humans redo the work.
-
-## Operating principles
-
-Hold three standards at once: a named owner, a written control, and a verification signal. Missing any one turns the practice into performance.
-
-Harnesses first: logs, token/time budgets, blast-radius limits, and a kill switch a human can use without a war room. Autonomy is earned after those exist.
+Owning outcomes when agents ship changes means the human merge still carries production accountability. Agents accelerate the middle; humans own the edge.
 
 Design hand-offs: when an agent must stop and ask, what context is packaged for the human, and how the resume is recorded. Dropped context forces humans to redo work the agent already “knew.”
 
-Idempotency for agentic side effects — retries must not double-charge, double-page, or double-merge. Partial failure is normal; duplicate effects are optional if you design poorly.
+Orchestration without a black-box conductor: prefer explicit workflows over an opaque planner nobody can debug. Debuggability is a product requirement.
 
-Useful specialization looks like a retrieval agent, a draft agent, and a verifier — each with narrow tools — not five personas arguing in a shared context window for theater value.
+Tool use as a privilege, not a default. Grant the minimum side effects; expand with evidence. Omnipotent agents that “just figure it out” eventually figure out the wrong production action.
 
-When an agent should stop and ask is a policy question, not a vibe. Write the list: irreversible writes, authz, customer communication, spend above threshold, tools outside the allow-list.
+When pressure rises, teams drop the unowned practice first. Put **Designing hand-offs between agents and humans** in the path of work — templates, checklists, review norms — or admit it was optional applause.
+
+## Where this shows up
+
+An agent opens twelve draft PRs overnight against a thin test suite. Review debt becomes the real cost. Budgets and merge gates would have been kinder than a demo.
+
+Under real load, an agent without budgets burns tokens, opens noisy PRs, and creates review debt faster than value. Budgets are not pessimism; they are product constraints.
 
 An agent retries a payment side effect after a timeout. Without idempotency keys, customers see duplicates. Treat agent side effects with the same discipline as payment systems.
 
-If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.
+## Tradeoffs
 
-Logs, budgets, and kill switches are how leaders sleep.
+Harnesses slow the first demo and save the first incident. Sequence matters.
 
-## The neighboring discipline
+Human hand-offs add latency. Unbounded autonomy adds blast radius. Pick the latency.
 
-A durable approach borrows controls from AI in engineering workflows instead of inventing a parallel religion.
+Narrow tools feel less magical than one omnipotent agent. Magic is not an operability strategy.
 
-Require a verification trail on assisted work: what the model changed, what a human checked, and where that note lives — PR, ticket, or decision record. Authorship is not ownership of production risk.
+Side effects need the same discipline as payments: idempotency, clear hand-offs, and a human who still owns production outcomes. Retries without keys turn partial failure into duplicate harm.
 
-A strong IC becomes a bottleneck because only they know the “good prompts.” Codify the harness: templates, allow-listed tools, eval snippets, and examples of refusals.
+Useful specialization is narrow tools and clear interfaces — not personas arguing in a shared context window for theater value.
 
-Coach AI literacy as judgment: when to draft with a model, when to refuse, when to escalate. Literacy is a coaching problem, not a one-time workshop.
+## Failure modes
 
-## Make it observable
+Each of these is a missing control, not a personality problem:
 
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+- Omnipotent agents that “just figure it out” until they take the wrong production action.
+- No kill switch; stopping requires redeploying or begging a vendor.
+- Retries without idempotency keys — duplicate side effects under partial failure.
+- Multi-agent theater without clear interfaces or ownership of outcomes.
 
-- Chaos-test retries: kill mid-flight and prove no duplicate side effects.
+## What to do this month
+
 - Ship the harness before the autonomy: budget, log schema, kill switch, allow-listed tools.
-- Keep a named human owner for every agentic workflow that can change production state.
-- Require event emission for every tool call in production.
 - Define stop-and-ask rules in writing; review them like any other safety control.
-- Tool use as a privilege, not a default.
+- Chaos-test retries: kill mid-flight and prove no duplicate side effects.
 
-## What to carry forward
+When an agent should stop and ask is a policy question, not a vibe. Write the list: irreversible writes, authz, customer communication, spend above threshold, tools outside the allow-list.
+
+Budgets are product constraints. Token, time, and blast-radius limits keep agents from optimizing for activity over outcomes.
+
+Orchestration without a black-box conductor means you can explain the workflow on a whiteboard and pause any step. If you cannot, you cannot operate it.
+
+Idempotency for agentic side effects — retries must not double-charge, double-page, or double-merge. Partial failure is normal; duplicate effects are optional if you design poorly.
+
+Event-driven agentic workflows teams can operate look like other event-driven systems: schemas, consumers, dead-letter paths, and owners.
+
+Useful specialization looks like a retrieval agent, a draft agent, and a verifier — each with narrow tools — not five personas arguing in a shared context window for theater value.
+
+Every tool grant is a privilege expansion. Review tool allow-lists the way you review IAM — on a cadence, with least privilege as the default.
+
+Harnesses first: logs, token/time budgets, blast-radius limits, and a kill switch a human can use without a war room. Autonomy is earned after those exist.
+
+Stop-and-ask rules were informal. The agent emails a customer. Now you have a process problem and a trust problem. Irreversible writes, authz changes, and customer communication belong on an allow-list with human gates.
+
+## Close
 
 Own the outcome. Let agents accelerate the safe middle of the workflow.
 
-If this feels quieter than a keynote, that is intentional. Compounding work rarely looks like theater.
-
-On **Designing hand-offs between agents and humans**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+On **Designing hand-offs between agents and humans**, keep the loop short: write the decision, name the owner, verify the outcome.

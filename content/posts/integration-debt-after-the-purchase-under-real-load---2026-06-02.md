@@ -1,5 +1,5 @@
 ---
-title: "Integration debt after the purchase under real load"
+title: "Integration debt after the purchase: naming the owner"
 date: 2026-06-02T05:00:00Z
 categories:
   - Engineering
@@ -7,105 +7,97 @@ categories:
 draft: false
 ---
 
-Under real load, **Integration debt after the purchase** stops being a slogan. Queues, incidents, and half-finished migrations reveal whether the system was designed or performed.
+Buy commodities. Build the harness that makes your judgment visible: policy, evals, audit, and exit.
 
-Buy-versus-build judgment debates go wrong when they start from pride or fear instead of ownership: who runs the failure mode, and what does exit cost?
+The rest develops that one idea with controls you can install and failure modes you can recognize.
 
-AI compresses the typing cost of building. It does not compress the ownership cost of running what you built.
+On **Integration debt after the purchase**, start from ownership of the failure mode and the exit path. Purchase price is the down payment; integration debt is the mortgage.
 
-I am not interested in branding this work. I am interested in whether the next person can run it without a week of hallway archaeology.
+When pressure rises, teams drop the unowned practice first. Put **Integration debt after the purchase** in the path of work — templates, checklists, review norms — or admit it was optional applause.
 
-## Sequence under ordinary pressure
+## What fails when you skip it
 
-Imagine ordinary pressure — not a lab. Someone proposes a change that touches this practice. The first question is not which tool. It is who owns the outcome and what you will verify.
+Teams already have scars. Naming the failure modes precisely is faster than inventing a framework brand.
 
-Build the harness, buy the commodity works until someone rebuilds the commodity “for flexibility.” Flexibility without differentiated ownership is usually nostalgia.
+Building because pride, buying because fear — neither from ownership analysis.
 
-Day two is writing. A short decision record: context, options, choice, owner, revisit date. Without that page, the week becomes Slack archaeology.
+Shadow purchases by teams that skip security and data review.
+
+Custom platforms that reinvent commodity chrome while underfunding the harness.
+
+Vendor success metrics replacing your product metrics.
+
+## Controls that answer those failures
 
 Platforms you buy still need owners — for identity integration, data retention, incident comms, and process translation. Procurement does not create ownership.
 
+Evaluating vendors like critical-path systems includes asking how you pause them. No pause path means no operational maturity.
+
+Write exit strategies for bought AI tooling before procurement: data export, prompt/eval portability, and a 90-day unwind drill. Soft lock-in is still lock-in.
+
 When a vendor becomes your process, document the process in your words. Otherwise a price hike or outage becomes an identity crisis.
 
-Midweek friction is expected. Clear drag — access, environments, unclear interfaces — before you add a status meeting that performs leadership.
-
-A vendor’s success metrics replace product metrics in leadership reviews. That is lock-in of attention. Keep your north-star metrics in-house.
-
-Build less, own more of the outcome: prefer thin custom layers over reimplementing commodity models. Copilots make greenfield look cheap until on-call inherits it.
-
-By week’s end, success is an operable slice: a log schema, an eval, a runbook, a kill switch, or a freshness owner — plus a human who can reverse the change.
-
-No exit plan. Price increases. Suddenly “switching costs” are discovered during budget season. A tabletop unwind once a year is cheaper than surprise.
+The new cost of custom is maintenance, not typing. AI makes that easy to forget until the second quarter of on-call.
 
 Evaluate AI vendors like critical-path systems: SLOs, incident communication, subprocessors, kill switches, and data boundaries.
 
-## The wreck as syllabus
+Keep the unit of progress small enough to finish under a full calendar: one owner clarification, one verification signal, one reversible control. Grand programs without weekly evidence become status machines.
 
-- Shadow purchases by teams that skip security and data review.
-- Building because pride, buying because fear — neither from ownership analysis.
-- Vendor success metrics replacing your product metrics.
+## A concrete scene
 
-## Tradeoffs worth naming
+A vendor’s success metrics replace product metrics in leadership reviews. That is lock-in of attention. Keep your north-star metrics in-house.
+
+A price hike arrives and nobody can list what data is trapped where. The exit sketch should have been written at purchase, not at panic.
+
+A team builds a custom agent platform because it feels strategic. Six months later they maintain auth, quotas, and UI chrome instead of product differentiation. Commodity inference plus an in-house harness would have been enough.
+
+## Tradeoffs
+
+Vendor features arrive fast. Your process still needs translation into owned runbooks.
 
 Keeping harnesses in-house costs engineering time and preserves exit. Worth it for anything on the critical path.
 
 Building custom feels like control and often buys maintenance. Buying feels like speed and often buys integration debt. Name the debt either way.
 
-Vendor features arrive fast. Your process still needs translation into owned runbooks.
+If nobody on your team can operate the failure mode, you did not buy a capability — you rented a demo with a support email.
 
-## How to hold the standard
+Write one page while the decision is still warm — context, options, choice, owner, revisit date. Verbal alignment on **Integration debt after the purchase** evaporates under ordinary calendar pressure, and Slack archaeology is a poor substitute for a decision record.
 
-Optimize for the next person's onboarding cost. Every undocumented exception becomes a tax on hiring and incident response.
+## What to do this month
 
-Evaluate AI vendors like critical-path systems: SLOs, incident communication, subprocessors, kill switches, and data boundaries.
+- Require eval and audit ownership to stay in-house for AI tooling.
+- Track integration debt items on the same board as features until retired.
+- Annual: run a tabletop exit for one critical vendor.
+- Every build: name the commodity you refused to buy and why ownership differs.
 
-Price integration debt explicitly: connectors, identity, logging, eval wiring, and the people who will babysit them. Purchase price is the down payment.
-
-Start from ownership. If nobody on your team can operate the failure mode, you did not buy a capability — you rented a demo with a support email.
-
-The new cost of custom is maintenance, not typing. AI makes that easy to forget until the second quarter of on-call.
+Build less, own more of the outcome: prefer thin custom layers over reimplementing commodity models. Copilots make greenfield look cheap until on-call inherits it.
 
 Build the harness, buy the commodity: keep eval suites, policy, and audit logs in systems you control even if inference is purchased.
 
-A team builds a custom agent platform because it feels strategic. Six months later they maintain auth, quotas, and UI chrome instead of product differentiation. Commodity inference plus an in-house harness would have been enough.
+Make-or-buy with agents in the mix still requires you to define tool allow-lists and human override. Buying the runtime does not buy judgment.
 
-Teach the principles in the artifacts people already touch: PR templates, RFC sections, architecture checklists, and on-call runbooks.
+Start from ownership. If nobody on your team can operate the failure mode, you did not buy a capability — you rented a demo with a support email.
 
-Keep the feedback loop short enough that the team can feel the practice working before the next planning cycle.
+Integration debt belongs on the same board as features until retired. Otherwise procurement wins the quarter and on-call pays the year.
 
-## Do not silo the practice
+Price integration debt explicitly: connectors, identity, logging, eval wiring, and the people who will babysit them. Purchase price is the down payment.
 
-This work does not live alone. It couples to AI in engineering workflows.
+Exit drills are cheap insurance. Export a sample, revoke a key, and time how long a degraded mode lasts before you need the vendor again.
 
-Prompting is not process. Harnesses are: allow-lists, templates, evals, and review norms that survive a teammate leaving.
+Keep eval suites and audit logs in systems you control even when inference is purchased. That is how you keep judgment portable.
 
-Someone pastes a production schema into a consumer model tool to “move faster.” Leadership had no published data boundary. That is not an individual ethics failure first — it is a missing control.
+No exit plan. Price increases. Suddenly “switching costs” are discovered during budget season. A tabletop unwind once a year is cheaper than surprise.
 
-Shared harnesses beat private prompt folklore. If the only way to do it “right” lives in one engineer’s chat history, you do not have a practice.
+Integration debt after purchase: five half-connected identity paths and no single owner for authz bugs. Procurement celebrated; on-call paid.
 
-## Harnesses beat vibes
+Build the harness, buy the commodity works until someone rebuilds the commodity “for flexibility.” Flexibility without differentiated ownership is usually nostalgia.
 
-Models accelerate drafts. They do not absorb production accountability. Keep verification human and visible.
+One more practice worth installing: Every purchase: name the internal owner and the failure-mode runbook.
 
-AI changes tempo; leadership still owns outcomes. If escaped defects rise while suggestion counts rise, you optimized the wrong dashboard.
-
-Tool use as a privilege, not a default. Grant the minimum side effects; expand with evidence. Omnipotent agents that “just figure it out” eventually figure out the wrong production action.
-
-## Checklist you can run
-
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
-
-- Every purchase: name the internal owner and the failure-mode runbook.
-- Every build: name the commodity you refused to buy and why ownership differs.
-- When a vendor becomes your process, document the process in your words.
-- Platforms you buy still need owners — for identity integration, data retention, incident comms, and process translation.
-- Require eval and audit ownership to stay in-house for AI tooling.
-- Track integration debt items on the same board as features until retired.
+Prefer reversible moves on **Integration debt after the purchase**. If you cannot say how you would unwind the decision, you are not done designing it.
 
 ## Close
 
 If nobody can operate the failure mode, you rented a demo.
 
-Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.
-
-On **Integration debt after the purchase**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+On **Integration debt after the purchase**, keep the loop short: write the decision, name the owner, verify the outcome.

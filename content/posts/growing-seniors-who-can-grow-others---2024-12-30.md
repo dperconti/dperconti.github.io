@@ -7,103 +7,91 @@ categories:
 draft: false
 ---
 
-**Growing seniors who can grow others** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
+Teaching judgment means letting people own a slice, fail without shame, and hear specific feedback before the lesson evaporates.
 
-Mentorship is engineering work. It produces artifacts: better reviews, clearer decisions, safer incident leads, and people who can teach without you in the room.
+I will stay on this thesis — no adjacent manifesto, no tour of every neighboring discipline.
 
-Growing seniors who can grow others is how organizations scale craft without scaling heroics.
+Measure what you claim to care about. If **Growing seniors who can grow others** only appears in kickoff slides and never in review, incident, or planning artifacts, it is branding. Put a verification signal where people already look.
 
-I am not interested in branding this work. I am interested in whether the next person can run it without a week of hallway archaeology.
+Write one page while the decision is still warm — context, options, choice, owner, revisit date. Verbal alignment on **Growing seniors who can grow others** evaporates under ordinary calendar pressure, and Slack archaeology is a poor substitute for a decision record.
 
-## Design the loop
+## Practices with enough detail to copy
 
-Treat the practice as a system with inputs, outputs, and feedback. If any of those are social-only, the system will drift.
+Cadence beats intensity. These hold when they fit inside weeks people already live.
 
-Seniors need deliberate practice teaching: lead a review huddle, write the onboarding doc, own feedback quality. If you only reward personal velocity, teaching becomes unpaid overtime.
+### 1
 
-When someone freezes asking for help, treat it as a systems smell. Latency to ask questions predicts incident severity. Psychological safety is an engineering control.
-
-A mid-level engineer wants promotion. Their manager talks about “visibility.” A better move: sponsor them to own a migration with a written plan, a kill switch, and a teaching review for the team afterward.
-
-Useful signals tie to user impact and operability: escaped defects, stale answers, retry amplification, review cycle time, on-call toil. Vanity metrics create vanity leadership.
-
-Pair on the decision, not only the code. Have the mentee write the tradeoff paragraph first, then implement. Judgment is a writing skill under time pressure as much as it is a coding skill.
-
-Keep a light written trail of growth so progress is not a vibe only the manager remembers. Promotion packets should not require archaeology.
-
-A senior is excellent individually and absent as a teacher. Promotion criteria still overweight personal output. Leadership then wonders why the bench is thin. Change the scoreboard: teaching artifacts count.
-
-AI tools introduced without coaching on verification, data boundaries, or accountability.
-
-Quarterly: seniors run a teaching session from a real failure (escaped defect, bad hand-off, stale RAG answer).
-
-Every PR review: at least one comment that teaches a reusable pattern.
-
-A junior with a strong copilot ships fluent PRs. Mentorship is teaching them to distrust fluent wrongness: invariants, authz edges, and “what breaks at 10x load.” Without that coaching, you accelerate confident mistakes.
-
-## The costs of doing it right
-
-The tradeoff in public sponsorship is risk to your own reputation. Take it. That is part of the job. Private cheerleading costs you nothing and buys them little.
-
-The tradeoff in not stealing the work is short-term speed. You will be slower this afternoon so the team is faster next month. Leaders who cannot tolerate that tradeoff become permanent critical path.
-
-With AI drafting, the tradeoff is review load. Explicit verification notes reduce merge regret more than asking people to “be careful.”
-
-Feedback that lands after incidents should arrive within days, tied to a specific decision or omission, and paired with a practice rep. Delayed generic feedback teaches nothing useful.
-
-## Principles under ordinary pressure
-
-Hold three standards at once: a named owner, a written control, and a verification signal. Missing any one turns the practice into performance.
-
-Keep a light written trail of growth so progress is not a vibe only the manager remembers. Promotion packets should not require archaeology.
-
-Feedback that lands after incidents should arrive within days, tied to a specific decision or omission, and paired with a practice rep. Delayed generic feedback teaches nothing useful.
+Every 1:1: one concrete coaching ask, one ownership shift, one written follow-up.
 
 Use review comments as teaching artifacts. Prefer “here is the pattern and why it matters in production” over drive-by nits. A review that only polices style teaches compliance, not craft.
 
+### 2
+
+When AI drafts: require a human verification note in the PR describing what was checked and how.
+
 Pairing as coaching is not surveillance. Time-box it, name the learning goal, and leave an artifact. Surveillance pairing produces compliance; coaching pairing produces judgment.
 
-Career conversations should change next week’s work: a stretch ownership, a public design, a safer incident role — not only aspirational titles twelve months out.
+### 3
+
+Every month: one public sponsorship act — authorship, presentation, or incident lead.
+
+Feedback that lands after incidents should arrive within days, tied to a specific decision or omission, and paired with a practice rep. Delayed generic feedback teaches nothing useful.
+
+### 4
+
+Every PR review: at least one comment that teaches a reusable pattern.
+
+Promotion packets should be assembled from artifacts already in the open: RFCs, incident leads, teaching reviews. If the packet requires secret knowledge, mentorship failed earlier.
+
+When someone freezes asking for help, treat it as a systems smell. Latency to ask questions predicts incident severity. Psychological safety is an engineering control.
+
+Sponsor publicly. Put someone’s name on the design review invite, the RFC author line, the customer-facing postmortem. Private belief in someone does not compound; public sponsorship does.
+
+Keep the unit of progress small enough to finish under a full calendar: one owner clarification, one verification signal, one reversible control. Grand programs without weekly evidence become status machines.
+
+## Scenes
+
+A mid-level engineer wants promotion. Their manager talks about “visibility.” A better move: sponsor them to own a migration with a written plan, a kill switch, and a teaching review for the team afterward.
 
 AI-assisted workflows arrive without coaching norms. People paste secrets into tools, accept insecure snippets, and skip tests because the model “looked sure.” Literacy clinics on one failure mode per month beat a single all-hands about AI.
 
-If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.
+A senior is excellent individually and absent as a teacher. Promotion criteria still overweight personal output. Leadership then wonders why the bench is thin. Change the scoreboard: teaching artifacts count.
 
-Keep the feedback loop short enough that the team can feel the practice working before the next planning cycle.
+## Tradeoffs
 
-## The neighboring discipline
+The tradeoff in not stealing the work is short-term speed. You will be slower this afternoon so the team is faster next month. Leaders who cannot tolerate that tradeoff become permanent critical path.
 
-Leaders who isolate the practice from Engineering craft create beautiful local optima and expensive global failure.
+The tradeoff in public sponsorship is risk to your own reputation. Take it. That is part of the job. Private cheerleading costs you nothing and buys them little.
 
-Observability that tells a story correlates user impact → service → change → owner. Orphaned dashboards are decoration. Alerts that fire for noise train people to ignore harm.
+With AI drafting, the tradeoff is review load. Explicit verification notes reduce merge regret more than asking people to “be careful.”
 
-An architecture review celebrates a new service boundary. Nobody asks who owns the failure mode across the new network hop. Three incidents later, the boundary is rewritten — this time with an owner map.
+For **Growing seniors who can grow others**, the inheritance test is blunt: after a week, can someone outside the original room explain what changed, who owns it, and how you will know if it breaks? If the answer depends on hallway memory, you still have a story — not a practice.
 
-Observability that cannot answer “what changed for which users?” is incomplete. Build the story path before you build the fifteenth chart.
+Specific feedback tied to a PR, RFC, or incident role compounds. Vague encouragement at review time feels kind and teaches nothing.
 
-## When models join the workflow
+## Failure modes
 
-If agents or copilots touch this workflow, add budgets, logs, and a kill switch before you add autonomy.
+Each of these is a missing control, not a personality problem:
 
-Update review norms when copilots arrive. If you do not, you will approve fluent bugs faster. Slow the merge until verification is explicit.
+- Feedback that arrives only at review time, when grades feel political instead of formative.
+- Stealing the work under the banner of helping — the mentee never practices judgment under load.
+- Seniors rewarded only for personal output, so teaching becomes unpaid overtime.
+- Mentorship as calendar filler: 1:1s that never change assignments or ownership.
 
-Orchestration without a black-box conductor: prefer explicit workflows over an opaque planner nobody can debug. Debuggability is a product requirement.
+Seniors need deliberate practice teaching: lead a review huddle, write the onboarding doc, own feedback quality. If you only reward personal velocity, teaching becomes unpaid overtime.
 
-## A plan for the next seven days
+Pair on the decision, not only the code. Have the mentee write the tradeoff paragraph first, then implement. Judgment is a writing skill under time pressure as much as it is a coding skill.
 
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+Critique privately and specifically. Vague encouragement teaches nothing. Vague criticism teaches fear. Specific critique tied to a reusable pattern teaches judgment.
 
-- Every PR review: at least one comment that teaches a reusable pattern.
-- Quarterly: seniors run a teaching session from a real failure (escaped defect, bad hand-off, stale RAG answer).
-- When AI drafts: require a human verification note in the PR describing what was checked and how.
-- Seniors need deliberate practice teaching: lead a review huddle, write the onboarding doc, own feedback quality.
-- Every month: one public sponsorship act — authorship, presentation, or incident lead.
-- Every 1:1: one concrete coaching ask, one ownership shift, one written follow-up.
+Keep a light written trail of growth so progress is not a vibe only the manager remembers. Promotion packets should not require archaeology.
+
+The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
+
+Career conversations should change next week’s work: a stretch ownership, a public design, a safer incident role — not only aspirational titles twelve months out.
 
 ## Close
 
 If your calendar is full, shrink the loop — do not cancel the coaching.
 
-Continuity is the product. Tools and frameworks are optional accessories.
-
-On **Growing seniors who can grow others**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+If someone new cannot explain **Growing seniors who can grow others** from your artifacts in fifteen minutes, the practice is still private.

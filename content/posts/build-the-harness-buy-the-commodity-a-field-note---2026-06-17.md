@@ -1,5 +1,5 @@
 ---
-title: "Build the harness, buy the commodity: a field note"
+title: "Build the harness, buy the commodity: evidence over enthusiasm"
 date: 2026-06-17T05:00:00Z
 categories:
   - Engineering
@@ -7,108 +7,89 @@ categories:
 draft: false
 ---
 
-A field note on **Build the harness, buy the commodity** should be inspectable next week. Mechanisms beat vibes.
+Most teams endorse “Build the harness, buy the commodity” quickly and operationalize it slowly. Logs, budgets, and kill switches are leadership tools — not only platform niceties.
 
-Agentic systems attracts demos faster than operability. The difference between useful and dangerous is almost always the harness: logs, budgets, privileges, and a human kill switch.
+What follows stays on that claim: mechanisms, concrete scenes, and the failure modes that appear when the claim is ignored.
 
-Treat agents like junior systems: limited privileges, explicit tools, budgets, and a human who owns the outcome. Autonomy without audit is distributed risk.
+Keep the unit of progress small enough to finish under a full calendar: one owner clarification, one verification signal, one reversible control. Grand programs without weekly evidence become status machines.
 
-I am not interested in branding this work. I am interested in whether the next person can run it without a week of hallway archaeology.
+Measure what you claim to care about. If **Build the harness, buy the commodity** only appears in kickoff slides and never in review, incident, or planning artifacts, it is branding. Put a verification signal where people already look.
 
-## Cadence that survives calendars
-
-Cadence beats intensity. The practice holds when it fits inside weeks people already live.
-
-### 1. Practice
-
-Chaos-test retries: kill mid-flight and prove no duplicate side effects.
-
-Owning outcomes when agents ship changes means the human merge still carries production accountability. Agents accelerate the middle; humans own the edge.
+## A scene from delivery
 
 Stop-and-ask rules were informal. The agent emails a customer. Now you have a process problem and a trust problem. Irreversible writes, authz changes, and customer communication belong on an allow-list with human gates.
 
-### 2. Practice
+That scene is the thesis under calendar pressure. The response is not another status meeting — it is a control.
 
-Define stop-and-ask rules in writing; review them like any other safety control.
-
-Tool use as a privilege, not a default. Grant the minimum side effects; expand with evidence. Omnipotent agents that “just figure it out” eventually figure out the wrong production action.
-
-An agent retries a payment side effect after a timeout. Without idempotency keys, customers see duplicates. Treat agent side effects with the same discipline as payment systems.
-
-### 3. Practice
-
-Ship the harness before the autonomy: budget, log schema, kill switch, allow-listed tools.
-
-Emit events for every tool call in production. Incidents without forensics become superstition. Event-driven design is how you keep humans in the loop without standing over the process.
-
-A multi-agent demo impresses leadership. In production, nobody can explain which agent wrote which file or why. Specialization without interfaces is just distributed confusion.
-
-### 4. Practice
-
-Require event emission for every tool call in production.
-
-Useful specialization looks like a retrieval agent, a draft agent, and a verifier — each with narrow tools — not five personas arguing in a shared context window for theater value.
-
-### 5. Practice
-
-Keep a named human owner for every agentic workflow that can change production state.
-
-Orchestration without a black-box conductor means you can explain the workflow on a whiteboard and pause any step. If you cannot, you cannot operate it.
-
-## What I refuse to romanticize
-
-Stop doing these:
-
-- Omnipotent agents that “just figure it out” until they take the wrong production action.
-- Hand-offs that drop context, so humans redo the work.
-- Multi-agent theater without clear interfaces or ownership of outcomes.
-- No kill switch; stopping requires redeploying or begging a vendor.
-
-## Principles under ordinary pressure
-
-Optimize for the next person's onboarding cost. Every undocumented exception becomes a tax on hiring and incident response.
-
-Useful specialization looks like a retrieval agent, a draft agent, and a verifier — each with narrow tools — not five personas arguing in a shared context window for theater value.
-
-Orchestration without a black-box conductor means you can explain the workflow on a whiteboard and pause any step. If you cannot, you cannot operate it.
-
-Event-driven agentic workflows teams can operate look like other event-driven systems: schemas, consumers, dead-letter paths, and owners.
+## Mechanisms
 
 Orchestration without a black-box conductor: prefer explicit workflows over an opaque planner nobody can debug. Debuggability is a product requirement.
 
+Orchestration without a black-box conductor means you can explain the workflow on a whiteboard and pause any step. If you cannot, you cannot operate it.
+
 Harnesses first: logs, token/time budgets, blast-radius limits, and a kill switch a human can use without a war room. Autonomy is earned after those exist.
+
+Design hand-offs: when an agent must stop and ask, what context is packaged for the human, and how the resume is recorded. Dropped context forces humans to redo work the agent already “knew.”
+
+Every tool grant is a privilege expansion. Review tool allow-lists the way you review IAM — on a cadence, with least privilege as the default.
+
+Human resume paths need packaged context: what the agent tried, what failed, and what must not be retried. Empty hand-offs erase the value of automation.
+
+When pressure rises, teams drop the unowned practice first. Put **Build the harness, buy the commodity** in the path of work — templates, checklists, review norms — or admit it was optional applause.
+
+## Another texture
+
+An agent opens twelve draft PRs overnight against a thin test suite. Review debt becomes the real cost. Budgets and merge gates would have been kinder than a demo.
+
+A kill switch exists but only in a vendor dashboard with three click-throughs and no on-call ownership. That is not a kill switch; that is a hope. Put the switch where operators already work.
+
+## Tradeoffs
+
+Narrow tools feel less magical than one omnipotent agent. Magic is not an operability strategy.
+
+Human hand-offs add latency. Unbounded autonomy adds blast radius. Pick the latency.
+
+Harnesses slow the first demo and save the first incident. Sequence matters.
+
+Side effects need the same discipline as payments: idempotency, clear hand-offs, and a human who still owns production outcomes. Retries without keys turn partial failure into duplicate harm.
+
+Resist the urge to expand scope into neighboring slogans. If a control does not make **Build the harness, buy the commodity** more operable for the next person, leave it for another note. Dilution is how coherent essays become stitched scrapbooks.
+
+## Failure modes
+
+Each of these is a missing control, not a personality problem:
+
+- No kill switch; stopping requires redeploying or begging a vendor.
+- Omnipotent agents that “just figure it out” until they take the wrong production action.
+- Retries without idempotency keys — duplicate side effects under partial failure.
+- Hand-offs that drop context, so humans redo the work.
+
+## What to do this month
+
+- Ship the harness before the autonomy: budget, log schema, kill switch, allow-listed tools.
+- Keep a named human owner for every agentic workflow that can change production state.
+- Chaos-test retries: kill mid-flight and prove no duplicate side effects.
+
+Emit events for every tool call in production. Incidents without forensics become superstition. Event-driven design is how you keep humans in the loop without standing over the process.
+
+Idempotency for agentic side effects — retries must not double-charge, double-page, or double-merge. Partial failure is normal; duplicate effects are optional if you design poorly.
+
+Budgets are product constraints. Token, time, and blast-radius limits keep agents from optimizing for activity over outcomes.
+
+Tool use as a privilege, not a default. Grant the minimum side effects; expand with evidence. Omnipotent agents that “just figure it out” eventually figure out the wrong production action.
+
+Useful specialization looks like a retrieval agent, a draft agent, and a verifier — each with narrow tools — not five personas arguing in a shared context window for theater value.
+
+When an agent should stop and ask is a policy question, not a vibe. Write the list: irreversible writes, authz, customer communication, spend above threshold, tools outside the allow-list.
+
+Owning outcomes when agents ship changes means the human merge still carries production accountability. Agents accelerate the middle; humans own the edge.
+
+Event-driven agentic workflows teams can operate look like other event-driven systems: schemas, consumers, dead-letter paths, and owners.
 
 Under real load, an agent without budgets burns tokens, opens noisy PRs, and creates review debt faster than value. Budgets are not pessimism; they are product constraints.
 
-If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.
-
-Keep the feedback loop short enough that the team can feel the practice working before the next planning cycle.
-
-## Where this couples to adjacent work
-
-A durable approach borrows controls from Engineering craft instead of inventing a parallel religion.
-
-Incident response that improves the system ends with a control change dated within a week. Timelines without control changes are storytelling.
-
-A migration is “done” at 80% with a cleanup ticket in the backlog forever. Craft would have treated 100% with kill-switch removal as the definition of done.
-
-Code review as teaching: require at least one pattern comment. Reject gatekeeping that only polices style without teaching why. Slow, unkind reviews are a leadership failure disguised as standards.
-
-## Make it observable
-
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
-
-- Chaos-test retries: kill mid-flight and prove no duplicate side effects.
-- Define stop-and-ask rules in writing; review them like any other safety control.
-- Owning outcomes when agents ship changes means the human merge still carries production accountability.
-- Ship the harness before the autonomy: budget, log schema, kill switch, allow-listed tools.
-- Require event emission for every tool call in production.
-- Keep a named human owner for every agentic workflow that can change production state.
-
 ## Close
 
-Autonomy is earned with observability. Until then, keep the blast radius small.
+Logs, budgets, and kill switches are how leaders sleep.
 
-If this feels quieter than a keynote, that is intentional. Compounding work rarely looks like theater.
-
-On **Build the harness, buy the commodity**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+If someone new cannot explain **Build the harness, buy the commodity** from your artifacts in fifteen minutes, the practice is still private.

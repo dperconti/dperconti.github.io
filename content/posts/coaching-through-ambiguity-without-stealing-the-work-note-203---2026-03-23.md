@@ -1,5 +1,5 @@
 ---
-title: "Coaching through ambiguity without stealing the work — note 203"
+title: "Coaching through ambiguity without stealing the work: naming the owner"
 date: 2026-03-23T05:00:00Z
 categories:
   - Leadership
@@ -7,103 +7,83 @@ categories:
 draft: false
 ---
 
-Another working note on **Coaching through ambiguity without stealing the work**: same thesis, sharper edges from recent delivery pressure.
+“Coaching through ambiguity without stealing the work” stops being abstract the moment you ask who gets paged when it fails.
 
-Mentorship is engineering work. It produces artifacts: better reviews, clearer decisions, safer incident leads, and people who can teach without you in the room.
+With AI in the loop, mentorship shifts toward verification, taste, and accountability. Syntax was never the hard part.
 
-Teaching judgment means letting people own a slice, fail without shame, and hear specific feedback before the lesson evaporates.
+What follows stays on that claim: mechanisms, concrete scenes, and the failure modes that appear when the claim is ignored.
 
-Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.
+Seniors need deliberate practice teaching. If the scoreboard only rewards personal velocity, judgment does not scale past one hero.
 
-## Interfaces, feedback, ownership
+Measure what you claim to care about. If **Coaching through ambiguity without stealing the work** only appears in kickoff slides and never in review, incident, or planning artifacts, it is branding. Put a verification signal where people already look.
 
-Treat the practice as a system with inputs, outputs, and feedback. If any of those are social-only, the system will drift.
+## How it actually works
 
-The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
-
-Keep a light written trail of growth so progress is not a vibe only the manager remembers. Promotion packets should not require archaeology.
-
-AI-assisted workflows arrive without coaching norms. People paste secrets into tools, accept insecure snippets, and skip tests because the model “looked sure.” Literacy clinics on one failure mode per month beat a single all-hands about AI.
-
-Useful signals tie to user impact and operability: escaped defects, stale answers, retry amplification, review cycle time, on-call toil. Vanity metrics create vanity leadership.
+Install the smallest set of mechanisms that make success and failure legible. Skip the program name.
 
 Seniors need deliberate practice teaching: lead a review huddle, write the onboarding doc, own feedback quality. If you only reward personal velocity, teaching becomes unpaid overtime.
 
-Use review comments as teaching artifacts. Prefer “here is the pattern and why it matters in production” over drive-by nits. A review that only polices style teaches compliance, not craft.
-
-A senior is excellent individually and absent as a teacher. Promotion criteria still overweight personal output. Leadership then wonders why the bench is thin. Change the scoreboard: teaching artifacts count.
-
-Seniors rewarded only for personal output, so teaching becomes unpaid overtime.
-
-Every PR review: at least one comment that teaches a reusable pattern.
-
-When AI drafts: require a human verification note in the PR describing what was checked and how.
-
-Feedback arrives only at performance review. By then it feels political. The fix is weekly specific notes tied to artifacts — PR comments, decision records, incident roles — so the review is a summary, not a surprise.
-
-## The costs of doing it right
-
-With AI drafting, the tradeoff is review load. Explicit verification notes reduce merge regret more than asking people to “be careful.”
-
-The tradeoff in not stealing the work is short-term speed. You will be slower this afternoon so the team is faster next month. Leaders who cannot tolerate that tradeoff become permanent critical path.
-
-The tradeoff in public sponsorship is risk to your own reputation. Take it. That is part of the job. Private cheerleading costs you nothing and buys them little.
-
 Pairing as coaching is not surveillance. Time-box it, name the learning goal, and leave an artifact. Surveillance pairing produces compliance; coaching pairing produces judgment.
 
-## Operating principles
+Stretch ownership without a safety net is abandonment. Stretch ownership with a named coach, a kill switch, and a debrief is how judgment grows.
 
-Optimize for the next person's onboarding cost. Every undocumented exception becomes a tax on hiring and incident response.
-
-Use review comments as teaching artifacts. Prefer “here is the pattern and why it matters in production” over drive-by nits. A review that only polices style teaches compliance, not craft.
-
-Pairing as coaching is not surveillance. Time-box it, name the learning goal, and leave an artifact. Surveillance pairing produces compliance; coaching pairing produces judgment.
-
-Career conversations should change next week’s work: a stretch ownership, a public design, a safer incident role — not only aspirational titles twelve months out.
-
-Sponsor publicly. Put someone’s name on the design review invite, the RFC author line, the customer-facing postmortem. Private belief in someone does not compound; public sponsorship does.
+Keep a light written trail of growth so progress is not a vibe only the manager remembers. Promotion packets should not require archaeology.
 
 When someone freezes asking for help, treat it as a systems smell. Latency to ask questions predicts incident severity. Psychological safety is an engineering control.
 
-A mid-level engineer wants promotion. Their manager talks about “visibility.” A better move: sponsor them to own a migration with a written plan, a kill switch, and a teaching review for the team afterward.
+The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
 
-If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.
+Resist the urge to expand scope into neighboring slogans. If a control does not make **Coaching through ambiguity without stealing the work** more operable for the next person, leave it for another note. Dilution is how coherent essays become stitched scrapbooks.
 
-Keep the feedback loop short enough that the team can feel the practice working before the next planning cycle.
+## Where this shows up
 
-## The neighboring discipline
+A senior is excellent individually and absent as a teacher. Promotion criteria still overweight personal output. Leadership then wonders why the bench is thin. Change the scoreboard: teaching artifacts count.
 
-This work does not live alone. It couples to Engineering leadership.
+A mentee ships a migration with a written plan and a debrief for the team. That single loop teaches more than six months of vague “visibility” talk.
 
-Clear drag before you add ceremony. Review queues, ambiguous interfaces, missing environments, and decision latency tax the team more than a missing standup. Leaders who invent process without clearing path create motion that feels like management and performs like delay.
+Feedback arrives only at performance review. By then it feels political. The fix is weekly specific notes tied to artifacts — PR comments, decision records, incident roles — so the review is a summary, not a surprise.
 
-An incident write-up is eloquent and changes nothing. No test, no budget, no privilege change, no ownership map update. Leadership failed the expensive coaching moment. Feelings are not remediation.
+## Tradeoffs
 
-Trust compounds when leaders absorb uncertainty without dumping it as urgency onto the people closest to the code. Urgency without triage is just anxiety with a deadline.
+With AI drafting, the tradeoff is review load. Explicit verification notes reduce merge regret more than asking people to “be careful.”
 
-## Harnesses beat vibes
+The tradeoff in public sponsorship is risk to your own reputation. Take it. That is part of the job. Private cheerleading costs you nothing and buys them little.
 
-Fluent output raises the value of written invariants. Improvisation got cheaper; durable context got more precious.
+The tradeoff in not stealing the work is short-term speed. You will be slower this afternoon so the team is faster next month. Leaders who cannot tolerate that tradeoff become permanent critical path.
 
-AI changes tempo; leadership still owns outcomes. If escaped defects rise while suggestion counts rise, you optimized the wrong dashboard.
+Write one page while the decision is still warm — context, options, choice, owner, revisit date. Verbal alignment on **Coaching through ambiguity without stealing the work** evaporates under ordinary calendar pressure, and Slack archaeology is a poor substitute for a decision record.
 
-Useful specialization looks like a retrieval agent, a draft agent, and a verifier — each with narrow tools — not five personas arguing in a shared context window for theater value.
+On **Coaching through ambiguity without stealing the work**, care that never changes next week’s ownership is performance. Stretch a thin slice, coach the decision, and leave an artifact someone else can reuse.
 
-## Checklist you can run
+## Failure modes
 
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+Each of these is a missing control, not a personality problem:
 
-- Every month: one public sponsorship act — authorship, presentation, or incident lead.
+- Feedback that arrives only at review time, when grades feel political instead of formative.
+- Seniors rewarded only for personal output, so teaching becomes unpaid overtime.
+- AI tools introduced without coaching on verification, data boundaries, or accountability.
+- Stealing the work under the banner of helping — the mentee never practices judgment under load.
+
+## What to do this month
+
 - When AI drafts: require a human verification note in the PR describing what was checked and how.
-- The psychology of asking for help is shaped by what got rewarded last time someone asked.
 - Every PR review: at least one comment that teaches a reusable pattern.
 - Every 1:1: one concrete coaching ask, one ownership shift, one written follow-up.
-- Keep a light written trail of growth so progress is not a vibe only the manager remembers.
 
-## What to carry forward
+Career conversations should change next week’s work: a stretch ownership, a public design, a safer incident role — not only aspirational titles twelve months out.
 
-The measure of mentorship is whether the next hard problem can be owned by someone else — with you still available, not required.
+Use review comments as teaching artifacts. Prefer “here is the pattern and why it matters in production” over drive-by nits. A review that only polices style teaches compliance, not craft.
 
-Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.
+Critique privately and specifically. Vague encouragement teaches nothing. Vague criticism teaches fear. Specific critique tied to a reusable pattern teaches judgment.
 
-On **Coaching through ambiguity without stealing the work**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+Pair on the decision, not only the code. Have the mentee write the tradeoff paragraph first, then implement. Judgment is a writing skill under time pressure as much as it is a coding skill.
+
+Feedback that lands after incidents should arrive within days, tied to a specific decision or omission, and paired with a practice rep. Delayed generic feedback teaches nothing useful.
+
+Sponsor publicly. Put someone’s name on the design review invite, the RFC author line, the customer-facing postmortem. Private belief in someone does not compound; public sponsorship does.
+
+## Close
+
+If your calendar is full, shrink the loop — do not cancel the coaching.
+
+Carry the claim as a habit, not a brand: **Coaching through ambiguity without stealing the work** either compounds ownership or it was applause.

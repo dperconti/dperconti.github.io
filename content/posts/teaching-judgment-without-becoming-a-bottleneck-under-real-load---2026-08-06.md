@@ -1,5 +1,5 @@
 ---
-title: "Teaching judgment without becoming a bottleneck under real load"
+title: "Teaching judgment without becoming a bottleneck: what fails first"
 date: 2026-08-06T05:00:00Z
 categories:
   - Mentorship
@@ -7,106 +7,85 @@ categories:
 draft: false
 ---
 
-Under real load, **Teaching judgment without becoming a bottleneck** stops being a slogan. Queues, incidents, and half-finished migrations reveal whether the system was designed or performed.
+Most teams endorse “Teaching judgment without becoming a bottleneck” quickly and operationalize it slowly. Teaching judgment means letting people own a slice, fail without shame, and hear specific feedback before the lesson evaporates.
 
-If Mentorship only happens in 1:1s that never change assignments, you are performing care. Real mentorship changes what someone owns next week.
+What follows stays on that claim: mechanisms, concrete scenes, and the failure modes that appear when the claim is ignored.
 
-With AI in the loop, mentorship shifts toward verification, taste, and accountability. Syntax was never the hard part.
+For **Teaching judgment without becoming a bottleneck**, the inheritance test is blunt: after a week, can someone outside the original room explain what changed, who owns it, and how you will know if it breaks? If the answer depends on hallway memory, you still have a story — not a practice.
 
-The standard is inheritance. If a new teammate cannot find the owner, the control, and the evidence, you have a story — not a practice.
+Write one page while the decision is still warm — context, options, choice, owner, revisit date. Verbal alignment on **Teaching judgment without becoming a bottleneck** evaporates under ordinary calendar pressure, and Slack archaeology is a poor substitute for a decision record.
 
-## The operating controls
-
-Start with mechanisms. For this work, the first controls should be boring on purpose — inspectable, teachable, and cheap to revisit.
-
-Pair on the decision, not only the code. Have the mentee write the tradeoff paragraph first, then implement. Judgment is a writing skill under time pressure as much as it is a coding skill.
-
-Critique privately and specifically. Vague encouragement teaches nothing. Vague criticism teaches fear. Specific critique tied to a reusable pattern teaches judgment.
-
-Sponsor publicly. Put someone’s name on the design review invite, the RFC author line, the customer-facing postmortem. Private belief in someone does not compound; public sponsorship does.
-
-The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
-
-When someone freezes asking for help, treat it as a systems smell. Latency to ask questions predicts incident severity. Psychological safety is an engineering control.
-
-Career conversations should change next week’s work: a stretch ownership, a public design, a safer incident role — not only aspirational titles twelve months out.
-
-## Concrete cases
+## A scene from delivery
 
 Feedback arrives only at performance review. By then it feels political. The fix is weekly specific notes tied to artifacts — PR comments, decision records, incident roles — so the review is a summary, not a surprise.
 
+That scene is the thesis under calendar pressure. The response is not another status meeting — it is a control.
+
+## Mechanisms
+
+Seniors need deliberate practice teaching: lead a review huddle, write the onboarding doc, own feedback quality. If you only reward personal velocity, teaching becomes unpaid overtime.
+
+Career conversations should change next week’s work: a stretch ownership, a public design, a safer incident role — not only aspirational titles twelve months out.
+
+Sponsor publicly. Put someone’s name on the design review invite, the RFC author line, the customer-facing postmortem. Private belief in someone does not compound; public sponsorship does.
+
+Pair on the decision, not only the code. Have the mentee write the tradeoff paragraph first, then implement. Judgment is a writing skill under time pressure as much as it is a coding skill.
+
+Teach the verification step out loud when models draft. Juniors copy what seniors check — or what seniors skip.
+
+Stretch ownership without a safety net is abandonment. Stretch ownership with a named coach, a kill switch, and a debrief is how judgment grows.
+
+Specific feedback tied to a PR, RFC, or incident role compounds. Vague encouragement at review time feels kind and teaches nothing.
+
+## Another texture
+
+A senior is excellent individually and absent as a teacher. Promotion criteria still overweight personal output. Leadership then wonders why the bench is thin. Change the scoreboard: teaching artifacts count.
+
 A mid-level engineer wants promotion. Their manager talks about “visibility.” A better move: sponsor them to own a migration with a written plan, a kill switch, and a teaching review for the team afterward.
 
-AI-assisted workflows arrive without coaching norms. People paste secrets into tools, accept insecure snippets, and skip tests because the model “looked sure.” Literacy clinics on one failure mode per month beat a single all-hands about AI.
-
-## The wreck as syllabus
-
-Each failure mode below is a missing control. Another meeting will not install it.
-
-- Stealing the work under the banner of helping — the mentee never practices judgment under load.
-- Mentorship as calendar filler: 1:1s that never change assignments or ownership.
-- AI tools introduced without coaching on verification, data boundaries, or accountability.
-- Feedback that arrives only at review time, when grades feel political instead of formative.
-
-## What you give up
-
-The tradeoff in public sponsorship is risk to your own reputation. Take it. That is part of the job. Private cheerleading costs you nothing and buys them little.
+## Tradeoffs
 
 The tradeoff in not stealing the work is short-term speed. You will be slower this afternoon so the team is faster next month. Leaders who cannot tolerate that tradeoff become permanent critical path.
 
 With AI drafting, the tradeoff is review load. Explicit verification notes reduce merge regret more than asking people to “be careful.”
 
-## How to hold the standard
+The tradeoff in public sponsorship is risk to your own reputation. Take it. That is part of the job. Private cheerleading costs you nothing and buys them little.
 
-Hold three standards at once: a named owner, a written control, and a verification signal. Missing any one turns the practice into performance.
+On **Teaching judgment without becoming a bottleneck**, care that never changes next week’s ownership is performance. Stretch a thin slice, coach the decision, and leave an artifact someone else can reuse.
 
-The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
+Seniors need deliberate practice teaching. If the scoreboard only rewards personal velocity, judgment does not scale past one hero.
+
+## Failure modes
+
+Each of these is a missing control, not a personality problem:
+
+- AI tools introduced without coaching on verification, data boundaries, or accountability.
+- Seniors rewarded only for personal output, so teaching becomes unpaid overtime.
+- Feedback that arrives only at review time, when grades feel political instead of formative.
+- Stealing the work under the banner of helping — the mentee never practices judgment under load.
+
+## What to do this month
+
+- Every PR review: at least one comment that teaches a reusable pattern.
+- Every month: one public sponsorship act — authorship, presentation, or incident lead.
+- Every 1:1: one concrete coaching ask, one ownership shift, one written follow-up.
+
+Keep a light written trail of growth so progress is not a vibe only the manager remembers. Promotion packets should not require archaeology.
+
+Use review comments as teaching artifacts. Prefer “here is the pattern and why it matters in production” over drive-by nits. A review that only polices style teaches compliance, not craft.
+
+Critique privately and specifically. Vague encouragement teaches nothing. Vague criticism teaches fear. Specific critique tied to a reusable pattern teaches judgment.
+
+Pairing as coaching is not surveillance. Time-box it, name the learning goal, and leave an artifact. Surveillance pairing produces compliance; coaching pairing produces judgment.
 
 When someone freezes asking for help, treat it as a systems smell. Latency to ask questions predicts incident severity. Psychological safety is an engineering control.
 
-Career conversations should change next week’s work: a stretch ownership, a public design, a safer incident role — not only aspirational titles twelve months out.
+Promotion packets should be assembled from artifacts already in the open: RFCs, incident leads, teaching reviews. If the packet requires secret knowledge, mentorship failed earlier.
 
-Feedback that lands after incidents should arrive within days, tied to a specific decision or omission, and paired with a practice rep. Delayed generic feedback teaches nothing useful.
+The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
 
-Seniors need deliberate practice teaching: lead a review huddle, write the onboarding doc, own feedback quality. If you only reward personal velocity, teaching becomes unpaid overtime.
-
-A junior with a strong copilot ships fluent PRs. Mentorship is teaching them to distrust fluent wrongness: invariants, authz edges, and “what breaks at 10x load.” Without that coaching, you accelerate confident mistakes.
-
-If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.
+## Close
 
 Grow judgment in public artifacts. Hallway wisdom does not compound.
 
-## Do not silo the practice
-
-This work does not live alone. It couples to Engineering leadership.
-
-Separate sponsorship from surveillance. Be present enough to feel latency in decisions; distant enough that the work remains theirs. Stealing hard problems under the banner of help produces brittle teams and exhausted managers.
-
-A manager absorbs every hard design conversation “to unblock the team.” Velocity looks fine for a quarter. Then vacation happens, and the team discovers it cannot make a medium decision without the manager’s taste. The remedy is timed pairing on the hardest 10% and written decision records for the rest.
-
-Judgment under load is a practiced skill: triage, communicate, decide with incomplete information, and write down what you assumed. Managers who only practice judgment in calm weeks fail the weeks that matter.
-
-## Harnesses beat vibes
-
-Models accelerate drafts. They do not absorb production accountability. Keep verification human and visible.
-
-Keeping humans accountable when models draft code means the merge still carries a name and a verification note. Anonymized autocomplete is not an accountability model.
-
-## Checklist you can run
-
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
-
-- Every 1:1: one concrete coaching ask, one ownership shift, one written follow-up.
-- Critique privately and specifically.
-- Every PR review: at least one comment that teaches a reusable pattern.
-- Quarterly: seniors run a teaching session from a real failure (escaped defect, bad hand-off, stale RAG answer).
-- When AI drafts: require a human verification note in the PR describing what was checked and how.
-- Pair on the decision, not only the code.
-
-## What to carry forward
-
-The measure of mentorship is whether the next hard problem can be owned by someone else — with you still available, not required.
-
-Continuity is the product. Tools and frameworks are optional accessories.
-
-On **Teaching judgment without becoming a bottleneck**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+On **Teaching judgment without becoming a bottleneck**, keep the loop short: write the decision, name the owner, verify the outcome.

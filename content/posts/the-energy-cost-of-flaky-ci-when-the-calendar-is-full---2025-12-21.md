@@ -1,5 +1,5 @@
 ---
-title: "The energy cost of flaky CI when the calendar is full"
+title: "The energy cost of flaky CI: naming the owner"
 date: 2025-12-21T05:00:00Z
 categories:
   - Sustainability
@@ -7,106 +7,97 @@ categories:
 draft: false
 ---
 
-When the calendar is full, **The energy cost of flaky CI** only survives inside short loops. Long programs without owners become status machines.
+Most teams endorse “The energy cost of flaky CI” quickly and operationalize it slowly. Green software is an engineering constraint: efficiency as reliability and cost discipline, not a branding exercise after the fact.
 
-Green software and efficiency is not a separate virtue track. It is the discipline of fewer retries, right-sized environments, and CI that does not burn cycles for vanity.
+I will stay on this thesis — no adjacent manifesto, no tour of every neighboring discipline.
 
-Green software is an engineering constraint: efficiency as reliability and cost discipline, not a branding exercise after the fact.
+Keep the unit of progress small enough to finish under a full calendar: one owner clarification, one verification signal, one reversible control. Grand programs without weekly evidence become status machines.
 
-The standard is inheritance. If a new teammate cannot find the owner, the control, and the evidence, you have a story — not a practice.
+When pressure rises, teams drop the unowned practice first. Put **The energy cost of flaky CI** in the path of work — templates, checklists, review norms — or admit it was optional applause.
 
-## The operating controls
-
-Start with mechanisms. For this work, the first controls should be boring on purpose — inspectable, teachable, and cheap to revisit.
-
-Measuring compute waste without an owner who can delete or resize is dashboards as decoration. Pair every metric with a decision rights note.
-
-Efficiency as reliability practice shows up when you delete a redundant pipeline stage and incident escape rate does not rise. That is the experiment worth running.
-
-Measure compute waste in product teams: idle envs, redundant builds, chatty meshes with no owner. Numbers create permission to delete.
-
-Put sustainability questions in architecture forums: what did we choose that forces waste forever? If the forum cannot change a decision, it is theater.
-
-Carbon-aware scheduling without slogans means shifting batch work when it is safe and measuring whether load actually moved. Unmeasured virtue is marketing.
-
-Right-sizing after a traffic shape change is a leadership conversation because finance, platform, and product all feel the “what if” differently. Bring numbers.
-
-## Where this shows up
-
-Carbon-aware batch jobs shift to night without checking downstream SLA commitments. Green intent creates customer pain. Constraints must be negotiated, not silently applied.
+## A scene from delivery
 
 Architecture review asks about carbon once, records a slogan, changes no sizing decision. Next quarter the same waste remains. Sustainability reviews need owners who can change schedules or footprint.
 
-Staging runs at production scale “for realism” while load profiles show it is idle 20 hours a day. Right-sizing is leadership because nobody else can say no cleanly.
+That scene is the thesis under calendar pressure. The response is not another status meeting — it is a control.
 
-## How the practice decays
-
-Each failure mode below is a missing control. Another meeting will not install it.
-
-- Retry storms celebrated as resilience while they burn budget and hide bugs.
-- Greenwashing metrics that never change an architecture decision.
-- Always-on environments for demos that could be ephemeral.
-- Flaky CI accepted as weather instead of a defect.
-
-## The costs of doing it right
-
-Carbon-aware batch shifts can delay results. Make the delay explicit and reversible.
-
-Deleting pipeline stages requires courage and good eval of what still protects users.
-
-Right-sizing can feel like risk. Mitigate with scale-up paths and load tests, not eternal overprovision.
-
-## How to hold the standard
-
-Hold three standards at once: a named owner, a written control, and a verification signal. Missing any one turns the practice into performance.
-
-Put sustainability questions in architecture forums: what did we choose that forces waste forever? If the forum cannot change a decision, it is theater.
-
-Carbon-aware scheduling without slogans means shifting batch work when it is safe and measuring whether load actually moved. Unmeasured virtue is marketing.
+## Mechanisms
 
 Right-sizing after a traffic shape change is a leadership conversation because finance, platform, and product all feel the “what if” differently. Bring numbers.
 
 Design for fewer retries, not prettier dashboards. Retries multiply compute and hide root causes. Cap amplification and alert when it exceeds a threshold.
 
-Ephemeralize non-prod by default. Always-on demo and staging fleets are often habit, not requirement.
+Architecture forums that never change a sizing or schedule decision are performing green theater. Require a reversible experiment with an owner.
+
+Sustainable pace and sustainable systems share a refusal: do not buy speed with hidden churn — flaky tests, retry storms, or always-on idle fleets.
+
+Retry amplification should have a budget and an alert. Unbounded retries are a distributed denial of your own reliability.
+
+Measure compute waste in product teams: idle envs, redundant builds, chatty meshes with no owner. Numbers create permission to delete.
+
+Resist the urge to expand scope into neighboring slogans. If a control does not make **The energy cost of flaky CI** more operable for the next person, leave it for another note. Dilution is how coherent essays become stitched scrapbooks.
+
+## Another texture
+
+Flaky tests burn CI minutes nightly. Engineers ignore failures. Carbon and attention both leak. Quarantine with a deadline beats living with noise.
 
 A team celebrates resilience because the client retries aggressively. Production is stable-ish and the bill is not. They built a retry storm and called it fortitude. Cap retries and fix the root timeout.
 
-None of these principles require a new program name. They require attention in the path of work — reviews, design notes, procurement, and post-incident follow-through.
+## Tradeoffs
 
-Keep the feedback loop short enough that the team can feel the practice working before the next planning cycle.
+Right-sizing can feel like risk. Mitigate with scale-up paths and load tests, not eternal overprovision.
 
-## The neighboring discipline
+Carbon-aware batch shifts can delay results. Make the delay explicit and reversible.
 
-This work does not live alone. It couples to Engineering craft.
+Deleting pipeline stages requires courage and good eval of what still protects users.
 
-Architecture decisions you can reverse include a rollback path and a date to re-evaluate assumptions. Inevitable-looking diagrams are often just unchallenged ones.
+Efficiency is reliability practice. If a carbon or cost signal never changes an architecture decision, the forum is performing virtue.
 
-API consumers invent conflicting interpretations of optional fields because the contract never said which fields are load-bearing. A one-page consumer expectation doc would have been cheaper than the outage.
+Flaky CI burns minutes and attention. Quarantine with deadlines; infinite noise trains people to ignore real failures.
 
-Small platforms that stay operable refuse features that cannot be owned on-call by the same team that ships them. Unowned platform features are product debt wearing infrastructure clothing.
+## Failure modes
 
-## Harnesses beat vibes
+Each of these is a missing control, not a personality problem:
 
-Models accelerate drafts. They do not absorb production accountability. Keep verification human and visible.
+- Greenwashing metrics that never change an architecture decision.
+- Retry storms celebrated as resilience while they burn budget and hide bugs.
+- Flaky CI accepted as weather instead of a defect.
+- Always-on environments for demos that could be ephemeral.
 
-Coach AI literacy as judgment: when to draft with a model, when to refuse, when to escalate. Literacy is a coaching problem, not a one-time workshop.
+## What to do this month
 
-## Checklist you can run
-
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
-
-- Report idle environment hours next to cloud spend in engineering reviews.
 - Track flaky test quarantine time as a reliability SLO.
-- Efficiency as reliability practice shows up when you delete a redundant pipeline stage and incident escape rate does not rise.
 - Budget retries: cap and alert when amplification exceeds a threshold.
-- Ephemeralize non-prod by default; justify always-on in writing.
-- Add one sustainability question to every architecture review with a named follow-up owner.
+- Report idle environment hours next to cloud spend in engineering reviews.
 
-## What to carry forward
+Measuring compute waste without an owner who can delete or resize is dashboards as decoration. Pair every metric with a decision rights note.
 
-Constraints clarify design. Carbon and energy are constraints — use them.
+Right-size infrastructure as leadership work: challenge defaults that force always-on waste for rarely-used paths. “Just in case” environments need a written justification.
 
-Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.
+Put sustainability questions in architecture forums: what did we choose that forces waste forever? If the forum cannot change a decision, it is theater.
 
-On **The energy cost of flaky CI**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+Carbon-aware scheduling without slogans means shifting batch work when it is safe and measuring whether load actually moved. Unmeasured virtue is marketing.
+
+CI minutes are both money and attention. Quarantine flakes with deadlines; infinite quarantine is how noise becomes culture.
+
+The energy cost of flaky CI includes engineer attention. Fix flakes as reliability work with an SLO on quarantine time.
+
+Efficiency as reliability practice shows up when you delete a redundant pipeline stage and incident escape rate does not rise. That is the experiment worth running.
+
+Ephemeralize non-prod by default. Always-on demo and staging fleets are often habit, not requirement.
+
+A team discovers staging mirrors production capacity while serving a handful of QA users. Right-sizing frees budget and reduces the blast radius of bad deploys.
+
+Staging runs at production scale “for realism” while load profiles show it is idle 20 hours a day. Right-sizing is leadership because nobody else can say no cleanly.
+
+Carbon-aware batch jobs shift to night without checking downstream SLA commitments. Green intent creates customer pain. Constraints must be negotiated, not silently applied.
+
+One more practice worth installing: Add one sustainability question to every architecture review with a named follow-up owner.
+
+If you need a program office to explain **The energy cost of flaky CI**, the design is too heavy. Prefer artifacts people already touch — reviews, runbooks, decision records.
+
+## Close
+
+Efficiency is operational maturity. Lead it like any other reliability practice.
+
+If someone new cannot explain **The energy cost of flaky CI** from your artifacts in fifteen minutes, the practice is still private.

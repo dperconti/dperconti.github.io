@@ -1,5 +1,5 @@
 ---
-title: "Career conversations that change next week’s work when the calendar is full"
+title: "Career conversations that change next week’s work: what fails first"
 date: 2025-03-14T05:00:00Z
 categories:
   - Mentorship
@@ -7,108 +7,91 @@ categories:
 draft: false
 ---
 
-When the calendar is full, **Career conversations that change next week’s work** only survives inside short loops. Long programs without owners become status machines.
+The useful version of “Career conversations that change next week’s work” is narrower than the slogan: With AI in the loop, mentorship shifts toward verification, taste, and accountability. Syntax was never the hard part.
 
-If Mentorship only happens in 1:1s that never change assignments, you are performing care. Real mentorship changes what someone owns next week.
+The rest develops that one idea with controls you can install and failure modes you can recognize.
 
-With AI in the loop, mentorship shifts toward verification, taste, and accountability. Syntax was never the hard part.
+Seniors need deliberate practice teaching. If the scoreboard only rewards personal velocity, judgment does not scale past one hero.
 
-Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.
+Keep the unit of progress small enough to finish under a full calendar: one owner clarification, one verification signal, one reversible control. Grand programs without weekly evidence become status machines.
 
-## Mechanisms worth installing
+## Practices with enough detail to copy
 
-Start with mechanisms. For this work, the first controls should be boring on purpose — inspectable, teachable, and cheap to revisit.
+Cadence beats intensity. These hold when they fit inside weeks people already live.
+
+### 1
+
+When AI drafts: require a human verification note in the PR describing what was checked and how.
 
 Keep a light written trail of growth so progress is not a vibe only the manager remembers. Promotion packets should not require archaeology.
 
-Critique privately and specifically. Vague encouragement teaches nothing. Vague criticism teaches fear. Specific critique tied to a reusable pattern teaches judgment.
+### 2
 
-Pair on the decision, not only the code. Have the mentee write the tradeoff paragraph first, then implement. Judgment is a writing skill under time pressure as much as it is a coding skill.
+Every month: one public sponsorship act — authorship, presentation, or incident lead.
+
+Stretch ownership without a safety net is abandonment. Stretch ownership with a named coach, a kill switch, and a debrief is how judgment grows.
+
+### 3
+
+Every 1:1: one concrete coaching ask, one ownership shift, one written follow-up.
+
+Teach the verification step out loud when models draft. Juniors copy what seniors check — or what seniors skip.
+
+### 4
+
+Quarterly: seniors run a teaching session from a real failure (escaped defect, bad hand-off, stale RAG answer).
 
 Pairing as coaching is not surveillance. Time-box it, name the learning goal, and leave an artifact. Surveillance pairing produces compliance; coaching pairing produces judgment.
 
-Feedback that lands after incidents should arrive within days, tied to a specific decision or omission, and paired with a practice rep. Delayed generic feedback teaches nothing useful.
-
 Use review comments as teaching artifacts. Prefer “here is the pattern and why it matters in production” over drive-by nits. A review that only polices style teaches compliance, not craft.
 
-## Scenes from delivery
+When someone freezes asking for help, treat it as a systems smell. Latency to ask questions predicts incident severity. Psychological safety is an engineering control.
+
+Resist the urge to expand scope into neighboring slogans. If a control does not make **Career conversations that change next week’s work** more operable for the next person, leave it for another note. Dilution is how coherent essays become stitched scrapbooks.
+
+## Scenes
 
 A junior with a strong copilot ships fluent PRs. Mentorship is teaching them to distrust fluent wrongness: invariants, authz edges, and “what breaks at 10x load.” Without that coaching, you accelerate confident mistakes.
 
-AI-assisted workflows arrive without coaching norms. People paste secrets into tools, accept insecure snippets, and skip tests because the model “looked sure.” Literacy clinics on one failure mode per month beat a single all-hands about AI.
-
 A mid-level engineer wants promotion. Their manager talks about “visibility.” A better move: sponsor them to own a migration with a written plan, a kill switch, and a teaching review for the team afterward.
 
-## The wreck as syllabus
+Feedback arrives only at performance review. By then it feels political. The fix is weekly specific notes tied to artifacts — PR comments, decision records, incident roles — so the review is a summary, not a surprise.
 
-Each failure mode below is a missing control. Another meeting will not install it.
-
-- Seniors rewarded only for personal output, so teaching becomes unpaid overtime.
-- Stealing the work under the banner of helping — the mentee never practices judgment under load.
-- AI tools introduced without coaching on verification, data boundaries, or accountability.
-- Mentorship as calendar filler: 1:1s that never change assignments or ownership.
-
-## The costs of doing it right
-
-With AI drafting, the tradeoff is review load. Explicit verification notes reduce merge regret more than asking people to “be careful.”
+## Tradeoffs
 
 The tradeoff in public sponsorship is risk to your own reputation. Take it. That is part of the job. Private cheerleading costs you nothing and buys them little.
 
 The tradeoff in not stealing the work is short-term speed. You will be slower this afternoon so the team is faster next month. Leaders who cannot tolerate that tradeoff become permanent critical path.
 
-## How to hold the standard
+With AI drafting, the tradeoff is review load. Explicit verification notes reduce merge regret more than asking people to “be careful.”
 
-Prefer reversible moves. If you cannot say how you would unwind the decision, you are not done designing it.
+When pressure rises, teams drop the unowned practice first. Put **Career conversations that change next week’s work** in the path of work — templates, checklists, review norms — or admit it was optional applause.
 
-Pairing as coaching is not surveillance. Time-box it, name the learning goal, and leave an artifact. Surveillance pairing produces compliance; coaching pairing produces judgment.
+On **Career conversations that change next week’s work**, care that never changes next week’s ownership is performance. Stretch a thin slice, coach the decision, and leave an artifact someone else can reuse.
+
+## Failure modes
+
+Each of these is a missing control, not a personality problem:
+
+- Seniors rewarded only for personal output, so teaching becomes unpaid overtime.
+- Mentorship as calendar filler: 1:1s that never change assignments or ownership.
+- AI tools introduced without coaching on verification, data boundaries, or accountability.
+- Feedback that arrives only at review time, when grades feel political instead of formative.
+
+Pair on the decision, not only the code. Have the mentee write the tradeoff paragraph first, then implement. Judgment is a writing skill under time pressure as much as it is a coding skill.
 
 Feedback that lands after incidents should arrive within days, tied to a specific decision or omission, and paired with a practice rep. Delayed generic feedback teaches nothing useful.
 
-Use review comments as teaching artifacts. Prefer “here is the pattern and why it matters in production” over drive-by nits. A review that only polices style teaches compliance, not craft.
+The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
+
+Career conversations should change next week’s work: a stretch ownership, a public design, a safer incident role — not only aspirational titles twelve months out.
 
 Sponsor publicly. Put someone’s name on the design review invite, the RFC author line, the customer-facing postmortem. Private belief in someone does not compound; public sponsorship does.
 
-Seniors need deliberate practice teaching: lead a review huddle, write the onboarding doc, own feedback quality. If you only reward personal velocity, teaching becomes unpaid overtime.
+Critique privately and specifically. Vague encouragement teaches nothing. Vague criticism teaches fear. Specific critique tied to a reusable pattern teaches judgment.
 
-Feedback arrives only at performance review. By then it feels political. The fix is weekly specific notes tied to artifacts — PR comments, decision records, incident roles — so the review is a summary, not a surprise.
-
-If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.
-
-Grow judgment in public artifacts. Hallway wisdom does not compound.
-
-## Do not silo the practice
-
-Leaders who isolate the practice from Engineering leadership create beautiful local optima and expensive global failure.
-
-Trust compounds when leaders absorb uncertainty without dumping it as urgency onto the people closest to the code. Urgency without triage is just anxiety with a deadline.
-
-Hiring celebrates architects who dazzle in system-design interviews but cannot leave a service operable on-call. Six months later, juniors inherit tribal knowledge. The leadership miss was selecting for theater over inheritance.
-
-Reorganizations that change reporting lines without rewriting ownership maps just move the fog. Update runbooks and the “who decides” table in the same week you change the org chart.
-
-## Tempo changed; accountability did not
-
-Models accelerate drafts. They do not absorb production accountability. Keep verification human and visible.
-
-Evaluating AI assistance without vanity metrics means comparing escaped defects, onboarding time, and review quality — not counting accepted suggestions like arcade tickets.
-
-Useful specialization looks like a retrieval agent, a draft agent, and a verifier — each with narrow tools — not five personas arguing in a shared context window for theater value.
-
-## A plan for the next seven days
-
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
-
-- When AI drafts: require a human verification note in the PR describing what was checked and how.
-- Critique privately and specifically.
-- Every month: one public sponsorship act — authorship, presentation, or incident lead.
-- Keep a light written trail of growth so progress is not a vibe only the manager remembers.
-- Every 1:1: one concrete coaching ask, one ownership shift, one written follow-up.
-- Quarterly: seniors run a teaching session from a real failure (escaped defect, bad hand-off, stale RAG answer).
-
-## What to carry forward
+## Close
 
 The measure of mentorship is whether the next hard problem can be owned by someone else — with you still available, not required.
 
-Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.
-
-On **Career conversations that change next week’s work**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+On **Career conversations that change next week’s work**, keep the loop short: write the decision, name the owner, verify the outcome.

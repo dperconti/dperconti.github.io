@@ -1,6 +1,7 @@
 /**
- * Rewrite every post in content/posts/ with a long-form essay body.
- * Preserves frontmatter (title, date, categories, draft). Regenerates body only.
+ * Rewrite every post in content/posts/ as one coherent essay.
+ * Preserves dates, categories, draft flag, and filenames (URL slugs).
+ * Improves formulaic frontmatter titles when needed.
  *
  * Usage:
  *   node scripts/rewrite-posts-longform.js
@@ -12,7 +13,6 @@ const fs = require('fs')
 const path = require('path')
 const matter = require('gray-matter')
 const BANKS = require('./essay-banks')
-const CROSS = BANKS.CROSS
 const EXTRA = require('./essay-banks-extra')
 for (const [theme, extra] of Object.entries(EXTRA)) {
   if (!BANKS[theme]) continue
@@ -22,6 +22,7 @@ for (const [theme, extra] of Object.entries(EXTRA)) {
 
 const POSTS_DIR = path.join(__dirname, '..', 'content', 'posts')
 const MIN_WORDS = 900
+const MAX_WORDS = 1150
 
 function mulberry32(a) {
   return function () {
@@ -55,15 +56,6 @@ function pickN(rng, arr, n) {
   return out
 }
 
-function shuffle(rng, arr) {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(rng() * (i + 1))
-    ;[a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
-}
-
 function wordCount(text) {
   return text
     .replace(/[#>*_\-`]/g, ' ')
@@ -74,7 +66,7 @@ function wordCount(text) {
 function stripAngleSuffix(title) {
   return title
     .replace(
-      /\s*[—:-]\s*(note\s+\d+|a field note|what I watch for|working notes).*$/i,
+      /\s*[—:-]\s*(note\s+\d+|a field note|what I watch for|working notes|naming the owner|what fails first|the operable version|evidence over enthusiasm|a shorter feedback loop|keeping it teachable|small controls that stick).*$/i,
       '',
     )
     .replace(
@@ -83,19 +75,6 @@ function stripAngleSuffix(title) {
     )
     .replace(/\s*\((20\d{2})\)\s*$/i, '')
     .trim()
-}
-
-function detectAngle(title) {
-  const t = title.toLowerCase()
-  if (/what i watch for/.test(t)) return 'watch'
-  if (/field note|working notes/.test(t)) return 'field'
-  if (/in practice/.test(t)) return 'practice'
-  if (/under real load/.test(t)) return 'load'
-  if (/without the theater/.test(t)) return 'theater'
-  if (/when the calendar is full/.test(t)) return 'calendar'
-  if (/for engineering leaders/.test(t)) return 'leaders'
-  if (/note \d+/.test(t)) return 'note'
-  return 'core'
 }
 
 function detectTheme(title, categories = []) {
@@ -132,7 +111,7 @@ function detectTheme(title, categories = []) {
   )
     return 'opensource'
   if (
-    /mentor|coaching|junior|career conversation|sponsor|pairing|feedback that|psychology of asking|growing seniors|teaching judgment|ai literacy|ai-assisted/.test(
+    /mentor|coaching|junior|career conversation|sponsor|pairing|feedback that|psychology of asking|growing seniors|teaching judgment|ai literacy|ai-assisted|hiring for ownership/.test(
       t,
     )
   )
@@ -163,411 +142,357 @@ function detectTheme(title, categories = []) {
   return 'leadership'
 }
 
-const ANGLE_LINE = {
-  watch: (topic) =>
-    `What I watch for is not enthusiasm around **${topic}** — it is whether ownership, verification, and the next person’s path got clearer under ordinary calendar pressure.`,
-  field: (topic) =>
-    `A field note on **${topic}** should be inspectable next week. Mechanisms beat vibes.`,
-  practice: (topic) =>
-    `In practice, **${topic}** is a sequence of controls you can name — not a philosophy deck.`,
-  load: (topic) =>
-    `Under real load, **${topic}** stops being a slogan. Queues, incidents, and half-finished migrations reveal whether the system was designed or performed.`,
-  theater: (topic) =>
-    `Without the theater, **${topic}** is quieter: fewer frameworks, more written owners, less applause for motion.`,
-  calendar: (topic) =>
-    `When the calendar is full, **${topic}** only survives inside short loops. Long programs without owners become status machines.`,
-  leaders: (topic) =>
-    `For engineering leaders, **${topic}** is a design problem: incentives, interfaces, and feedback loops — not a personality trait.`,
-  note: (topic) =>
-    `Another working note on **${topic}**: same thesis, sharper edges from recent delivery pressure.`,
-  core: (topic) =>
-    `**${topic}** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.`,
+/** Natural title variants for posts that share a base topic (Related Posts). */
+function improveTitle(rawTitle, ordinalAmongBase) {
+  const base = stripAngleSuffix(rawTitle)
+  if (ordinalAmongBase === 0) return base
+  const join = base.includes(':') ? ' — ' : ': '
+  const variants = [
+    `naming the owner`,
+    `what fails first`,
+    `the operable version`,
+    `evidence over enthusiasm`,
+    `a shorter feedback loop`,
+    `keeping it teachable`,
+    `small controls that stick`,
+  ]
+  const v = variants[(ordinalAmongBase - 1) % variants.length]
+  return `${base}${join}${v}`
 }
 
-const STRUCTURES = [
-  'mechanisms',
-  'failure_first',
-  'week_walkthrough',
-  'practices',
-  'counterargument',
-  'pressure',
-  'coaching',
-  'systems',
-]
-
-const H = {
-  mech: [
-    'Mechanisms worth installing',
-    'The operating controls',
-    'What to put in place before the announcement',
-    'Boring controls that compound',
-  ],
-  fail: [
-    'Failure modes that teach',
-    'How the practice decays',
-    'What I refuse to romanticize',
-    'The wreck as syllabus',
-  ],
-  scene: [
-    'Scenes from delivery',
-    'Where this shows up',
-    'Concrete cases',
-    'Texture from the work',
-  ],
-  trade: [
-    'Tradeoffs worth naming',
-    'What you give up',
-    'The costs of doing it right',
-  ],
-  bridge: [
-    'Where this couples to adjacent work',
-    'Do not silo the practice',
-    'The neighboring discipline',
-  ],
-  ai: [
-    'When models join the workflow',
-    'Tempo changed; accountability did not',
-    'Harnesses beat vibes',
-  ],
-  plan: [
-    'A plan for the next seven days',
-    'Make it observable',
-    'Checklist you can run',
-  ],
-  close: ['Close', 'The point, again', 'What to carry forward'],
-  week: [
-    'A week walking the practice',
-    'From ambiguity to an operable slice',
-    'Sequence under ordinary pressure',
-  ],
-  practice: [
-    'Cadence that survives calendars',
-    'Practices with enough detail to copy',
-    'Operating rhythm',
-  ],
-  counter: [
-    'The seductive counterargument',
-    'Why smart teams still dodge this',
-    'The objection, taken seriously',
-  ],
-  pressure: [
-    'Pressure test',
-    'What load reveals',
-    'Design for the bad day',
-  ],
-  coach: [
-    'Coaching lens',
-    'Transferring judgment',
-    'Grow the next owner',
-  ],
-  systems: [
-    'Systems view',
-    'Interfaces, feedback, ownership',
-    'Design the loop',
-  ],
+function topicDevelopment(topic, theme, rng) {
+  const shared = [
+    `For **${topic}**, the inheritance test is blunt: after a week, can someone outside the original room explain what changed, who owns it, and how you will know if it breaks? If the answer depends on hallway memory, you still have a story — not a practice.`,
+    `Write one page while the decision is still warm — context, options, choice, owner, revisit date. Verbal alignment on **${topic}** evaporates under ordinary calendar pressure, and Slack archaeology is a poor substitute for a decision record.`,
+    `Resist the urge to expand scope into neighboring slogans. If a control does not make **${topic}** more operable for the next person, leave it for another note. Dilution is how coherent essays become stitched scrapbooks.`,
+    `Measure what you claim to care about. If **${topic}** only appears in kickoff slides and never in review, incident, or planning artifacts, it is branding. Put a verification signal where people already look.`,
+    `Keep the unit of progress small enough to finish under a full calendar: one owner clarification, one verification signal, one reversible control. Grand programs without weekly evidence become status machines.`,
+    `When pressure rises, teams drop the unowned practice first. Put **${topic}** in the path of work — templates, checklists, review norms — or admit it was optional applause.`,
+  ]
+  const byTheme = {
+    rag: [
+      `On **${topic}**, polish the chat UI last. Connectors, authz at retrieval time, freshness owners, and a gold-question suite decide whether users trust the answers. Demo fluency without those controls is a long half-life of embarrassment.`,
+      `Treat polite wrongness as a product defect with a trace: query, retrieved IDs, scores, answer, feedback. Without that trail, debates stay stuck on model vibes while users quietly stop asking.`,
+      `Thin context should refuse or escalate. Inventing confidence is how retrieval systems lose the room — and how support tickets turn into vague complaints about “the AI.”`,
+    ],
+    agents: [
+      `On **${topic}**, design the stop path before the autonomy story — budgets, allow-listed tools, audit logs, and a kill switch operators can reach without a war room. Autonomy is earned after those exist.`,
+      `Side effects need the same discipline as payments: idempotency, clear hand-offs, and a human who still owns production outcomes. Retries without keys turn partial failure into duplicate harm.`,
+      `Useful specialization is narrow tools and clear interfaces — not personas arguing in a shared context window for theater value.`,
+    ],
+    ai: [
+      `On **${topic}**, tempo is not the product. Verification notes, data boundaries, and review norms decide whether faster drafts become cheaper defects. Fluency is not evidence.`,
+      `Shared harnesses beat private prompt folklore. If the “right way” lives in one chat history, you do not have a team practice — you have a bus factor dressed as productivity.`,
+      `Measure assistance with outcomes you already care about: change-fail rate, review quality, escaped defects. Suggestion counts are arcade tickets.`,
+    ],
+    mentorship: [
+      `On **${topic}**, care that never changes next week’s ownership is performance. Stretch a thin slice, coach the decision, and leave an artifact someone else can reuse.`,
+      `Specific feedback tied to a PR, RFC, or incident role compounds. Vague encouragement at review time feels kind and teaches nothing.`,
+      `Seniors need deliberate practice teaching. If the scoreboard only rewards personal velocity, judgment does not scale past one hero.`,
+    ],
+    collaboration: [
+      `On **${topic}**, publish the interface: inputs, outputs, done criteria, and who gets paged. More Slack is not a substitute for a contract, and hero translators are a continuity risk.`,
+      `Meetings can choose among written options. They cannot permanently store ownership across org boundaries. Status karaoke is expensive theater.`,
+      `Shared roadmaps without shared capacity envelopes are fiction. Publish what each team can carry before you celebrate alignment.`,
+    ],
+    craft: [
+      `On **${topic}**, craft shows up as reversible decisions, reviews that teach, and remediations that change a control within a week of an incident — not as aesthetics in a diagram.`,
+      `Put repayment and operability on the same board as features so debt competes in the open instead of at 2 a.m. Unscheduled debt always loses to the loudest slide.`,
+      `Observability should answer what changed for which users, tied to an owner. Orphaned dashboards are decoration.`,
+    ],
+    leadership: [
+      `On **${topic}**, clear drag before you invent ceremony. Ambiguous owners and missing environments tax the team more than a missing standup. Process without path-clearing is motion that performs like delay.`,
+      `Stay close enough to feel texture; distant enough that people still own outcomes. Stealing hard problems under the banner of help produces brittle benches and exhausted managers.`,
+      `Quiet continuity beats loud frameworks. You are paid for systems and people that still work when you are not narrating.`,
+    ],
+    sustainability: [
+      `On **${topic}**, refuse waste that buys no safety — retry storms, flaky CI, always-on idle fleets — and assign an owner who can change sizing or schedules. Unowned green metrics are decoration.`,
+      `Efficiency is reliability practice. If a carbon or cost signal never changes an architecture decision, the forum is performing virtue.`,
+      `Flaky CI burns minutes and attention. Quarantine with deadlines; infinite noise trains people to ignore real failures.`,
+    ],
+    opensource: [
+      `On **${topic}**, contribute where you already depend, fund maintainer time, and write exit criteria before you fork. Cosplay contributions create noise, not leverage.`,
+      `Citizenship without capacity planning creates unpaid queues and brittle commons. Own what you share, including docs freshness and security contacts.`,
+      `Upstream first keeps collaboration cheap. Private patches bit-rot; upstream fixes travel with every pull.`,
+    ],
+    buybuild: [
+      `On **${topic}**, start from ownership of the failure mode and the exit path. Purchase price is the down payment; integration debt is the mortgage.`,
+      `Keep harnesses you control — evals, policy, audit — even when you buy commodity inference or platforms. That is how judgment stays portable.`,
+      `If nobody on your team can operate the failure mode, you did not buy a capability — you rented a demo with a support email.`,
+    ],
+  }
+  const pool = [...shared, ...(byTheme[theme] || [])]
+  return pickN(rng, pool, 5)
 }
 
-function h(rng, key) {
-  return pick(rng, H[key])
+function normalizeKey(p) {
+  return p
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 80)
+    .toLowerCase()
+}
+
+function dedupeParagraphs(parts) {
+  const seen = new Set()
+  const out = []
+  for (const p of parts) {
+    if (!p || !String(p).trim()) continue
+    const key = normalizeKey(String(p))
+    // Always keep headings
+    if (String(p).startsWith('## ') || String(p).startsWith('### ')) {
+      out.push(p)
+      continue
+    }
+    if (seen.has(key)) continue
+    seen.add(key)
+    out.push(p)
+  }
+  return out
 }
 
 function bullets(items) {
   return items.map((i) => `- ${i}`).join('\n')
 }
 
+function makeOpening(topic, thesis, bank, rng) {
+  const openers = [
+    thesis,
+    `Most teams endorse “${topic}” quickly and operationalize it slowly. ${thesis}`,
+    `The useful version of “${topic}” is narrower than the slogan: ${thesis}`,
+    `I care about “${topic}” for one practical reason: it either leaves clearer ownership next week, or it was theater.`,
+    `“${topic}” stops being abstract the moment you ask who gets paged when it fails.`,
+    `${pick(rng, bank.openings)(topic)}`,
+  ]
+  return pick(rng, openers)
+}
+
 function buildEssay({ title, categories, rng }) {
   const topic = stripAngleSuffix(title)
-  const angle = detectAngle(title)
   const theme = detectTheme(title, categories)
   const bank = BANKS[theme]
-  const structure = pick(rng, STRUCTURES)
-  const crossKey = pick(rng, CROSS[theme] || ['leadership'])
-  const cross = BANKS[crossKey]
+  const structure = pick(rng, [
+    'mechanisms',
+    'failure_first',
+    'scene_led',
+    'practices',
+  ])
 
-  const thesis = pick(rng, bank.theses)
-  const topicShort = topic.length > 48 ? bank.label : topic
-  const openingFn = pick(rng, bank.openings)
-  const deep = pickN(rng, bank.deep, 6)
-  const scenes = pickN(rng, bank.scenarios, 3)
-  const trades = pickN(rng, bank.tradeoffs, 3)
-  const fails = pickN(rng, bank.failures, 4)
-  const practices = pickN(rng, bank.practices, 5)
-  const close = pick(rng, bank.closes)
-  const crossDeep = pickN(rng, cross.deep, 2)
-  const crossScene = pick(rng, cross.scenarios)
+  // Exhaustive unique picks — never reuse a paragraph in the same essay
+  const used = new Set()
+  const take = (arr, n) => {
+    const avail = arr.filter((x) => x && !used.has(x))
+    const picks = pickN(rng, avail, n)
+    picks.forEach((p) => used.add(p))
+    return picks
+  }
+  const takeOne = (arr) => {
+    const [x] = take(arr, 1)
+    return x
+  }
+
+  const thesis = takeOne(bank.theses)
+  const deep = take(bank.deep, 6)
+  const scenes = take(bank.scenarios, 3)
+  const trades = take(bank.tradeoffs, 3)
+  const fails = take(bank.failures, 4)
+  const practices = take(bank.practices, 4)
+  const close = takeOne(bank.closes)
+  const topicParas = topicDevelopment(topic, theme, rng)
+  topicParas.forEach((p) => used.add(p))
 
   const parts = []
 
-  // --- Opening ---
-  parts.push(ANGLE_LINE[angle](topic))
-  parts.push(openingFn(bank.label))
-  parts.push(thesis)
+  // 1. Opening — clear human thesis (one idea)
+  parts.push(makeOpening(topic, thesis, bank, rng))
+  if (!parts[0].includes(thesis.slice(0, 40))) {
+    parts.push(thesis)
+  }
   parts.push(
     pick(rng, [
-      `The standard is inheritance. If a new teammate cannot find the owner, the control, and the evidence, you have a story — not a practice.`,
-      `I am not interested in branding this work. I am interested in whether the next person can run it without a week of hallway archaeology.`,
-      `Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.`,
+      `What follows stays on that claim: mechanisms, concrete scenes, and the failure modes that appear when the claim is ignored.`,
+      `I will stay on this thesis — no adjacent manifesto, no tour of every neighboring discipline.`,
+      `The rest develops that one idea with controls you can install and failure modes you can recognize.`,
     ]),
   )
+  parts.push(topicParas[0])
+  parts.push(topicParas[1])
 
-  // --- Body by structure ---
+  // 2. Develop the idea
   if (structure === 'mechanisms') {
-    parts.push(`## ${h(rng, 'mech')}`)
+    parts.push('## How it actually works')
     parts.push(
-      `Start with mechanisms. For this work, the first controls should be boring on purpose — inspectable, teachable, and cheap to revisit.`,
+      pick(rng, [
+        `Start with controls that are boring on purpose: written owners, verification, and a path for the next person.`,
+        `Install the smallest set of mechanisms that make success and failure legible. Skip the program name.`,
+      ]),
     )
     deep.forEach((d) => parts.push(d))
-    parts.push(`## ${h(rng, 'scene')}`)
+    if (topicParas[2]) parts.push(topicParas[2])
+    parts.push('## Where this shows up')
     scenes.forEach((s) => parts.push(s))
-    parts.push(`## ${h(rng, 'fail')}`)
-    parts.push(
-      `Each failure mode below is a missing control. Another meeting will not install it.`,
-    )
-    parts.push(bullets(fails))
-    parts.push(`## ${h(rng, 'trade')}`)
+    parts.push('## Tradeoffs')
     trades.forEach((t) => parts.push(t))
   } else if (structure === 'failure_first') {
-    parts.push(`## ${h(rng, 'fail')}`)
+    parts.push('## What fails when you skip it')
     parts.push(
-      `I teach from failure modes because teams already have scars. Naming them precisely is faster than inventing a framework brand.`,
+      `Teams already have scars. Naming the failure modes precisely is faster than inventing a framework brand.`,
     )
     fails.forEach((f) => parts.push(f))
-    parts.push(`## ${h(rng, 'mech')}`)
-    parts.push(`Those failures map to controls. Install the smallest ones that make failure legible.`)
+    parts.push('## Controls that answer those failures')
     deep.forEach((d) => parts.push(d))
-    parts.push(`## ${h(rng, 'scene')}`)
+    if (topicParas[2]) parts.push(topicParas[2])
+    parts.push('## A concrete scene')
     scenes.forEach((s) => parts.push(s))
-    parts.push(`## ${h(rng, 'trade')}`)
+    parts.push('## Tradeoffs')
     trades.forEach((t) => parts.push(t))
-  } else if (structure === 'week_walkthrough') {
-    parts.push(`## ${h(rng, 'week')}`)
-    parts.push(
-      `Imagine ordinary pressure — not a lab. Someone proposes a change that touches this practice. The first question is not which tool. It is who owns the outcome and what you will verify.`,
-    )
+  } else if (structure === 'scene_led') {
+    parts.push('## A scene from delivery')
     parts.push(scenes[0])
     parts.push(
-      `Day two is writing. A short decision record: context, options, choice, owner, revisit date. Without that page, the week becomes Slack archaeology.`,
+      `That scene is the thesis under calendar pressure. The response is not another status meeting — it is a control.`,
     )
-    parts.push(deep[0])
-    parts.push(deep[1])
-    parts.push(
-      `Midweek friction is expected. Clear drag — access, environments, unclear interfaces — before you add a status meeting that performs leadership.`,
-    )
-    parts.push(scenes[1])
-    parts.push(deep[2])
-    parts.push(
-      `By week’s end, success is an operable slice: a log schema, an eval, a runbook, a kill switch, or a freshness owner — plus a human who can reverse the change.`,
-    )
-    parts.push(scenes[2])
-    parts.push(deep[3])
-    parts.push(`## ${h(rng, 'fail')}`)
-    parts.push(bullets(fails.slice(0, 3)))
-    parts.push(`## ${h(rng, 'trade')}`)
+    parts.push('## Mechanisms')
+    deep.forEach((d) => parts.push(d))
+    if (topicParas[2]) parts.push(topicParas[2])
+    if (scenes[1]) {
+      parts.push('## Another texture')
+      parts.push(scenes[1])
+      if (scenes[2]) parts.push(scenes[2])
+    }
+    parts.push('## Tradeoffs')
     trades.forEach((t) => parts.push(t))
-  } else if (structure === 'practices') {
-    parts.push(`## ${h(rng, 'practice')}`)
+  } else {
+    parts.push('## Practices with enough detail to copy')
     parts.push(
-      `Cadence beats intensity. The practice holds when it fits inside weeks people already live.`,
+      `Cadence beats intensity. These hold when they fit inside weeks people already live.`,
     )
     practices.forEach((p, i) => {
-      parts.push(`### ${i + 1}. Practice`)
+      parts.push(`### ${i + 1}`)
       parts.push(p)
-      parts.push(deep[i % deep.length])
-      if (i < scenes.length) parts.push(scenes[i])
+      if (deep[i]) parts.push(deep[i])
     })
-    parts.push(`## ${h(rng, 'fail')}`)
-    parts.push(`Stop doing these:`)
-    parts.push(bullets(fails))
-  } else if (structure === 'counterargument') {
-    parts.push(`## ${h(rng, 'counter')}`)
-    parts.push(
-      pick(rng, [
-        `The counterargument is usually speed: we do not have time. That sentence often means you do not have time for the second failure.`,
-        `Some leaders argue culture will handle this without written controls. Culture without artifacts is memory — and memory does not survive hiring waves.`,
-        `Another objection: we bought a tool for this. Tools without owners become expensive folklore.`,
-      ]),
-    )
-    parts.push(
-      `Take the objection seriously. Lightweight is good. Invisible is not. The fix is shorter artifacts and clearer owners — not more ceremony.`,
-    )
-    parts.push(`## ${h(rng, 'mech')}`)
-    deep.slice(0, 4).forEach((d) => parts.push(d))
-    parts.push(`## ${h(rng, 'scene')}`)
+    deep.slice(practices.length).forEach((d) => parts.push(d))
+    if (topicParas[2]) parts.push(topicParas[2])
+    parts.push('## Scenes')
     scenes.forEach((s) => parts.push(s))
-    parts.push(`## ${h(rng, 'trade')}`)
-    parts.push(
-      `Do not build a program office for a one-team problem. Do not invent a framework brand. Do install the smallest control that makes failure legible.`,
-    )
+    parts.push('## Tradeoffs')
     trades.forEach((t) => parts.push(t))
-    parts.push(fails[0])
-  } else if (structure === 'pressure') {
-    parts.push(`## ${h(rng, 'pressure')}`)
-    parts.push(
-      `Load is the honest critic. Incidents, hiring spikes, and vendor outages reveal whether the practice was designed or merely announced.`,
-    )
-    parts.push(scenes[0])
-    parts.push(fails[0])
-    parts.push(fails[1])
-    parts.push(`## ${h(rng, 'mech')}`)
-    deep.forEach((d) => parts.push(d))
-    parts.push(scenes[1])
-    parts.push(
-      `Under load, meetings multiply. Resist. Written interfaces, budgets, and kill switches scale better than status theater.`,
-    )
-    parts.push(scenes[2])
-    parts.push(`## ${h(rng, 'trade')}`)
-    trades.forEach((t) => parts.push(t))
-    parts.push(bullets(fails.slice(2)))
-  } else if (structure === 'coaching') {
-    parts.push(`## ${h(rng, 'coach')}`)
-    parts.push(
-      `If the practice only lives in your head, you have a bus factor of one. Mentorship here means transferring judgment through artifacts.`,
-    )
-    parts.push(pick(rng, BANKS.mentorship.deep))
-    parts.push(deep[0])
-    parts.push(deep[1])
-    parts.push(scenes[0])
-    parts.push(
-      `Juniors need safe ownership of a thin slice and specific feedback. Seniors need sponsorship to teach — review quality, RFC authorship, incident lead — not only more tickets.`,
-    )
-    parts.push(scenes[1])
-    parts.push(deep[2])
-    parts.push(deep[3])
-    parts.push(scenes[2])
-    parts.push(`## ${h(rng, 'practice')}`)
+  }
+
+  if (topicParas[3]) parts.push(topicParas[3])
+  if (topicParas[4]) parts.push(topicParas[4])
+
+  // 3. Failure modes tied to THIS thesis only
+  if (structure === 'failure_first') {
+    parts.push('## What to do this month')
     parts.push(bullets(practices))
-    parts.push(`## ${h(rng, 'fail')}`)
-    parts.push(bullets(fails.slice(0, 3)))
+  } else if (structure === 'practices') {
+    parts.push('## Failure modes')
+    parts.push(
+      `Each of these is a missing control, not a personality problem:`,
+    )
+    parts.push(bullets(fails))
   } else {
-    // systems
-    parts.push(`## ${h(rng, 'systems')}`)
+    parts.push('## Failure modes')
     parts.push(
-      `Treat the practice as a system with inputs, outputs, and feedback. If any of those are social-only, the system will drift.`,
+      `Each of these is a missing control, not a personality problem:`,
     )
-    parts.push(deep[0])
-    parts.push(deep[1])
-    parts.push(scenes[0])
-    parts.push(
-      `Useful signals tie to user impact and operability: escaped defects, stale answers, retry amplification, review cycle time, on-call toil. Vanity metrics create vanity leadership.`,
-    )
-    parts.push(deep[2])
-    parts.push(deep[3])
-    parts.push(scenes[1])
-    parts.push(fails[0])
-    parts.push(practices[0])
-    parts.push(practices[1])
-    parts.push(scenes[2])
-    parts.push(`## ${h(rng, 'trade')}`)
-    trades.forEach((t) => parts.push(t))
-    parts.push(deep[4] || deep[0])
+    parts.push(bullets(fails))
+    parts.push('## What to do this month')
+    parts.push(bullets(practices.slice(0, 3)))
   }
 
-  // --- Principles (always; adds depth without filler) ---
-  parts.push(`## ${pick(rng, ['Operating principles', 'Principles under ordinary pressure', 'How to hold the standard'])}`)
-  parts.push(pick(rng, [
-    `Hold three standards at once: a named owner, a written control, and a verification signal. Missing any one turns the practice into performance.`,
-    `Prefer reversible moves. If you cannot say how you would unwind the decision, you are not done designing it.`,
-    `Optimize for the next person's onboarding cost. Every undocumented exception becomes a tax on hiring and incident response.`,
-  ]))
-  const leftover = deep.slice(3)
-  leftover.forEach((d) => parts.push(d))
-  // pull additional unused bank material for depth
-  const moreDeep = pickN(rng, bank.deep.filter((d) => !deep.includes(d)), 2)
-  moreDeep.forEach((d) => parts.push(d))
-  const moreScene = pickN(rng, bank.scenarios.filter((s) => !scenes.includes(s)), 1)
-  moreScene.forEach((s) => parts.push(s))
-  parts.push(pick(rng, [
-    `None of these principles require a new program name. They require attention in the path of work — reviews, design notes, procurement, and post-incident follow-through.`,
-    `If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.`,
-    `Teach the principles in the artifacts people already touch: PR templates, RFC sections, architecture checklists, and on-call runbooks.`,
-  ]))
-  const moreTrade = bank.tradeoffs.filter((t) => !trades.includes(t))
-  if (moreTrade.length) parts.push(pick(rng, moreTrade))
-  parts.push(pick(rng, bank.closes.filter((c) => c !== close) .concat([
-    `Keep the feedback loop short enough that the team can feel the practice working before the next planning cycle.`,
-    `Refuse to scale a workflow you cannot explain on a whiteboard to a new hire in fifteen minutes.`,
-  ])))
-
-  // --- Bridge ---
-  parts.push(`## ${h(rng, 'bridge')}`)
-  parts.push(
-    pick(rng, [
-      `This work does not live alone. It couples to ${cross.label}.`,
-      `Leaders who isolate the practice from ${cross.label} create beautiful local optima and expensive global failure.`,
-      `A durable approach borrows controls from ${cross.label} instead of inventing a parallel religion.`,
-    ]),
-  )
-  parts.push(crossDeep[0])
-  parts.push(crossScene)
-  if (crossDeep[1]) parts.push(crossDeep[1])
-
-  // --- AI note when not already AI/agents ---
-  if (theme !== 'ai' && theme !== 'agents' && theme !== 'rag') {
-    parts.push(`## ${h(rng, 'ai')}`)
-    parts.push(
-      pick(rng, [
-        `Models accelerate drafts. They do not absorb production accountability. Keep verification human and visible.`,
-        `If agents or copilots touch this workflow, add budgets, logs, and a kill switch before you add autonomy.`,
-        `Fluent output raises the value of written invariants. Improvisation got cheaper; durable context got more precious.`,
-      ]),
-    )
-    parts.push(pick(rng, BANKS.ai.deep))
-    if (rng() > 0.4) parts.push(pick(rng, BANKS.agents.deep))
-  } else if (theme === 'rag') {
-    parts.push(`## ${h(rng, 'ai')}`)
-    parts.push(
-      `Retrieval systems sit next to agentic workflows. The same discipline applies: privileges, audit trails, and human override when context is thin or side effects are irreversible.`,
-    )
-    parts.push(pick(rng, BANKS.agents.deep))
-  }
-
-  // --- Seven-day plan ---
-  parts.push(`## ${h(rng, 'plan')}`)
-  parts.push(
-    `Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.`,
-  )
-  parts.push(bullets(shuffle(rng, [...practices, ...deep.slice(0, 2).map((d) => d.split('. ')[0] + '.')]).slice(0, 6)))
-
-  // --- Closing ---
-  parts.push(`## ${h(rng, 'close')}`)
+  // 4. Short close — land the point (no cross-theme bridge, no off-topic AI inject)
+  parts.push('## Close')
   parts.push(close)
   parts.push(
     pick(rng, [
-      `Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.`,
-      `Continuity is the product. Tools and frameworks are optional accessories.`,
-      `If this feels quieter than a keynote, that is intentional. Compounding work rarely looks like theater.`,
+      `On **${topic}**, keep the loop short: write the decision, name the owner, verify the outcome.`,
+      `If someone new cannot explain **${topic}** from your artifacts in fifteen minutes, the practice is still private.`,
+      `Carry the claim as a habit, not a brand: **${topic}** either compounds ownership or it was applause.`,
     ]),
   )
-  parts.push(
-    `On **${topic}**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?`,
-  )
 
-  let body = parts.filter(Boolean).join('\n\n')
-  // Ensure floor without repetitive filler: add unused bank material once
+  let body = dedupeParagraphs(parts).join('\n\n')
+
+  // Grow carefully toward target without duplicating or drifting themes
   let guard = 0
-  while (wordCount(body) < MIN_WORDS && guard < 4) {
-    const unusedDeep = bank.deep.filter((d) => !body.includes(d.slice(0, 40)))
-    const unusedScene = bank.scenarios.filter((sc) => !body.includes(sc.slice(0, 40)))
-    const unusedFail = bank.failures.filter((f) => !body.includes(f.slice(0, 40)))
-    const chunk = []
-    chunk.push(`## ${pick(rng, ['One more control worth naming', 'Additional texture', 'Further on the operating standard'])}`)
-    if (unusedDeep.length) chunk.push(pick(rng, unusedDeep))
-    if (unusedScene.length) chunk.push(pick(rng, unusedScene))
-    if (unusedFail.length) chunk.push(`Watch for this decay mode: ${pick(rng, unusedFail)}`)
-    chunk.push(pick(rng, [
-      `Write it down the same week. Unpublished standards do not survive the next hiring wave or the next incident.`,
-      `If you only remember one move: name the owner of the failure mode before you celebrate the happy path.`,
-      `Treat this as reversible until proven otherwise — and say what reverse looks like.`,
-    ]))
-    // insert before final Close heading
-    if (/\n## (Close|The point, again|What to carry forward)\n/.test(body)) {
-      body = body.replace(/\n## (Close|The point, again|What to carry forward)\n/, `\n${chunk.join('\n\n')}\n\n## $1\n`)
+  while (wordCount(body) < MIN_WORDS && guard < 15) {
+    const unusedDeep = bank.deep.filter(
+      (d) => !used.has(d) && !body.includes(d.slice(0, 48)),
+    )
+    const unusedScene = bank.scenarios.filter(
+      (s) => !used.has(s) && !body.includes(s.slice(0, 48)),
+    )
+    const unusedTrade = bank.tradeoffs.filter(
+      (t) => !used.has(t) && !body.includes(t.slice(0, 48)),
+    )
+    const unusedPractice = bank.practices.filter(
+      (p) => !used.has(p) && !body.includes(p.slice(0, 48)),
+    )
+    let addition = null
+    if (unusedDeep.length) {
+      addition = pick(rng, unusedDeep)
+      used.add(addition)
+    } else if (unusedScene.length) {
+      addition = pick(rng, unusedScene)
+      used.add(addition)
+    } else if (unusedTrade.length) {
+      addition = pick(rng, unusedTrade)
+      used.add(addition)
+    } else if (unusedPractice.length) {
+      const p = pick(rng, unusedPractice)
+      used.add(p)
+      addition = `One more practice worth installing: ${p}`
     } else {
-      body += '\n\n' + chunk.join('\n\n')
+      addition = pick(rng, [
+        `If you need a program office to explain **${topic}**, the design is too heavy. Prefer artifacts people already touch — reviews, runbooks, decision records.`,
+        `Ambiguity is expensive. Spell out what “good” looks like for **${topic}** in one paragraph a new teammate can reuse.`,
+        `Optimism without an owner is how demos become liabilities. Name the human before you name the tool.`,
+        `The point of writing this down is not documentation theater. It is so the next person does not have to reconstruct intent from Slack.`,
+        `Prefer reversible moves on **${topic}**. If you cannot say how you would unwind the decision, you are not done designing it.`,
+        `Hold three standards at once for **${topic}**: a named owner, a written control, and a verification signal.`,
+      ])
+      if (used.has(addition) || body.includes(addition.slice(0, 48))) {
+        addition = `Make the next step on **${topic}** visible this week — even if it is only naming the owner of the failure mode and the date you will check evidence.`
+        if (body.includes(addition.slice(0, 48))) break
+      }
+      used.add(addition)
     }
+    if (/\n## Close\n/.test(body)) {
+      body = body.replace(/\n## Close\n/, `\n${addition}\n\n## Close\n`)
+    } else {
+      body += '\n\n' + addition
+    }
+    body = dedupeParagraphs(body.split(/\n\n+/)).join('\n\n')
     guard++
   }
-  return { body, theme, structure, words: wordCount(body), angle }
+
+  // Soft trim if over target
+  if (wordCount(body) > MAX_WORDS + 120) {
+    const blocks = body.split(/\n\n+/)
+    const closeIdx = blocks.findIndex((b) => b === '## Close')
+    if (closeIdx > 8) {
+      for (
+        let i = closeIdx - 1;
+        i > 4 && wordCount(blocks.join('\n\n')) > MAX_WORDS;
+        i--
+      ) {
+        if (!blocks[i].startsWith('#') && !blocks[i].startsWith('- ')) {
+          blocks.splice(i, 1)
+        }
+      }
+      body = blocks.join('\n\n')
+    }
+  }
+
+  return {
+    body,
+    theme,
+    structure,
+    words: wordCount(body),
+  }
 }
 
 function extractDateRaw(raw) {
@@ -591,6 +516,31 @@ ${body.trim()}
 `
 }
 
+function buildTitlePlan(files) {
+  /** @type {Map<string, {file: string, title: string, date: string}[]>} */
+  const byBase = new Map()
+  for (const file of files) {
+    const full = path.join(POSTS_DIR, file)
+    const raw = fs.readFileSync(full, 'utf8')
+    const parsed = matter(raw)
+    const base = stripAngleSuffix(String(parsed.data.title))
+    const date = extractDateRaw(raw) || ''
+    if (!byBase.has(base)) byBase.set(base, [])
+    byBase.get(base).push({ file, title: parsed.data.title, date })
+  }
+  for (const arr of byBase.values()) {
+    arr.sort((a, b) => a.date.localeCompare(b.date) || a.file.localeCompare(b.file))
+  }
+  /** @type {Map<string, string>} */
+  const fileToTitle = new Map()
+  for (const [base, arr] of byBase) {
+    arr.forEach((item, i) => {
+      fileToTitle.set(item.file, improveTitle(base, i))
+    })
+  }
+  return fileToTitle
+}
+
 function main() {
   const args = process.argv.slice(2)
   const dry = args.includes('--dry-run')
@@ -607,45 +557,59 @@ function main() {
   if (fileSub) files = files.filter((f) => f.includes(fileSub))
   if (limit) files = files.slice(0, limit)
 
+  // Title plan across the full corpus when rewriting all / many
+  const allFiles = fs
+    .readdirSync(POSTS_DIR)
+    .filter((f) => f.endsWith('.md'))
+    .sort()
+  const titlePlan = buildTitlePlan(allFiles)
+
   const stats = []
   let written = 0
+  let titlesChanged = 0
 
   for (const file of files) {
     const full = path.join(POSTS_DIR, file)
     const raw = fs.readFileSync(full, 'utf8')
     const parsed = matter(raw)
     const dateRaw = extractDateRaw(raw)
-    const seed = hashString(file + '|' + parsed.data.title + '|v5')
+    const newTitle = titlePlan.get(file) || stripAngleSuffix(String(parsed.data.title))
+    if (newTitle !== parsed.data.title) titlesChanged++
+
+    const seed = hashString(file + '|' + newTitle + '|v6-coherent')
     const rng = mulberry32(seed)
-    const { body, theme, structure, words, angle } = buildEssay({
-      title: parsed.data.title,
+    const { body, theme, structure, words } = buildEssay({
+      title: newTitle,
       categories: parsed.data.categories || [],
       rng,
     })
 
-    stats.push({ file, words, theme, structure, angle, title: parsed.data.title })
+    const data = { ...parsed.data, title: newTitle }
+    stats.push({ file, words, theme, structure, title: newTitle })
 
     if (!dry) {
-      fs.writeFileSync(
-        full,
-        serialize({ data: parsed.data, dateRaw, body }),
-        'utf8',
-      )
+      fs.writeFileSync(full, serialize({ data, dateRaw, body }), 'utf8')
       written++
     }
   }
 
   const lengths = stats.map((s) => s.words).sort((a, b) => a - b)
-  const avg = Math.round(lengths.reduce((a, b) => a + b, 0) / (lengths.length || 1))
+  const avg = Math.round(
+    lengths.reduce((a, b) => a + b, 0) / (lengths.length || 1),
+  )
   const short = stats.filter((s) => s.words < MIN_WORDS)
+  const long = stats.filter((s) => s.words > MAX_WORDS + 100)
 
   console.log(`Posts: ${stats.length}`)
   console.log(`Written: ${written}${dry ? ' (dry-run)' : ''}`)
+  console.log(`Titles improved: ${titlesChanged}`)
   console.log(
     `Words: min=${lengths[0]} median=${lengths[Math.floor(lengths.length / 2)]} avg=${avg} max=${lengths[lengths.length - 1]}`,
   )
   console.log(`Below ${MIN_WORDS}: ${short.length}`)
-  if (short.length) short.slice(0, 15).forEach((s) => console.log(`  - ${s.words} ${s.file}`))
+  console.log(`Above ${MAX_WORDS + 100}: ${long.length}`)
+  if (short.length)
+    short.slice(0, 15).forEach((s) => console.log(`  - ${s.words} ${s.file}`))
 
   const byTheme = {}
   const byStruct = {}
@@ -657,7 +621,7 @@ function main() {
   console.log('Structures:', byStruct)
   console.log('\nSample:')
   for (const s of stats.slice(0, Math.min(8, stats.length))) {
-    console.log(`  ${s.words}w [${s.theme}/${s.structure}/${s.angle}] ${s.title}`)
+    console.log(`  ${s.words}w [${s.theme}/${s.structure}] ${s.title}`)
   }
 }
 

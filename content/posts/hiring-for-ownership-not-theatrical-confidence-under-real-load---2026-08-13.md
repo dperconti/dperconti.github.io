@@ -1,5 +1,5 @@
 ---
-title: "Hiring for ownership, not theatrical confidence under real load"
+title: "Hiring for ownership, not theatrical confidence: a shorter feedback loop"
 date: 2026-08-13T05:00:00Z
 categories:
   - Leadership
@@ -7,111 +7,81 @@ categories:
 draft: false
 ---
 
-Under real load, **Hiring for ownership, not theatrical confidence** stops being a slogan. Queues, incidents, and half-finished migrations reveal whether the system was designed or performed.
+The useful version of “Hiring for ownership, not theatrical confidence” is narrower than the slogan: Growing seniors who can grow others is how organizations scale craft without scaling heroics.
 
-Cross-team collaboration gets romanticized as “more communication.” Most teams already communicate constantly. What they lack is a published interface for work that crosses boundaries.
+The rest develops that one idea with controls you can install and failure modes you can recognize.
 
-Shared ownership across org boundaries needs a named primary for each failure mode. Co-owning everything is owning nothing.
+Resist the urge to expand scope into neighboring slogans. If a control does not make **Hiring for ownership, not theatrical confidence** more operable for the next person, leave it for another note. Dilution is how coherent essays become stitched scrapbooks.
 
-Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.
+For **Hiring for ownership, not theatrical confidence**, the inheritance test is blunt: after a week, can someone outside the original room explain what changed, who owns it, and how you will know if it breaks? If the answer depends on hallway memory, you still have a story — not a practice.
 
-## What I refuse to romanticize
+## What fails when you skip it
 
-I teach from failure modes because teams already have scars. Naming them precisely is faster than inventing a framework brand.
+Teams already have scars. Naming the failure modes precisely is faster than inventing a framework brand.
 
-Meetings used as a substitute for written interfaces — everyone left “aligned,” nobody can explain ownership later.
+AI tools introduced without coaching on verification, data boundaries, or accountability.
 
-Hero bridges that mask missing contracts until attrition.
+Stealing the work under the banner of helping — the mentee never practices judgment under load.
 
-Collaboration theater: more shared channels, same missing contracts.
+Mentorship as calendar filler: 1:1s that never change assignments or ownership.
 
-Hand-offs that drop context so the receiving team re-learns the sender’s scars.
+Seniors rewarded only for personal output, so teaching becomes unpaid overtime.
 
-## What to put in place before the announcement
+## Controls that answer those failures
 
-Those failures map to controls. Install the smallest ones that make failure legible.
+The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
 
-Hand-offs that preserve context include decision history, open risks, and the last failed assumption — not only a ticket ID. Context loss is a defect.
+Feedback that lands after incidents should arrive within days, tied to a specific decision or omission, and paired with a practice rep. Delayed generic feedback teaches nothing useful.
 
-Prefer async artifacts for continuity. Use meetings when the decision is contested or irreversible. Calendar density is not collaboration quality.
+Sponsor publicly. Put someone’s name on the design review invite, the RFC author line, the customer-facing postmortem. Private belief in someone does not compound; public sponsorship does.
 
-The meeting you should replace with a doc is the one that only redistributes status. Keep the meeting that resolves contested decisions — and require options in writing before it starts.
+Promotion packets should be assembled from artifacts already in the open: RFCs, incident leads, teaching reviews. If the packet requires secret knowledge, mentorship failed earlier.
 
-Hero bridges — one person who translates between teams — feel invaluable until they burn out and the org discovers it had no interface. Document what the hero knows while they are still standing.
+Pairing as coaching is not surveillance. Time-box it, name the learning goal, and leave an artifact. Surveillance pairing produces compliance; coaching pairing produces judgment.
 
-Conflict as a design input means capturing the disagreement as constraints and options. Personality narratives are a dead end; interface narratives ship.
+Keep a light written trail of growth so progress is not a vibe only the manager remembers. Promotion packets should not require archaeology.
 
-Publish “done” definitions across teams before joint work starts — especially for platform and product hand-offs. Ambiguous done is how resentments form.
+Write one page while the decision is still warm — context, options, choice, owner, revisit date. Verbal alignment on **Hiring for ownership, not theatrical confidence** evaporates under ordinary calendar pressure, and Slack archaeology is a poor substitute for a decision record.
 
-## Texture from the work
+## A concrete scene
 
-Product wants a feature; platform wants stability. Without a capacity envelope and SLO, every conversation becomes moral. With them, the conversation becomes scheduling and tradeoffs.
+A senior is excellent individually and absent as a teacher. Promotion criteria still overweight personal output. Leadership then wonders why the bench is thin. Change the scoreboard: teaching artifacts count.
 
-A hand-off ticket says “ready for platform.” Platform discovers missing authz assumptions in production. Ready now means: runbook, rollback, and a joint drill — not a status emoji.
+Feedback arrives only at performance review. By then it feels political. The fix is weekly specific notes tied to artifacts — PR comments, decision records, incident roles — so the review is a summary, not a surprise.
 
-Two teams “share a roadmap.” Neither owns the shared schema. Breaking changes collide. The repair is a schema owner, a deprecation clock, and an explicit consumer list — not a longer joint standup.
+AI-assisted workflows arrive without coaching norms. People paste secrets into tools, accept insecure snippets, and skip tests because the model “looked sure.” Literacy clinics on one failure mode per month beat a single all-hands about AI.
 
-## What you give up
+## Tradeoffs
 
-Strict ownership can feel cold. Ambiguous ownership feels warm until the page. Prefer clear primary owners with named collaborators.
+The tradeoff in not stealing the work is short-term speed. You will be slower this afternoon so the team is faster next month. Leaders who cannot tolerate that tradeoff become permanent critical path.
 
-Fewer meetings feel risky to managers who equate presence with control. Measure outcomes and escaped misunderstandings instead of seat time.
+The tradeoff in public sponsorship is risk to your own reputation. Take it. That is part of the job. Private cheerleading costs you nothing and buys them little.
 
-Written interfaces cost an afternoon. Unwritten interfaces cost a quarter. Choose deliberately.
+With AI drafting, the tradeoff is review load. Explicit verification notes reduce merge regret more than asking people to “be careful.”
 
-## How to hold the standard
+Measure what you claim to care about. If **Hiring for ownership, not theatrical confidence** only appears in kickoff slides and never in review, incident, or planning artifacts, it is branding. Put a verification signal where people already look.
 
-Optimize for the next person's onboarding cost. Every undocumented exception becomes a tax on hiring and incident response.
+Keep the unit of progress small enough to finish under a full calendar: one owner clarification, one verification signal, one reversible control. Grand programs without weekly evidence become status machines.
 
-Hero bridges — one person who translates between teams — feel invaluable until they burn out and the org discovers it had no interface. Document what the hero knows while they are still standing.
+## What to do this month
 
-Conflict as a design input means capturing the disagreement as constraints and options. Personality narratives are a dead end; interface narratives ship.
+- Every month: one public sponsorship act — authorship, presentation, or incident lead.
+- Quarterly: seniors run a teaching session from a real failure (escaped defect, bad hand-off, stale RAG answer).
+- Every 1:1: one concrete coaching ask, one ownership shift, one written follow-up.
+- When AI drafts: require a human verification note in the PR describing what was checked and how.
 
-Publish “done” definitions across teams before joint work starts — especially for platform and product hand-offs. Ambiguous done is how resentments form.
+Critique privately and specifically. Vague encouragement teaches nothing. Vague criticism teaches fear. Specific critique tied to a reusable pattern teaches judgment.
 
-Working agreements that age well name how to change the agreement. Static culture docs become wallpaper within a quarter.
+Teach the verification step out loud when models draft. Juniors copy what seniors check — or what seniors skip.
 
-Write the boundary as an API: inputs, outputs, latency expectations, error semantics, and who gets paged. If you cannot write that page, you do not have alignment — you have hope.
+Use review comments as teaching artifacts. Prefer “here is the pattern and why it matters in production” over drive-by nits. A review that only polices style teaches compliance, not craft.
 
-Two orgs share on-call for a boundary service. Without a primary for each failure mode, pages bounce. Shared ownership without primaries is a page-routing bug.
+Stretch ownership without a safety net is abandonment. Stretch ownership with a named coach, a kill switch, and a debrief is how judgment grows.
 
-If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.
-
-If collaboration feels expensive, check the interface before you hire more coordinators.
-
-## The neighboring discipline
-
-Leaders who isolate the practice from Engineering craft create beautiful local optima and expensive global failure.
-
-Incident response that improves the system ends with a control change dated within a week. Timelines without control changes are storytelling.
-
-Incident response produces a beautiful timeline and no permanent control. The next similar failure arrives on schedule. Remediation means a test, a rate limit, a privilege change, or a budget — something that bites.
-
-API design for inheritors: name invariants, versioning rules, and what “breaking” means before the first client. Clever endpoints without consumer contracts become permanent politics.
-
-## When models join the workflow
-
-Fluent output raises the value of written invariants. Improvisation got cheaper; durable context got more precious.
-
-Require a verification trail on assisted work: what the model changed, what a human checked, and where that note lives — PR, ticket, or decision record. Authorship is not ownership of production risk.
-
-Orchestration without a black-box conductor means you can explain the workflow on a whiteboard and pause any step. If you cannot, you cannot operate it.
-
-## Make it observable
-
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
-
-- Before joint delivery: publish the interface doc and the escalation path.
-- Quarterly: delete channels and meetings that produce no decisions or artifacts.
-- After hand-off: verify the receiving team can operate the failure mode without a Slack ping to the sender.
-- Hand-offs that preserve context include decision history, open risks, and the last failed assumption — not only a ticket ID.
-- Prefer async artifacts for continuity.
-- When stuck: write the disagreement as options with tradeoffs; meet only to choose.
+When someone freezes asking for help, treat it as a systems smell. Latency to ask questions predicts incident severity. Psychological safety is an engineering control.
 
 ## Close
 
-Continuity is the product of clear contracts — not of more conversation.
+The measure of mentorship is whether the next hard problem can be owned by someone else — with you still available, not required.
 
-If this feels quieter than a keynote, that is intentional. Compounding work rarely looks like theater.
-
-On **Hiring for ownership, not theatrical confidence**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+If someone new cannot explain **Hiring for ownership, not theatrical confidence** from your artifacts in fifteen minutes, the practice is still private.

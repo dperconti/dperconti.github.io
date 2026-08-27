@@ -1,5 +1,5 @@
 ---
-title: "Architecture decisions you can reverse (2026)"
+title: "Architecture decisions you can reverse: naming the owner"
 date: 2025-06-15T05:00:00Z
 categories:
   - Engineering
@@ -7,109 +7,91 @@ categories:
 draft: false
 ---
 
-**Architecture decisions you can reverse** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
+Architecture that cannot be walked back becomes politics. Prefer reversible decisions with explicit revisit criteria.
 
-Engineering craft earns trust when incidents get cheaper, reviews teach, and migrations complete without heroic weekends.
+The rest develops that one idea with controls you can install and failure modes you can recognize.
 
-Craft shows up in boring places: migrations sized to capacity, alerts that mean something, reviews that leave the code more teachable.
+On **Architecture decisions you can reverse**, craft shows up as reversible decisions, reviews that teach, and remediations that change a control within a week of an incident — not as aesthetics in a diagram.
 
-Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.
+Write one page while the decision is still warm — context, options, choice, owner, revisit date. Verbal alignment on **Architecture decisions you can reverse** evaporates under ordinary calendar pressure, and Slack archaeology is a poor substitute for a decision record.
 
-## How the practice decays
+## How it actually works
 
-I teach from failure modes because teams already have scars. Naming them precisely is faster than inventing a framework brand.
+Start with controls that are boring on purpose: written owners, verification, and a path for the next person.
 
-Big-bang migrations that consume goodwill and leave half-migrated states.
-
-Docs that rot because nobody owns freshness; new hires learn folklore instead.
-
-Reviews as status gates — slow, unkind, and educationally empty.
-
-Debt that never appears on the board and therefore never loses to a feature fairly.
-
-## The operating controls
-
-Those failures map to controls. Install the smallest ones that make failure legible.
-
-Documentation that earns its keep means runbooks and decision records over aspirational diagrams. If freshness has no owner, docs become fiction.
-
-Incident response that improves the system ends with a control change dated within a week. Timelines without control changes are storytelling.
-
-Observability that tells a story correlates user impact → service → change → owner. Orphaned dashboards are decoration. Alerts that fire for noise train people to ignore harm.
+Technical debt with a repayment schedule appears beside features with an owner and a trigger metric. Unscheduled debt always loses to the loudest roadmap slide.
 
 Architecture decisions you can reverse include a rollback path and a date to re-evaluate assumptions. Inevitable-looking diagrams are often just unchallenged ones.
 
+Observability that tells a story correlates user impact → service → change → owner. Orphaned dashboards are decoration. Alerts that fire for noise train people to ignore harm.
+
+API consumer contracts should name required fields, error semantics, and deprecation windows. Optional-everything APIs become archaeology projects.
+
+Code review as teaching: require at least one pattern comment. Reject gatekeeping that only polices style without teaching why. Slow, unkind reviews are a leadership failure disguised as standards.
+
 Small platforms that stay operable refuse features that cannot be owned on-call by the same team that ships them. Unowned platform features are product debt wearing infrastructure clothing.
 
-API design for inheritors: name invariants, versioning rules, and what “breaking” means before the first client. Clever endpoints without consumer contracts become permanent politics.
+Observability should answer what changed for which users, tied to an owner. Orphaned dashboards are decoration.
 
-## Scenes from delivery
+## Where this shows up
+
+A migration is “done” at 80% with a cleanup ticket in the backlog forever. Craft would have treated 100% with kill-switch removal as the definition of done.
 
 An architecture review celebrates a new service boundary. Nobody asks who owns the failure mode across the new network hop. Three incidents later, the boundary is rewritten — this time with an owner map.
 
 API consumers invent conflicting interpretations of optional fields because the contract never said which fields are load-bearing. A one-page consumer expectation doc would have been cheaper than the outage.
 
-A team ships a “temporary” dual-write and forgets the delete ticket. Six months later both paths are load-bearing. Craft would have put a repayment date next to the feature flag.
-
-## What you give up
-
-Reversible architecture can look indecisive to executives who want inevitability. Translate: we are buying option value and reducing blast radius.
-
-Teaching reviews take minutes longer than rubber stamps. Escaped defects take days. Budget the minutes.
+## Tradeoffs
 
 Right-sizing tests means saying no to low-value suites that burn CI energy without protecting user invariants.
 
-## How to hold the standard
+Teaching reviews take minutes longer than rubber stamps. Escaped defects take days. Budget the minutes.
 
-Hold three standards at once: a named owner, a written control, and a verification signal. Missing any one turns the practice into performance.
+Reversible architecture can look indecisive to executives who want inevitability. Translate: we are buying option value and reducing blast radius.
 
-Architecture decisions you can reverse include a rollback path and a date to re-evaluate assumptions. Inevitable-looking diagrams are often just unchallenged ones.
+Put repayment and operability on the same board as features so debt competes in the open instead of at 2 a.m. Unscheduled debt always loses to the loudest slide.
 
-Small platforms that stay operable refuse features that cannot be owned on-call by the same team that ships them. Unowned platform features are product debt wearing infrastructure clothing.
+Resist the urge to expand scope into neighboring slogans. If a control does not make **Architecture decisions you can reverse** more operable for the next person, leave it for another note. Dilution is how coherent essays become stitched scrapbooks.
 
-API design for inheritors: name invariants, versioning rules, and what “breaking” means before the first client. Clever endpoints without consumer contracts become permanent politics.
+## Failure modes
+
+Each of these is a missing control, not a personality problem:
+
+- Debt that never appears on the board and therefore never loses to a feature fairly.
+- Dashboards nobody trusts because alerts fire for noise and silence for harm.
+- Big-bang migrations that consume goodwill and leave half-migrated states.
+- Docs that rot because nobody owns freshness; new hires learn folklore instead.
+
+## What to do this month
+
+- Every API: publish consumer expectations and deprecation rules.
+- Every review: teach one reusable pattern in writing.
+- Every incident: ship one permanent control within a week.
+
+Documentation that earns its keep means runbooks and decision records over aspirational diagrams. If freshness has no owner, docs become fiction.
+
+Review latency is a craft signal. A queue that sits for days teaches people to bypass standards or to ship without teaching comments.
+
+Migrations earn trust when each slice leaves the system operable and reversible. Percentage-complete without a kill switch is optimism with a burn-down chart.
 
 Migrations that respect capacity use thin slices, dual-write windows, and a kill switch. Big-bang weekends consume goodwill and leave half-migrated states.
 
-Code review as teaching: require at least one pattern comment. Reject gatekeeping that only polices style without teaching why. Slow, unkind reviews are a leadership failure disguised as standards.
+Observability that cannot answer “what changed for which users?” is incomplete. Build the story path before you build the fifteenth chart.
+
+API design for inheritors: name invariants, versioning rules, and what “breaking” means before the first client. Clever endpoints without consumer contracts become permanent politics.
+
+Incident response that improves the system ends with a control change dated within a week. Timelines without control changes are storytelling.
+
+Testing strategy when speed matters protects the invariants customers feel. Coverage percentages without risk focus become theater.
+
+A team ships a “temporary” dual-write and forgets the delete ticket. Six months later both paths are load-bearing. Craft would have put a repayment date next to the feature flag.
 
 Incident response produces a beautiful timeline and no permanent control. The next similar failure arrives on schedule. Remediation means a test, a rate limit, a privilege change, or a budget — something that bites.
 
-If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.
+A service grows a second write path “temporarily.” Eighteen months later both paths are sacred. Temporary needs an expiration owner on the same board as the feature.
 
-Prefer systems that teach through their structure — clear boundaries beat cleverness.
+## Close
 
-## Do not silo the practice
+Leave the codebase more explainable than you found it.
 
-This work does not live alone. It couples to Green software and efficiency.
-
-Measuring compute waste without an owner who can delete or resize is dashboards as decoration. Pair every metric with a decision rights note.
-
-Staging runs at production scale “for realism” while load profiles show it is idle 20 hours a day. Right-sizing is leadership because nobody else can say no cleanly.
-
-Right-sizing after a traffic shape change is a leadership conversation because finance, platform, and product all feel the “what if” differently. Bring numbers.
-
-## Harnesses beat vibes
-
-If agents or copilots touch this workflow, add budgets, logs, and a kill switch before you add autonomy.
-
-Shipping with models without losing craft requires the same standards you already had for human drafts, plus an explicit verification step because fluency hides gaps.
-
-## Checklist you can run
-
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
-
-- Every quarter: schedule debt repayment proportional to change-fail pain.
-- Every incident: ship one permanent control within a week.
-- Documentation that earns its keep means runbooks and decision records over aspirational diagrams.
-- Every API: publish consumer expectations and deprecation rules.
-- Every design: state the reversible path and the revisit date.
-- Every review: teach one reusable pattern in writing.
-
-## The point, again
-
-Craft is operability under inheritance. Build for the next engineer.
-
-If this feels quieter than a keynote, that is intentional. Compounding work rarely looks like theater.
-
-On **Architecture decisions you can reverse**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+On **Architecture decisions you can reverse**, keep the loop short: write the decision, name the owner, verify the outcome.

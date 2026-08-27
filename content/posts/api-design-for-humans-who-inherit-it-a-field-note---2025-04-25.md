@@ -1,5 +1,5 @@
 ---
-title: "API design for humans who inherit it: a field note"
+title: "API design for humans who inherit it: naming the owner"
 date: 2025-04-25T05:00:00Z
 categories:
   - Engineering
@@ -7,114 +7,101 @@ categories:
 draft: false
 ---
 
-A field note on **API design for humans who inherit it** should be inspectable next week. Mechanisms beat vibes.
+People praise API design for humans who inherit it in the abstract and starve it in the sprint. The fix is to put craft controls on the same board as features.
 
-People praise Engineering craft in the abstract and starve it in the sprint. The fix is to put craft controls on the same board as features.
+Architecture that cannot be walked back becomes politics. Prefer reversible decisions with explicit revisit criteria.
 
-Operability under inheritance is the craft metric that compounds.
+The rest develops that one idea with controls you can install and failure modes you can recognize.
 
-I am not interested in branding this work. I am interested in whether the next person can run it without a week of hallway archaeology.
+When pressure rises, teams drop the unowned practice first. Put **API design for humans who inherit it** in the path of work — templates, checklists, review norms — or admit it was optional applause.
 
-## Operating rhythm
+For **API design for humans who inherit it**, the inheritance test is blunt: after a week, can someone outside the original room explain what changed, who owns it, and how you will know if it breaks? If the answer depends on hallway memory, you still have a story — not a practice.
 
-Cadence beats intensity. The practice holds when it fits inside weeks people already live.
+## Practices with enough detail to copy
 
-### 1. Practice
+Cadence beats intensity. These hold when they fit inside weeks people already live.
 
-Every design: state the reversible path and the revisit date.
-
-Documentation that earns its keep means runbooks and decision records over aspirational diagrams. If freshness has no owner, docs become fiction.
-
-Incident response produces a beautiful timeline and no permanent control. The next similar failure arrives on schedule. Remediation means a test, a rate limit, a privilege change, or a budget — something that bites.
-
-### 2. Practice
-
-Every quarter: schedule debt repayment proportional to change-fail pain.
-
-API design for inheritors: name invariants, versioning rules, and what “breaking” means before the first client. Clever endpoints without consumer contracts become permanent politics.
-
-API consumers invent conflicting interpretations of optional fields because the contract never said which fields are load-bearing. A one-page consumer expectation doc would have been cheaper than the outage.
-
-### 3. Practice
+### 1
 
 Every review: teach one reusable pattern in writing.
 
-Code review as teaching: require at least one pattern comment. Reject gatekeeping that only polices style without teaching why. Slow, unkind reviews are a leadership failure disguised as standards.
-
-A team ships a “temporary” dual-write and forgets the delete ticket. Six months later both paths are load-bearing. Craft would have put a repayment date next to the feature flag.
-
-### 4. Practice
-
-Every incident: ship one permanent control within a week.
-
 Technical debt with a repayment schedule appears beside features with an owner and a trigger metric. Unscheduled debt always loses to the loudest roadmap slide.
 
-### 5. Practice
+### 2
 
 Every API: publish consumer expectations and deprecation rules.
 
-Incident response that improves the system ends with a control change dated within a week. Timelines without control changes are storytelling.
+Documentation that earns its keep means runbooks and decision records over aspirational diagrams. If freshness has no owner, docs become fiction.
 
-## How the practice decays
+### 3
 
-Stop doing these:
-
-- Big-bang migrations that consume goodwill and leave half-migrated states.
-- Debt that never appears on the board and therefore never loses to a feature fairly.
-- Dashboards nobody trusts because alerts fire for noise and silence for harm.
-- Reviews as status gates — slow, unkind, and educationally empty.
-
-## Operating principles
-
-Prefer reversible moves. If you cannot say how you would unwind the decision, you are not done designing it.
-
-Technical debt with a repayment schedule appears beside features with an owner and a trigger metric. Unscheduled debt always loses to the loudest roadmap slide.
-
-Incident response that improves the system ends with a control change dated within a week. Timelines without control changes are storytelling.
+Every design: state the reversible path and the revisit date.
 
 Testing strategy when speed matters protects the invariants customers feel. Coverage percentages without risk focus become theater.
 
-Architecture decisions you can reverse include a rollback path and a date to re-evaluate assumptions. Inevitable-looking diagrams are often just unchallenged ones.
+### 4
 
-Observability that tells a story correlates user impact → service → change → owner. Orphaned dashboards are decoration. Alerts that fire for noise train people to ignore harm.
+Every quarter: schedule debt repayment proportional to change-fail pain.
+
+API consumer contracts should name required fields, error semantics, and deprecation windows. Optional-everything APIs become archaeology projects.
+
+Review latency is a craft signal. A queue that sits for days teaches people to bypass standards or to ship without teaching comments.
+
+Incident response that improves the system ends with a control change dated within a week. Timelines without control changes are storytelling.
+
+Put repayment and operability on the same board as features so debt competes in the open instead of at 2 a.m. Unscheduled debt always loses to the loudest slide.
+
+## Scenes
+
+A team ships a “temporary” dual-write and forgets the delete ticket. Six months later both paths are load-bearing. Craft would have put a repayment date next to the feature flag.
 
 A migration is “done” at 80% with a cleanup ticket in the backlog forever. Craft would have treated 100% with kill-switch removal as the definition of done.
 
-Teach the principles in the artifacts people already touch: PR templates, RFC sections, architecture checklists, and on-call runbooks.
+A service grows a second write path “temporarily.” Eighteen months later both paths are sacred. Temporary needs an expiration owner on the same board as the feature.
 
-Craft is operability under inheritance. Build for the next engineer.
+## Tradeoffs
 
-## Do not silo the practice
+Right-sizing tests means saying no to low-value suites that burn CI energy without protecting user invariants.
 
-This work does not live alone. It couples to Engineering leadership.
+Teaching reviews take minutes longer than rubber stamps. Escaped defects take days. Budget the minutes.
 
-Clear drag before you add ceremony. Review queues, ambiguous interfaces, missing environments, and decision latency tax the team more than a missing standup. Leaders who invent process without clearing path create motion that feels like management and performs like delay.
+Reversible architecture can look indecisive to executives who want inevitability. Translate: we are buying option value and reducing blast radius.
 
-A manager absorbs every hard design conversation “to unblock the team.” Velocity looks fine for a quarter. Then vacation happens, and the team discovers it cannot make a medium decision without the manager’s taste. The remedy is timed pairing on the hardest 10% and written decision records for the rest.
+Resist the urge to expand scope into neighboring slogans. If a control does not make **API design for humans who inherit it** more operable for the next person, leave it for another note. Dilution is how coherent essays become stitched scrapbooks.
 
-Hands-on does not mean doing everyone’s job. It means knowing where the system will tax the team and being willing to renegotiate scope when reality asks for it. Stay close enough to feel texture; distant enough that people still own outcomes.
+Observability should answer what changed for which users, tied to an owner. Orphaned dashboards are decoration.
 
-## Tempo changed; accountability did not
+## Failure modes
 
-Fluent output raises the value of written invariants. Improvisation got cheaper; durable context got more precious.
+Each of these is a missing control, not a personality problem:
 
-Where copilots help: boilerplate, test scaffolding, exploratory refactors with strong suites. Where they hide debt: security boundaries, concurrency, and domain invariants nobody wrote down.
+- Debt that never appears on the board and therefore never loses to a feature fairly.
+- Big-bang migrations that consume goodwill and leave half-migrated states.
+- Dashboards nobody trusts because alerts fire for noise and silence for harm.
+- Docs that rot because nobody owns freshness; new hires learn folklore instead.
 
-## Checklist you can run
+Migrations earn trust when each slice leaves the system operable and reversible. Percentage-complete without a kill switch is optimism with a burn-down chart.
 
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+Code review as teaching: require at least one pattern comment. Reject gatekeeping that only polices style without teaching why. Slow, unkind reviews are a leadership failure disguised as standards.
 
-- API design for inheritors: name invariants, versioning rules, and what “breaking” means before the first client.
-- Every incident: ship one permanent control within a week.
-- Every API: publish consumer expectations and deprecation rules.
-- Every quarter: schedule debt repayment proportional to change-fail pain.
-- Every design: state the reversible path and the revisit date.
-- Every review: teach one reusable pattern in writing.
+Observability that tells a story correlates user impact → service → change → owner. Orphaned dashboards are decoration. Alerts that fire for noise train people to ignore harm.
 
-## The point, again
+Architecture decisions you can reverse include a rollback path and a date to re-evaluate assumptions. Inevitable-looking diagrams are often just unchallenged ones.
 
-Prefer systems that teach through their structure — clear boundaries beat cleverness.
+Small platforms that stay operable refuse features that cannot be owned on-call by the same team that ships them. Unowned platform features are product debt wearing infrastructure clothing.
 
-Continuity is the product. Tools and frameworks are optional accessories.
+Migrations that respect capacity use thin slices, dual-write windows, and a kill switch. Big-bang weekends consume goodwill and leave half-migrated states.
 
-On **API design for humans who inherit it**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+Observability that cannot answer “what changed for which users?” is incomplete. Build the story path before you build the fifteenth chart.
+
+API design for inheritors: name invariants, versioning rules, and what “breaking” means before the first client. Clever endpoints without consumer contracts become permanent politics.
+
+Incident response produces a beautiful timeline and no permanent control. The next similar failure arrives on schedule. Remediation means a test, a rate limit, a privilege change, or a budget — something that bites.
+
+An architecture review celebrates a new service boundary. Nobody asks who owns the failure mode across the new network hop. Three incidents later, the boundary is rewritten — this time with an owner map.
+
+## Close
+
+Leave the codebase more explainable than you found it.
+
+If someone new cannot explain **API design for humans who inherit it** from your artifacts in fifteen minutes, the practice is still private.

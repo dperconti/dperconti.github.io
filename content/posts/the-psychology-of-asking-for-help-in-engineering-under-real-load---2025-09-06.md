@@ -1,5 +1,5 @@
 ---
-title: "The psychology of asking for help in engineering under real load"
+title: "The psychology of asking for help in engineering: naming the owner"
 date: 2025-09-06T05:00:00Z
 categories:
   - Mentorship
@@ -7,103 +7,83 @@ categories:
 draft: false
 ---
 
-Under real load, **The psychology of asking for help in engineering** stops being a slogan. Queues, incidents, and half-finished migrations reveal whether the system was designed or performed.
-
-Mentorship is engineering work. It produces artifacts: better reviews, clearer decisions, safer incident leads, and people who can teach without you in the room.
+The psychology of asking for help in engineering is engineering work. It produces artifacts: better reviews, clearer decisions, safer incident leads, and people who can teach without you in the room.
 
 Mentorship that survives calendar chaos is a set of small, observable loops — not a quarterly speech about growth.
 
-The standard is inheritance. If a new teammate cannot find the owner, the control, and the evidence, you have a story — not a practice.
+What follows stays on that claim: mechanisms, concrete scenes, and the failure modes that appear when the claim is ignored.
 
-## The seductive counterargument
+For **The psychology of asking for help in engineering**, the inheritance test is blunt: after a week, can someone outside the original room explain what changed, who owns it, and how you will know if it breaks? If the answer depends on hallway memory, you still have a story — not a practice.
 
-Another objection: we bought a tool for this. Tools without owners become expensive folklore.
+Specific feedback tied to a PR, RFC, or incident role compounds. Vague encouragement at review time feels kind and teaches nothing.
 
-Take the objection seriously. Lightweight is good. Invisible is not. The fix is shorter artifacts and clearer owners — not more ceremony.
-
-## Boring controls that compound
-
-The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
-
-Feedback that lands after incidents should arrive within days, tied to a specific decision or omission, and paired with a practice rep. Delayed generic feedback teaches nothing useful.
-
-Sponsor publicly. Put someone’s name on the design review invite, the RFC author line, the customer-facing postmortem. Private belief in someone does not compound; public sponsorship does.
-
-Seniors need deliberate practice teaching: lead a review huddle, write the onboarding doc, own feedback quality. If you only reward personal velocity, teaching becomes unpaid overtime.
-
-## Texture from the work
-
-Feedback arrives only at performance review. By then it feels political. The fix is weekly specific notes tied to artifacts — PR comments, decision records, incident roles — so the review is a summary, not a surprise.
-
-A mid-level engineer wants promotion. Their manager talks about “visibility.” A better move: sponsor them to own a migration with a written plan, a kill switch, and a teaching review for the team afterward.
+## A scene from delivery
 
 A junior with a strong copilot ships fluent PRs. Mentorship is teaching them to distrust fluent wrongness: invariants, authz edges, and “what breaks at 10x load.” Without that coaching, you accelerate confident mistakes.
 
-## What you give up
+That scene is the thesis under calendar pressure. The response is not another status meeting — it is a control.
 
-Do not build a program office for a one-team problem. Do not invent a framework brand. Do install the smallest control that makes failure legible.
-
-The tradeoff in public sponsorship is risk to your own reputation. Take it. That is part of the job. Private cheerleading costs you nothing and buys them little.
-
-The tradeoff in not stealing the work is short-term speed. You will be slower this afternoon so the team is faster next month. Leaders who cannot tolerate that tradeoff become permanent critical path.
-
-With AI drafting, the tradeoff is review load. Explicit verification notes reduce merge regret more than asking people to “be careful.”
-
-Seniors rewarded only for personal output, so teaching becomes unpaid overtime.
-
-## Principles under ordinary pressure
-
-Optimize for the next person's onboarding cost. Every undocumented exception becomes a tax on hiring and incident response.
-
-Seniors need deliberate practice teaching: lead a review huddle, write the onboarding doc, own feedback quality. If you only reward personal velocity, teaching becomes unpaid overtime.
+## Mechanisms
 
 Career conversations should change next week’s work: a stretch ownership, a public design, a safer incident role — not only aspirational titles twelve months out.
+
+The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
+
+Sponsor publicly. Put someone’s name on the design review invite, the RFC author line, the customer-facing postmortem. Private belief in someone does not compound; public sponsorship does.
+
+When someone freezes asking for help, treat it as a systems smell. Latency to ask questions predicts incident severity. Psychological safety is an engineering control.
 
 Pair on the decision, not only the code. Have the mentee write the tradeoff paragraph first, then implement. Judgment is a writing skill under time pressure as much as it is a coding skill.
 
 Use review comments as teaching artifacts. Prefer “here is the pattern and why it matters in production” over drive-by nits. A review that only polices style teaches compliance, not craft.
 
-Keep a light written trail of growth so progress is not a vibe only the manager remembers. Promotion packets should not require archaeology.
+Resist the urge to expand scope into neighboring slogans. If a control does not make **The psychology of asking for help in engineering** more operable for the next person, leave it for another note. Dilution is how coherent essays become stitched scrapbooks.
 
-AI-assisted workflows arrive without coaching norms. People paste secrets into tools, accept insecure snippets, and skip tests because the model “looked sure.” Literacy clinics on one failure mode per month beat a single all-hands about AI.
+## Another texture
 
-If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.
+A senior is excellent individually and absent as a teacher. Promotion criteria still overweight personal output. Leadership then wonders why the bench is thin. Change the scoreboard: teaching artifacts count.
 
-Refuse to scale a workflow you cannot explain on a whiteboard to a new hire in fifteen minutes.
+A mid-level engineer wants promotion. Their manager talks about “visibility.” A better move: sponsor them to own a migration with a written plan, a kill switch, and a teaching review for the team afterward.
 
-## The neighboring discipline
+## Tradeoffs
 
-A durable approach borrows controls from Engineering craft instead of inventing a parallel religion.
+The tradeoff in not stealing the work is short-term speed. You will be slower this afternoon so the team is faster next month. Leaders who cannot tolerate that tradeoff become permanent critical path.
 
-Testing strategy when speed matters protects the invariants customers feel. Coverage percentages without risk focus become theater.
+With AI drafting, the tradeoff is review load. Explicit verification notes reduce merge regret more than asking people to “be careful.”
 
-A team ships a “temporary” dual-write and forgets the delete ticket. Six months later both paths are load-bearing. Craft would have put a repayment date next to the feature flag.
+The tradeoff in public sponsorship is risk to your own reputation. Take it. That is part of the job. Private cheerleading costs you nothing and buys them little.
 
-Small platforms that stay operable refuse features that cannot be owned on-call by the same team that ships them. Unowned platform features are product debt wearing infrastructure clothing.
+Measure what you claim to care about. If **The psychology of asking for help in engineering** only appears in kickoff slides and never in review, incident, or planning artifacts, it is branding. Put a verification signal where people already look.
 
-## Harnesses beat vibes
+On **The psychology of asking for help in engineering**, care that never changes next week’s ownership is performance. Stretch a thin slice, coach the decision, and leave an artifact someone else can reuse.
 
-If agents or copilots touch this workflow, add budgets, logs, and a kill switch before you add autonomy.
+## Failure modes
 
-Prompting is not process. Harnesses are: allow-lists, templates, evals, and review norms that survive a teammate leaving.
+Each of these is a missing control, not a personality problem:
 
-Emit events for every tool call in production. Incidents without forensics become superstition. Event-driven design is how you keep humans in the loop without standing over the process.
+- Mentorship as calendar filler: 1:1s that never change assignments or ownership.
+- Stealing the work under the banner of helping — the mentee never practices judgment under load.
+- AI tools introduced without coaching on verification, data boundaries, or accountability.
+- Feedback that arrives only at review time, when grades feel political instead of formative.
 
-## Checklist you can run
+## What to do this month
 
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
-
-- The psychology of asking for help is shaped by what got rewarded last time someone asked.
-- Every month: one public sponsorship act — authorship, presentation, or incident lead.
-- Feedback that lands after incidents should arrive within days, tied to a specific decision or omission, and paired with a practice rep.
-- Every 1:1: one concrete coaching ask, one ownership shift, one written follow-up.
+- Every PR review: at least one comment that teaches a reusable pattern.
 - When AI drafts: require a human verification note in the PR describing what was checked and how.
-- Quarterly: seniors run a teaching session from a real failure (escaped defect, bad hand-off, stale RAG answer).
+- Every 1:1: one concrete coaching ask, one ownership shift, one written follow-up.
 
-## What to carry forward
+Seniors need deliberate practice teaching: lead a review huddle, write the onboarding doc, own feedback quality. If you only reward personal velocity, teaching becomes unpaid overtime.
 
-If your calendar is full, shrink the loop — do not cancel the coaching.
+Critique privately and specifically. Vague encouragement teaches nothing. Vague criticism teaches fear. Specific critique tied to a reusable pattern teaches judgment.
 
-Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.
+Stretch ownership without a safety net is abandonment. Stretch ownership with a named coach, a kill switch, and a debrief is how judgment grows.
 
-On **The psychology of asking for help in engineering**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+Promotion packets should be assembled from artifacts already in the open: RFCs, incident leads, teaching reviews. If the packet requires secret knowledge, mentorship failed earlier.
+
+Pairing as coaching is not surveillance. Time-box it, name the learning goal, and leave an artifact. Surveillance pairing produces compliance; coaching pairing produces judgment.
+
+## Close
+
+The measure of mentorship is whether the next hard problem can be owned by someone else — with you still available, not required.
+
+On **The psychology of asking for help in engineering**, keep the loop short: write the decision, name the owner, verify the outcome.

@@ -1,5 +1,5 @@
 ---
-title: "Open source governance for small teams (2026)"
+title: "Open source governance for small teams: naming the owner"
 date: 2025-06-07T05:00:00Z
 categories:
   - Open Source
@@ -7,111 +7,111 @@ categories:
 draft: false
 ---
 
-**Open source governance for small teams** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
+“Open source governance for small teams” stops being abstract the moment you ask who gets paged when it fails.
 
-Open source practice is often sold as brand and rarely budgeted as maintenance. Leadership has to hold both truths at once.
+Open source is mentorship with a public paper trail — powerful, and it has a real maintainer cost.
 
-Upstream first is a collaboration habit: fix at the source when you can, fork only with an exit plan.
+The rest develops that one idea with controls you can install and failure modes you can recognize.
 
-The standard is inheritance. If a new teammate cannot find the owner, the control, and the evidence, you have a story — not a practice.
+Write one page while the decision is still warm — context, options, choice, owner, revisit date. Verbal alignment on **Open source governance for small teams** evaporates under ordinary calendar pressure, and Slack archaeology is a poor substitute for a decision record.
 
-## The wreck as syllabus
+Measure what you claim to care about. If **Open source governance for small teams** only appears in kickoff slides and never in review, incident, or planning artifacts, it is branding. Put a verification signal where people already look.
 
-I teach from failure modes because teams already have scars. Naming them precisely is faster than inventing a framework brand.
+## Practices with enough detail to copy
 
-Maintainer burnout after unplanned virality.
+Cadence beats intensity. These hold when they fit inside weeks people already live.
 
-Permanent forks with no merge-back plan.
+### 1
 
-Docs that lie because nobody owns freshness after the launch wave.
+Pick one critical dependency and schedule quarterly upstream engagement.
 
-Unowned shared libraries that become political bottlenecks.
+Docs PRs as onboarding practice: new hires improve the path they just walked; seniors review for accuracy. That loop teaches systems and writing.
 
-## Boring controls that compound
+### 2
 
-Those failures map to controls. Install the smallest ones that make failure legible.
+Budget maintainer capacity explicitly in planning — not as leftover evenings.
 
-Contributing without cosplay means your PRs match your production dependencies and your review standards match what you demand internally.
+Governance for small teams can be light: CODEOWNERS, a security contact, and a deprecation policy — enough to be trustworthy without a bureaucracy cosplay.
 
-Budget maintainer burden against team capacity. A popular internal library without maintainers is a future incident with a README.
+### 3
 
-Borrowing patterns without citing sources teaches the wrong citizenship. Attribution is part of the craft, not optional polish.
+Treat docs PRs as valid onboarding tasks with senior review.
 
-Upstream first fails when legal review is an afterthought. Bring license and export constraints into the same conversation as the technical fix.
+Upstream-first keeps collaboration cheap. Private patches bit-rot; upstream fixes travel with every pull.
 
-Maintainer burden is capacity planning. If your team cannot fund review hours, do not advertise contribution pathways that create unpaid queues.
+### 4
 
-Borrow patterns, not brand names. Cite people for ideas you use; do not name-drop for SEO. Substance beats affiliation theater.
+Before forking: write the exit criteria and the merge-back owner.
 
-## Where this shows up
-
-Internal open source thrives when CODEOWNERS answer within a published SLA. Without that, shared packages become political parking lots.
-
-Docs lie after launch because freshness had no owner. New contributors learn folklore. Assign docs ownership like any other production surface.
-
-A docs PR from a new hire fixes the onboarding hole everyone walked past. Senior review turns it into a teaching moment and a permanent path improvement.
-
-## Tradeoffs worth naming
-
-Funding maintainers feels optional until you calculate the cost of a divergent fork.
-
-Upstream engagement costs calendar time and returns fewer surprise forks. Budget it like reliability work.
-
-Strict CODEOWNERS can slow shared packages and also prevent orphaned code. Prefer slow ownership over silent abandonment.
-
-## Operating principles
-
-Prefer reversible moves. If you cannot say how you would unwind the decision, you are not done designing it.
-
-Upstream first fails when legal review is an afterthought. Bring license and export constraints into the same conversation as the technical fix.
-
-Maintainer burden is capacity planning. If your team cannot fund review hours, do not advertise contribution pathways that create unpaid queues.
+Open source governance for small teams should optimize for trust: security contact, release ownership, and a clear path to say no to scope that the maintainers cannot carry.
 
 Borrow patterns, not brand names. Cite people for ideas you use; do not name-drop for SEO. Substance beats affiliation theater.
 
 Internal open source needs explicit ownership, review norms, and a path to deprecate — not only a monorepo folder named “shared.”
 
-Docs PRs as onboarding practice: new hires improve the path they just walked; seniors review for accuracy. That loop teaches systems and writing.
+Upstream first keeps collaboration cheap. Private patches bit-rot; upstream fixes travel with every pull.
+
+## Scenes
 
 A team “does open source” with drive-by PRs while ignoring a critical dependency’s issue tracker. Citizenship would start with the dependency they already run in production.
 
-Teach the principles in the artifacts people already touch: PR templates, RFC sections, architecture checklists, and on-call runbooks.
+A docs PR from a new hire fixes the onboarding hole everyone walked past. Senior review turns it into a teaching moment and a permanent path improvement.
 
-Upstream first keeps collaboration cheap. Practice it before you need it.
+Internal open source thrives when CODEOWNERS answer within a published SLA. Without that, shared packages become political parking lots.
 
-## Do not silo the practice
+## Tradeoffs
 
-Leaders who isolate the practice from Mentorship create beautiful local optima and expensive global failure.
+Upstream engagement costs calendar time and returns fewer surprise forks. Budget it like reliability work.
 
-Seniors need deliberate practice teaching: lead a review huddle, write the onboarding doc, own feedback quality. If you only reward personal velocity, teaching becomes unpaid overtime.
+Strict CODEOWNERS can slow shared packages and also prevent orphaned code. Prefer slow ownership over silent abandonment.
 
-AI-assisted workflows arrive without coaching norms. People paste secrets into tools, accept insecure snippets, and skip tests because the model “looked sure.” Literacy clinics on one failure mode per month beat a single all-hands about AI.
+Funding maintainers feels optional until you calculate the cost of a divergent fork.
 
-Use review comments as teaching artifacts. Prefer “here is the pattern and why it matters in production” over drive-by nits. A review that only polices style teaches compliance, not craft.
+When pressure rises, teams drop the unowned practice first. Put **Open source governance for small teams** in the path of work — templates, checklists, review norms — or admit it was optional applause.
 
-## When models join the workflow
+Citizenship without capacity planning creates unpaid queues and brittle commons. Own what you share, including docs freshness and security contacts.
 
-If agents or copilots touch this workflow, add budgets, logs, and a kill switch before you add autonomy.
+## Failure modes
 
-AI changes tempo; leadership still owns outcomes. If escaped defects rise while suggestion counts rise, you optimized the wrong dashboard.
+Each of these is a missing control, not a personality problem:
 
-Event-driven agentic workflows teams can operate look like other event-driven systems: schemas, consumers, dead-letter paths, and owners.
+- Contributing for theater while ignoring the dependencies you actually run.
+- Permanent forks with no merge-back plan.
+- Unowned shared libraries that become political bottlenecks.
+- Maintainer burnout after unplanned virality.
 
-## Make it observable
+Upstream first fails when legal review is an afterthought. Bring license and export constraints into the same conversation as the technical fix.
 
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+Contributing without cosplay means your PRs match your production dependencies and your review standards match what you demand internally.
 
-- Require CODEOWNERS for internal shared packages.
-- Budget maintainer burden against team capacity.
-- Pick one critical dependency and schedule quarterly upstream engagement.
-- Contributing without cosplay means your PRs match your production dependencies and your review standards match what you demand internally..
-- Budget maintainer capacity explicitly in planning — not as leftover evenings.
-- Before forking: write the exit criteria and the merge-back owner.
+Budget maintainer burden against team capacity. A popular internal library without maintainers is a future incident with a README.
 
-## What to carry forward
+Licenses, liability, and leadership judgment: know what you ship. Do not outsource compliance to hope.
 
-Citizenship scales mentorship — if you fund the maintenance, not only the applause.
+Borrowing patterns without citing sources teaches the wrong citizenship. Attribution is part of the craft, not optional polish.
 
-Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.
+Maintainer burden is capacity planning. If your team cannot fund review hours, do not advertise contribution pathways that create unpaid queues.
 
-On **Open source governance for small teams**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+Internal open source across product teams fails when shared packages have no deprecation path. Fear of breaking consumers freezes the commons.
+
+When to fork and when to fund: forks need owners; funding maintainers is often cheaper than permanent divergence. Write exit criteria before you fork.
+
+Licenses are leadership judgment. “Engineering said it was fine” is not a control. Know the license class before you ship.
+
+Security contacts and release owners are not bureaucracy when they are two names on a page. They are how outsiders know you are serious.
+
+A team forks to move fast, then discovers CVE patches no longer apply cleanly. The missing artifact was not bravado — it was a merge-back owner and a calendar.
+
+A private fork drifts for two years. Security fixes stop applying cleanly. The missing artifact was a merge-back owner and a timeline.
+
+Docs lie after launch because freshness had no owner. New contributors learn folklore. Assign docs ownership like any other production surface.
+
+An internal library goes viral after a blog post. Maintainer burden spikes. Leadership either funds the maintainers or declines the fame. Ambiguous ownership after virality is predictable failure.
+
+One more practice worth installing: Require CODEOWNERS for internal shared packages.
+
+## Close
+
+Own what you share. Unowned commons become incident factories.
+
+On **Open source governance for small teams**, keep the loop short: write the decision, name the owner, verify the outcome.

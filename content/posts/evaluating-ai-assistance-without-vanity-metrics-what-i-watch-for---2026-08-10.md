@@ -1,5 +1,5 @@
 ---
-title: "Evaluating AI assistance without vanity metrics: what I watch for"
+title: "Evaluating AI assistance without vanity metrics: naming the owner"
 date: 2026-08-10T05:00:00Z
 categories:
   - AI
@@ -7,41 +7,57 @@ categories:
 draft: false
 ---
 
-What I watch for is not enthusiasm around **Evaluating AI assistance without vanity metrics** — it is whether ownership, verification, and the next person’s path got clearer under ordinary calendar pressure.
+Most teams endorse “Evaluating AI assistance without vanity metrics” quickly and operationalize it slowly. AI changes how fast drafts appear. It does not change who is accountable for correctness, security, or operability.
 
-The useful question for AI in engineering workflows is boring: what did the model change, what did a human verify, and where does that trail live?
+I will stay on this thesis — no adjacent manifesto, no tour of every neighboring discipline.
 
-Fluent wrongness is the new failure mode. Confidence in prose is not evidence.
+Keep the unit of progress small enough to finish under a full calendar: one owner clarification, one verification signal, one reversible control. Grand programs without weekly evidence become status machines.
 
-Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.
+When pressure rises, teams drop the unowned practice first. Put **Evaluating AI assistance without vanity metrics** in the path of work — templates, checklists, review norms — or admit it was optional applause.
 
-## Design the loop
+## Practices with enough detail to copy
 
-Treat the practice as a system with inputs, outputs, and feedback. If any of those are social-only, the system will drift.
+Cadence beats intensity. These hold when they fit inside weeks people already live.
 
-AI changes tempo; leadership still owns outcomes. If escaped defects rise while suggestion counts rise, you optimized the wrong dashboard.
+### 1
 
-Keeping humans accountable when models draft code means the merge still carries a name and a verification note. Anonymized autocomplete is not an accountability model.
+Run a monthly literacy clinic on one failure mode (secrets, authz, flaky tests).
 
-AI on the slide deck: logo, inevitability, no workflow. AI in the workflow: ticket → draft → harness checks → human verification note → review. Only one of those ships safely.
+Publish what must never go into a model tool: secrets, unrestricted customer data, unresolved legal holds. Ambiguity here becomes shadow IT with a chat UI.
 
-Useful signals tie to user impact and operability: escaped defects, stale answers, retry amplification, review cycle time, on-call toil. Vanity metrics create vanity leadership.
+### 2
+
+Prefer shared eval snippets and prompt templates over private magic.
 
 Where copilots help: boilerplate, test scaffolding, exploratory refactors with strong suites. Where they hide debt: security boundaries, concurrency, and domain invariants nobody wrote down.
 
-Coach AI literacy as judgment: when to draft with a model, when to refuse, when to escalate. Literacy is a coaching problem, not a one-time workshop.
+### 3
 
-Someone pastes a production schema into a consumer model tool to “move faster.” Leadership had no published data boundary. That is not an individual ethics failure first — it is a missing control.
+Add a “human verified” checklist to PRs that used model drafts.
 
-Private prompt folklore instead of shared harnesses and policies.
+Teach distrust of fluent wrongness. Models sound senior. Tests, invariants, and threat models still decide truth.
+
+### 4
 
 Publish allowed tools and prohibited data classes in the engineering handbook.
 
-Track escaped defects that originated in assisted drafts and coach from that set.
+Keeping humans accountable when models draft code means the merge still carries a name and a verification note. Anonymized autocomplete is not an accountability model.
+
+Require a verification trail on assisted work: what the model changed, what a human checked, and where that note lives — PR, ticket, or decision record. Authorship is not ownership of production risk.
+
+Coach AI literacy as judgment: when to draft with a model, when to refuse, when to escalate. Literacy is a coaching problem, not a one-time workshop.
+
+On **Evaluating AI assistance without vanity metrics**, tempo is not the product. Verification notes, data boundaries, and review norms decide whether faster drafts become cheaper defects. Fluency is not evidence.
+
+## Scenes
+
+A team celebrates merged suggestion counts. Escaped defects rise in authz paths. The metric was vanity; the fix is tagging assisted PRs and reviewing that subset for verification quality.
+
+A team bans AI briefly after a bad merge, then reintroduces it without new controls. The ban was theater; the missing piece was verification and data boundaries.
 
 A strong IC becomes a bottleneck because only they know the “good prompts.” Codify the harness: templates, allow-listed tools, eval snippets, and examples of refusals.
 
-## The costs of doing it right
+## Tradeoffs
 
 Verification notes add friction to the PR. They remove friction from the incident. Budget for the former.
 
@@ -49,53 +65,43 @@ Restricting tools feels anti-innovation until the first compliance event. Policy
 
 Tempo gains are real on boilerplate and real-negative on subtle invariants. Teach the difference explicitly.
 
-Update review norms when copilots arrive. If you do not, you will approve fluent bugs faster. Slow the merge until verification is explicit.
+For **Evaluating AI assistance without vanity metrics**, the inheritance test is blunt: after a week, can someone outside the original room explain what changed, who owns it, and how you will know if it breaks? If the answer depends on hallway memory, you still have a story — not a practice.
 
-## Principles under ordinary pressure
+Measure assistance with outcomes you already care about: change-fail rate, review quality, escaped defects. Suggestion counts are arcade tickets.
 
-Hold three standards at once: a named owner, a written control, and a verification signal. Missing any one turns the practice into performance.
+## Failure modes
 
-Coach AI literacy as judgment: when to draft with a model, when to refuse, when to escalate. Literacy is a coaching problem, not a one-time workshop.
+Each of these is a missing control, not a personality problem:
 
-Update review norms when copilots arrive. If you do not, you will approve fluent bugs faster. Slow the merge until verification is explicit.
+- Private prompt folklore instead of shared harnesses and policies.
+- No exit criteria for tools — the vendor becomes the process.
+- Leaders celebrating velocity while review quality quietly collapses.
+- No coaching loop for juniors using assistants — mistakes accelerate.
 
-Require a verification trail on assisted work: what the model changed, what a human checked, and where that note lives — PR, ticket, or decision record. Authorship is not ownership of production risk.
+Shared harnesses beat private prompt folklore. If the only way to do it “right” lives in one engineer’s chat history, you do not have a practice.
 
 Measure assistance by outcomes you already care about — change-fail rate, review cycle time, incident escape — not vanity “lines generated” or “acceptance rate.”
 
+Define allowed tools and data boundaries. Copilots without policy become shadow IT with autocomplete. Secrets, customer data, and authz logic need explicit rules.
+
+AI changes tempo; leadership still owns outcomes. If escaped defects rise while suggestion counts rise, you optimized the wrong dashboard.
+
 Shipping with models without losing craft requires the same standards you already had for human drafts, plus an explicit verification step because fluency hides gaps.
 
-A team celebrates merged suggestion counts. Escaped defects rise in authz paths. The metric was vanity; the fix is tagging assisted PRs and reviewing that subset for verification quality.
+Evaluating AI assistance without vanity metrics means comparing escaped defects, onboarding time, and review quality — not counting accepted suggestions like arcade tickets.
 
-None of these principles require a new program name. They require attention in the path of work — reviews, design notes, procurement, and post-incident follow-through.
+Prompting is not process. Harnesses are: allow-lists, templates, evals, and review norms that survive a teammate leaving.
 
-Tempo is a gift. Accountability is still the job. Keep both in the same sentence.
+Update review norms when copilots arrive. If you do not, you will approve fluent bugs faster. Slow the merge until verification is explicit.
 
-## Do not silo the practice
+Treat “the model said so” as a non-reason in design review. Ask for the invariant, the test, or the threat model instead.
 
-This work does not live alone. It couples to Buy-versus-build judgment.
+AI on the slide deck: logo, inevitability, no workflow. AI in the workflow: ticket → draft → harness checks → human verification note → review. Only one of those ships safely.
 
-Make-or-buy with agents in the mix still requires you to define tool allow-lists and human override. Buying the runtime does not buy judgment.
+Someone pastes a production schema into a consumer model tool to “move faster.” Leadership had no published data boundary. That is not an individual ethics failure first — it is a missing control.
 
-A vendor’s success metrics replace product metrics in leadership reviews. That is lock-in of attention. Keep your north-star metrics in-house.
-
-Evaluate AI vendors like critical-path systems: SLOs, incident communication, subprocessors, kill switches, and data boundaries.
-
-## Make it observable
-
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
-
-- Keeping humans accountable when models draft code means the merge still carries a name and a verification note.
-- Prefer shared eval snippets and prompt templates over private magic.
-- Publish allowed tools and prohibited data classes in the engineering handbook.
-- Add a “human verified” checklist to PRs that used model drafts.
-- Run a monthly literacy clinic on one failure mode (secrets, authz, flaky tests).
-- Track escaped defects that originated in assisted drafts and coach from that set.
-
-## What to carry forward
+## Close
 
 Own the outcome. Let models accelerate drafts — never the truth.
 
-Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.
-
-On **Evaluating AI assistance without vanity metrics**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+On **Evaluating AI assistance without vanity metrics**, keep the loop short: write the decision, name the owner, verify the outcome.

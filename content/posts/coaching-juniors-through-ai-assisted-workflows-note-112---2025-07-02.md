@@ -1,5 +1,5 @@
 ---
-title: "Coaching juniors through AI-assisted workflows — note 112"
+title: "Coaching juniors through AI-assisted workflows: naming the owner"
 date: 2025-07-02T05:00:00Z
 categories:
   - Mentorship
@@ -7,103 +7,95 @@ categories:
 draft: false
 ---
 
-Another working note on **Coaching juniors through AI-assisted workflows**: same thesis, sharper edges from recent delivery pressure.
+Most teams endorse “Coaching juniors through AI-assisted workflows” quickly and operationalize it slowly. Growing seniors who can grow others is how organizations scale craft without scaling heroics.
 
-If Mentorship only happens in 1:1s that never change assignments, you are performing care. Real mentorship changes what someone owns next week.
+The rest develops that one idea with controls you can install and failure modes you can recognize.
 
-With AI in the loop, mentorship shifts toward verification, taste, and accountability. Syntax was never the hard part.
+Resist the urge to expand scope into neighboring slogans. If a control does not make **Coaching juniors through AI-assisted workflows** more operable for the next person, leave it for another note. Dilution is how coherent essays become stitched scrapbooks.
 
-Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.
+Measure what you claim to care about. If **Coaching juniors through AI-assisted workflows** only appears in kickoff slides and never in review, incident, or planning artifacts, it is branding. Put a verification signal where people already look.
 
-## The seductive counterargument
+## Practices with enough detail to copy
 
-The counterargument is usually speed: we do not have time. That sentence often means you do not have time for the second failure.
+Cadence beats intensity. These hold when they fit inside weeks people already live.
 
-Take the objection seriously. Lightweight is good. Invisible is not. The fix is shorter artifacts and clearer owners — not more ceremony.
+### 1
 
-## The operating controls
-
-Career conversations should change next week’s work: a stretch ownership, a public design, a safer incident role — not only aspirational titles twelve months out.
-
-The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
-
-When someone freezes asking for help, treat it as a systems smell. Latency to ask questions predicts incident severity. Psychological safety is an engineering control.
-
-Pairing as coaching is not surveillance. Time-box it, name the learning goal, and leave an artifact. Surveillance pairing produces compliance; coaching pairing produces judgment.
-
-## Scenes from delivery
-
-AI-assisted workflows arrive without coaching norms. People paste secrets into tools, accept insecure snippets, and skip tests because the model “looked sure.” Literacy clinics on one failure mode per month beat a single all-hands about AI.
-
-Feedback arrives only at performance review. By then it feels political. The fix is weekly specific notes tied to artifacts — PR comments, decision records, incident roles — so the review is a summary, not a surprise.
-
-A senior is excellent individually and absent as a teacher. Promotion criteria still overweight personal output. Leadership then wonders why the bench is thin. Change the scoreboard: teaching artifacts count.
-
-## Tradeoffs worth naming
-
-Do not build a program office for a one-team problem. Do not invent a framework brand. Do install the smallest control that makes failure legible.
-
-The tradeoff in not stealing the work is short-term speed. You will be slower this afternoon so the team is faster next month. Leaders who cannot tolerate that tradeoff become permanent critical path.
-
-With AI drafting, the tradeoff is review load. Explicit verification notes reduce merge regret more than asking people to “be careful.”
-
-The tradeoff in public sponsorship is risk to your own reputation. Take it. That is part of the job. Private cheerleading costs you nothing and buys them little.
-
-AI tools introduced without coaching on verification, data boundaries, or accountability.
-
-## Operating principles
-
-Prefer reversible moves. If you cannot say how you would unwind the decision, you are not done designing it.
-
-Pairing as coaching is not surveillance. Time-box it, name the learning goal, and leave an artifact. Surveillance pairing produces compliance; coaching pairing produces judgment.
-
-Keep a light written trail of growth so progress is not a vibe only the manager remembers. Promotion packets should not require archaeology.
+Quarterly: seniors run a teaching session from a real failure (escaped defect, bad hand-off, stale RAG answer).
 
 Sponsor publicly. Put someone’s name on the design review invite, the RFC author line, the customer-facing postmortem. Private belief in someone does not compound; public sponsorship does.
 
-Seniors need deliberate practice teaching: lead a review huddle, write the onboarding doc, own feedback quality. If you only reward personal velocity, teaching becomes unpaid overtime.
+### 2
 
-Pair on the decision, not only the code. Have the mentee write the tradeoff paragraph first, then implement. Judgment is a writing skill under time pressure as much as it is a coding skill.
+Every PR review: at least one comment that teaches a reusable pattern.
+
+The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
+
+### 3
+
+When AI drafts: require a human verification note in the PR describing what was checked and how.
+
+Promotion packets should be assembled from artifacts already in the open: RFCs, incident leads, teaching reviews. If the packet requires secret knowledge, mentorship failed earlier.
+
+### 4
+
+Every month: one public sponsorship act — authorship, presentation, or incident lead.
+
+Feedback that lands after incidents should arrive within days, tied to a specific decision or omission, and paired with a practice rep. Delayed generic feedback teaches nothing useful.
+
+Teach the verification step out loud when models draft. Juniors copy what seniors check — or what seniors skip.
+
+Stretch ownership without a safety net is abandonment. Stretch ownership with a named coach, a kill switch, and a debrief is how judgment grows.
+
+When pressure rises, teams drop the unowned practice first. Put **Coaching juniors through AI-assisted workflows** in the path of work — templates, checklists, review norms — or admit it was optional applause.
+
+## Scenes
+
+A mentee ships a migration with a written plan and a debrief for the team. That single loop teaches more than six months of vague “visibility” talk.
+
+A senior is excellent individually and absent as a teacher. Promotion criteria still overweight personal output. Leadership then wonders why the bench is thin. Change the scoreboard: teaching artifacts count.
 
 A junior with a strong copilot ships fluent PRs. Mentorship is teaching them to distrust fluent wrongness: invariants, authz edges, and “what breaks at 10x load.” Without that coaching, you accelerate confident mistakes.
 
-Teach the principles in the artifacts people already touch: PR templates, RFC sections, architecture checklists, and on-call runbooks.
+## Tradeoffs
 
-Keep the feedback loop short enough that the team can feel the practice working before the next planning cycle.
+The tradeoff in not stealing the work is short-term speed. You will be slower this afternoon so the team is faster next month. Leaders who cannot tolerate that tradeoff become permanent critical path.
 
-## The neighboring discipline
+The tradeoff in public sponsorship is risk to your own reputation. Take it. That is part of the job. Private cheerleading costs you nothing and buys them little.
 
-This work does not live alone. It couples to AI in engineering workflows.
+With AI drafting, the tradeoff is review load. Explicit verification notes reduce merge regret more than asking people to “be careful.”
 
-Measure assistance by outcomes you already care about — change-fail rate, review cycle time, incident escape — not vanity “lines generated” or “acceptance rate.”
+Specific feedback tied to a PR, RFC, or incident role compounds. Vague encouragement at review time feels kind and teaches nothing.
 
-A team bans AI briefly after a bad merge, then reintroduces it without new controls. The ban was theater; the missing piece was verification and data boundaries.
+Seniors need deliberate practice teaching. If the scoreboard only rewards personal velocity, judgment does not scale past one hero.
 
-Keeping humans accountable when models draft code means the merge still carries a name and a verification note. Anonymized autocomplete is not an accountability model.
+## Failure modes
 
-## Tempo changed; accountability did not
+Each of these is a missing control, not a personality problem:
 
-Fluent output raises the value of written invariants. Improvisation got cheaper; durable context got more precious.
+- AI tools introduced without coaching on verification, data boundaries, or accountability.
+- Stealing the work under the banner of helping — the mentee never practices judgment under load.
+- Seniors rewarded only for personal output, so teaching becomes unpaid overtime.
+- Feedback that arrives only at review time, when grades feel political instead of formative.
 
-AI changes tempo; leadership still owns outcomes. If escaped defects rise while suggestion counts rise, you optimized the wrong dashboard.
+Seniors need deliberate practice teaching: lead a review huddle, write the onboarding doc, own feedback quality. If you only reward personal velocity, teaching becomes unpaid overtime.
 
-Idempotency for agentic side effects — retries must not double-charge, double-page, or double-merge. Partial failure is normal; duplicate effects are optional if you design poorly.
+Career conversations should change next week’s work: a stretch ownership, a public design, a safer incident role — not only aspirational titles twelve months out.
 
-## Make it observable
+Use review comments as teaching artifacts. Prefer “here is the pattern and why it matters in production” over drive-by nits. A review that only polices style teaches compliance, not craft.
 
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+Pairing as coaching is not surveillance. Time-box it, name the learning goal, and leave an artifact. Surveillance pairing produces compliance; coaching pairing produces judgment.
 
-- Career conversations should change next week’s work: a stretch ownership, a public design, a safer incident role — not only aspirational titles twelve months out..
-- Quarterly: seniors run a teaching session from a real failure (escaped defect, bad hand-off, stale RAG answer).
-- Every month: one public sponsorship act — authorship, presentation, or incident lead.
-- Every 1:1: one concrete coaching ask, one ownership shift, one written follow-up.
-- When AI drafts: require a human verification note in the PR describing what was checked and how.
-- The psychology of asking for help is shaped by what got rewarded last time someone asked.
+Critique privately and specifically. Vague encouragement teaches nothing. Vague criticism teaches fear. Specific critique tied to a reusable pattern teaches judgment.
 
-## The point, again
+When someone freezes asking for help, treat it as a systems smell. Latency to ask questions predicts incident severity. Psychological safety is an engineering control.
 
-The measure of mentorship is whether the next hard problem can be owned by someone else — with you still available, not required.
+Keep a light written trail of growth so progress is not a vibe only the manager remembers. Promotion packets should not require archaeology.
 
-Continuity is the product. Tools and frameworks are optional accessories.
+Pair on the decision, not only the code. Have the mentee write the tradeoff paragraph first, then implement. Judgment is a writing skill under time pressure as much as it is a coding skill.
 
-On **Coaching juniors through AI-assisted workflows**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+## Close
+
+If your calendar is full, shrink the loop — do not cancel the coaching.
+
+On **Coaching juniors through AI-assisted workflows**, keep the loop short: write the decision, name the owner, verify the outcome.

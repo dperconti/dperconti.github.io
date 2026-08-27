@@ -1,5 +1,5 @@
 ---
-title: "Growing seniors who can grow others — working notes"
+title: "Growing seniors who can grow others: naming the owner"
 date: 2025-10-15T05:00:00Z
 categories:
   - Mentorship
@@ -7,101 +7,91 @@ categories:
 draft: false
 ---
 
-A field note on **Growing seniors who can grow others** should be inspectable next week. Mechanisms beat vibes.
+“Growing seniors who can grow others” stops being abstract the moment you ask who gets paged when it fails.
 
-Mentorship fails in busy calendars for a predictable reason: it was scheduled as inspiration instead of designed as a feedback loop with an owner.
+Mentorship that survives calendar chaos is a set of small, observable loops — not a quarterly speech about growth.
 
-With AI in the loop, mentorship shifts toward verification, taste, and accountability. Syntax was never the hard part.
+I will stay on this thesis — no adjacent manifesto, no tour of every neighboring discipline.
 
-Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.
+Write one page while the decision is still warm — context, options, choice, owner, revisit date. Verbal alignment on **Growing seniors who can grow others** evaporates under ordinary calendar pressure, and Slack archaeology is a poor substitute for a decision record.
 
-## The objection, taken seriously
+When pressure rises, teams drop the unowned practice first. Put **Growing seniors who can grow others** in the path of work — templates, checklists, review norms — or admit it was optional applause.
 
-Some leaders argue culture will handle this without written controls. Culture without artifacts is memory — and memory does not survive hiring waves.
+## Practices with enough detail to copy
 
-Take the objection seriously. Lightweight is good. Invisible is not. The fix is shorter artifacts and clearer owners — not more ceremony.
+Cadence beats intensity. These hold when they fit inside weeks people already live.
 
-## What to put in place before the announcement
+### 1
+
+Every 1:1: one concrete coaching ask, one ownership shift, one written follow-up.
 
 Sponsor publicly. Put someone’s name on the design review invite, the RFC author line, the customer-facing postmortem. Private belief in someone does not compound; public sponsorship does.
 
+### 2
+
+Quarterly: seniors run a teaching session from a real failure (escaped defect, bad hand-off, stale RAG answer).
+
+Keep a light written trail of growth so progress is not a vibe only the manager remembers. Promotion packets should not require archaeology.
+
+### 3
+
+Every month: one public sponsorship act — authorship, presentation, or incident lead.
+
+Promotion packets should be assembled from artifacts already in the open: RFCs, incident leads, teaching reviews. If the packet requires secret knowledge, mentorship failed earlier.
+
+### 4
+
+When AI drafts: require a human verification note in the PR describing what was checked and how.
+
+Career conversations should change next week’s work: a stretch ownership, a public design, a safer incident role — not only aspirational titles twelve months out.
+
+Seniors need deliberate practice teaching: lead a review huddle, write the onboarding doc, own feedback quality. If you only reward personal velocity, teaching becomes unpaid overtime.
+
 Feedback that lands after incidents should arrive within days, tied to a specific decision or omission, and paired with a practice rep. Delayed generic feedback teaches nothing useful.
 
-The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
+On **Growing seniors who can grow others**, care that never changes next week’s ownership is performance. Stretch a thin slice, coach the decision, and leave an artifact someone else can reuse.
 
-Critique privately and specifically. Vague encouragement teaches nothing. Vague criticism teaches fear. Specific critique tied to a reusable pattern teaches judgment.
-
-## Where this shows up
+## Scenes
 
 A junior with a strong copilot ships fluent PRs. Mentorship is teaching them to distrust fluent wrongness: invariants, authz edges, and “what breaks at 10x load.” Without that coaching, you accelerate confident mistakes.
 
-A mid-level engineer wants promotion. Their manager talks about “visibility.” A better move: sponsor them to own a migration with a written plan, a kill switch, and a teaching review for the team afterward.
-
 AI-assisted workflows arrive without coaching norms. People paste secrets into tools, accept insecure snippets, and skip tests because the model “looked sure.” Literacy clinics on one failure mode per month beat a single all-hands about AI.
 
-## The costs of doing it right
+Feedback arrives only at performance review. By then it feels political. The fix is weekly specific notes tied to artifacts — PR comments, decision records, incident roles — so the review is a summary, not a surprise.
 
-Do not build a program office for a one-team problem. Do not invent a framework brand. Do install the smallest control that makes failure legible.
-
-The tradeoff in public sponsorship is risk to your own reputation. Take it. That is part of the job. Private cheerleading costs you nothing and buys them little.
+## Tradeoffs
 
 The tradeoff in not stealing the work is short-term speed. You will be slower this afternoon so the team is faster next month. Leaders who cannot tolerate that tradeoff become permanent critical path.
 
 With AI drafting, the tradeoff is review load. Explicit verification notes reduce merge regret more than asking people to “be careful.”
 
-AI tools introduced without coaching on verification, data boundaries, or accountability.
+The tradeoff in public sponsorship is risk to your own reputation. Take it. That is part of the job. Private cheerleading costs you nothing and buys them little.
 
-## Operating principles
+For **Growing seniors who can grow others**, the inheritance test is blunt: after a week, can someone outside the original room explain what changed, who owns it, and how you will know if it breaks? If the answer depends on hallway memory, you still have a story — not a practice.
 
-Hold three standards at once: a named owner, a written control, and a verification signal. Missing any one turns the practice into performance.
+Keep the unit of progress small enough to finish under a full calendar: one owner clarification, one verification signal, one reversible control. Grand programs without weekly evidence become status machines.
 
-Critique privately and specifically. Vague encouragement teaches nothing. Vague criticism teaches fear. Specific critique tied to a reusable pattern teaches judgment.
+## Failure modes
 
-When someone freezes asking for help, treat it as a systems smell. Latency to ask questions predicts incident severity. Psychological safety is an engineering control.
+Each of these is a missing control, not a personality problem:
 
-Keep a light written trail of growth so progress is not a vibe only the manager remembers. Promotion packets should not require archaeology.
+- Seniors rewarded only for personal output, so teaching becomes unpaid overtime.
+- Feedback that arrives only at review time, when grades feel political instead of formative.
+- Mentorship as calendar filler: 1:1s that never change assignments or ownership.
+- Stealing the work under the banner of helping — the mentee never practices judgment under load.
+
+Pair on the decision, not only the code. Have the mentee write the tradeoff paragraph first, then implement. Judgment is a writing skill under time pressure as much as it is a coding skill.
 
 Pairing as coaching is not surveillance. Time-box it, name the learning goal, and leave an artifact. Surveillance pairing produces compliance; coaching pairing produces judgment.
 
-Career conversations should change next week’s work: a stretch ownership, a public design, a safer incident role — not only aspirational titles twelve months out.
+When someone freezes asking for help, treat it as a systems smell. Latency to ask questions predicts incident severity. Psychological safety is an engineering control.
 
-Feedback arrives only at performance review. By then it feels political. The fix is weekly specific notes tied to artifacts — PR comments, decision records, incident roles — so the review is a summary, not a surprise.
+Critique privately and specifically. Vague encouragement teaches nothing. Vague criticism teaches fear. Specific critique tied to a reusable pattern teaches judgment.
 
-If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.
-
-Refuse to scale a workflow you cannot explain on a whiteboard to a new hire in fifteen minutes.
-
-## Where this couples to adjacent work
-
-Leaders who isolate the practice from AI in engineering workflows create beautiful local optima and expensive global failure.
-
-Require a verification trail on assisted work: what the model changed, what a human checked, and where that note lives — PR, ticket, or decision record. Authorship is not ownership of production risk.
-
-A team celebrates merged suggestion counts. Escaped defects rise in authz paths. The metric was vanity; the fix is tagging assisted PRs and reviewing that subset for verification quality.
-
-AI changes tempo; leadership still owns outcomes. If escaped defects rise while suggestion counts rise, you optimized the wrong dashboard.
-
-## Tempo changed; accountability did not
-
-If agents or copilots touch this workflow, add budgets, logs, and a kill switch before you add autonomy.
-
-AI changes tempo; leadership still owns outcomes. If escaped defects rise while suggestion counts rise, you optimized the wrong dashboard.
-
-## Checklist you can run
-
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
-
-- Quarterly: seniors run a teaching session from a real failure (escaped defect, bad hand-off, stale RAG answer).
-- Every PR review: at least one comment that teaches a reusable pattern.
-- Every 1:1: one concrete coaching ask, one ownership shift, one written follow-up.
-- Feedback that lands after incidents should arrive within days, tied to a specific decision or omission, and paired with a practice rep.
-- Every month: one public sponsorship act — authorship, presentation, or incident lead.
-- Sponsor publicly.
+The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
 
 ## Close
 
 The measure of mentorship is whether the next hard problem can be owned by someone else — with you still available, not required.
 
-Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.
-
-On **Growing seniors who can grow others**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+On **Growing seniors who can grow others**, keep the loop short: write the decision, name the owner, verify the outcome.

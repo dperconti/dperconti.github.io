@@ -7,48 +7,43 @@ categories:
 draft: false
 ---
 
-**When to fork and when to fund** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
+Most teams endorse “When to fork and when to fund” quickly and operationalize it slowly. Unowned commons become incident factories. Own what you share.
 
-Good Open source practice looks like citizenship on the dependencies you run — not drive-by PRs for applause.
+The rest develops that one idea with controls you can install and failure modes you can recognize.
 
-Contribute where your team already depends. Cosplay contributions create noise, not leverage.
+Keep the unit of progress small enough to finish under a full calendar: one owner clarification, one verification signal, one reversible control. Grand programs without weekly evidence become status machines.
 
-The standard is inheritance. If a new teammate cannot find the owner, the control, and the evidence, you have a story — not a practice.
+For **When to fork and when to fund**, the inheritance test is blunt: after a week, can someone outside the original room explain what changed, who owns it, and how you will know if it breaks? If the answer depends on hallway memory, you still have a story — not a practice.
 
-## The operating controls
+## A scene from delivery
 
-Start with mechanisms. For this work, the first controls should be boring on purpose — inspectable, teachable, and cheap to revisit.
+A docs PR from a new hire fixes the onboarding hole everyone walked past. Senior review turns it into a teaching moment and a permanent path improvement.
 
-Open source governance for small teams should optimize for trust: security contact, release ownership, and a clear path to say no to scope that the maintainers cannot carry.
+That scene is the thesis under calendar pressure. The response is not another status meeting — it is a control.
 
-Internal open source across product teams fails when shared packages have no deprecation path. Fear of breaking consumers freezes the commons.
+## Mechanisms
+
+Upstream-first keeps collaboration cheap. Private patches bit-rot; upstream fixes travel with every pull.
+
+Budget maintainer burden against team capacity. A popular internal library without maintainers is a future incident with a README.
+
+Maintainer burden is capacity planning. If your team cannot fund review hours, do not advertise contribution pathways that create unpaid queues.
+
+Docs PRs as onboarding practice: new hires improve the path they just walked; seniors review for accuracy. That loop teaches systems and writing.
+
+Borrowing patterns without citing sources teaches the wrong citizenship. Attribution is part of the craft, not optional polish.
 
 When to fork and when to fund: forks need owners; funding maintainers is often cheaper than permanent divergence. Write exit criteria before you fork.
 
-Upstream first fails when legal review is an afterthought. Bring license and export constraints into the same conversation as the technical fix.
+Upstream first keeps collaboration cheap. Private patches bit-rot; upstream fixes travel with every pull.
 
-Borrow patterns, not brand names. Cite people for ideas you use; do not name-drop for SEO. Substance beats affiliation theater.
-
-Contributing without cosplay means your PRs match your production dependencies and your review standards match what you demand internally.
-
-## Texture from the work
-
-Docs lie after launch because freshness had no owner. New contributors learn folklore. Assign docs ownership like any other production surface.
+## Another texture
 
 Internal open source thrives when CODEOWNERS answer within a published SLA. Without that, shared packages become political parking lots.
 
 A team “does open source” with drive-by PRs while ignoring a critical dependency’s issue tracker. Citizenship would start with the dependency they already run in production.
 
-## What I refuse to romanticize
-
-Each failure mode below is a missing control. Another meeting will not install it.
-
-- Permanent forks with no merge-back plan.
-- Unowned shared libraries that become political bottlenecks.
-- Contributing for theater while ignoring the dependencies you actually run.
-- Maintainer burnout after unplanned virality.
-
-## Tradeoffs worth naming
+## Tradeoffs
 
 Strict CODEOWNERS can slow shared packages and also prevent orphaned code. Prefer slow ownership over silent abandonment.
 
@@ -56,57 +51,57 @@ Upstream engagement costs calendar time and returns fewer surprise forks. Budget
 
 Funding maintainers feels optional until you calculate the cost of a divergent fork.
 
-## Principles under ordinary pressure
+Write one page while the decision is still warm — context, options, choice, owner, revisit date. Verbal alignment on **When to fork and when to fund** evaporates under ordinary calendar pressure, and Slack archaeology is a poor substitute for a decision record.
 
-Prefer reversible moves. If you cannot say how you would unwind the decision, you are not done designing it.
+Citizenship without capacity planning creates unpaid queues and brittle commons. Own what you share, including docs freshness and security contacts.
 
-Upstream first fails when legal review is an afterthought. Bring license and export constraints into the same conversation as the technical fix.
+## Failure modes
+
+Each of these is a missing control, not a personality problem:
+
+- Maintainer burnout after unplanned virality.
+- Docs that lie because nobody owns freshness after the launch wave.
+- Permanent forks with no merge-back plan.
+- Unowned shared libraries that become political bottlenecks.
+
+## What to do this month
+
+- Pick one critical dependency and schedule quarterly upstream engagement.
+- Require CODEOWNERS for internal shared packages.
+- Treat docs PRs as valid onboarding tasks with senior review.
+
+Internal open source needs explicit ownership, review norms, and a path to deprecate — not only a monorepo folder named “shared.”
 
 Borrow patterns, not brand names. Cite people for ideas you use; do not name-drop for SEO. Substance beats affiliation theater.
 
+Governance for small teams can be light: CODEOWNERS, a security contact, and a deprecation policy — enough to be trustworthy without a bureaucracy cosplay.
+
+Open source governance for small teams should optimize for trust: security contact, release ownership, and a clear path to say no to scope that the maintainers cannot carry.
+
+Upstream first fails when legal review is an afterthought. Bring license and export constraints into the same conversation as the technical fix.
+
+Internal open source across product teams fails when shared packages have no deprecation path. Fear of breaking consumers freezes the commons.
+
+Security contacts and release owners are not bureaucracy when they are two names on a page. They are how outsiders know you are serious.
+
 Contributing without cosplay means your PRs match your production dependencies and your review standards match what you demand internally.
 
-Borrowing patterns without citing sources teaches the wrong citizenship. Attribution is part of the craft, not optional polish.
+Licenses are leadership judgment. “Engineering said it was fine” is not a control. Know the license class before you ship.
 
 Licenses, liability, and leadership judgment: know what you ship. Do not outsource compliance to hope.
 
 A private fork drifts for two years. Security fixes stop applying cleanly. The missing artifact was a merge-back owner and a timeline.
 
-None of these principles require a new program name. They require attention in the path of work — reviews, design notes, procurement, and post-incident follow-through.
+A team forks to move fast, then discovers CVE patches no longer apply cleanly. The missing artifact was not bravado — it was a merge-back owner and a calendar.
 
-Refuse to scale a workflow you cannot explain on a whiteboard to a new hire in fifteen minutes.
+An internal library goes viral after a blog post. Maintainer burden spikes. Leadership either funds the maintainers or declines the fame. Ambiguous ownership after virality is predictable failure.
 
-## Do not silo the practice
+Docs lie after launch because freshness had no owner. New contributors learn folklore. Assign docs ownership like any other production surface.
 
-A durable approach borrows controls from Mentorship instead of inventing a parallel religion.
-
-Critique privately and specifically. Vague encouragement teaches nothing. Vague criticism teaches fear. Specific critique tied to a reusable pattern teaches judgment.
-
-Feedback arrives only at performance review. By then it feels political. The fix is weekly specific notes tied to artifacts — PR comments, decision records, incident roles — so the review is a summary, not a surprise.
-
-When someone freezes asking for help, treat it as a systems smell. Latency to ask questions predicts incident severity. Psychological safety is an engineering control.
-
-## When models join the workflow
-
-Fluent output raises the value of written invariants. Improvisation got cheaper; durable context got more precious.
-
-Prompting is not process. Harnesses are: allow-lists, templates, evals, and review norms that survive a teammate leaving.
-
-## Checklist you can run
-
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
-
-- Before forking: write the exit criteria and the merge-back owner.
-- Pick one critical dependency and schedule quarterly upstream engagement.
-- Treat docs PRs as valid onboarding tasks with senior review.
-- Budget maintainer capacity explicitly in planning — not as leftover evenings.
-- Require CODEOWNERS for internal shared packages.
-- Open source governance for small teams should optimize for trust: security contact, release ownership, and a clear path to say no to scope that the maintainers cannot carry..
+One more practice worth installing: Before forking: write the exit criteria and the merge-back owner.
 
 ## Close
 
 Upstream first keeps collaboration cheap. Practice it before you need it.
 
-Continuity is the product. Tools and frameworks are optional accessories.
-
-On **When to fork and when to fund**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+Carry the claim as a habit, not a brand: **When to fork and when to fund** either compounds ownership or it was applause.

@@ -1,5 +1,5 @@
 ---
-title: "When product and platform disagree productively — working notes"
+title: "When product and platform disagree productively: naming the owner"
 date: 2025-02-04T05:00:00Z
 categories:
   - Teams
@@ -7,103 +7,97 @@ categories:
 draft: false
 ---
 
-A field note on **When product and platform disagree productively** should be inspectable next week. Mechanisms beat vibes.
+Most teams endorse “When product and platform disagree productively” quickly and operationalize it slowly. Cross-team collaboration fails when interfaces are social instead of technical: Slack threads instead of contracts, heroes instead of owners.
 
-Cross-team collaboration is design work. Meetings can choose among options. They cannot permanently store ownership.
+The rest develops that one idea with controls you can install and failure modes you can recognize.
 
-Alignment is a protocol — written inputs, outputs, owners, and failure modes — not a recurring meeting that performs agreement.
+Meetings can choose among written options. They cannot permanently store ownership across org boundaries. Status karaoke is expensive theater.
 
-I am not interested in branding this work. I am interested in whether the next person can run it without a week of hallway archaeology.
+Write one page while the decision is still warm — context, options, choice, owner, revisit date. Verbal alignment on **When product and platform disagree productively** evaporates under ordinary calendar pressure, and Slack archaeology is a poor substitute for a decision record.
 
-## Why smart teams still dodge this
+## Practices with enough detail to copy
 
-Another objection: we bought a tool for this. Tools without owners become expensive folklore.
+Cadence beats intensity. These hold when they fit inside weeks people already live.
 
-Take the objection seriously. Lightweight is good. Invisible is not. The fix is shorter artifacts and clearer owners — not more ceremony.
+### 1
 
-## What to put in place before the announcement
+Quarterly: delete channels and meetings that produce no decisions or artifacts.
 
-Replace status karaoke with a short decision doc: context, options, choice, date, owner. Status belongs in a dashboard or a running doc; meetings are for conflict and irreversible choices.
+Escalation paths that rely on knowing the right person are outages waiting for vacation. Publish who decides, by when, and what “stuck” means.
+
+### 2
+
+Before joint delivery: publish the interface doc and the escalation path.
+
+Prefer async artifacts for continuity. Use meetings when the decision is contested or irreversible. Calendar density is not collaboration quality.
+
+### 3
+
+For every shared system: name a primary owner per failure mode.
+
+Hero bridges — one person who translates between teams — feel invaluable until they burn out and the org discovers it had no interface. Document what the hero knows while they are still standing.
+
+### 4
+
+When stuck: write the disagreement as options with tradeoffs; meet only to choose.
+
+Publish “done” definitions across teams before joint work starts — especially for platform and product hand-offs. Ambiguous done is how resentments form.
 
 Working agreements that age well name how to change the agreement. Static culture docs become wallpaper within a quarter.
 
 Interfaces between teams beat shared Slack channels. Channels are transport; interfaces are contracts. Confusing the two creates ambient anxiety and no ownership.
 
-Treat conflict as design input. Resolve it in the interface, not in personality. Productive disagreement about SLOs and capacity envelopes beats political disagreement about who is more strategic.
+For **When product and platform disagree productively**, the inheritance test is blunt: after a week, can someone outside the original room explain what changed, who owns it, and how you will know if it breaks? If the answer depends on hallway memory, you still have a story — not a practice.
 
-## Concrete cases
-
-Product wants a feature; platform wants stability. Without a capacity envelope and SLO, every conversation becomes moral. With them, the conversation becomes scheduling and tradeoffs.
-
-A working group creates a Slack channel for “alignment.” Six weeks later the channel is noise and decisions still live in side DMs. Delete the channel or convert it into a decision log with owners.
+## Scenes
 
 A hand-off ticket says “ready for platform.” Platform discovers missing authz assumptions in production. Ready now means: runbook, rollback, and a joint drill — not a status emoji.
 
-## Tradeoffs worth naming
-
-Do not build a program office for a one-team problem. Do not invent a framework brand. Do install the smallest control that makes failure legible.
-
-Written interfaces cost an afternoon. Unwritten interfaces cost a quarter. Choose deliberately.
-
-Fewer meetings feel risky to managers who equate presence with control. Measure outcomes and escaped misunderstandings instead of seat time.
-
-Strict ownership can feel cold. Ambiguous ownership feels warm until the page. Prefer clear primary owners with named collaborators.
-
-Hero bridges that mask missing contracts until attrition.
-
-## How to hold the standard
-
-Prefer reversible moves. If you cannot say how you would unwind the decision, you are not done designing it.
-
-Treat conflict as design input. Resolve it in the interface, not in personality. Productive disagreement about SLOs and capacity envelopes beats political disagreement about who is more strategic.
-
-The meeting you should replace with a doc is the one that only redistributes status. Keep the meeting that resolves contested decisions — and require options in writing before it starts.
-
-Hero bridges — one person who translates between teams — feel invaluable until they burn out and the org discovers it had no interface. Document what the hero knows while they are still standing.
-
-Hand-offs that preserve context include decision history, open risks, and the last failed assumption — not only a ticket ID. Context loss is a defect.
-
-Prefer async artifacts for continuity. Use meetings when the decision is contested or irreversible. Calendar density is not collaboration quality.
+A cross-team launch checklist exists as a wiki page nobody updates. Convert it into a living interface doc with an owner and a last-reviewed date, or delete it.
 
 Two teams “share a roadmap.” Neither owns the shared schema. Breaking changes collide. The repair is a schema owner, a deprecation clock, and an explicit consumer list — not a longer joint standup.
 
-None of these principles require a new program name. They require attention in the path of work — reviews, design notes, procurement, and post-incident follow-through.
+## Tradeoffs
 
-If collaboration feels expensive, check the interface before you hire more coordinators.
+Fewer meetings feel risky to managers who equate presence with control. Measure outcomes and escaped misunderstandings instead of seat time.
 
-## Do not silo the practice
+Written interfaces cost an afternoon. Unwritten interfaces cost a quarter. Choose deliberately.
 
-This work does not live alone. It couples to Buy-versus-build judgment.
+Strict ownership can feel cold. Ambiguous ownership feels warm until the page. Prefer clear primary owners with named collaborators.
 
-Platforms you buy still need owners — for identity integration, data retention, incident comms, and process translation. Procurement does not create ownership.
+Measure what you claim to care about. If **When product and platform disagree productively** only appears in kickoff slides and never in review, incident, or planning artifacts, it is branding. Put a verification signal where people already look.
 
-Build the harness, buy the commodity works until someone rebuilds the commodity “for flexibility.” Flexibility without differentiated ownership is usually nostalgia.
+Keep the unit of progress small enough to finish under a full calendar: one owner clarification, one verification signal, one reversible control. Grand programs without weekly evidence become status machines.
 
-Write exit strategies for bought AI tooling before procurement: data export, prompt/eval portability, and a 90-day unwind drill. Soft lock-in is still lock-in.
+## Failure modes
 
-## When models join the workflow
+Each of these is a missing control, not a personality problem:
 
-Fluent output raises the value of written invariants. Improvisation got cheaper; durable context got more precious.
+- Collaboration theater: more shared channels, same missing contracts.
+- Roadmaps that look shared but hide capacity fiction — platform work scheduled as free.
+- Hand-offs that drop context so the receiving team re-learns the sender’s scars.
+- Meetings used as a substitute for written interfaces — everyone left “aligned,” nobody can explain ownership later.
 
-Where copilots help: boilerplate, test scaffolding, exploratory refactors with strong suites. Where they hide debt: security boundaries, concurrency, and domain invariants nobody wrote down.
+Joint incidents need a single incident commander even when two orgs are involved. Dual command is how pages bounce and customers wait.
 
-Orchestration without a black-box conductor means you can explain the workflow on a whiteboard and pause any step. If you cannot, you cannot operate it.
+Hand-offs that preserve context include decision history, open risks, and the last failed assumption — not only a ticket ID. Context loss is a defect.
 
-## Checklist you can run
+Replace status karaoke with a short decision doc: context, options, choice, date, owner. Status belongs in a dashboard or a running doc; meetings are for conflict and irreversible choices.
 
-Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+Write the boundary as an API: inputs, outputs, latency expectations, error semantics, and who gets paged. If you cannot write that page, you do not have alignment — you have hope.
 
-- Quarterly: delete channels and meetings that produce no decisions or artifacts.
-- After hand-off: verify the receiving team can operate the failure mode without a Slack ping to the sender.
-- For every shared system: name a primary owner per failure mode.
-- Replace status karaoke with a short decision doc: context, options, choice, date, owner.
-- Before joint delivery: publish the interface doc and the escalation path.
-- Working agreements that age well name how to change the agreement.
+Conflict as a design input means capturing the disagreement as constraints and options. Personality narratives are a dead end; interface narratives ship.
 
-## The point, again
+The meeting you should replace with a doc is the one that only redistributes status. Keep the meeting that resolves contested decisions — and require options in writing before it starts.
+
+Shared roadmaps without shared capacity envelopes are fiction. Publish what each team can actually carry before you celebrate alignment.
+
+Treat conflict as design input. Resolve it in the interface, not in personality. Productive disagreement about SLOs and capacity envelopes beats political disagreement about who is more strategic.
+
+A working group creates a Slack channel for “alignment.” Six weeks later the channel is noise and decisions still live in side DMs. Delete the channel or convert it into a decision log with owners.
+
+## Close
 
 Protocols beat vibes. Write the boundary, name the owner, make failure legible.
 
-If this feels quieter than a keynote, that is intentional. Compounding work rarely looks like theater.
-
-On **When product and platform disagree productively**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
+Carry the claim as a habit, not a brand: **When product and platform disagree productively** either compounds ownership or it was applause.
