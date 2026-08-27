@@ -7,26 +7,101 @@ categories:
 draft: false
 ---
 
-If you lead engineers, you already know the temptation: solve the hard part yourself. That instinct fights carbon-aware scheduling without the slogans.
+**Carbon-aware scheduling without the slogans** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
 
-Sustainable pace for people and sustainable resource use for systems are the same habit: refuse unnecessary churn.
+I treat Green software and efficiency as reliability practice. Waste that buys no safety is both an energy problem and an on-call problem.
 
-Green software thinking — the kind Asim Hussain and the Green Software Foundation keep insisting on — treats efficiency as a reliability and cost discipline, not a branding exercise.
+Green software is an engineering constraint: efficiency as reliability and cost discipline, not a branding exercise after the fact.
 
-Cross-team collaboration gets easier when you publish interfaces: who consumes what, what “done” means, and how failures are communicated. Ambiguity is expensive; clarity is a kindness.
+I am not interested in branding this work. I am interested in whether the next person can run it without a week of hallway archaeology.
 
-Flaky CI, chatty retries, and oversized environments are leadership issues because they burn attention and energy.
+## Design the loop
 
-Ask architecture reviews one plain question: what did we choose that forces waste forever?
+Treat the practice as a system with inputs, outputs, and feedback. If any of those are social-only, the system will drift.
 
-Buy-versus-build debates should start from ownership. If nobody on your team can operate the failure mode, you did not buy a capability — you rented a demo.
+Efficiency as reliability practice shows up when you delete a redundant pipeline stage and incident escape rate does not rise. That is the experiment worth running.
 
-On carbon-aware scheduling without the slogans, the leadership move is to make the invisible visible: ownership, verification, and the path for the next person.
+Carbon-aware scheduling without slogans means shifting batch work when it is safe and measuring whether load actually moved. Unmeasured virtue is marketing.
 
-Mentorship scales when seniors narrate tradeoffs in writing. A one-paragraph decision record teaches more than a hallway conversation that evaporates.
+Architecture review asks about carbon once, records a slogan, changes no sizing decision. Next quarter the same waste remains. Sustainability reviews need owners who can change schedules or footprint.
 
-I prefer written decisions over verbal ones. Memory is a poor archive, and AI tools make fluent improvisation cheap — which raises the value of durable context.
+Useful signals tie to user impact and operability: escaped defects, stale answers, retry amplification, review cycle time, on-call toil. Vanity metrics create vanity leadership.
 
-None of this requires a new framework brand. It requires attention, a short feedback loop, and the humility to change process when agents join the workflow.
+Measure compute waste in product teams: idle envs, redundant builds, chatty meshes with no owner. Numbers create permission to delete.
 
-Lead for continuity. Leave systems and people that still work when you are not in the room.
+Put sustainability questions in architecture forums: what did we choose that forces waste forever? If the forum cannot change a decision, it is theater.
+
+Carbon-aware batch jobs shift to night without checking downstream SLA commitments. Green intent creates customer pain. Constraints must be negotiated, not silently applied.
+
+Greenwashing metrics that never change an architecture decision.
+
+Ephemeralize non-prod by default; justify always-on in writing.
+
+Track flaky test quarantine time as a reliability SLO.
+
+A team celebrates resilience because the client retries aggressively. Production is stable-ish and the bill is not. They built a retry storm and called it fortitude. Cap retries and fix the root timeout.
+
+## Tradeoffs worth naming
+
+Right-sizing can feel like risk. Mitigate with scale-up paths and load tests, not eternal overprovision.
+
+Carbon-aware batch shifts can delay results. Make the delay explicit and reversible.
+
+Deleting pipeline stages requires courage and good eval of what still protects users.
+
+Right-size infrastructure as leadership work: challenge defaults that force always-on waste for rarely-used paths. “Just in case” environments need a written justification.
+
+## Operating principles
+
+Optimize for the next person's onboarding cost. Every undocumented exception becomes a tax on hiring and incident response.
+
+Put sustainability questions in architecture forums: what did we choose that forces waste forever? If the forum cannot change a decision, it is theater.
+
+Right-size infrastructure as leadership work: challenge defaults that force always-on waste for rarely-used paths. “Just in case” environments need a written justification.
+
+The energy cost of flaky CI includes engineer attention. Fix flakes as reliability work with an SLO on quarantine time.
+
+Right-sizing after a traffic shape change is a leadership conversation because finance, platform, and product all feel the “what if” differently. Bring numbers.
+
+Design for fewer retries, not prettier dashboards. Retries multiply compute and hide root causes. Cap amplification and alert when it exceeds a threshold.
+
+Flaky tests burn CI minutes nightly. Engineers ignore failures. Carbon and attention both leak. Quarantine with a deadline beats living with noise.
+
+Teach the principles in the artifacts people already touch: PR templates, RFC sections, architecture checklists, and on-call runbooks.
+
+Efficiency is operational maturity. Lead it like any other reliability practice.
+
+## Where this couples to adjacent work
+
+This work does not live alone. It couples to Buy-versus-build judgment.
+
+Platforms you buy still need owners — for identity integration, data retention, incident comms, and process translation. Procurement does not create ownership.
+
+No exit plan. Price increases. Suddenly “switching costs” are discovered during budget season. A tabletop unwind once a year is cheaper than surprise.
+
+The new cost of custom is maintenance, not typing. AI makes that easy to forget until the second quarter of on-call.
+
+## Tempo changed; accountability did not
+
+If agents or copilots touch this workflow, add budgets, logs, and a kill switch before you add autonomy.
+
+Teach distrust of fluent wrongness. Models sound senior. Tests, invariants, and threat models still decide truth.
+
+## Make it observable
+
+Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+
+- Budget retries: cap and alert when amplification exceeds a threshold.
+- Ephemeralize non-prod by default; justify always-on in writing.
+- Report idle environment hours next to cloud spend in engineering reviews.
+- Carbon-aware scheduling without slogans means shifting batch work when it is safe and measuring whether load actually moved.
+- Track flaky test quarantine time as a reliability SLO.
+- Efficiency as reliability practice shows up when you delete a redundant pipeline stage and incident escape rate does not rise.
+
+## What to carry forward
+
+Constraints clarify design. Carbon and energy are constraints — use them.
+
+Continuity is the product. Tools and frameworks are optional accessories.
+
+On **Carbon-aware scheduling without the slogans**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?

@@ -7,26 +7,95 @@ categories:
 draft: false
 ---
 
-Make-or-buy with agents in the mix sounds like a strategy slide until you watch a team try it under real load.
+**Make-or-buy with agents in the mix** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
 
-A purchased AI tool still needs an owner on-call for failure modes, data handling, and process fit.
+If you are shipping Agentic systems, design the stop path before the autonomy story. Teams remember the first uncontrolled side effect longer than the first clever demo.
 
-Buy commodities. Build the harness that makes your team’s judgment visible: policy, evals, audit, and exit.
+Multi-agent theater is specialization without interfaces. Useful specialization is narrow tools, clear side effects, and kill switches.
 
-When agents join the loop, treat them like junior systems: limited privileges, explicit tools, budgets, and a human who owns the outcome. Autonomy without audit is just distributed risk.
+I am not interested in branding this work. I am interested in whether the next person can run it without a week of hallway archaeology.
 
-AI compresses the typing cost of building. It does not compress the ownership cost of running what you built.
+## The seductive counterargument
 
-Make-or-buy decisions should include the cost of undoing the choice. Soft lock-in is still lock-in.
+The counterargument is usually speed: we do not have time. That sentence often means you do not have time for the second failure.
 
-Process should be light enough to change. If your AI workflow cannot be updated when a model, connector, or compliance rule changes, you do not have a workflow — you have a ritual.
+Take the objection seriously. Lightweight is good. Invisible is not. The fix is shorter artifacts and clearer owners — not more ceremony.
 
-On make-or-buy with agents in the mix, the leadership move is to make the invisible visible: ownership, verification, and the path for the next person.
+## The operating controls
 
-In practice that means shorter cycles: decide, ship a thin slice, review what broke, coach the pattern into the next person. Long programs without those loops become status machines.
+Useful specialization looks like a retrieval agent, a draft agent, and a verifier — each with narrow tools — not five personas arguing in a shared context window for theater value.
 
-I prefer written decisions over verbal ones. Memory is a poor archive, and AI tools make fluent improvisation cheap — which raises the value of durable context.
+Owning outcomes when agents ship changes means the human merge still carries production accountability. Agents accelerate the middle; humans own the edge.
 
-None of this requires a new framework brand. It requires attention, a short feedback loop, and the humility to change process when agents join the workflow.
+Orchestration without a black-box conductor: prefer explicit workflows over an opaque planner nobody can debug. Debuggability is a product requirement.
 
-The practical next step is small: pick one workflow, name an owner, and make the outcome observable next week.
+Design hand-offs: when an agent must stop and ask, what context is packaged for the human, and how the resume is recorded. Dropped context forces humans to redo work the agent already “knew.”
+
+## Concrete cases
+
+Under real load, an agent without budgets burns tokens, opens noisy PRs, and creates review debt faster than value. Budgets are not pessimism; they are product constraints.
+
+Stop-and-ask rules were informal. The agent emails a customer. Now you have a process problem and a trust problem. Irreversible writes, authz changes, and customer communication belong on an allow-list with human gates.
+
+A multi-agent demo impresses leadership. In production, nobody can explain which agent wrote which file or why. Specialization without interfaces is just distributed confusion.
+
+## The costs of doing it right
+
+Do not build a program office for a one-team problem. Do not invent a framework brand. Do install the smallest control that makes failure legible.
+
+Human hand-offs add latency. Unbounded autonomy adds blast radius. Pick the latency.
+
+Harnesses slow the first demo and save the first incident. Sequence matters.
+
+Narrow tools feel less magical than one omnipotent agent. Magic is not an operability strategy.
+
+Retries without idempotency keys — duplicate side effects under partial failure.
+
+## How to hold the standard
+
+Optimize for the next person's onboarding cost. Every undocumented exception becomes a tax on hiring and incident response.
+
+Design hand-offs: when an agent must stop and ask, what context is packaged for the human, and how the resume is recorded. Dropped context forces humans to redo work the agent already “knew.”
+
+Idempotency for agentic side effects — retries must not double-charge, double-page, or double-merge. Partial failure is normal; duplicate effects are optional if you design poorly.
+
+Harnesses first: logs, token/time budgets, blast-radius limits, and a kill switch a human can use without a war room. Autonomy is earned after those exist.
+
+When an agent should stop and ask is a policy question, not a vibe. Write the list: irreversible writes, authz, customer communication, spend above threshold, tools outside the allow-list.
+
+Event-driven agentic workflows teams can operate look like other event-driven systems: schemas, consumers, dead-letter paths, and owners.
+
+An agent retries a payment side effect after a timeout. Without idempotency keys, customers see duplicates. Treat agent side effects with the same discipline as payment systems.
+
+Teach the principles in the artifacts people already touch: PR templates, RFC sections, architecture checklists, and on-call runbooks.
+
+Own the outcome. Let agents accelerate the safe middle of the workflow.
+
+## Do not silo the practice
+
+Leaders who isolate the practice from AI in engineering workflows create beautiful local optima and expensive global failure.
+
+Update review norms when copilots arrive. If you do not, you will approve fluent bugs faster. Slow the merge until verification is explicit.
+
+Someone pastes a production schema into a consumer model tool to “move faster.” Leadership had no published data boundary. That is not an individual ethics failure first — it is a missing control.
+
+AI changes tempo; leadership still owns outcomes. If escaped defects rise while suggestion counts rise, you optimized the wrong dashboard.
+
+## Make it observable
+
+Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+
+- Chaos-test retries: kill mid-flight and prove no duplicate side effects.
+- Owning outcomes when agents ship changes means the human merge still carries production accountability.
+- Useful specialization looks like a retrieval agent, a draft agent, and a verifier — each with narrow tools — not five personas arguing in a shared context window for theater value..
+- Require event emission for every tool call in production.
+- Keep a named human owner for every agentic workflow that can change production state.
+- Ship the harness before the autonomy: budget, log schema, kill switch, allow-listed tools.
+
+## The point, again
+
+Autonomy is earned with observability. Until then, keep the blast radius small.
+
+If this feels quieter than a keynote, that is intentional. Compounding work rarely looks like theater.
+
+On **Make-or-buy with agents in the mix**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?

@@ -7,30 +7,108 @@ categories:
 draft: false
 ---
 
-Career conversations that change next week’s work: what I watch for sounds like a strategy slide until you watch a team try it under real load.
+What I watch for is not enthusiasm around **Career conversations that change next week’s work** — it is whether ownership, verification, and the next person’s path got clearer under ordinary calendar pressure.
 
-Mentorship that works looks like smaller loops: a review comment that teaches a pattern, a design note that names tradeoffs, a career chat that changes next week’s assignment.
+Mentorship fails in busy calendars for a predictable reason: it was scheduled as inspiration instead of designed as a feedback loop with an owner.
 
-With AI in the loop, mentorship shifts. You coach verification, skepticism, and taste — not just syntax.
+Mentorship that survives calendar chaos is a set of small, observable loops — not a quarterly speech about growth.
 
-In practice that means shorter cycles: decide, ship a thin slice, review what broke, coach the pattern into the next person. Long programs without those loops become status machines.
+Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.
 
-Sponsor publicly, critique privately, and keep a written trail of growth so progress is not a vibe.
+## What to put in place before the announcement
 
-Juniors do not need motivational speeches. They need safe chances to own a slice, fail without shame, and hear specific feedback.
+Start with mechanisms. For this work, the first controls should be boring on purpose — inspectable, teachable, and cheap to revisit.
 
-I watch for two failure modes. First, leaders who disappear into strategy and lose the texture of the work. Second, leaders who never leave the details and never grow successors. Both produce brittle teams.
+Critique privately and specifically. Vague encouragement teaches nothing. Vague criticism teaches fear. Specific critique tied to a reusable pattern teaches judgment.
 
-On career conversations that change next week’s work: what i watch for, the leadership move is to make the invisible visible: ownership, verification, and the path for the next person.
+Pair on the decision, not only the code. Have the mentee write the tradeoff paragraph first, then implement. Judgment is a writing skill under time pressure as much as it is a coding skill.
 
-When agents join the loop, treat them like junior systems: limited privileges, explicit tools, budgets, and a human who owns the outcome. Autonomy without audit is just distributed risk.
+When someone freezes asking for help, treat it as a systems smell. Latency to ask questions predicts incident severity. Psychological safety is an engineering control.
 
-AI tools change how fast drafts appear. They do not change who is accountable for correctness, security, or operability.
+Sponsor publicly. Put someone’s name on the design review invite, the RFC author line, the customer-facing postmortem. Private belief in someone does not compound; public sponsorship does.
 
-Psychology shows up in engineering as safety to ask questions. Without it, AI only accelerates confident mistakes.
+The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
 
-I prefer written decisions over verbal ones. Memory is a poor archive, and AI tools make fluent improvisation cheap — which raises the value of durable context.
+Pairing as coaching is not surveillance. Time-box it, name the learning goal, and leave an artifact. Surveillance pairing produces compliance; coaching pairing produces judgment.
 
-None of this requires a new framework brand. It requires attention, a short feedback loop, and the humility to change process when agents join the workflow.
+## Where this shows up
 
-If this feels too quiet for a leadership post, that is the point. Compounding work rarely looks like theater.
+A mid-level engineer wants promotion. Their manager talks about “visibility.” A better move: sponsor them to own a migration with a written plan, a kill switch, and a teaching review for the team afterward.
+
+Feedback arrives only at performance review. By then it feels political. The fix is weekly specific notes tied to artifacts — PR comments, decision records, incident roles — so the review is a summary, not a surprise.
+
+AI-assisted workflows arrive without coaching norms. People paste secrets into tools, accept insecure snippets, and skip tests because the model “looked sure.” Literacy clinics on one failure mode per month beat a single all-hands about AI.
+
+## What I refuse to romanticize
+
+Each failure mode below is a missing control. Another meeting will not install it.
+
+- Feedback that arrives only at review time, when grades feel political instead of formative.
+- AI tools introduced without coaching on verification, data boundaries, or accountability.
+- Seniors rewarded only for personal output, so teaching becomes unpaid overtime.
+- Mentorship as calendar filler: 1:1s that never change assignments or ownership.
+
+## What you give up
+
+The tradeoff in not stealing the work is short-term speed. You will be slower this afternoon so the team is faster next month. Leaders who cannot tolerate that tradeoff become permanent critical path.
+
+With AI drafting, the tradeoff is review load. Explicit verification notes reduce merge regret more than asking people to “be careful.”
+
+The tradeoff in public sponsorship is risk to your own reputation. Take it. That is part of the job. Private cheerleading costs you nothing and buys them little.
+
+## Operating principles
+
+Optimize for the next person's onboarding cost. Every undocumented exception becomes a tax on hiring and incident response.
+
+Sponsor publicly. Put someone’s name on the design review invite, the RFC author line, the customer-facing postmortem. Private belief in someone does not compound; public sponsorship does.
+
+The psychology of asking for help is shaped by what got rewarded last time someone asked. If asking is punished as weakness, AI tools will hide mistakes instead of surfacing uncertainty.
+
+Pairing as coaching is not surveillance. Time-box it, name the learning goal, and leave an artifact. Surveillance pairing produces compliance; coaching pairing produces judgment.
+
+Feedback that lands after incidents should arrive within days, tied to a specific decision or omission, and paired with a practice rep. Delayed generic feedback teaches nothing useful.
+
+Career conversations should change next week’s work: a stretch ownership, a public design, a safer incident role — not only aspirational titles twelve months out.
+
+A junior with a strong copilot ships fluent PRs. Mentorship is teaching them to distrust fluent wrongness: invariants, authz edges, and “what breaks at 10x load.” Without that coaching, you accelerate confident mistakes.
+
+None of these principles require a new program name. They require attention in the path of work — reviews, design notes, procurement, and post-incident follow-through.
+
+Refuse to scale a workflow you cannot explain on a whiteboard to a new hire in fifteen minutes.
+
+## Where this couples to adjacent work
+
+This work does not live alone. It couples to AI in engineering workflows.
+
+Require a verification trail on assisted work: what the model changed, what a human checked, and where that note lives — PR, ticket, or decision record. Authorship is not ownership of production risk.
+
+A strong IC becomes a bottleneck because only they know the “good prompts.” Codify the harness: templates, allow-listed tools, eval snippets, and examples of refusals.
+
+Coach AI literacy as judgment: when to draft with a model, when to refuse, when to escalate. Literacy is a coaching problem, not a one-time workshop.
+
+## When models join the workflow
+
+If agents or copilots touch this workflow, add budgets, logs, and a kill switch before you add autonomy.
+
+Shipping with models without losing craft requires the same standards you already had for human drafts, plus an explicit verification step because fluency hides gaps.
+
+Owning outcomes when agents ship changes means the human merge still carries production accountability. Agents accelerate the middle; humans own the edge.
+
+## Checklist you can run
+
+Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+
+- Critique privately and specifically.
+- When AI drafts: require a human verification note in the PR describing what was checked and how.
+- Quarterly: seniors run a teaching session from a real failure (escaped defect, bad hand-off, stale RAG answer).
+- Every month: one public sponsorship act — authorship, presentation, or incident lead.
+- Pair on the decision, not only the code.
+- Every PR review: at least one comment that teaches a reusable pattern.
+
+## Close
+
+If your calendar is full, shrink the loop — do not cancel the coaching.
+
+If this feels quieter than a keynote, that is intentional. Compounding work rarely looks like theater.
+
+On **Career conversations that change next week’s work**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?

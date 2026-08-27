@@ -7,28 +7,100 @@ categories:
 draft: false
 ---
 
-Quiet teams often get this right before loud ones do: ai in the workflow, not on the slide deck is a system of habits, not a quarterly theme.
+**AI in the workflow, not on the slide deck** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
 
-Leaders should ask: what did the model change, what did a human verify, and where is that trail stored?
+The useful question for AI in engineering workflows is boring: what did the model change, what did a human verify, and where does that trail live?
 
-Watch for fluent wrongness. Confidence in the output is not evidence.
+Put AI in the workflow — harnesses, evals, review norms — not on the slide deck as inevitability theater.
 
-When agents join the loop, treat them like junior systems: limited privileges, explicit tools, budgets, and a human who owns the outcome. Autonomy without audit is just distributed risk.
+Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.
 
-Team literacy matters more than individual clever prompts. Shared harnesses beat private magic.
+## What load reveals
 
-AI tools change how fast drafts appear. They do not change who is accountable for correctness, security, or operability.
+Load is the honest critic. Incidents, hiring spikes, and vendor outages reveal whether the practice was designed or merely announced.
 
-Cross-team collaboration gets easier when you publish interfaces: who consumes what, what “done” means, and how failures are communicated. Ambiguity is expensive; clarity is a kindness.
+A team celebrates merged suggestion counts. Escaped defects rise in authz paths. The metric was vanity; the fix is tagging assisted PRs and reviewing that subset for verification quality.
 
-On ai in the workflow, not on the slide deck, the leadership move is to make the invisible visible: ownership, verification, and the path for the next person.
+No exit criteria for tools — the vendor becomes the process.
 
-Process should be light enough to change. If your AI workflow cannot be updated when a model, connector, or compliance rule changes, you do not have a workflow — you have a ritual.
+No coaching loop for juniors using assistants — mistakes accelerate.
 
-Modern AI tooling voices matter most when they talk about evals, harnesses, and failure modes — not when they sell inevitability.
+## The operating controls
 
-I prefer written decisions over verbal ones. Memory is a poor archive, and AI tools make fluent improvisation cheap — which raises the value of durable context.
+Keeping humans accountable when models draft code means the merge still carries a name and a verification note. Anonymized autocomplete is not an accountability model.
 
-None of this requires a new framework brand. It requires attention, a short feedback loop, and the humility to change process when agents join the workflow.
+Evaluating AI assistance without vanity metrics means comparing escaped defects, onboarding time, and review quality — not counting accepted suggestions like arcade tickets.
 
-If this feels too quiet for a leadership post, that is the point. Compounding work rarely looks like theater.
+Define allowed tools and data boundaries. Copilots without policy become shadow IT with autocomplete. Secrets, customer data, and authz logic need explicit rules.
+
+Update review norms when copilots arrive. If you do not, you will approve fluent bugs faster. Slow the merge until verification is explicit.
+
+Coach AI literacy as judgment: when to draft with a model, when to refuse, when to escalate. Literacy is a coaching problem, not a one-time workshop.
+
+Shared harnesses beat private prompt folklore. If the only way to do it “right” lives in one engineer’s chat history, you do not have a practice.
+
+Someone pastes a production schema into a consumer model tool to “move faster.” Leadership had no published data boundary. That is not an individual ethics failure first — it is a missing control.
+
+Under load, meetings multiply. Resist. Written interfaces, budgets, and kill switches scale better than status theater.
+
+A strong IC becomes a bottleneck because only they know the “good prompts.” Codify the harness: templates, allow-listed tools, eval snippets, and examples of refusals.
+
+## The costs of doing it right
+
+Restricting tools feels anti-innovation until the first compliance event. Policy is what lets you expand autonomy later.
+
+Tempo gains are real on boilerplate and real-negative on subtle invariants. Teach the difference explicitly.
+
+Verification notes add friction to the PR. They remove friction from the incident. Budget for the former.
+
+- Leaders celebrating velocity while review quality quietly collapses.
+- Treating model output as authority because it sounds senior.
+
+## Operating principles
+
+Prefer reversible moves. If you cannot say how you would unwind the decision, you are not done designing it.
+
+Update review norms when copilots arrive. If you do not, you will approve fluent bugs faster. Slow the merge until verification is explicit.
+
+Coach AI literacy as judgment: when to draft with a model, when to refuse, when to escalate. Literacy is a coaching problem, not a one-time workshop.
+
+Shared harnesses beat private prompt folklore. If the only way to do it “right” lives in one engineer’s chat history, you do not have a practice.
+
+Where copilots help: boilerplate, test scaffolding, exploratory refactors with strong suites. Where they hide debt: security boundaries, concurrency, and domain invariants nobody wrote down.
+
+Shipping with models without losing craft requires the same standards you already had for human drafts, plus an explicit verification step because fluency hides gaps.
+
+AI on the slide deck: logo, inevitability, no workflow. AI in the workflow: ticket → draft → harness checks → human verification note → review. Only one of those ships safely.
+
+None of these principles require a new program name. They require attention in the path of work — reviews, design notes, procurement, and post-incident follow-through.
+
+Keep the feedback loop short enough that the team can feel the practice working before the next planning cycle.
+
+## The neighboring discipline
+
+A durable approach borrows controls from Buy-versus-build judgment instead of inventing a parallel religion.
+
+Evaluate AI vendors like critical-path systems: SLOs, incident communication, subprocessors, kill switches, and data boundaries.
+
+A vendor’s success metrics replace product metrics in leadership reviews. That is lock-in of attention. Keep your north-star metrics in-house.
+
+When a vendor becomes your process, document the process in your words. Otherwise a price hike or outage becomes an identity crisis.
+
+## Checklist you can run
+
+Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+
+- Evaluating AI assistance without vanity metrics means comparing escaped defects, onboarding time, and review quality — not counting accepted suggestions like arcade tickets..
+- Run a monthly literacy clinic on one failure mode (secrets, authz, flaky tests).
+- Keeping humans accountable when models draft code means the merge still carries a name and a verification note.
+- Prefer shared eval snippets and prompt templates over private magic.
+- Track escaped defects that originated in assisted drafts and coach from that set.
+- Publish allowed tools and prohibited data classes in the engineering handbook.
+
+## Close
+
+Literacy is a coaching problem. Treat it like any other craft skill under load.
+
+Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.
+
+On **AI in the workflow, not on the slide deck**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?

@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://dperconti.github.io/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- Blog -->
   <url>
     <loc>https://dperconti.github.io/blog/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -20,7 +20,7 @@
   <!-- Contact -->
   <url>
     <loc>https://dperconti.github.io/contact/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2100,7 +2100,7 @@
   <!-- Category: AI -->
   <url>
     <loc>https://dperconti.github.io/categories/ai/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2108,7 +2108,7 @@
   <!-- Category: Architecture -->
   <url>
     <loc>https://dperconti.github.io/categories/architecture/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2116,7 +2116,7 @@
   <!-- Category: Engineering -->
   <url>
     <loc>https://dperconti.github.io/categories/engineering/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2124,7 +2124,7 @@
   <!-- Category: Teams -->
   <url>
     <loc>https://dperconti.github.io/categories/teams/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2132,7 +2132,7 @@
   <!-- Category: Leadership -->
   <url>
     <loc>https://dperconti.github.io/categories/leadership/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2140,7 +2140,7 @@
   <!-- Category: Open Source -->
   <url>
     <loc>https://dperconti.github.io/categories/open-source/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2148,7 +2148,7 @@
   <!-- Category: Sustainability -->
   <url>
     <loc>https://dperconti.github.io/categories/sustainability/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2156,7 +2156,7 @@
   <!-- Category: Mentorship -->
   <url>
     <loc>https://dperconti.github.io/categories/mentorship/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

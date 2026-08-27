@@ -7,28 +7,111 @@ categories:
 draft: false
 ---
 
-There is a version of working agreements that age well — note 157 that looks busy and a version that compounds. The difference is rarely a tool.
+Another working note on **Working agreements that age well**: same thesis, sharper edges from recent delivery pressure.
 
-Cross-team collaboration fails when interfaces are social instead of technical: Slack threads instead of contracts, heroes instead of owners.
+When people say they need better Cross-team collaboration, I look for missing contracts: who consumes what, what “done” means, and who gets paged when the joint system lies.
 
-Write the boundary as if it were an API: inputs, outputs, latency expectations, and who gets paged.
+The collaboration tax is paid in ambiguity. Clarity is a kindness and a throughput strategy.
 
-Cross-team collaboration gets easier when you publish interfaces: who consumes what, what “done” means, and how failures are communicated. Ambiguity is expensive; clarity is a kindness.
+Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.
 
-When two teams disagree, treat the disagreement as a design input. Resolve it in the interface, not in personality.
+## Failure modes that teach
 
-The cheapest alignment tool is still a short doc with a decision and a date. Meetings are for conflict, not for status karaoke.
+I teach from failure modes because teams already have scars. Naming them precisely is faster than inventing a framework brand.
 
-Process should be light enough to change. If your AI workflow cannot be updated when a model, connector, or compliance rule changes, you do not have a workflow — you have a ritual.
+Roadmaps that look shared but hide capacity fiction — platform work scheduled as free.
 
-On working agreements that age well — note 157, the leadership move is to make the invisible visible: ownership, verification, and the path for the next person.
+Hand-offs that drop context so the receiving team re-learns the sender’s scars.
 
-Buy-versus-build debates should start from ownership. If nobody on your team can operate the failure mode, you did not buy a capability — you rented a demo.
+Collaboration theater: more shared channels, same missing contracts.
 
-Leaders should ask: what did the model change, what did a human verify, and where is that trail stored?
+Meetings used as a substitute for written interfaces — everyone left “aligned,” nobody can explain ownership later.
 
-I prefer written decisions over verbal ones. Memory is a poor archive, and AI tools make fluent improvisation cheap — which raises the value of durable context.
+## Boring controls that compound
 
-None of this requires a new framework brand. It requires attention, a short feedback loop, and the humility to change process when agents join the workflow.
+Those failures map to controls. Install the smallest ones that make failure legible.
 
-If this feels too quiet for a leadership post, that is the point. Compounding work rarely looks like theater.
+Interfaces between teams beat shared Slack channels. Channels are transport; interfaces are contracts. Confusing the two creates ambient anxiety and no ownership.
+
+Hand-offs that preserve context include decision history, open risks, and the last failed assumption — not only a ticket ID. Context loss is a defect.
+
+Hero bridges — one person who translates between teams — feel invaluable until they burn out and the org discovers it had no interface. Document what the hero knows while they are still standing.
+
+Publish “done” definitions across teams before joint work starts — especially for platform and product hand-offs. Ambiguous done is how resentments form.
+
+The meeting you should replace with a doc is the one that only redistributes status. Keep the meeting that resolves contested decisions — and require options in writing before it starts.
+
+Prefer async artifacts for continuity. Use meetings when the decision is contested or irreversible. Calendar density is not collaboration quality.
+
+## Texture from the work
+
+A working group creates a Slack channel for “alignment.” Six weeks later the channel is noise and decisions still live in side DMs. Delete the channel or convert it into a decision log with owners.
+
+Two orgs share on-call for a boundary service. Without a primary for each failure mode, pages bounce. Shared ownership without primaries is a page-routing bug.
+
+A hand-off ticket says “ready for platform.” Platform discovers missing authz assumptions in production. Ready now means: runbook, rollback, and a joint drill — not a status emoji.
+
+## What you give up
+
+Written interfaces cost an afternoon. Unwritten interfaces cost a quarter. Choose deliberately.
+
+Fewer meetings feel risky to managers who equate presence with control. Measure outcomes and escaped misunderstandings instead of seat time.
+
+Strict ownership can feel cold. Ambiguous ownership feels warm until the page. Prefer clear primary owners with named collaborators.
+
+## Operating principles
+
+Prefer reversible moves. If you cannot say how you would unwind the decision, you are not done designing it.
+
+Publish “done” definitions across teams before joint work starts — especially for platform and product hand-offs. Ambiguous done is how resentments form.
+
+The meeting you should replace with a doc is the one that only redistributes status. Keep the meeting that resolves contested decisions — and require options in writing before it starts.
+
+Prefer async artifacts for continuity. Use meetings when the decision is contested or irreversible. Calendar density is not collaboration quality.
+
+Treat conflict as design input. Resolve it in the interface, not in personality. Productive disagreement about SLOs and capacity envelopes beats political disagreement about who is more strategic.
+
+Replace status karaoke with a short decision doc: context, options, choice, date, owner. Status belongs in a dashboard or a running doc; meetings are for conflict and irreversible choices.
+
+Two teams “share a roadmap.” Neither owns the shared schema. Breaking changes collide. The repair is a schema owner, a deprecation clock, and an explicit consumer list — not a longer joint standup.
+
+If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.
+
+Keep the feedback loop short enough that the team can feel the practice working before the next planning cycle.
+
+## Where this couples to adjacent work
+
+Leaders who isolate the practice from Buy-versus-build judgment create beautiful local optima and expensive global failure.
+
+Start from ownership. If nobody on your team can operate the failure mode, you did not buy a capability — you rented a demo with a support email.
+
+Build the harness, buy the commodity works until someone rebuilds the commodity “for flexibility.” Flexibility without differentiated ownership is usually nostalgia.
+
+Evaluating vendors like critical-path systems includes asking how you pause them. No pause path means no operational maturity.
+
+## Tempo changed; accountability did not
+
+Fluent output raises the value of written invariants. Improvisation got cheaper; durable context got more precious.
+
+Prompting is not process. Harnesses are: allow-lists, templates, evals, and review norms that survive a teammate leaving.
+
+Owning outcomes when agents ship changes means the human merge still carries production accountability. Agents accelerate the middle; humans own the edge.
+
+## Checklist you can run
+
+Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+
+- When stuck: write the disagreement as options with tradeoffs; meet only to choose.
+- After hand-off: verify the receiving team can operate the failure mode without a Slack ping to the sender.
+- Hand-offs that preserve context include decision history, open risks, and the last failed assumption — not only a ticket ID.
+- Quarterly: delete channels and meetings that produce no decisions or artifacts.
+- Before joint delivery: publish the interface doc and the escalation path.
+- For every shared system: name a primary owner per failure mode.
+
+## Close
+
+If collaboration feels expensive, check the interface before you hire more coordinators.
+
+Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.
+
+On **Working agreements that age well**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?

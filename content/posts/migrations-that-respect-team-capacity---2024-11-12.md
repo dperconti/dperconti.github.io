@@ -7,28 +7,109 @@ categories:
 draft: false
 ---
 
-There is a version of migrations that respect team capacity that looks busy and a version that compounds. The difference is rarely a tool.
+**Migrations that respect team capacity** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
 
-Technical debt is not a moral failing. Unscheduled debt is. Put repayment on the same board as features.
+Engineering craft is not aesthetics. It is whether the next engineer — including future you — can change the system without folklore and without fear.
 
-Incidents are expensive coaching. The write-up should change a checklist, a test, or an ownership map — not just a feeling.
+Architecture that cannot be walked back becomes politics. Prefer reversible decisions with explicit revisit criteria.
 
-Process should be light enough to change. If your AI workflow cannot be updated when a model, connector, or compliance rule changes, you do not have a workflow — you have a ritual.
+Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.
 
-Prefer reversible decisions. Architecture that cannot be walked back becomes politics.
+## The wreck as syllabus
 
-Craft shows up in boring places: migrations sized to capacity, alerts that mean something, reviews that leave the code more teachable.
+I teach from failure modes because teams already have scars. Naming them precisely is faster than inventing a framework brand.
 
-Buy-versus-build debates should start from ownership. If nobody on your team can operate the failure mode, you did not buy a capability — you rented a demo.
+Big-bang migrations that consume goodwill and leave half-migrated states.
 
-On migrations that respect team capacity, the leadership move is to make the invisible visible: ownership, verification, and the path for the next person.
+Docs that rot because nobody owns freshness; new hires learn folklore instead.
 
-Mentorship scales when seniors narrate tradeoffs in writing. A one-paragraph decision record teaches more than a hallway conversation that evaporates.
+Reviews as status gates — slow, unkind, and educationally empty.
 
-Classic engineering writing on simplicity and operability still applies — complexity is a tax teams pay daily.
+Dashboards nobody trusts because alerts fire for noise and silence for harm.
 
-I prefer written decisions over verbal ones. Memory is a poor archive, and AI tools make fluent improvisation cheap — which raises the value of durable context.
+## Boring controls that compound
 
-None of this requires a new framework brand. It requires attention, a short feedback loop, and the humility to change process when agents join the workflow.
+Those failures map to controls. Install the smallest ones that make failure legible.
 
-Ship the habit, not the slogan. Then measure whether the next person can run it without you.
+Documentation that earns its keep means runbooks and decision records over aspirational diagrams. If freshness has no owner, docs become fiction.
+
+Observability that tells a story correlates user impact → service → change → owner. Orphaned dashboards are decoration. Alerts that fire for noise train people to ignore harm.
+
+Small platforms that stay operable refuse features that cannot be owned on-call by the same team that ships them. Unowned platform features are product debt wearing infrastructure clothing.
+
+Testing strategy when speed matters protects the invariants customers feel. Coverage percentages without risk focus become theater.
+
+API design for inheritors: name invariants, versioning rules, and what “breaking” means before the first client. Clever endpoints without consumer contracts become permanent politics.
+
+Technical debt with a repayment schedule appears beside features with an owner and a trigger metric. Unscheduled debt always loses to the loudest roadmap slide.
+
+## Where this shows up
+
+Incident response produces a beautiful timeline and no permanent control. The next similar failure arrives on schedule. Remediation means a test, a rate limit, a privilege change, or a budget — something that bites.
+
+A migration is “done” at 80% with a cleanup ticket in the backlog forever. Craft would have treated 100% with kill-switch removal as the definition of done.
+
+A team ships a “temporary” dual-write and forgets the delete ticket. Six months later both paths are load-bearing. Craft would have put a repayment date next to the feature flag.
+
+## Tradeoffs worth naming
+
+Teaching reviews take minutes longer than rubber stamps. Escaped defects take days. Budget the minutes.
+
+Right-sizing tests means saying no to low-value suites that burn CI energy without protecting user invariants.
+
+Reversible architecture can look indecisive to executives who want inevitability. Translate: we are buying option value and reducing blast radius.
+
+## Operating principles
+
+Prefer reversible moves. If you cannot say how you would unwind the decision, you are not done designing it.
+
+Testing strategy when speed matters protects the invariants customers feel. Coverage percentages without risk focus become theater.
+
+API design for inheritors: name invariants, versioning rules, and what “breaking” means before the first client. Clever endpoints without consumer contracts become permanent politics.
+
+Technical debt with a repayment schedule appears beside features with an owner and a trigger metric. Unscheduled debt always loses to the loudest roadmap slide.
+
+Code review as teaching: require at least one pattern comment. Reject gatekeeping that only polices style without teaching why. Slow, unkind reviews are a leadership failure disguised as standards.
+
+Migrations that respect capacity use thin slices, dual-write windows, and a kill switch. Big-bang weekends consume goodwill and leave half-migrated states.
+
+An architecture review celebrates a new service boundary. Nobody asks who owns the failure mode across the new network hop. Three incidents later, the boundary is rewritten — this time with an owner map.
+
+If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.
+
+Leave the codebase more explainable than you found it.
+
+## Do not silo the practice
+
+A durable approach borrows controls from Green software and efficiency instead of inventing a parallel religion.
+
+The energy cost of flaky CI includes engineer attention. Fix flakes as reliability work with an SLO on quarantine time.
+
+Architecture review asks about carbon once, records a slogan, changes no sizing decision. Next quarter the same waste remains. Sustainability reviews need owners who can change schedules or footprint.
+
+Sustainable pace and sustainable systems share a refusal: do not buy speed with hidden churn — flaky tests, retry storms, or always-on idle fleets.
+
+## Tempo changed; accountability did not
+
+If agents or copilots touch this workflow, add budgets, logs, and a kill switch before you add autonomy.
+
+Prompting is not process. Harnesses are: allow-lists, templates, evals, and review norms that survive a teammate leaving.
+
+## Make it observable
+
+Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+
+- Every quarter: schedule debt repayment proportional to change-fail pain.
+- Every design: state the reversible path and the revisit date.
+- Documentation that earns its keep means runbooks and decision records over aspirational diagrams.
+- Every incident: ship one permanent control within a week.
+- Every API: publish consumer expectations and deprecation rules.
+- Every review: teach one reusable pattern in writing.
+
+## The point, again
+
+Prefer systems that teach through their structure — clear boundaries beat cleverness.
+
+Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.
+
+On **Migrations that respect team capacity**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?

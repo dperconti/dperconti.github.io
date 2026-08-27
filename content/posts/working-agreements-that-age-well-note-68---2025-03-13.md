@@ -7,26 +7,101 @@ categories:
 draft: false
 ---
 
-There is a version of working agreements that age well — note 68 that looks busy and a version that compounds. The difference is rarely a tool.
+Another working note on **Working agreements that age well**: same thesis, sharper edges from recent delivery pressure.
 
-The cheapest alignment tool is still a short doc with a decision and a date. Meetings are for conflict, not for status karaoke.
+Cross-team collaboration gets romanticized as “more communication.” Most teams already communicate constantly. What they lack is a published interface for work that crosses boundaries.
 
-Cross-team collaboration fails when interfaces are social instead of technical: Slack threads instead of contracts, heroes instead of owners.
+Alignment is a protocol — written inputs, outputs, owners, and failure modes — not a recurring meeting that performs agreement.
 
-Sustainability shows up as fewer retries, right-sized environments, and CI that does not burn cycles for vanity. Efficiency is operational maturity.
+Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.
 
-Write the boundary as if it were an API: inputs, outputs, latency expectations, and who gets paged.
+## Interfaces, feedback, ownership
 
-When two teams disagree, treat the disagreement as a design input. Resolve it in the interface, not in personality.
+Treat the practice as a system with inputs, outputs, and feedback. If any of those are social-only, the system will drift.
 
-In practice that means shorter cycles: decide, ship a thin slice, review what broke, coach the pattern into the next person. Long programs without those loops become status machines.
+Replace status karaoke with a short decision doc: context, options, choice, date, owner. Status belongs in a dashboard or a running doc; meetings are for conflict and irreversible choices.
 
-On working agreements that age well — note 68, the leadership move is to make the invisible visible: ownership, verification, and the path for the next person.
+The meeting you should replace with a doc is the one that only redistributes status. Keep the meeting that resolves contested decisions — and require options in writing before it starts.
 
-Process should be light enough to change. If your AI workflow cannot be updated when a model, connector, or compliance rule changes, you do not have a workflow — you have a ritual.
+Product wants a feature; platform wants stability. Without a capacity envelope and SLO, every conversation becomes moral. With them, the conversation becomes scheduling and tradeoffs.
 
-I prefer written decisions over verbal ones. Memory is a poor archive, and AI tools make fluent improvisation cheap — which raises the value of durable context.
+Useful signals tie to user impact and operability: escaped defects, stale answers, retry amplification, review cycle time, on-call toil. Vanity metrics create vanity leadership.
 
-None of this requires a new framework brand. It requires attention, a short feedback loop, and the humility to change process when agents join the workflow.
+Publish “done” definitions across teams before joint work starts — especially for platform and product hand-offs. Ambiguous done is how resentments form.
 
-Coaching is the mechanism. Process is the memory. Tools are leverage — only when ownership stays human.
+Prefer async artifacts for continuity. Use meetings when the decision is contested or irreversible. Calendar density is not collaboration quality.
+
+Two orgs share on-call for a boundary service. Without a primary for each failure mode, pages bounce. Shared ownership without primaries is a page-routing bug.
+
+Meetings used as a substitute for written interfaces — everyone left “aligned,” nobody can explain ownership later.
+
+For every shared system: name a primary owner per failure mode.
+
+Before joint delivery: publish the interface doc and the escalation path.
+
+A hand-off ticket says “ready for platform.” Platform discovers missing authz assumptions in production. Ready now means: runbook, rollback, and a joint drill — not a status emoji.
+
+## What you give up
+
+Written interfaces cost an afternoon. Unwritten interfaces cost a quarter. Choose deliberately.
+
+Strict ownership can feel cold. Ambiguous ownership feels warm until the page. Prefer clear primary owners with named collaborators.
+
+Fewer meetings feel risky to managers who equate presence with control. Measure outcomes and escaped misunderstandings instead of seat time.
+
+Working agreements that age well name how to change the agreement. Static culture docs become wallpaper within a quarter.
+
+## How to hold the standard
+
+Prefer reversible moves. If you cannot say how you would unwind the decision, you are not done designing it.
+
+Prefer async artifacts for continuity. Use meetings when the decision is contested or irreversible. Calendar density is not collaboration quality.
+
+Working agreements that age well name how to change the agreement. Static culture docs become wallpaper within a quarter.
+
+Conflict as a design input means capturing the disagreement as constraints and options. Personality narratives are a dead end; interface narratives ship.
+
+Hero bridges — one person who translates between teams — feel invaluable until they burn out and the org discovers it had no interface. Document what the hero knows while they are still standing.
+
+Interfaces between teams beat shared Slack channels. Channels are transport; interfaces are contracts. Confusing the two creates ambient anxiety and no ownership.
+
+A working group creates a Slack channel for “alignment.” Six weeks later the channel is noise and decisions still live in side DMs. Delete the channel or convert it into a decision log with owners.
+
+If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.
+
+If collaboration feels expensive, check the interface before you hire more coordinators.
+
+## Where this couples to adjacent work
+
+Leaders who isolate the practice from Engineering leadership create beautiful local optima and expensive global failure.
+
+Ceremony is optional; continuity is not. Keep the lightest process that still produces decisions, owners, and evidence. Delete the rest without guilt.
+
+Hiring celebrates architects who dazzle in system-design interviews but cannot leave a service operable on-call. Six months later, juniors inherit tribal knowledge. The leadership miss was selecting for theater over inheritance.
+
+Judgment under load is a practiced skill: triage, communicate, decide with incomplete information, and write down what you assumed. Managers who only practice judgment in calm weeks fail the weeks that matter.
+
+## When models join the workflow
+
+Fluent output raises the value of written invariants. Improvisation got cheaper; durable context got more precious.
+
+Where copilots help: boilerplate, test scaffolding, exploratory refactors with strong suites. Where they hide debt: security boundaries, concurrency, and domain invariants nobody wrote down.
+
+## A plan for the next seven days
+
+Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+
+- After hand-off: verify the receiving team can operate the failure mode without a Slack ping to the sender.
+- For every shared system: name a primary owner per failure mode.
+- When stuck: write the disagreement as options with tradeoffs; meet only to choose.
+- Quarterly: delete channels and meetings that produce no decisions or artifacts.
+- Replace status karaoke with a short decision doc: context, options, choice, date, owner.
+- The meeting you should replace with a doc is the one that only redistributes status.
+
+## The point, again
+
+Protocols beat vibes. Write the boundary, name the owner, make failure legible.
+
+Continuity is the product. Tools and frameworks are optional accessories.
+
+On **Working agreements that age well**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?

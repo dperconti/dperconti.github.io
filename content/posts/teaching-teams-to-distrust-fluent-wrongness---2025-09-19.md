@@ -7,28 +7,95 @@ categories:
 draft: false
 ---
 
-Good engineering leadership treats teaching teams to distrust fluent wrongness as practice — repeated, observable, coachable.
+**Teaching teams to distrust fluent wrongness** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
 
-Team literacy matters more than individual clever prompts. Shared harnesses beat private magic.
+The useful question for AI in engineering workflows is boring: what did the model change, what did a human verify, and where does that trail live?
 
-Watch for fluent wrongness. Confidence in the output is not evidence.
+Fluent wrongness is the new failure mode. Confidence in prose is not evidence.
 
-In practice that means shorter cycles: decide, ship a thin slice, review what broke, coach the pattern into the next person. Long programs without those loops become status machines.
+Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.
 
-AI tools change how fast drafts appear. They do not change who is accountable for correctness, security, or operability.
+## Systems view
 
-Leaders should ask: what did the model change, what did a human verify, and where is that trail stored?
+Treat the practice as a system with inputs, outputs, and feedback. If any of those are social-only, the system will drift.
 
-Cross-team collaboration gets easier when you publish interfaces: who consumes what, what “done” means, and how failures are communicated. Ambiguity is expensive; clarity is a kindness.
+Shipping with models without losing craft requires the same standards you already had for human drafts, plus an explicit verification step because fluency hides gaps.
 
-On teaching teams to distrust fluent wrongness, the leadership move is to make the invisible visible: ownership, verification, and the path for the next person.
+Require a verification trail on assisted work: what the model changed, what a human checked, and where that note lives — PR, ticket, or decision record. Authorship is not ownership of production risk.
 
-Process should be light enough to change. If your AI workflow cannot be updated when a model, connector, or compliance rule changes, you do not have a workflow — you have a ritual.
+Someone pastes a production schema into a consumer model tool to “move faster.” Leadership had no published data boundary. That is not an individual ethics failure first — it is a missing control.
 
-Modern AI tooling voices matter most when they talk about evals, harnesses, and failure modes — not when they sell inevitability.
+Useful signals tie to user impact and operability: escaped defects, stale answers, retry amplification, review cycle time, on-call toil. Vanity metrics create vanity leadership.
 
-I prefer written decisions over verbal ones. Memory is a poor archive, and AI tools make fluent improvisation cheap — which raises the value of durable context.
+Keeping humans accountable when models draft code means the merge still carries a name and a verification note. Anonymized autocomplete is not an accountability model.
 
-None of this requires a new framework brand. It requires attention, a short feedback loop, and the humility to change process when agents join the workflow.
+Evaluating AI assistance without vanity metrics means comparing escaped defects, onboarding time, and review quality — not counting accepted suggestions like arcade tickets.
 
-Ship the habit, not the slogan. Then measure whether the next person can run it without you.
+AI on the slide deck: logo, inevitability, no workflow. AI in the workflow: ticket → draft → harness checks → human verification note → review. Only one of those ships safely.
+
+Private prompt folklore instead of shared harnesses and policies.
+
+Prefer shared eval snippets and prompt templates over private magic.
+
+Add a “human verified” checklist to PRs that used model drafts.
+
+A team bans AI briefly after a bad merge, then reintroduces it without new controls. The ban was theater; the missing piece was verification and data boundaries.
+
+## Tradeoffs worth naming
+
+Verification notes add friction to the PR. They remove friction from the incident. Budget for the former.
+
+Restricting tools feels anti-innovation until the first compliance event. Policy is what lets you expand autonomy later.
+
+Tempo gains are real on boilerplate and real-negative on subtle invariants. Teach the difference explicitly.
+
+Define allowed tools and data boundaries. Copilots without policy become shadow IT with autocomplete. Secrets, customer data, and authz logic need explicit rules.
+
+## How to hold the standard
+
+Optimize for the next person's onboarding cost. Every undocumented exception becomes a tax on hiring and incident response.
+
+Evaluating AI assistance without vanity metrics means comparing escaped defects, onboarding time, and review quality — not counting accepted suggestions like arcade tickets.
+
+Define allowed tools and data boundaries. Copilots without policy become shadow IT with autocomplete. Secrets, customer data, and authz logic need explicit rules.
+
+Update review norms when copilots arrive. If you do not, you will approve fluent bugs faster. Slow the merge until verification is explicit.
+
+Where copilots help: boilerplate, test scaffolding, exploratory refactors with strong suites. Where they hide debt: security boundaries, concurrency, and domain invariants nobody wrote down.
+
+AI changes tempo; leadership still owns outcomes. If escaped defects rise while suggestion counts rise, you optimized the wrong dashboard.
+
+A strong IC becomes a bottleneck because only they know the “good prompts.” Codify the harness: templates, allow-listed tools, eval snippets, and examples of refusals.
+
+None of these principles require a new program name. They require attention in the path of work — reviews, design notes, procurement, and post-incident follow-through.
+
+Tempo is a gift. Accountability is still the job. Keep both in the same sentence.
+
+## The neighboring discipline
+
+This work does not live alone. It couples to Buy-versus-build judgment.
+
+Price integration debt explicitly: connectors, identity, logging, eval wiring, and the people who will babysit them. Purchase price is the down payment.
+
+No exit plan. Price increases. Suddenly “switching costs” are discovered during budget season. A tabletop unwind once a year is cheaper than surprise.
+
+Platforms you buy still need owners — for identity integration, data retention, incident comms, and process translation. Procurement does not create ownership.
+
+## Make it observable
+
+Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+
+- Require a verification trail on assisted work: what the model changed, what a human checked, and where that note lives — PR, ticket, or decision record.
+- Add a “human verified” checklist to PRs that used model drafts.
+- Prefer shared eval snippets and prompt templates over private magic.
+- Track escaped defects that originated in assisted drafts and coach from that set.
+- Publish allowed tools and prohibited data classes in the engineering handbook.
+- Run a monthly literacy clinic on one failure mode (secrets, authz, flaky tests).
+
+## Close
+
+Literacy is a coaching problem. Treat it like any other craft skill under load.
+
+Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.
+
+On **Teaching teams to distrust fluent wrongness**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?

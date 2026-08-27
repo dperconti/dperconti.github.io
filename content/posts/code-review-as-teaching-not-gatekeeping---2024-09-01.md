@@ -7,28 +7,103 @@ categories:
 draft: false
 ---
 
-If you lead engineers, you already know the temptation: solve the hard part yourself. That instinct fights code review as teaching, not gatekeeping.
+**Code review as teaching, not gatekeeping** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
 
-Craft shows up in boring places: migrations sized to capacity, alerts that mean something, reviews that leave the code more teachable.
+Engineering craft is not aesthetics. It is whether the next engineer — including future you — can change the system without folklore and without fear.
 
-Incidents are expensive coaching. The write-up should change a checklist, a test, or an ownership map — not just a feeling.
+Architecture that cannot be walked back becomes politics. Prefer reversible decisions with explicit revisit criteria.
 
-Sustainability shows up as fewer retries, right-sized environments, and CI that does not burn cycles for vanity. Efficiency is operational maturity.
+I am not interested in branding this work. I am interested in whether the next person can run it without a week of hallway archaeology.
 
-Technical debt is not a moral failing. Unscheduled debt is. Put repayment on the same board as features.
+## Transferring judgment
 
-Prefer reversible decisions. Architecture that cannot be walked back becomes politics.
+If the practice only lives in your head, you have a bus factor of one. Mentorship here means transferring judgment through artifacts.
 
-When agents join the loop, treat them like junior systems: limited privileges, explicit tools, budgets, and a human who owns the outcome. Autonomy without audit is just distributed risk.
+Sponsor publicly. Put someone’s name on the design review invite, the RFC author line, the customer-facing postmortem. Private belief in someone does not compound; public sponsorship does.
 
-On code review as teaching, not gatekeeping, the leadership move is to make the invisible visible: ownership, verification, and the path for the next person.
+Small platforms that stay operable refuse features that cannot be owned on-call by the same team that ships them. Unowned platform features are product debt wearing infrastructure clothing.
 
-In practice that means shorter cycles: decide, ship a thin slice, review what broke, coach the pattern into the next person. Long programs without those loops become status machines.
+Incident response that improves the system ends with a control change dated within a week. Timelines without control changes are storytelling.
 
-Classic engineering writing on simplicity and operability still applies — complexity is a tax teams pay daily.
+A team ships a “temporary” dual-write and forgets the delete ticket. Six months later both paths are load-bearing. Craft would have put a repayment date next to the feature flag.
 
-I prefer written decisions over verbal ones. Memory is a poor archive, and AI tools make fluent improvisation cheap — which raises the value of durable context.
+Juniors need safe ownership of a thin slice and specific feedback. Seniors need sponsorship to teach — review quality, RFC authorship, incident lead — not only more tickets.
 
-None of this requires a new framework brand. It requires attention, a short feedback loop, and the humility to change process when agents join the workflow.
+Incident response produces a beautiful timeline and no permanent control. The next similar failure arrives on schedule. Remediation means a test, a rate limit, a privilege change, or a budget — something that bites.
 
-Lead for continuity. Leave systems and people that still work when you are not in the room.
+Documentation that earns its keep means runbooks and decision records over aspirational diagrams. If freshness has no owner, docs become fiction.
+
+Observability that cannot answer “what changed for which users?” is incomplete. Build the story path before you build the fifteenth chart.
+
+An architecture review celebrates a new service boundary. Nobody asks who owns the failure mode across the new network hop. Three incidents later, the boundary is rewritten — this time with an owner map.
+
+## Practices with enough detail to copy
+
+- Every quarter: schedule debt repayment proportional to change-fail pain.
+- Every design: state the reversible path and the revisit date.
+- Every API: publish consumer expectations and deprecation rules.
+- Every review: teach one reusable pattern in writing.
+- Every incident: ship one permanent control within a week.
+
+## How the practice decays
+
+- Reviews as status gates — slow, unkind, and educationally empty.
+- Big-bang migrations that consume goodwill and leave half-migrated states.
+- Docs that rot because nobody owns freshness; new hires learn folklore instead.
+
+## Operating principles
+
+Hold three standards at once: a named owner, a written control, and a verification signal. Missing any one turns the practice into performance.
+
+Observability that cannot answer “what changed for which users?” is incomplete. Build the story path before you build the fifteenth chart.
+
+Migrations that respect capacity use thin slices, dual-write windows, and a kill switch. Big-bang weekends consume goodwill and leave half-migrated states.
+
+Architecture decisions you can reverse include a rollback path and a date to re-evaluate assumptions. Inevitable-looking diagrams are often just unchallenged ones.
+
+API design for inheritors: name invariants, versioning rules, and what “breaking” means before the first client. Clever endpoints without consumer contracts become permanent politics.
+
+Observability that tells a story correlates user impact → service → change → owner. Orphaned dashboards are decoration. Alerts that fire for noise train people to ignore harm.
+
+API consumers invent conflicting interpretations of optional fields because the contract never said which fields are load-bearing. A one-page consumer expectation doc would have been cheaper than the outage.
+
+If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.
+
+Refuse to scale a workflow you cannot explain on a whiteboard to a new hire in fifteen minutes.
+
+## Where this couples to adjacent work
+
+This work does not live alone. It couples to Engineering leadership.
+
+Put repayment of known debt on the same board as features. Unowned debt is future incident prep disguised as optimism. If it cannot compete for capacity in the open, it will compete for sleep during an outage.
+
+A leader clears a review queue personally for two sprints. Throughput rises, then collapses when they travel. The missing investment was teaching reviewers the standards in writing and calibrating once in a huddle — not becoming the queue.
+
+Continuity planning is leadership work even when the org chart is stable. Ask who can run the critical path if two people are out. If the answer is folklore, you have a continuity defect — schedule the teaching and the written runbook before the calendar forces it.
+
+## Harnesses beat vibes
+
+If agents or copilots touch this workflow, add budgets, logs, and a kill switch before you add autonomy.
+
+Keeping humans accountable when models draft code means the merge still carries a name and a verification note. Anonymized autocomplete is not an accountability model.
+
+Orchestration without a black-box conductor means you can explain the workflow on a whiteboard and pause any step. If you cannot, you cannot operate it.
+
+## Make it observable
+
+Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+
+- Every review: teach one reusable pattern in writing.
+- Every design: state the reversible path and the revisit date.
+- Every API: publish consumer expectations and deprecation rules.
+- Small platforms that stay operable refuse features that cannot be owned on-call by the same team that ships them.
+- Incident response that improves the system ends with a control change dated within a week.
+- Every quarter: schedule debt repayment proportional to change-fail pain.
+
+## What to carry forward
+
+Leave the codebase more explainable than you found it.
+
+Continuity is the product. Tools and frameworks are optional accessories.
+
+On **Code review as teaching, not gatekeeping**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?

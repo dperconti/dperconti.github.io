@@ -7,30 +7,103 @@ categories:
 draft: false
 ---
 
-If you lead engineers, you already know the temptation: solve the hard part yourself. That instinct fights trust compounds slower than roadmaps without the theater.
+Without the theater, **Trust compounds slower than roadmaps** is quieter: fewer frameworks, more written owners, less applause for motion.
 
-A useful leadership move is to make the work visible: write the decision, name the owner, set the review date. Theater thrives in fog.
+Cross-team collaboration gets romanticized as “more communication.” Most teams already communicate constantly. What they lack is a published interface for work that crosses boundaries.
 
-Trust compounds when leaders absorb uncertainty without dumping it as urgency onto the people closest to the code.
+Shared ownership across org boundaries needs a named primary for each failure mode. Co-owning everything is owning nothing.
 
-When agents join the loop, treat them like junior systems: limited privileges, explicit tools, budgets, and a human who owns the outcome. Autonomy without audit is just distributed risk.
+I am not interested in branding this work. I am interested in whether the next person can run it without a week of hallway archaeology.
 
-Hands-on does not mean doing everyone’s job. It means knowing where the system will tax the team and being willing to renegotiate scope when reality asks for it.
+## Interfaces, feedback, ownership
 
-Coaching means staying close enough to feel drag — latency in decisions, vague ownership, reviews that teach nothing — then clearing it without taking the keyboard permanently.
+Treat the practice as a system with inputs, outputs, and feedback. If any of those are social-only, the system will drift.
 
-Sustainability shows up as fewer retries, right-sized environments, and CI that does not burn cycles for vanity. Efficiency is operational maturity.
+Working agreements that age well name how to change the agreement. Static culture docs become wallpaper within a quarter.
 
-On trust compounds slower than roadmaps without the theater, the leadership move is to make the invisible visible: ownership, verification, and the path for the next person.
+Conflict as a design input means capturing the disagreement as constraints and options. Personality narratives are a dead end; interface narratives ship.
 
-Cross-team collaboration gets easier when you publish interfaces: who consumes what, what “done” means, and how failures are communicated. Ambiguity is expensive; clarity is a kindness.
+A hand-off ticket says “ready for platform.” Platform discovers missing authz assumptions in production. Ready now means: runbook, rollback, and a joint drill — not a status emoji.
 
-Leaders should ask: what did the model change, what did a human verify, and where is that trail stored?
+Useful signals tie to user impact and operability: escaped defects, stale answers, retry amplification, review cycle time, on-call toil. Vanity metrics create vanity leadership.
 
-Event-driven agentic workflows only help when every action emits an auditable event: what ran, why, with which tools, and what it changed.
+Hero bridges — one person who translates between teams — feel invaluable until they burn out and the org discovers it had no interface. Document what the hero knows while they are still standing.
 
-I prefer written decisions over verbal ones. Memory is a poor archive, and AI tools make fluent improvisation cheap — which raises the value of durable context.
+Interfaces between teams beat shared Slack channels. Channels are transport; interfaces are contracts. Confusing the two creates ambient anxiety and no ownership.
 
-None of this requires a new framework brand. It requires attention, a short feedback loop, and the humility to change process when agents join the workflow.
+A working group creates a Slack channel for “alignment.” Six weeks later the channel is noise and decisions still live in side DMs. Delete the channel or convert it into a decision log with owners.
 
-Ship the habit, not the slogan. Then measure whether the next person can run it without you.
+Hero bridges that mask missing contracts until attrition.
+
+For every shared system: name a primary owner per failure mode.
+
+Quarterly: delete channels and meetings that produce no decisions or artifacts.
+
+Product wants a feature; platform wants stability. Without a capacity envelope and SLO, every conversation becomes moral. With them, the conversation becomes scheduling and tradeoffs.
+
+## Tradeoffs worth naming
+
+Strict ownership can feel cold. Ambiguous ownership feels warm until the page. Prefer clear primary owners with named collaborators.
+
+Written interfaces cost an afternoon. Unwritten interfaces cost a quarter. Choose deliberately.
+
+Fewer meetings feel risky to managers who equate presence with control. Measure outcomes and escaped misunderstandings instead of seat time.
+
+Hand-offs that preserve context include decision history, open risks, and the last failed assumption — not only a ticket ID. Context loss is a defect.
+
+## Principles under ordinary pressure
+
+Hold three standards at once: a named owner, a written control, and a verification signal. Missing any one turns the practice into performance.
+
+Interfaces between teams beat shared Slack channels. Channels are transport; interfaces are contracts. Confusing the two creates ambient anxiety and no ownership.
+
+Hand-offs that preserve context include decision history, open risks, and the last failed assumption — not only a ticket ID. Context loss is a defect.
+
+Treat conflict as design input. Resolve it in the interface, not in personality. Productive disagreement about SLOs and capacity envelopes beats political disagreement about who is more strategic.
+
+Write the boundary as an API: inputs, outputs, latency expectations, error semantics, and who gets paged. If you cannot write that page, you do not have alignment — you have hope.
+
+The meeting you should replace with a doc is the one that only redistributes status. Keep the meeting that resolves contested decisions — and require options in writing before it starts.
+
+Two orgs share on-call for a boundary service. Without a primary for each failure mode, pages bounce. Shared ownership without primaries is a page-routing bug.
+
+None of these principles require a new program name. They require attention in the path of work — reviews, design notes, procurement, and post-incident follow-through.
+
+Continuity is the product of clear contracts — not of more conversation.
+
+## The neighboring discipline
+
+Leaders who isolate the practice from Engineering craft create beautiful local optima and expensive global failure.
+
+Technical debt with a repayment schedule appears beside features with an owner and a trigger metric. Unscheduled debt always loses to the loudest roadmap slide.
+
+Incident response produces a beautiful timeline and no permanent control. The next similar failure arrives on schedule. Remediation means a test, a rate limit, a privilege change, or a budget — something that bites.
+
+Small platforms that stay operable refuse features that cannot be owned on-call by the same team that ships them. Unowned platform features are product debt wearing infrastructure clothing.
+
+## Tempo changed; accountability did not
+
+If agents or copilots touch this workflow, add budgets, logs, and a kill switch before you add autonomy.
+
+Evaluating AI assistance without vanity metrics means comparing escaped defects, onboarding time, and review quality — not counting accepted suggestions like arcade tickets.
+
+Emit events for every tool call in production. Incidents without forensics become superstition. Event-driven design is how you keep humans in the loop without standing over the process.
+
+## A plan for the next seven days
+
+Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+
+- When stuck: write the disagreement as options with tradeoffs; meet only to choose.
+- For every shared system: name a primary owner per failure mode.
+- Conflict as a design input means capturing the disagreement as constraints and options.
+- After hand-off: verify the receiving team can operate the failure mode without a Slack ping to the sender.
+- Working agreements that age well name how to change the agreement.
+- Before joint delivery: publish the interface doc and the escalation path.
+
+## The point, again
+
+If collaboration feels expensive, check the interface before you hire more coordinators.
+
+If this feels quieter than a keynote, that is intentional. Compounding work rarely looks like theater.
+
+On **Trust compounds slower than roadmaps**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?

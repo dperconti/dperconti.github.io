@@ -7,28 +7,95 @@ categories:
 draft: false
 ---
 
-If you lead engineers, you already know the temptation: solve the hard part yourself. That instinct fights keeping humans accountable when models draft code.
+**Keeping humans accountable when models draft code** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
 
-Team literacy matters more than individual clever prompts. Shared harnesses beat private magic.
+Leaders who talk about AI in engineering workflows without talking about verification are selling tempo and buying escaped defects.
 
-Watch for fluent wrongness. Confidence in the output is not evidence.
+AI changes how fast drafts appear. It does not change who is accountable for correctness, security, or operability.
 
-Sustainability shows up as fewer retries, right-sized environments, and CI that does not burn cycles for vanity. Efficiency is operational maturity.
+The standard is inheritance. If a new teammate cannot find the owner, the control, and the evidence, you have a story — not a practice.
 
-Leaders should ask: what did the model change, what did a human verify, and where is that trail stored?
+## Why smart teams still dodge this
 
-AI tools change how fast drafts appear. They do not change who is accountable for correctness, security, or operability.
+Another objection: we bought a tool for this. Tools without owners become expensive folklore.
 
-When agents join the loop, treat them like junior systems: limited privileges, explicit tools, budgets, and a human who owns the outcome. Autonomy without audit is just distributed risk.
+Take the objection seriously. Lightweight is good. Invisible is not. The fix is shorter artifacts and clearer owners — not more ceremony.
 
-On keeping humans accountable when models draft code, the leadership move is to make the invisible visible: ownership, verification, and the path for the next person.
+## Mechanisms worth installing
 
-Cross-team collaboration gets easier when you publish interfaces: who consumes what, what “done” means, and how failures are communicated. Ambiguity is expensive; clarity is a kindness.
+Define allowed tools and data boundaries. Copilots without policy become shadow IT with autocomplete. Secrets, customer data, and authz logic need explicit rules.
 
-Modern AI tooling voices matter most when they talk about evals, harnesses, and failure modes — not when they sell inevitability.
+Shipping with models without losing craft requires the same standards you already had for human drafts, plus an explicit verification step because fluency hides gaps.
 
-I prefer written decisions over verbal ones. Memory is a poor archive, and AI tools make fluent improvisation cheap — which raises the value of durable context.
+Teach distrust of fluent wrongness. Models sound senior. Tests, invariants, and threat models still decide truth.
 
-None of this requires a new framework brand. It requires attention, a short feedback loop, and the humility to change process when agents join the workflow.
+Update review norms when copilots arrive. If you do not, you will approve fluent bugs faster. Slow the merge until verification is explicit.
 
-Ask your team one question in standup this week: what did we make easier to own?
+## Where this shows up
+
+Someone pastes a production schema into a consumer model tool to “move faster.” Leadership had no published data boundary. That is not an individual ethics failure first — it is a missing control.
+
+AI on the slide deck: logo, inevitability, no workflow. AI in the workflow: ticket → draft → harness checks → human verification note → review. Only one of those ships safely.
+
+A team bans AI briefly after a bad merge, then reintroduces it without new controls. The ban was theater; the missing piece was verification and data boundaries.
+
+## What you give up
+
+Do not build a program office for a one-team problem. Do not invent a framework brand. Do install the smallest control that makes failure legible.
+
+Tempo gains are real on boilerplate and real-negative on subtle invariants. Teach the difference explicitly.
+
+Verification notes add friction to the PR. They remove friction from the incident. Budget for the former.
+
+Restricting tools feels anti-innovation until the first compliance event. Policy is what lets you expand autonomy later.
+
+Private prompt folklore instead of shared harnesses and policies.
+
+## How to hold the standard
+
+Hold three standards at once: a named owner, a written control, and a verification signal. Missing any one turns the practice into performance.
+
+Update review norms when copilots arrive. If you do not, you will approve fluent bugs faster. Slow the merge until verification is explicit.
+
+Coach AI literacy as judgment: when to draft with a model, when to refuse, when to escalate. Literacy is a coaching problem, not a one-time workshop.
+
+Where copilots help: boilerplate, test scaffolding, exploratory refactors with strong suites. Where they hide debt: security boundaries, concurrency, and domain invariants nobody wrote down.
+
+Require a verification trail on assisted work: what the model changed, what a human checked, and where that note lives — PR, ticket, or decision record. Authorship is not ownership of production risk.
+
+Prompting is not process. Harnesses are: allow-lists, templates, evals, and review norms that survive a teammate leaving.
+
+A strong IC becomes a bottleneck because only they know the “good prompts.” Codify the harness: templates, allow-listed tools, eval snippets, and examples of refusals.
+
+None of these principles require a new program name. They require attention in the path of work — reviews, design notes, procurement, and post-incident follow-through.
+
+Keep the feedback loop short enough that the team can feel the practice working before the next planning cycle.
+
+## Where this couples to adjacent work
+
+This work does not live alone. It couples to Buy-versus-build judgment.
+
+Price integration debt explicitly: connectors, identity, logging, eval wiring, and the people who will babysit them. Purchase price is the down payment.
+
+Build the harness, buy the commodity works until someone rebuilds the commodity “for flexibility.” Flexibility without differentiated ownership is usually nostalgia.
+
+Start from ownership. If nobody on your team can operate the failure mode, you did not buy a capability — you rented a demo with a support email.
+
+## A plan for the next seven days
+
+Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+
+- Define allowed tools and data boundaries.
+- Run a monthly literacy clinic on one failure mode (secrets, authz, flaky tests).
+- Prefer shared eval snippets and prompt templates over private magic.
+- Shipping with models without losing craft requires the same standards you already had for human drafts, plus an explicit verification step because fluency hides gaps..
+- Track escaped defects that originated in assisted drafts and coach from that set.
+- Add a “human verified” checklist to PRs that used model drafts.
+
+## The point, again
+
+Own the outcome. Let models accelerate drafts — never the truth.
+
+Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.
+
+On **Keeping humans accountable when models draft code**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?

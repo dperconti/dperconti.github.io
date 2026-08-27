@@ -7,26 +7,103 @@ categories:
 draft: false
 ---
 
-There is a version of the new cost of custom: maintenance, not typing that looks busy and a version that compounds. The difference is rarely a tool.
+**The new cost of custom: maintenance, not typing** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
 
-AI compresses the typing cost of building. It does not compress the ownership cost of running what you built.
+Buy-versus-build judgment debates go wrong when they start from pride or fear instead of ownership: who runs the failure mode, and what does exit cost?
 
-A purchased AI tool still needs an owner on-call for failure modes, data handling, and process fit.
+If you cannot unwind it, you did not buy a tool — you adopted a dependency with a logo.
 
-Buy-versus-build debates should start from ownership. If nobody on your team can operate the failure mode, you did not buy a capability — you rented a demo.
+The standard is inheritance. If a new teammate cannot find the owner, the control, and the evidence, you have a story — not a practice.
 
-Make-or-buy decisions should include the cost of undoing the choice. Soft lock-in is still lock-in.
+## A week walking the practice
 
-Buy commodities. Build the harness that makes your team’s judgment visible: policy, evals, audit, and exit.
+Imagine ordinary pressure — not a lab. Someone proposes a change that touches this practice. The first question is not which tool. It is who owns the outcome and what you will verify.
 
-Sustainability shows up as fewer retries, right-sized environments, and CI that does not burn cycles for vanity. Efficiency is operational maturity.
+No exit plan. Price increases. Suddenly “switching costs” are discovered during budget season. A tabletop unwind once a year is cheaper than surprise.
 
-On the new cost of custom: maintenance, not typing, the leadership move is to make the invisible visible: ownership, verification, and the path for the next person.
+Day two is writing. A short decision record: context, options, choice, owner, revisit date. Without that page, the week becomes Slack archaeology.
 
-When agents join the loop, treat them like junior systems: limited privileges, explicit tools, budgets, and a human who owns the outcome. Autonomy without audit is just distributed risk.
+Build less, own more of the outcome: prefer thin custom layers over reimplementing commodity models. Copilots make greenfield look cheap until on-call inherits it.
 
-I prefer written decisions over verbal ones. Memory is a poor archive, and AI tools make fluent improvisation cheap — which raises the value of durable context.
+Write exit strategies for bought AI tooling before procurement: data export, prompt/eval portability, and a 90-day unwind drill. Soft lock-in is still lock-in.
 
-None of this requires a new framework brand. It requires attention, a short feedback loop, and the humility to change process when agents join the workflow.
+Midweek friction is expected. Clear drag — access, environments, unclear interfaces — before you add a status meeting that performs leadership.
 
-Ask your team one question in standup this week: what did we make easier to own?
+Integration debt after purchase: five half-connected identity paths and no single owner for authz bugs. Procurement celebrated; on-call paid.
+
+The new cost of custom is maintenance, not typing. AI makes that easy to forget until the second quarter of on-call.
+
+By week’s end, success is an operable slice: a log schema, an eval, a runbook, a kill switch, or a freshness owner — plus a human who can reverse the change.
+
+A vendor’s success metrics replace product metrics in leadership reviews. That is lock-in of attention. Keep your north-star metrics in-house.
+
+Evaluate AI vendors like critical-path systems: SLOs, incident communication, subprocessors, kill switches, and data boundaries.
+
+## What I refuse to romanticize
+
+- Custom platforms that reinvent commodity chrome while underfunding the harness.
+- No exit plan; switching costs discovered during an outage or a price hike.
+- Vendor success metrics replacing your product metrics.
+
+## What you give up
+
+Keeping harnesses in-house costs engineering time and preserves exit. Worth it for anything on the critical path.
+
+Vendor features arrive fast. Your process still needs translation into owned runbooks.
+
+Building custom feels like control and often buys maintenance. Buying feels like speed and often buys integration debt. Name the debt either way.
+
+## Operating principles
+
+Optimize for the next person's onboarding cost. Every undocumented exception becomes a tax on hiring and incident response.
+
+Evaluate AI vendors like critical-path systems: SLOs, incident communication, subprocessors, kill switches, and data boundaries.
+
+Price integration debt explicitly: connectors, identity, logging, eval wiring, and the people who will babysit them. Purchase price is the down payment.
+
+Start from ownership. If nobody on your team can operate the failure mode, you did not buy a capability — you rented a demo with a support email.
+
+Platforms you buy still need owners — for identity integration, data retention, incident comms, and process translation. Procurement does not create ownership.
+
+Evaluating vendors like critical-path systems includes asking how you pause them. No pause path means no operational maturity.
+
+Build the harness, buy the commodity works until someone rebuilds the commodity “for flexibility.” Flexibility without differentiated ownership is usually nostalgia.
+
+If your calendar cannot fit a one-page decision record, it also cannot fit the rework that follows from skipping it.
+
+Own the outcome. Buy time on commodities; keep judgment and exit under your roof.
+
+## The neighboring discipline
+
+A durable approach borrows controls from Agentic systems instead of inventing a parallel religion.
+
+Orchestration without a black-box conductor means you can explain the workflow on a whiteboard and pause any step. If you cannot, you cannot operate it.
+
+A multi-agent demo impresses leadership. In production, nobody can explain which agent wrote which file or why. Specialization without interfaces is just distributed confusion.
+
+When an agent should stop and ask is a policy question, not a vibe. Write the list: irreversible writes, authz, customer communication, spend above threshold, tools outside the allow-list.
+
+## When models join the workflow
+
+Fluent output raises the value of written invariants. Improvisation got cheaper; durable context got more precious.
+
+Teach distrust of fluent wrongness. Models sound senior. Tests, invariants, and threat models still decide truth.
+
+## Checklist you can run
+
+Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+
+- Build less, own more of the outcome: prefer thin custom layers over reimplementing commodity models.
+- Write exit strategies for bought AI tooling before procurement: data export, prompt/eval portability, and a 90-day unwind drill.
+- Require eval and audit ownership to stay in-house for AI tooling.
+- Annual: run a tabletop exit for one critical vendor.
+- Every build: name the commodity you refused to buy and why ownership differs.
+- Every purchase: name the internal owner and the failure-mode runbook.
+
+## Close
+
+If nobody can operate the failure mode, you rented a demo.
+
+If this feels quieter than a keynote, that is intentional. Compounding work rarely looks like theater.
+
+On **The new cost of custom: maintenance, not typing**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?

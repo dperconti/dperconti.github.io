@@ -7,26 +7,109 @@ categories:
 draft: false
 ---
 
-Quiet teams often get this right before loud ones do: grounding answers in systems teams actually run is a system of habits, not a quarterly theme.
+**Grounding answers in systems teams actually run** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
 
-Retrieval quality is an operations problem: stale sources, missing permissions, and chunking that shreds meaning.
+Retrieval and operable RAG is infrastructure with a product owner. Treat it that way and you will skip a year of trust erosion.
 
-A RAG system without an owner for freshness is a demo with a long half-life of embarrassment.
+Retrieval quality is an operations problem. Chunking, access control, and source freshness decide trust more than model choice.
 
-Sustainability shows up as fewer retries, right-sized environments, and CI that does not burn cycles for vanity. Efficiency is operational maturity.
+Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.
 
-Build evals early. Without them you are arguing about vibes while users lose trust.
+## The wreck as syllabus
 
-Connectors and access control are where RAG projects die. Treat them as product work, not glue.
+I teach from failure modes because teams already have scars. Naming them precisely is faster than inventing a framework brand.
 
-In practice that means shorter cycles: decide, ship a thin slice, review what broke, coach the pattern into the next person. Long programs without those loops become status machines.
+No owner for corpus freshness; silent drift until users stop asking.
 
-On grounding answers in systems teams actually run, the leadership move is to make the invisible visible: ownership, verification, and the path for the next person.
+Treating retrieval as a model problem when it is a data-operations problem.
 
-Buy-versus-build debates should start from ownership. If nobody on your team can operate the failure mode, you did not buy a capability — you rented a demo.
+Evals skipped because “users will tell us.” Users leave instead.
 
-I prefer written decisions over verbal ones. Memory is a poor archive, and AI tools make fluent improvisation cheap — which raises the value of durable context.
+Connectors treated as temporary glue with no product owner.
 
-None of this requires a new framework brand. It requires attention, a short feedback loop, and the humility to change process when agents join the workflow.
+## The operating controls
 
-Coaching is the mechanism. Process is the memory. Tools are leverage — only when ownership stays human.
+Those failures map to controls. Install the smallest ones that make failure legible.
+
+Ground answers in systems teams actually run — tickets, dashboards, runbooks — not paraphrases of marketing docs. Citation quality is a product requirement.
+
+Chunking strategy as an architecture choice belongs in the same review as service boundaries. It changes failure modes and cost profiles.
+
+Connectors need product management: identity, rate limits, partial failure, schema drift, and who owns the break. Glue code without an owner becomes a career-limiting outage.
+
+Fail gracefully when context is thin: say what you do not know, ask for a tighter question, or escalate to a human path. Inventing confidence is how demos become liabilities.
+
+Design chunking as architecture: preserve meaning units, cite sources, and refuse to shred tables into noise. “Improving” chunk size without an eval is a regression with good intentions.
+
+When retrieval lies politely, users blame “the AI” and stop reporting. Instrument feedback and retrieval traces so lies become tickets with owners.
+
+## Scenes from delivery
+
+Who owns the knowledge graph behind the bot? “The AI squad” means nobody owns source quality. Assign freshness owners per major corpus with an SLO.
+
+Permissions were “coming later.” The chat UI shipped. Then an answer included a doc the user should not see. That is not a model problem; it is an access-control problem you deferred.
+
+A bot answers from last quarter’s runbooks with perfect tone and wrong on-call. Freshness had no owner. Users learned to distrust the system in a week.
+
+## What you give up
+
+Thin-context refusals lower answer rate and raise trust. Optimize for trust if the product depends on it.
+
+Evals feel slow before launch and priceless after. Fifty gold questions beat a thousand vague complaints.
+
+Strict authz can reduce recall. That is acceptable. Unauthorized recall is not a quality feature.
+
+## How to hold the standard
+
+Hold three standards at once: a named owner, a written control, and a verification signal. Missing any one turns the practice into performance.
+
+Fail gracefully when context is thin: say what you do not know, ask for a tighter question, or escalate to a human path. Inventing confidence is how demos become liabilities.
+
+Design chunking as architecture: preserve meaning units, cite sources, and refuse to shred tables into noise. “Improving” chunk size without an eval is a regression with good intentions.
+
+When retrieval lies politely, users blame “the AI” and stop reporting. Instrument feedback and retrieval traces so lies become tickets with owners.
+
+Permissions in RAG are not optional. Enforce authz at retrieval time; never “filter in the prompt.” Prompt-side filtering is a leak with extra steps.
+
+Instrument the pipeline: query → retrieved IDs → scores → answer → user feedback. Make polite lies auditable. If you cannot replay what was retrieved, you cannot improve it.
+
+A connector flakes under rate limits. The bot answers from a partial corpus and sounds complete. Partial retrieval without a warning is a product bug.
+
+Teach the principles in the artifacts people already touch: PR templates, RFC sections, architecture checklists, and on-call runbooks.
+
+Keep the feedback loop short enough that the team can feel the practice working before the next planning cycle.
+
+## Do not silo the practice
+
+This work does not live alone. It couples to Engineering craft.
+
+API design for inheritors: name invariants, versioning rules, and what “breaking” means before the first client. Clever endpoints without consumer contracts become permanent politics.
+
+A team ships a “temporary” dual-write and forgets the delete ticket. Six months later both paths are load-bearing. Craft would have put a repayment date next to the feature flag.
+
+Observability that tells a story correlates user impact → service → change → owner. Orphaned dashboards are decoration. Alerts that fire for noise train people to ignore harm.
+
+## Harnesses beat vibes
+
+Retrieval systems sit next to agentic workflows. The same discipline applies: privileges, audit trails, and human override when context is thin or side effects are irreversible.
+
+Orchestration without a black-box conductor: prefer explicit workflows over an opaque planner nobody can debug. Debuggability is a product requirement.
+
+## Checklist you can run
+
+Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+
+- Log retrieval traces for every production answer for at least 30 days.
+- Before UI polish: ship connectors, authz checks, and a 50-question eval set.
+- Name a freshness owner per major source with a refresh SLO.
+- Chunking strategy as an architecture choice belongs in the same review as service boundaries.
+- Ground answers in systems teams actually run — tickets, dashboards, runbooks — not paraphrases of marketing docs.
+- Add a thin-context path: refuse or escalate instead of inventing.
+
+## The point, again
+
+Operable RAG is infrastructure with a product owner. Demo RAG is a screenshot.
+
+Write the decision. Name the owner. Verify the outcome. Repeat until the next person can run it.
+
+On **Grounding answers in systems teams actually run**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?

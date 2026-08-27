@@ -7,26 +7,103 @@ categories:
 draft: false
 ---
 
-I keep returning to a simple test: after a week of work on when product and platform disagree productively, can someone outside the room explain what changed and who owns it?
+**When product and platform disagree productively** is easy to endorse and hard to operationalize. The difference is whether you can point to owners, controls, and evidence.
 
-Cross-team collaboration fails when interfaces are social instead of technical: Slack threads instead of contracts, heroes instead of owners.
+When people say they need better Cross-team collaboration, I look for missing contracts: who consumes what, what “done” means, and who gets paged when the joint system lies.
 
-Write the boundary as if it were an API: inputs, outputs, latency expectations, and who gets paged.
+Alignment is a protocol — written inputs, outputs, owners, and failure modes — not a recurring meeting that performs agreement.
 
-Process should be light enough to change. If your AI workflow cannot be updated when a model, connector, or compliance rule changes, you do not have a workflow — you have a ritual.
+Most failures here are ordinary: ambiguous owners, missing verification, and calendars that reward motion over continuity.
 
-When two teams disagree, treat the disagreement as a design input. Resolve it in the interface, not in personality.
+## The objection, taken seriously
 
-The cheapest alignment tool is still a short doc with a decision and a date. Meetings are for conflict, not for status karaoke.
+Some leaders argue culture will handle this without written controls. Culture without artifacts is memory — and memory does not survive hiring waves.
 
-I watch for two failure modes. First, leaders who disappear into strategy and lose the texture of the work. Second, leaders who never leave the details and never grow successors. Both produce brittle teams.
+Take the objection seriously. Lightweight is good. Invisible is not. The fix is shorter artifacts and clearer owners — not more ceremony.
 
-On when product and platform disagree productively, the leadership move is to make the invisible visible: ownership, verification, and the path for the next person.
+## Boring controls that compound
 
-When agents join the loop, treat them like junior systems: limited privileges, explicit tools, budgets, and a human who owns the outcome. Autonomy without audit is just distributed risk.
+Hero bridges — one person who translates between teams — feel invaluable until they burn out and the org discovers it had no interface. Document what the hero knows while they are still standing.
 
-I prefer written decisions over verbal ones. Memory is a poor archive, and AI tools make fluent improvisation cheap — which raises the value of durable context.
+Interfaces between teams beat shared Slack channels. Channels are transport; interfaces are contracts. Confusing the two creates ambient anxiety and no ownership.
 
-None of this requires a new framework brand. It requires attention, a short feedback loop, and the humility to change process when agents join the workflow.
+Working agreements that age well name how to change the agreement. Static culture docs become wallpaper within a quarter.
 
-Lead for continuity. Leave systems and people that still work when you are not in the room.
+Treat conflict as design input. Resolve it in the interface, not in personality. Productive disagreement about SLOs and capacity envelopes beats political disagreement about who is more strategic.
+
+## Scenes from delivery
+
+Product wants a feature; platform wants stability. Without a capacity envelope and SLO, every conversation becomes moral. With them, the conversation becomes scheduling and tradeoffs.
+
+Two orgs share on-call for a boundary service. Without a primary for each failure mode, pages bounce. Shared ownership without primaries is a page-routing bug.
+
+A working group creates a Slack channel for “alignment.” Six weeks later the channel is noise and decisions still live in side DMs. Delete the channel or convert it into a decision log with owners.
+
+## What you give up
+
+Do not build a program office for a one-team problem. Do not invent a framework brand. Do install the smallest control that makes failure legible.
+
+Written interfaces cost an afternoon. Unwritten interfaces cost a quarter. Choose deliberately.
+
+Fewer meetings feel risky to managers who equate presence with control. Measure outcomes and escaped misunderstandings instead of seat time.
+
+Strict ownership can feel cold. Ambiguous ownership feels warm until the page. Prefer clear primary owners with named collaborators.
+
+Meetings used as a substitute for written interfaces — everyone left “aligned,” nobody can explain ownership later.
+
+## Operating principles
+
+Optimize for the next person's onboarding cost. Every undocumented exception becomes a tax on hiring and incident response.
+
+Treat conflict as design input. Resolve it in the interface, not in personality. Productive disagreement about SLOs and capacity envelopes beats political disagreement about who is more strategic.
+
+Replace status karaoke with a short decision doc: context, options, choice, date, owner. Status belongs in a dashboard or a running doc; meetings are for conflict and irreversible choices.
+
+Prefer async artifacts for continuity. Use meetings when the decision is contested or irreversible. Calendar density is not collaboration quality.
+
+Publish “done” definitions across teams before joint work starts — especially for platform and product hand-offs. Ambiguous done is how resentments form.
+
+Hand-offs that preserve context include decision history, open risks, and the last failed assumption — not only a ticket ID. Context loss is a defect.
+
+A hand-off ticket says “ready for platform.” Platform discovers missing authz assumptions in production. Ready now means: runbook, rollback, and a joint drill — not a status emoji.
+
+None of these principles require a new program name. They require attention in the path of work — reviews, design notes, procurement, and post-incident follow-through.
+
+Keep the feedback loop short enough that the team can feel the practice working before the next planning cycle.
+
+## Do not silo the practice
+
+This work does not live alone. It couples to Buy-versus-build judgment.
+
+Start from ownership. If nobody on your team can operate the failure mode, you did not buy a capability — you rented a demo with a support email.
+
+No exit plan. Price increases. Suddenly “switching costs” are discovered during budget season. A tabletop unwind once a year is cheaper than surprise.
+
+Write exit strategies for bought AI tooling before procurement: data export, prompt/eval portability, and a 90-day unwind drill. Soft lock-in is still lock-in.
+
+## Harnesses beat vibes
+
+If agents or copilots touch this workflow, add budgets, logs, and a kill switch before you add autonomy.
+
+Where copilots help: boilerplate, test scaffolding, exploratory refactors with strong suites. Where they hide debt: security boundaries, concurrency, and domain invariants nobody wrote down.
+
+Emit events for every tool call in production. Incidents without forensics become superstition. Event-driven design is how you keep humans in the loop without standing over the process.
+
+## Make it observable
+
+Pick one workflow. Name an owner. Choose one control. Make the outcome visible in seven days. If you cannot point to a change, you performed interest — you did not install a practice.
+
+- For every shared system: name a primary owner per failure mode.
+- Interfaces between teams beat shared Slack channels.
+- Before joint delivery: publish the interface doc and the escalation path.
+- After hand-off: verify the receiving team can operate the failure mode without a Slack ping to the sender.
+- When stuck: write the disagreement as options with tradeoffs; meet only to choose.
+- Hero bridges — one person who translates between teams — feel invaluable until they burn out and the org discovers it had no interface.
+
+## The point, again
+
+If collaboration feels expensive, check the interface before you hire more coordinators.
+
+If this feels quieter than a keynote, that is intentional. Compounding work rarely looks like theater.
+
+On **When product and platform disagree productively**, use the inheritance test: after a week, can someone outside the original room explain what changed, who owns it, and how we will know if it breaks?
